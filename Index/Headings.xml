@@ -3,29 +3,29 @@
 <plist version="1.0"><dict>
     <key>Application Version</key><string>6F95</string>
     <key>0</key><dict>
-        <key>Filename</key><string>/home/orion/Harry Potter and the Philosopher's stone.inform/Source/story.ni</string>
+        <key>Filename</key><string>/home/orion/Desktop/Harry Potter and the Philosopher's stone.inform/Source/story.ni</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>"Harry Potter and the Philosopher's stone" by "Orion Zymaris"</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
     <key>1</key><dict>
-        <key>Filename</key><string>/home/orion/Harry Potter and the Philosopher's stone.inform/Source/story.ni</string>
+        <key>Filename</key><string>/home/orion/Desktop/Harry Potter and the Philosopher's stone.inform/Source/story.ni</string>
         <key>Line</key><integer>5</integer>
         <key>Title</key><string>Chapter 1 - The boy who lived</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>2</key><dict>
-        <key>Filename</key><string>/home/orion/Harry Potter and the Philosopher's stone.inform/Source/story.ni</string>
+        <key>Filename</key><string>/home/orion/Desktop/Harry Potter and the Philosopher's stone.inform/Source/story.ni</string>
         <key>Line</key><integer>7</integer>
-        <key>Title</key><string>Part 1 - The Dursley's</string>
+        <key>Title</key><string>Part 1 - The Dursleys</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>3</key><dict>
-        <key>Filename</key><string>/home/orion/Harry Potter and the Philosopher's stone.inform/Source/story.ni</string>
-        <key>Line</key><integer>178</integer>
+        <key>Filename</key><string>/home/orion/Desktop/Harry Potter and the Philosopher's stone.inform/Source/story.ni</string>
+        <key>Line</key><integer>358</integer>
         <key>Title</key><string>Part 2 - Work</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
@@ -885,6 +885,69 @@
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>126</key><dict>
+        <key>Filename</key><string>/usr/share/gnome-inform7/Extensions/graham nelson/rideable vehicles.i7x</string>
+        <key>Line</key><integer>1</integer>
+        <key>Title</key><string>Version 3 of Rideable Vehicles by Graham Nelson begins here</string>
+        <key>Level</key><integer>0</integer>
+        <key>Indentation</key><integer>0</integer>
+    </dict>
+    <key>127</key><dict>
+        <key>Filename</key><string>/usr/share/gnome-inform7/Extensions/emily short/basic screen effects.i7x</string>
+        <key>Line</key><integer>1</integer>
+        <key>Title</key><string>Version 7 of Basic Screen Effects by Emily Short begins here</string>
+        <key>Level</key><integer>0</integer>
+        <key>Indentation</key><integer>0</integer>
+    </dict>
+    <key>128</key><dict>
+        <key>Filename</key><string>/usr/share/gnome-inform7/Extensions/emily short/basic screen effects.i7x</string>
+        <key>Line</key><integer>9</integer>
+        <key>Title</key><string>Section 1 - Spacing and Pausing</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>129</key><dict>
+        <key>Filename</key><string>/usr/share/gnome-inform7/Extensions/emily short/basic screen effects.i7x</string>
+        <key>Line</key><integer>176</integer>
+        <key>Title</key><string>Section 2 (for Z-machine only)</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>130</key><dict>
+        <key>Filename</key><string>/usr/share/gnome-inform7/Extensions/emily short/plurality.i7x</string>
+        <key>Line</key><integer>1</integer>
+        <key>Title</key><string>Version 9 of Plurality by Emily Short begins here</string>
+        <key>Level</key><integer>0</integer>
+        <key>Indentation</key><integer>0</integer>
+    </dict>
+    <key>131</key><dict>
+        <key>Filename</key><string>/usr/share/gnome-inform7/Extensions/emily short/plurality.i7x</string>
+        <key>Line</key><integer>7</integer>
+        <key>Title</key><string>Section 1 - Tracking Last Item</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>132</key><dict>
+        <key>Filename</key><string>/usr/share/gnome-inform7/Extensions/emily short/plurality.i7x</string>
+        <key>Line</key><integer>32</integer>
+        <key>Title</key><string>Section 2 - Verbs</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>133</key><dict>
+        <key>Filename</key><string>/usr/share/gnome-inform7/Extensions/emily short/plurality.i7x</string>
+        <key>Line</key><integer>120</integer>
+        <key>Title</key><string>Section 3 - Pronouns</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>134</key><dict>
+        <key>Filename</key><string>/usr/share/gnome-inform7/Extensions/emily short/plurality.i7x</string>
+        <key>Line</key><integer>502</integer>
+        <key>Title</key><string>Section 4 - Enumeration</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>135</key><dict>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>scene understood is a scene which varies</string>
         <key>Level</key><integer>0</integer>
