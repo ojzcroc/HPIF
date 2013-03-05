@@ -16,10 +16,10 @@
 	<dict>
 		<key>IFSettingCreateBlorb</key>
 		<true/>
-		<key>IFSettingZCodeVersion</key>
-		<integer>256</integer>
 		<key>IFSettingNobbleRng</key>
 		<false/>
+		<key>IFSettingZCodeVersion</key>
+		<integer>256</integer>
 	</dict>
 </dict>
 </plist>
