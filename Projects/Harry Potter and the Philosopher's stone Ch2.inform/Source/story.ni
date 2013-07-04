@@ -22,7 +22,7 @@ to say wait (T - a number) ms:
 	if glulx timekeeping is supported:
 		wait T ms before continuing.
 to say itinerary:
-	say "[']allo".
+	say "FIXME".
 bannerprinted is a number that varies. bannerprinted is 0.
 to say now bannerprinted is 1:
 	now bannerprinted is 1.
