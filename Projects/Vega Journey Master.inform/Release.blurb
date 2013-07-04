@@ -1,0 +1,59 @@
+! Blurb file created by Inform build 6G60
+
+status "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\CblorbModel.html" "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master.inform\Build\StatusCblorb.html"
+
+
+! Identification
+
+project folder "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master.inform"
+release to "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master Materials\Release"
+
+! Blorb instructions
+
+storyfile leafname "Vega Journey.gblorb"
+storyfile "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master.inform\Build\output.ulx" include
+ifiction "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master.inform\Metadata.iFiction" include
+cover "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
+picture 1 "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
+release file "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Cover.jpg"
+release file "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Small Cover.jpg"
+picture 4 "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master Materials\Figures\Living Quarters Map.png"
+picture 5 "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master Materials\Figures\Living Area Regions.png"
+picture 6 "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master Materials\Figures\Spaceship only region for living area.png"
+sound 3 "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master Materials\Sounds\typewriter_key_1.ogg"
+
+! Placeholder variables
+
+placeholder [IFID] = "99AB0B6A-0338-45CB-8A24-7361FA31780A"
+placeholder [RELEASE] = "1"
+placeholder [YEAR] = "2013"
+placeholder [TITLE] = "Vega Journey"
+placeholder [AUTHOR] = "Orion Zymaris"
+placeholder [BLURB] = "A work of interactive fiction."
+
+! Other material to release
+
+
+! Website instructions
+
+placeholder [ENCODEDSTORYFILE] = "Vega Journey.gblorb.js"
+template path "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master Materials\Templates"
+template path "D:\ZYM0001\Documents\Inform\Templates"
+template path "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Templates"
+interpreter "quixe" "g"
+base64 "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master.inform\Build\output.ulx" to "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master Materials\Release\interpreter\Vega Journey.gblorb.js"
+
+! Website instructions
+
+template path "D:\ZYM0001\Documents\Inform\Projects\Vega Journey Master Materials\Templates"
+template path "D:\ZYM0001\Documents\Inform\Templates"
+template path "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Templates"
+css
+website "Standard"
+status instruction ||&nbsp;<a href="source:story.ni#line221"><img border=0 src=inform:/Reveal.png></a>||
+status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc391.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the "Such-and-Such" file called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc389.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc398.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc392.html><img border=0 src=inform:/help.png></a>||

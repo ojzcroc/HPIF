@@ -1,0 +1,52 @@
+Debugging log of Inform 7
+Inform called as: C:\Program Files\Inform 7\Compilers\ni -rules C:\Program Files\Inform 7\Inform7\Extensions -census 
+I've also read Keyword Interface by Aaron Reed, which is 2885 words long.
+I've also read Snippetage by Dave Robinson, which is 972 words long.
+I've also read Custom Library Messages by David Fisher, which is 9464 words long.
+I've also read Computers by Emily Short, which is 4336 words long.
+I've also read Glulx Image Centering Edited by Emily Short, which is 152 words long.
+I've also read Menuswithaddons by Emily Short, which is 1019 words long.
+I've also read Menuswwithaddons by Emily Short, which is 1019 words long.
+I've also read Postures by Emily Short, which is 597 words long.
+I've also read Simple Graphical Window by Emily Short, which is 1417 words long.
+I've also read Conversation Framework by Eric Eve, which is 3117 words long.
+I've also read Conversation Package by Eric Eve, which is 1975 words long.
+I've also read Text Capture by Eric Eve, which is 870 words long.
+I've also read French by Eric Forgeot, which is 2344 words long.
+I've also read Graphical Window Animation by Erik Temple, which is 2208 words long.
+I've also read Real-Time Delays by Erik Temple, which is 675 words long.
+I've also read Telephones by George Tryfonas, which is 1023 words long.
+I've also read Ducking by Graham Nelson, which is 0 words long.
+I've also read Flexible Windows by Jon Ingold, which is 3905 words long.
+I've also read Simple Chat by Mark Tilford, which is 1567 words long.
+I've also read Keywords for Conversation by Matt Wigdahl, which is 758 words long.
+I've also read 2 Digit Number Lock by Orion Zymaris, which is 0 words long.
+I've also read 3 digit number lock by Orion Zymaris, which is 524 words long.
+I've also read Cheats by Orion Zymaris, which is 309 words long.
+I've also read Door Directions by Orion Zymaris, which is 161 words long.
+I've also read Hpmenu for chapter 1 by Orion Zymaris, which is 0 words long.
+I've also read HPMenu by Orion Zymaris, which is 0 words long.
+I've also read Mixed extensions by Orion Zymaris, which is 0 words long.
+I've also read Wizard Money by Orion Zymaris, which is 0 words long.
+I've also read After Not Doing Something by Ron Newcomb, which is 214 words long.
+I've also read Mentioned In Room Description by Ron Newcomb, which is 1487 words long.
+I've also read AI Moving by Sebastian Rahn, which is 25 words long.
+I've also read Room & Dimension by Sebastian Rahn, which is 8290 words long.
+I've also read English by David Fisher, which is 0 words long.
+I've also read Basic Help Menu by Emily Short, which is 452 words long.
+I've also read Basic Screen Effects by Emily Short, which is 1716 words long.
+I've also read Case Management by Emily Short, which is 65 words long.
+I've also read Complex Listing by Emily Short, which is 2215 words long.
+I've also read Glulx Entry Points by Emily Short, which is 816 words long.
+I've also read Glulx Image Centering by Emily Short, which is 152 words long.
+I've also read Glulx Text Effects by Emily Short, which is 1440 words long.
+I've also read Locksmith by Emily Short, which is 2111 words long.
+I've also read Menus by Emily Short, which is 1019 words long.
+I've also read Plurality by Emily Short, which is 863 words long.
+I've also read Punctuation Removal by Emily Short, which is 794 words long.
+I've also read Epistemology by Eric Eve, which is 1147 words long.
+I've also read Metric Units by Graham Nelson, which is 2258 words long.
+I've also read Rideable Vehicles by Graham Nelson, which is 953 words long.
+I've also read Standard Rules by Graham Nelson, which is 34 words long.
+I've also read Unicode Character Names by Graham Nelson, which is 102 words long.
+I've also read Unicode Full Character Names by Graham Nelson, which is 91 words long.

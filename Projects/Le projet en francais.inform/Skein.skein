@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x02A83680" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x04D83AA0"/>
+  <item nodeId="node-0x02A83680">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Le Roi de Fihnargaia&#x000A;Une introduction &#x00E0; la fiction interactive par Eric Forgeot&#x000A;Release 1 / Serial number 130624 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Petit Couloir&#x000A;Les murs sont couverts de lampes brillant de mille feux. Au nord se trouve le grand hall o&#x00F9; vous attend le roi, tandis que le couloir o&#x00F9; vous vous trouvez actuellement oblique vers l'est.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x02A835A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02A835A0">
+    <command xml:space="preserve">o_0</command>
+    <result xml:space="preserve">Je ne connais pas ce verbe.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D85380"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D85380">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Petit Couloir&#x000A;Les murs sont couverts de lampes brillant de mille feux. Au nord se trouve le grand hall o&#x00F9; vous attend le roi, tandis que le couloir o&#x00F9; vous vous trouvez actuellement oblique vers l'est.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D85310"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D85310">
+    <command xml:space="preserve">cherche</command>
+    <result xml:space="preserve">Petit Couloir&#x000A;Les murs sont couverts de lampes brillant de mille feux. Au nord se trouve le grand hall o&#x00F9; vous attend le roi, tandis que le couloir o&#x00F9; vous vous trouvez actuellement oblique vers l'est.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D85540"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D85540">
+    <command xml:space="preserve">recherche</command>
+    <result xml:space="preserve">Je ne connais pas ce verbe.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D854D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D854D0">
+    <command xml:space="preserve">walk</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D85460"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D85460">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Vous ne pouvez pas aller par l&#x00E0;.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D853F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D853F0">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Le Roi vous ayant convoqu&#x00E9;, vous feriez bien de ne pas le faire attendre. Vous retournerez &#x00E0; vos cuisines ensuite.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D85620"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D85620">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Vous ne pouvez pas aller par l&#x00E0;.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D85690"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D85690">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Le Roi vous ayant convoqu&#x00E9;, vous feriez bien de ne pas le faire attendre. Vous retournerez &#x00E0; vos cuisines ensuite.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D85700"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D85700">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Le Roi vous ayant convoqu&#x00E9;, vous feriez bien de ne pas le faire attendre. Vous retournerez &#x00E0; vos cuisines ensuite.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D85770"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D85770">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Le Roi vous ayant convoqu&#x00E9;, vous feriez bien de ne pas le faire attendre. Vous retournerez &#x00E0; vos cuisines ensuite.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D857E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D857E0">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Le Roi vous ayant convoqu&#x00E9;, vous feriez bien de ne pas le faire attendre. Vous retournerez &#x00E0; vos cuisines ensuite.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D85850"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D85850">
+    <command xml:space="preserve"></command>
+    <result xml:space="preserve">Je vous demande pardon ?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D858C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D858C0">
+    <command xml:space="preserve"></command>
+    <result xml:space="preserve">Je vous demande pardon ?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D85930"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D85930">
+    <command xml:space="preserve"></command>
+    <result xml:space="preserve">Je vous demande pardon ?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D839C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D839C0">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Le Roi vous ayant convoqu&#x00E9;, vous feriez bien de ne pas le faire attendre. Vous retournerez &#x00E0; vos cuisines ensuite.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D83A30"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D83A30">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Le Roi vous ayant convoqu&#x00E9;, vous feriez bien de ne pas le faire attendre. Vous retournerez &#x00E0; vos cuisines ensuite.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04D83AA0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04D83AA0">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Le Roi vous ayant convoqu&#x00E9;, vous feriez bien de ne pas le faire attendre. Vous retournerez &#x00E0; vos cuisines ensuite.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>

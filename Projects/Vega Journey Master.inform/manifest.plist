@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Graphics</key>
+        <dict>
+            <key>4</key>
+            <string>Figures\Living Quarters Map.png</string>
+            <key>5</key>
+            <string>Figures\Living Area Regions.png</string>
+            <key>6</key>
+            <string>Figures\Spaceship only region for living area.png</string>
+        </dict>
+        <key>Sounds</key>
+        <dict>
+            <key>3</key>
+            <string>Sounds\typewriter_key_1.ogg</string>
+        </dict>
+    </dict>
+</plist>

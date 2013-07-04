@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+    <story>
+        <identification>
+            <ifid>9C35D23C-6F6D-469B-80A0-DE1C156B3915</ifid>
+            <format>zcode</format>
+        </identification>
+        <bibliographic>
+            <title>Le Roi de Fihnargaia</title>
+            <author>Eric Forgeot</author>
+            <headline>Une introduction à la fiction interactive</headline>
+            <genre>Aventure</genre>
+            <firstpublished>2009</firstpublished>
+            <description>La rencontre du héros et de la famille royale</description>
+            <language>en</language>
+            <group>Inform</group>
+        </bibliographic>
+        <releases>
+            <attached>
+                <release>
+                    <releasedate>2013-06-24</releasedate>
+                    <version>1</version>
+                    <compiler>Inform 7</compiler>
+                    <compilerversion>6G60</compilerversion>
+                </release>
+            </attached>
+        </releases>
+        <colophon>
+            <generator>Inform 7</generator>
+            <generatorversion>6G60</generatorversion>
+            <originated>2013-06-24</originated>
+        </colophon>
+        <zcode>
+            <serial>130624</serial>
+            <release>1</release>
+            <compiler>Inform 7 build 6G60</compiler>
+        </zcode>
+    </story>
+</ifindex>

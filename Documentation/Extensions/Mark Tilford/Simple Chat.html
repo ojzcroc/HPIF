@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1077(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Simple Chat by Mark Tilford.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1077()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Simple Chat<font color="#404040"> by </font>Mark Tilford</b><p><small></small><p><p><hr><p><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Section 1: Using Simple Chat</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 2: Contact</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 3: Change log</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Simple Chat-eg1.html#eg1"><font color="#000000">A: Simplest Chat</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Simple Chat-eg2.html#eg2"><font color="#000000">B: Less Simple Chat</font></a><br><p><hr><p><p><hr><p>
+<p>
+<p><a name=docsec1><b><font color="#000000">Section 1: Using Simple Chat</b></font>
+<p>
+ This is an extension to handle simple menu-based conversations, or anything else for which you want to use an in-text menu. Simple Chat differs from Emily Short's Menus in that the latter replaces the normal game window by a menu navigated with the arrow keys, whereas Simple Chat prints a list of numbered options in the game text itself. In addition, Simple Chat makes it easy to set up the kind of connections that one needs for a menu-based conversation.
+<p>
+ The basic kind of value introduced by the extension is the chat node. For each thing the player can say, the author defines a chat node value: &quot;Harry-on-aliens is a chat node&quot;. To keep things organized, consider starting the name of each node with the name of the character the player is talking with, or something else related to the overall conversation.
+<p>
+ For all chat nodes, you must put in an &quot;Instead of giving text for ___: ...&quot; override. This function is to display the text for when the player is at that chat node.
+<p>
+ For all chat nodes which are linked from some other chat node (which will generally be all those which are not ones which start conversations), you must put in an &quot;Report giving link to ___: ... instead&quot; override. This function is to display the text which will be listed in the menu. If you want the text to vary depending on the previous chat node, you may instead use &quot;Report giving link to ___ when second chat node is ___:&quot;.
+<p>
+ For all chat nodes which are to display a menu, you must put in a &quot;Carry out finding responses to ___:&quot; override. For each chat node the player can go to from here, put in &quot;link to ___&quot;. If no chat nodes are linked to, then the conversation will stop. You can use conditionals in these phrases to change the contents of the menu based on the state of the game, e.g., &quot;if player wears the weird hat, link to ___&quot;.
+<p>
+ The &quot;link to ___&quot; phrase has no effect if the chat node is not active. Every chat node has an activatedness: either sc-active, sc-inactive, sc-once or sc-shown-once. These can be set at the beginning of the game with declarations like &quot;____ is sc-once&quot;. If no declaration is made, a chat node starts as sc-active.
+<p>
+ An sc-active chat node is shown when it is linked to, while an sc-inactive chat node is not shown. Chat nodes that are sc-once are shown normally, but will be set to sc-inactive once they are chosen, thus disappearing from the menu. Chat nodes that are sc-shown-once are also shown normally, but will be set to sc-inactive after being displayed in a menu, whether they are chosen or not: in effect, the player has only one chance to choose them.
+<p>
+ During play, chat nodes can be actived or deactived by &quot;activate ___&quot; and &quot;deactivate ___&quot;. (These are easier-to-read equivalents of &quot;now ___ is sc-active&quot; and &quot;now ___ is sc-inactive&quot;.)
+<p>
+ Finally, to show the menu starting from a certain chat node, put in &quot;run a conversation from ___&quot;. Simple Chat does not define a &quot;talking to&quot; action -- this is left to the author of the game.
+<p>
+ There can be at most twenty links printed from any chat node. Any more will be silently dropped. This number can be increased by adding rows to the Table Of Current Choices.
+<p>
+ By default, the player can get out of any menu by choosing 0. To change this for all menus, put &quot;When play begins: allow exiting on zero.&quot; at the beginning of the file. To change this for some menus, put &quot;allow exiting on zero;&quot; or &quot;forbid exiting on zero;&quot; in the appropriate &quot;give text for ...&quot; or &quot;find responses to ...&quot; block.
+<p>
+ The only text a user should ever see which is printed by Simple Chat is &quot;or 0 to say nothing&quot;. In games using the German or French translation extension, this is replaced by &quot;oder 0 um nichts zu sagen&quot; and &quot;ou 0 pour ne rien dire&quot; respectively. Other non-English games should add a translation by adding something like the following line:
+<p>
+<blockquote><font color="#000080"> To say simple chat zero option:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;or 0 to say nothing[run paragraph on]&quot;.</font></blockquote>
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 2: Contact</b></font>
+<p>
+ The current maintainer of Simple Chat is Victor Gijsbers. You can reach him at victor@lilith.cc.
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 3: Change log</b></font>
+<p>
+ Version 4: First version released by Victor Gijsbers. - Code cleanup. - Use options were removed. (They led to a confusing double functionality.) - Implemented activatedness as a property of chat nodes, rather than as a relation between chat nodes and property values. Added sc-inactive, sc-once and sc-shown-once for easier control of when chat nodes are shown. - Added a 'parser message' to the routine which asks for a number: some players did not see that the command prompt had changed, or did not understand what it meant. - Rewritten the documentation. - Reworked and replaced the example games. - Increased the maximum number of nodes in a single menu from 9 to 20. - A number of changes to the internal workings of the extension. - Easier internationalisation. Version 4 is not necessarily compatible with code written for previous versions!
+<p>
+ Version 3: Tentative version by Mark Tilford to make Inform 7 compatible with release 6E72 of Inform 7. Not released on the Inform 7 website. Version 3 is not necessarily compatible with code written for previous versions!
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Simple Chat-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Simple Chat-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Simplest Chat</font></b></a><br>Have a simple conversation with Larry. Shows how to use the basic functionality of Simple Chat.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Simple Chat-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Simple Chat-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Less Simple Chat</font></b></a><br>Shows off a few of the more advanced features of Simple Chat: nodes that get activated during play; nodes that can be chosen only once, or appear in the menu only once; mixing other actions with simple chat conversations.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

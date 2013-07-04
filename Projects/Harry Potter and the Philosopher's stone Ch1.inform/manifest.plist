@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Graphics</key>
+        <dict>
+        </dict>
+        <key>Sounds</key>
+        <dict>
+            <key>3</key>
+            <string>Sounds\Harry Potter and the Philosopher's stone intro.ogg</string>
+            <key>4</key>
+            <string>Sounds\Harry Potter with first paragraph cut.ogg</string>
+            <key>5</key>
+            <string>Sounds\Harry Potter with first two paragraphs cut.ogg</string>
+            <key>6</key>
+            <string>Sounds\Harry Potter with first three paragraphs cut.ogg</string>
+        </dict>
+    </dict>
+</plist>

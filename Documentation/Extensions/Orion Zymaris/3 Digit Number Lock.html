@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode3094(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include 3 Digit Number Lock by Orion Zymaris.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode3094()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>3 Digit Number Lock<font color="#404040"> by </font>Orion Zymaris</b><p><small><p>Version 1</small><p>An extension for providing a randomised 3 digit number lock, for any container<p>Kinds: <b>number unlockable</b> (a kind of container)<p>Values that vary: <b>First digit</b>, <b>Second digit</b>, <b>Third digit</b>, <b>first tumbler</b>, <b>second tumbler</b>, <b>third tumbler</b>, <b>incorrect number lock</b>, <b>stop if already unlocked</b><p>Actions: <b>Inputting</b><p><p><hr><p>
+<p>
+ &quot;For randomly generating numbers for padlocks and number unlocking objects. Can be used with all file types except Z machine version 5.&quot;
+<p>
+ This extension provides you with the ability to have a randomly generated 3 digit number lock, which changes every game. At the moment, the proccessis fairly basic. You can only define one random number per game, and this number, if typed, will unlock any container in the location of the kind number unlockable.
+<p>
+ This extension cannot be used By Z machine Version 5.
+<p>
+ To give the player the random number, include<blockquote><font color="#000080"> &quot;[random lock number]&quot; in the description of an object.</font></blockquote>
+<p>
+ To make something unlockable by the number, say<blockquote><font color="#000080"> &quot;[some object] is a number unlockable.&quot;.</font></blockquote>
+<p>
+ To change the standard response to not inputting the correct number for the number lock, say:
+<p>
+<blockquote><font color="#000080"> when play begins:<br>&nbsp;&nbsp;&nbsp;&nbsp; now incorrect number lock is &quot;That was a terrible guess.&quot;.</font></blockquote>
+<p>
+ To change the set response to trying to unlock an already unlocked object, say;
+<p>
+<blockquote><font color="#000080"> when play begins:<br>&nbsp;&nbsp;&nbsp;&nbsp; now stop if already unlocked is &quot;That is open already.&quot;.</font></blockquote>
+<p>
+ At the moment, seeing as the set up for unlocking involves the name of the object during the command, I am unable to give the ability to change the set response to unlocking successfully, which is &quot;You unlock [pnu]&quot;, where pnu is te object name.
+<p>
+ every turn when the player types the random 3 digit number in the presence of the object, it will unlock it.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="3 Digit Number Lock-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="3 Digit Number Lock-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Safe and Sound</font></b></a><br>A safe that has a random unlocking number.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

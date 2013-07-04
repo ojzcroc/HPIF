@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1113(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Mentioned In Room Description by Ron Newcomb.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1113()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Mentioned In Room Description<font color="#404040"> by </font>Ron Newcomb</b><p><small></small><p><p><hr><p><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Section 1: The Room Description</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 2: 'Here' and 'Elsewhere' as Adjectives</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 3: 'Mentioned Below'</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 4: 'If Capitalisation is Needed' and 'uc'</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Section 5: A Full Look After Going, Exiting</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Mentioned In Room Description-eg1.html#eg1"><font color="#000000">A: Notable Machines</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Mentioned In Room Description-eg2.html#eg2"><font color="#000000">B: Rip</font></a><br><p><hr><p><p><hr><p>
+<p>
+<p><a name=docsec1><b><font color="#000000">Section 1: The Room Description</b></font>
+<p>
+ This extension modifies Inform so that room descriptions which have their objects in square brackets, like this --
+<p>
+<blockquote><font color="#000080"> Warehouse is a room. &quot;The room is filled by [the ENIAC computing machine].&quot;</font></blockquote>
+<p>
+ -- will no longer be mentioned later in LOOK, such as the you-can-also-see line or a paragraph dedicated to the item. Likewise, objects mentioned in the room's heading, such as the supporter a player stands upon, will also be considered already mentioned.
+<p>
+ Traditionally, a room description was completely static text, describing the setting that the player has just walked into. As most locations do not appreciably change between visits -- buildings and landscape are themselves fairly static -- this is appropriate. Subsequent paragraphs list the portable items and movable actors with which you actually interact. But increasingly the &quot;room description&quot; is co-opted for other purposes. Either the setting itself changes with time and weather, or immobile but interactive things are best presented within the room description (as in the case of scenery), or a portable item or character spends a great deal of time in a particular room necessitating personalisation, or a strongly narrative work uses rooms as single-use set pieces containing plot or scene information.
+<p>
+ In such cases this extension allows the author to more easily coordinate the mentioning of objects between the room description and the rest of LOOK's generated prose, because a single guideline will apply: mention objects only once, regardless of where.
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 2: 'Here' and 'Elsewhere' as Adjectives</b></font>
+<p>
+ When we write portable items and people into the room description, an appropriate if-statement is likely needed to check that the item or person is still in the room. This extension defines &quot;here&quot; and &quot;elsewhere&quot; as adjectives for asking if an object is currently in the room being described. They can combine with other adjectives to ascertain several truths at once.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1114(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The Catskills is a room. [=0x0022=]Here is a lovely, secluded fold in the mountains, far from civilization[if Rip Van Winkle is here asleep]: as though to prove it, [Rip Van Winkle] is sleeping under a tree[end if].[=0x0022=][=0x000A=][=0x000A=]Rip Van Winkle is a man in the Catskills. [=0x0022=]Rip Van Winkle [if Rip is asleep]sleeps nearby[otherwise]stands here, looking mightily confused[end if].[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1114()"><img border=0 src=inform:/doc_images/paste.png></a> The Catskills is a room. &quot;Here is a lovely, secluded fold in the mountains, far from civilization[if Rip Van Winkle is here asleep]: as though to prove it, [Rip Van Winkle] is sleeping under a tree[end if].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Rip Van Winkle is a man in the Catskills. &quot;Rip Van Winkle [if Rip is asleep]sleeps nearby[otherwise]stands here, looking mightily confused[end if].&quot;</font></blockquote>
+<p>
+ The statement &quot;if Rip is here asleep&quot; ensures that Rip's description combines with the room's description only if both conditions are true. If he is awake, Rip gets a paragraph to himself. In other rooms, he gets a paragraph to himself regardless his state of consciousness. Only in that particular and presumably usual circumstance is the description of setting and character blended.
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 3: 'Mentioned Below'</b></font>
+<p>
+ If an object is mentioned in the room description but the author still wishes LOOK to automatically describe it anyway, there are three ways to accomplish this. The first is simply not to enclose the object in square brackets to begin with, though if the name of the object changes such a change won't be reflected automatically. The second way is via the say phrase &quot;mentioned below&quot;. The third way is via a rule.
+<p>
+<blockquote><font color="#000080"> Warehouse is a room. &quot;The room is filled by the ENIAC computing machine.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Warehouse is a room. &quot;The room is filled by [the ENIAC computing machine mentioned below].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Before printing the locale description of the warehouse: now the ENIAC machine is unmentioned.</font></blockquote>
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 4: 'If Capitalisation is Needed' and 'uc'</b></font>
+<p>
+ &quot;Mentioned below&quot; preserves the article and capitalisation of its object as many Inform say phrases do. Meaning, it knows and respects the difference between &quot;[The wrench]&quot; and &quot;[the wrench]&quot; and &quot;Eddie's [wrench]&quot;. But occasionally we don't wish to lead the mention of a common noun with an article, and in those cases we must explicitly tell Inform to capitalise the object's name with either the &quot;[uc]&quot; proofreading mark, or synonymously, the caret &quot;[^]&quot;.
+<p>
+<blockquote><font color="#000080"> The description of the cave is &quot;[uc][Water] drips from above.&quot;<br> The description of the cave is &quot;[^][Water] drips from above.&quot;</font></blockquote>
+<p>
+ In cases where capitalisation is rather complex, we can explicitly define what the capitalised name of something is.<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1115(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The printed capitalised name of the iPod is [=0x0022=]iPod[=0x0022=].[=0x000A=]The printed capitalised plural name of the iPod is [=0x0022=]iPods[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1115()"><img border=0 src=inform:/doc_images/paste.png></a> The printed capitalised name of the iPod is &quot;iPod&quot;.<br> The printed capitalised plural name of the iPod is &quot;iPods&quot;.</font></blockquote>
+<p>
+ The state of capitalisation can be queried with &quot;if capitalisation is needed&quot;. This may be useful within the Printing The Name Of activity.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1116(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Rule for printing the name of the player when the player is in the teleportation chamber:[=0x000A=][=0x0009=]if capitalisation is needed, say [=0x0022=]Flickering as if insubstantial, you[=0x0022=];[=0x000A=][=0x0009=]otherwise say [=0x0022=]your ghostly self[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1116()"><img border=0 src=inform:/doc_images/paste.png></a> Rule for printing the name of the player when the player is in the teleportation chamber:<br>&nbsp;&nbsp;&nbsp;&nbsp; if capitalisation is needed, say &quot;Flickering as if insubstantial, you&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; otherwise say &quot;your ghostly self&quot;.</font></blockquote>
+<p>
+ When we use other indefinite articles, such as &quot;some&quot; as in &quot;some water&quot;, we can call it forth by using the indefinite article &quot;a&quot;, as in &quot;[A Water] drips from the ceiling,&quot; or &quot;There is [a water] here.&quot; Whichever article (if any) the object used in its definition will be printed. For more information on this aspect of the indeterminate article, see 3.18, &quot;Articles and proper names&quot;, and Chapter 5.2, &quot;Text which names things&quot;, in the Writing With Inform manual. See the built-in extension Plurality, by Emily Short, for further handling of &quot;these/those&quot;, pronouns, and so on.
+<p>
+<p><a name=docsec5><b><font color="#000000">Section 5: A Full Look After Going, Exiting</b></font>
+<p>
+ With an increased reliance on room descriptions, we must take care with how the commands BRIEF and SUPERBRIEF will affect the work. These commands suppress the room description on subsequent visits, or permanently, respectively. The BRIEF listing, also called an abbreviated listing, is also used during VERBOSE mode after a character changes location via going, entering, or exiting, for example. For consistancy, this extension changes the default behavior so that a full LOOK is done after movement, removing this edge case and its small burden from the author.
+<p>
+ The author must still consider how the prose will lay if the player specifically enters the BRIEF or SUPERBRIEF commands. Generally, if a work requires a lot of backtracking, these modes are conveniences to the player, as he needs only room headings while running around to fetch keys and whatnot. But if the work provides a GO TO command which deposits the player at his destination in a single turn, it may be acceptable to disallow these modes completely.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1117(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Check preferring sometimes abbreviated room descriptions: say [=0x0022=]I[=0x0027=]m sorry, but [italic type][the story title][roman type] does not support BRIEF mode.[=0x0022=] instead.[=0x000A=][=0x000A=]Check preferring abbreviated room descriptions: say [=0x0022=]I[=0x0027=]m sorry, but [italic type][the story title][roman type] does not support SUPERBRIEF mode.[=0x0022=] instead.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1117()"><img border=0 src=inform:/doc_images/paste.png></a> Check preferring sometimes abbreviated room descriptions: say &quot;I'm sorry, but [italic type][the story title][roman type] does not support BRIEF mode.&quot; instead.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check preferring abbreviated room descriptions: say &quot;I'm sorry, but [italic type][the story title][roman type] does not support SUPERBRIEF mode.&quot; instead.</font></blockquote>
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Mentioned In Room Description-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Mentioned In Room Description-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Notable Machines</font></b></a><br>One machine to use a name, one machine to move around its mention. Comes with instructions.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Mentioned In Room Description.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Mentioned In Room Description.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Rip</font></b></a><br>A re-implementation of standard example 335, in which a character's description is blended into the room's, at least until he wakes.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ The original example required a less than obvious rule in order to solve difficulties in wrapping Rip Van Winkle's description in the room description. Here, we allow Rip to move around, napping in various places. But when he naps in his original location, his description is once again weaved into the room description.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1118(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Rip Van Winkle[=0x0022=][=0x000A=][=0x000A=]Include Mentioned in Room Description by Ron Newcomb.[=0x000A=][=0x000A=]Section 1 - Original Example[=0x000A=][=0x000A=]A person can be asleep.[=0x000A=][=0x000A=]The Catskills is a room. [=0x0022=]Here is a lovely, secluded fold in the mountains, far from civilization[if Rip Van Winkle is here asleep]: as though to prove it, [Rip Van Winkle] is sleeping under a tree[end if].[=0x0022=][=0x000A=][=0x000A=]A tree is scenery in the Catskills.[=0x000A=][=0x000A=]Rip Van Winkle is a man in the Catskills. [=0x0022=]Rip Van Winkle [if Rip is asleep]is sleeping again[otherwise]stands here, looking mightily confused[end if].[=0x0022=] Rip Van Winkle is asleep.[=0x000A=][=0x000A=]Instead of waiting:[=0x000A=][=0x0009=]say [=0x0022=]Rip Van Winkle wakes up with a snort.[=0x0022=];[=0x000A=][=0x0009=]now Rip Van Winkle is not asleep.[=0x000A=][=0x000A=]Test me with [=0x0022=]look / z / look / rip, down / look / down / nap / look / z / rip, up / look / up / nap / look[=0x0022=].[=0x000A=][=0x000A=]Section 2 - Additions[=0x000A=][=0x000A=]Instead of sleeping:[=0x000A=][=0x0009=]say [=0x0022=]Rip Van Winkle nods off again.[=0x0022=];[=0x000A=][=0x0009=]now Rip is asleep.[=0x000A=][=0x000A=]Down the valley is below the Catskills. [=0x0022=]A creek tumbles over pebbles and roots, enroute to the rest of the world.[=0x0022=][=0x000A=][=0x000A=]Persuasion: rule succeeds.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1118()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Rip Van Winkle&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Mentioned in Room Description by Ron Newcomb.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Section 1 - Original Example</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A person can be asleep.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Catskills is a room. &quot;Here is a lovely, secluded fold in the mountains, far from civilization[if Rip Van Winkle is here asleep]: as though to prove it, [Rip Van Winkle] is sleeping under a tree[end if].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A tree is scenery in the Catskills.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Rip Van Winkle is a man in the Catskills. &quot;Rip Van Winkle [if Rip is asleep]is sleeping again[otherwise]stands here, looking mightily confused[end if].&quot; Rip Van Winkle is asleep.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of waiting:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;Rip Van Winkle wakes up with a snort.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; now Rip Van Winkle is not asleep.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;look / z / look / rip, down / look / down / nap / look / z / rip, up / look / up / nap / look&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Section 2 - Additions</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of sleeping:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;Rip Van Winkle nods off again.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; now Rip is asleep.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Down the valley is below the Catskills. &quot;A creek tumbles over pebbles and roots, enroute to the rest of the world.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Persuasion: rule succeeds.</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

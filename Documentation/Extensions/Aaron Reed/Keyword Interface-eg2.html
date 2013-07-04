@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1003(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Keyword Interface by Aaron Reed.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1003()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Keyword Interface<font color="#404040"> by </font>Aaron Reed</b><p><small></small><p><p><hr><p><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Section 1: Basic Usage</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 2: Objects</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 3: Directions</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 4: Topics</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Section 5: Parser Messages</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Section 6: Control</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec7><font color="#000000">Section 7: Screen Reader Mode</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec8><font color="#000000">Section 8: Disambiguation</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Keyword Interface-eg1.html#eg1"><font color="#000000">A: Sense of Direction</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Keyword Interface-eg2.html#eg2"><font color="#000000">B: The Gnome's Holiday</font></a><br><p><hr><p><p><hr><p>
+<p>
+ This extension emulates the emphasized keyword system for streamlining common IF input, as seen in &quot;Blue Lacuna.&quot; Nouns, directions, and topics are highlighted and can be typed without verbs to examine, move, or discuss, respectively. (Topics are implemented only in skeletal form to allow for integration with any conversation system; Keywords for Conversation by Matt Wigdahl, for instance, will integrate it with Eric Eve's Conversation Package extensions.) A full system for letting the player select his own preferred color scheme and keeping games backwards-compatible for players on screen readers or with no color support is also included. The extension is compatible with either z-code or Glulx.
+<p>
+ A warning: Inform authors using color have poor options on either platform. In z-code games, colors can be freely adjusted, but are limited to a palette of eight neon shades, only a few of which will be readable on any given backdrop. Glulx users can select from a palette of sixteen million colors, but can only make two of these available at a time, and these cannot be changed during play. On z-code, all eight colors are made available to the user and can be adjusted by player or author at any time; on Glulx, the two defaults are blue and green, and only authors can customize this. On both platforms, bold, italics, and fixed-width are offered as alternatives to colored keywords.
+<p>
+<p><a name=docsec1><b><font color="#000000">Section 1: Basic Usage</b></font>
+<p>
+ Keyword Interface allows an emphasis style to be set for one of four possible categories. Each of these can be enabled or disabled independently by the author or player. By default, they are set as follows:
+<p>
+<blockquote><font color="#000080"> Object keyword highlighting is usually true.<br> Direction keyword highlighting is usually true.<br> Topic keyword highlighting is usually false.<br> Parser highlighting is usually false.</font></blockquote>
+<p>
+ These can be enabled or disabled at any time during play through a &quot;now&quot; statement, or globally by making a more definitive assertion:
+<p>
+<blockquote><font color="#000080"> Object keyword highlighting is false.</font></blockquote>
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 2: Objects</b></font>
+<p>
+ When object keyword highlighting is set to true, the extension will automatically emphasize non-scenery objects listed by the parser. Objects may also be manually emphasized in any text by wrapping them in and substitutions.
+<p>
+<blockquote><font color="#000080"> The Office is a room. &quot;Only a bare [o]bulb[x] illuminates this dim office, empty except for a solitary desk.&quot;. A desk and a bare bulb are scenery in the office. On the desk is a telephone book and the lamp.</font></blockquote>
+<p>
+ This produces output like the following (where emphasis is marked with asterisks):
+<p>
+<blockquote><font color="#000080"> The Office<br> Only a bare *bulb* illuminates this dim office, empty except for a solitary desk.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> On the desk are a telephone *book* and a *lamp*.</font></blockquote>
+<p>
+ If you want scenery items to be automatically emphasized, you can manually set them as keyworded, or include a line like the following (which would add emphasis to &quot;desk&quot; in the final line above):
+<p>
+<blockquote><font color="#000080"> When play begins: now every scenery thing is keyworded.</font></blockquote>
+<p>
+ The emphasized word will be the final word of the object's printed name. To change this, you can use the object's &quot;keyword&quot; text property, which should be one of the other words in the printed name. You can also define an object as &quot;keywordless,&quot; in which case it will never be automatically emphasized.
+<p>
+<blockquote><font color="#000080"> A book of memories with keyword &quot;book&quot; is in the Office. Some scattered cigarettes are a keywordless thing in the Office.</font></blockquote>
+<p>
+ Produces:
+<p>
+<blockquote><font color="#000080"> &quot;You can also see a *book* of memories and some scattered cigarettes here.&quot;</font></blockquote>
+<p>
+ Automatic emphasis normally occurs when looking, opening or taking inventory. If you want to disable one of these you can use code like the following:
+<p>
+<blockquote><font color="#000080"> The Keyword Interface highlight objects when looking rule is not listed in any rulebook.</font></blockquote>
+<p>
+ Conversely, if you want object highlighting during other times, you can use code like this:
+<p>
+<blockquote><font color="#000080"> Rule for printing the name of a thing (called item) while asking which do you mean:<br>&nbsp;&nbsp;&nbsp;&nbsp; carry out the object keywording activity with item.</font></blockquote>
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 3: Directions</b></font>
+<p>
+ When direction keyword highlighting is set to true and cardinal directions are wrapped in brackets in room descriptions, these will be emphasized as they are printed.
+<p>
+<blockquote><font color="#000080"> &quot;Gloomy passages depart to the [south] and [east].&quot;</font></blockquote>
+<p>
+ Compassless navigation as seen in Blue Lacuna can be implemented by adding a directional keyword as a synonym for the intended direction, limiting this to the specific room in which that keyword is valid, and wrapping the relevant word in &quot;d&quot; and &quot;x&quot; tags in the descriptive text.
+<p>
+<blockquote><font color="#000080"> &quot;Gloomy passages depart down a dusty set of [d]stairs[x] and through a wide [d]passage[x].&quot; Understand &quot;stairs&quot; as south when location is Gloomy Tunnel. Understand &quot;passage&quot; as east when location is Gloomy Tunnel.</font></blockquote>
+<p>
+ An &quot;exits&quot; verb is included with Keyword Interface to assist blind users or those without color interpreters (who in the above example would have no way of knowing which words correspond to movement). EXITS lists all of the cardinal exits from the current location. If your game uses compassless navigation, you may want to extend this verb to print your keywords instead (see the &quot;Gnome's Holiday&quot; example below for one way to do this).
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 4: Topics</b></font>
+<p>
+ Since there are so many different conversation systems, support for highlighting conversation topics is only vestigial. It's turned on when &quot;topic keyword highlighting&quot; is set to true and you can invoke it with the &quot;[t]topic[x]&quot; wrapper, but everything else will have to be done by hand to match your own conversation system. Again, see &quot;Gnome's Holiday&quot; for a simple example of a keyword-based conversation system.
+<p>
+<p><a name=docsec5><b><font color="#000000">Section 5: Parser Messages</b></font>
+<p>
+ The extension can also style parser messages differently from normal game text. This may be useful to authors who wish to differentiate error messages (&quot;I didn't understand the first part of that.&quot;) from in-game admonishments (&quot;You wouldn't be caught dead wearing that.&quot;)
+<p>
+ Parser error highlighting is disabled by default; you can turn it on with
+<p>
+<blockquote><font color="#000080"> Parser highlighting is true.</font></blockquote>
+<p>
+ If your game defines new parser error messages or rewrites existing ones, you should wrap them in the &quot;as the parser&quot; and &quot;as normal&quot; say statements:
+<p>
+<blockquote><font color="#000080"> Understand &quot;floop&quot; as a mistake (&quot;[as the parser]To cast a spell, you must cast it on something, like FLOOP THE MATTRESS.[as normal]&quot;).</font></blockquote>
+<p>
+<p><a name=docsec6><b><font color="#000000">Section 6: Control</b></font>
+<p>
+ As noted above, authors can enable or disable keyword highlighting for any component. Players also have control over emphasis style through the KEYWORD verb, which brings up a menu with flexible options, customized to which keywords are enabled and with instructions for activating a screen reader mode for blind players.
+<p>
+ If keywords are a crucial component of your game, you can add the following:
+<p>
+<blockquote><font color="#000080"> Keywords required is true.</font></blockquote>
+<p>
+ This will bring up a message before your game begins ensuring that players can see the keyword highlighting, and giving them an option to adjust styles.
+<p>
+ You can show some stock explanatory text, customized to which keywords are enabled, by using the following phrase, perhaps in the carry out rule for an &quot;about&quot; command:
+<p>
+<blockquote><font color="#000080"> show KI message for keyword-introduction</font></blockquote>
+<p>
+ To change the default color values at the start of play, authors can use syntax like:
+<p>
+<blockquote><font color="#000080"> The style of object-word is keyword-cyan.</font></blockquote>
+<p>
+ The four modes are object-word, direction-word, topic-word, and parser-word. For Glulx games, possible styles are keyword-color1-style and keyword-color2-style; for z-code games, they are keyword-red, keyword-green, keyword-yellow, keyword-blue, keyword-magenta, keyword-cyan, keyword-white, and keyword-black. Both VMs provide the additional styles keyword-bold-style, keyword-italics-style, keyword-fixedwidth-style, and keyword-no-style.
+<p>
+ To change the Glulx colors, you can adjust g-color1 and g-color2 by amending the Table of Common Color Values-- see the documentation for &quot;Glulx Text Effects&quot; by Emily Short for more information.
+<p>
+<blockquote><font color="#000080"> Table of Common Color Values (amended)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> glulx color value</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> assigned number</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-color1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 15645627</font></font></td></tr></table></blockquote>
+<p>
+ All messages the extension prints are customizable by amending the Table of Keyword Interface messages. Open up the extension source to see the full list of messages.
+<p>
+<p><a name=docsec7><b><font color="#000000">Section 7: Screen Reader Mode</b></font>
+<p>
+ By typing &quot;screen reader&quot; or selecting the appropriate option from the keyword customization menu, players can set the internal variable &quot;screen reader mode&quot; to true. Blind players and those without color interpreters can activate this mode. This might be useful to provide an alternative if your game contains other visual components such as a map, or uses color in puzzles.
+<p>
+ The extension provides two verbs to assist color-challenged players: a &quot;things&quot; command which prints a list of nearby objects, and an &quot;exits&quot; command which summarizes the nearby directions. If you're using compassless navigation, you may want to customize the exits command to make use of your custom direction names. Additionally, if your game features conversation, strongly consider building a &quot;topics&quot; command to round out the set.
+<p>
+<p><a name=docsec8><b><font color="#000000">Section 8: Disambiguation</b></font>
+<p>
+ Inform's normal disambiguation assumes that every command begins with a verb, which means conflicts between keywords, and between keywords and verbs, are hard or impossible to control. The best solution is to make sure your object, direction, and topic keywords have no overlap.
+<p>
+ *If an object and direction keyword* are in the same scope, the parser silently assumes the player means the direction keyword, and will print a seemingly useless &quot;(the object)&quot; clarification if the player manually examines that object instead.
+<p>
+ *If a highlighted keyword matches a verb*, the verb will take precedence. For example, typing &quot;set&quot; to reference a chess set would instead produce the message &quot;What do you want to set?&quot; The best way to avoid this is to change the keyword and description of the object to avoid mentioning the verb word-- in this case &quot;chessboard&quot; might be a good substitute. You could also disable the verb if it's not one your story uses (see &quot;Overriding existing commands&quot; in the docs).
+<p>
+ *Conversation systems should take precedence over objects* since this is what players will expect. See the example below for one implementation of this.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Keyword Interface-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Keyword Interface-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Sense of Direction</font></b></a><br>A simple usage of the extension to print bold compass directions.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Keyword Interface.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Keyword Interface.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Gnome's Holiday</font></b></a><br>A full example of emphasized objects, compassless directions, and conversation topics.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ We'll create a slightly longer scenario with several locations and a simple puzzle, to demonstrate the full potential of Keyword Interface. This story has &quot;keywords required&quot; set to true, so it begins with a menu that helps players calibrate keywords.
+<p>
+ We implement an extremely simple conversation system to demonstrate emphasized topic words. Note that a real conversation system would need to be much more robust and elaborate. We'll also create a variation on the exits verb to show our compassless exits.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1004(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]The Gnome[=0x0027=]s Holiday[=0x0022=][=0x000A=][=0x000A=]Include Keyword Interface by Aaron Reed. Use American dialect.[=0x000A=][=0x000A=]Topic keyword highlighting is true. Parser highlighting is true. Keywords required is true.[=0x000A=][=0x000A=]After printing the banner text: say [=0x0022=]First time players type ABOUT for more instructions.[=0x0022=].[=0x000A=][=0x000A=]Section - Conversation[=0x000A=][=0x000A=]keyword-asking is an action applying to one thing. Understand [=0x0022=][a speakable][=0x0022=] as keyword-asking when the number of other people in location [=0x003E=] 0.[=0x000A=][=0x000A=]Carry out keyword-asking:[=0x000A=][=0x0009=]let subject be a random other person in the location;[=0x000A=][=0x0009=]say [=0x0022=][response of noun][paragraph break][=0x0022=].[=0x000A=][=0x000A=]A speakable is a kind of thing. A speakable has some text called the response. Instead of doing anything other than keyword-asking to a speakable: say [=0x0022=]That[=0x0027=]s merely a topic of conversation.[=0x0022=]. Does the player mean doing something other than keyword-asking to a speakable: it is very unlikely.[=0x000A=][=0x000A=]Section - Exits[=0x000A=][=0x000A=]Every room has some text called the exits text.[=0x000A=][=0x000A=]First carry out listing exits:[=0x000A=][=0x0009=]unless the exits text of location is [=0x0022=][=0x0022=]:[=0x000A=][=0x0009=][=0x0009=]say the exits text of location;[=0x000A=][=0x0009=][=0x0009=]say line break;[=0x000A=][=0x0009=]stop the action.[=0x000A=][=0x000A=]After looking: try listing exits.[=0x000A=][=0x000A=]Section - Instructions[=0x000A=][=0x000A=]Understand [=0x0022=]about[=0x0022=] as requesting the about text. Requesting the about text is an action out of world applying to nothing. Carry out requesting the about text: show KI message for keyword-introduction.[=0x000A=][=0x000A=]Section - Game[=0x000A=][=0x000A=]Gnome[=0x0027=]s Garden is a room with description [=0x0022=]Brightly pastel flowers dot this well-kept garden, bordering a button-cute shack with whimsical stylings on the edge of the river, which is spanned here by a [drawbridge].[=0x0022=] and exits text [=0x0022=]A [d]path[x] of cherry-colored bricks winds off towards some distant hills, while the [if shack door is open][d]door[x] to the gnome[=0x0027=]s shack stands open[else]door to the gnome[=0x0027=]s shack is closed[end if][if drawbridge is open]. The lowered drawbridge spans the river to a treasure-strewn [d]wonderland[x][end if].[=0x0022=]. Understand [=0x0022=]path[=0x0022=] as west when location is Gnome[=0x0027=]s Garden.[=0x000A=][=0x000A=]A stone table is a keywordless fixed in place supporter in Gnome[=0x0027=]s Garden. On the table is a copy of the Daily Gnomon with description [=0x0022=]You can[=0x0027=]t read gnomish, but you can make a great gnocchi.[=0x0022=] The keyword of the Daily Gnomon is [=0x0022=]copy[=0x0022=]. The button-cute shack is scenery in Gnome[=0x0027=]s Garden. Instead of entering shack, try going north.[=0x000A=][=0x000A=]The shack door is a closed locked undescribed door with keyword [=0x0022=]door[=0x0022=]. It is north of Gnome[=0x0027=]s Garden and south of Cozy Shack. The can[=0x0027=]t go through undescribed doors rule is not listed in any rulebook. Instead of going inside in Gnome[=0x0027=]s Garden, try going north.[=0x000A=][=0x000A=]The drawbridge is a closed unopenable door. [=0x0022=][if closed]The drawbridge is raised, allowing passage by a steady stream of tiny steamboats, but preventing access to the treasure-strewn wonderland on the other side of the river[else]Wee steamboats queue impatiently behind the lowered drawbridge[end if].[=0x0022=]. It is east of Gnome[=0x0027=]s Garden and west of the Treasure-Strewn Wonderland. The description of drawbridge is [=0x0022=][if closed]If only you could find a way to lower it and cross the river![else]The treasure-strewn wonderland across the river awaits![end if][=0x0022=].[=0x000A=][=0x000A=]The cherry-brick path is a backdrop. It is everywhere. Understand [=0x0022=]cherry/cherry-colored/colored[=0x0022=] as path.[=0x000A=][=0x000A=]Golden Pasture is a room with description [=0x0022=]The grass here is thick and heavy, sparkling with gold and amber hues.[=0x0022=] and exits text [=0x0022=]Only the [d]path[x] back to the garden is clear.[=0x0022=] Golden Pasture is west of Gnome[=0x0027=]s Garden. Understand [=0x0022=]path[=0x0022=] as east when location is Golden Pasture.[=0x000A=][=0x000A=]The gnome is a person in Golden Pasture. [=0x0022=]A [gnome] perches on a checkered toadstool here, stroking his beard in relaxed contentment.[=0x0022=] The description is [=0x0022=]Dressed in brightly colored clothes, he has the cheerful air of someone on holiday.[=0x0022=].[=0x000A=][=0x000A=]After examining the gnome, say [=0x0022=]You could ask him about his [t]dragon[x], the [t]weather[x], or the [t]drawbridge[x].[=0x0022=].[=0x000A=][=0x000A=]A pet dragon creature is a female animal in Golden Pasture. [=0x0022=]Clinging anxiously to the gnome[=0x0027=]s cap is a tiny bronze [o]creature[x].[=0x0022=]. The description is [=0x0022=]Looking closer, you see she is a beautiful baby dragon. She regards you [if we have keyword-asked the personality topic]with a friendly twinkle in her eye[else]fearfully, clutching the gnome[=0x0027=]s hat with an almost comically tight grip[end if].[=0x0022=][=0x000A=][=0x000A=]The dragon topic is a speakable with response [=0x0022=][=0x0027=]You like her?[=0x0027=] the gnome says fondly, petting the dragon which watches you nervously. [=0x0027=]She[=0x0027=]s named [t]Quinnabel[x].[=0x0027=][=0x0022=].[=0x000A=][=0x000A=]The Quinnabel topic is a speakable with response [=0x0022=][=0x0027=]Found her in an old mushroom mine,[=0x0027=] the gnome says, warming to his subject. The dragon sniffs you tentatively. [=0x0027=]She[=0x0027=]s got quite a [t]personality[x].[=0x0027=][=0x0022=].[=0x000A=][=0x000A=]The personality topic is a speakable with response [=0x0022=][=0x0027=]Oh, she[=0x0027=]s shy at first, but she[=0x0027=]ll warm up to you right away if you let her.[=0x0027=] And sure enough, the dragon finally seems to take a liking to you, and purrs contentedly as you scratch it behind the ears.[=0x0022=]. After keyword-asking the personality topic for the first time: say [=0x0022=][=0x0027=]See, you[=0x0027=]re not such a bad sort,[=0x0027=] the gnome says. [=0x0027=]Why don[=0x0027=]t you take this key and see to that drawbridge yourself.[=0x0027=] And he hands you a scuffed silver key (oversized even for you).[=0x0022=]; move silver key to player. The silver key unlocks the shack door.[=0x000A=][=0x000A=]The drawbridge topic is a speakable with response [=0x0022=][=0x0027=]Hrmph,[=0x0027=] the gnome mutters, crossing his arms defiantly, [=0x0027=]I[=0x0027=]m supposed to be on vacation.[=0x0027=][=0x0022=].[=0x000A=][=0x000A=]The weather topic is a speakable with response [=0x0022=][=0x0027=]Looks like another day of beautiful sunshine again,[=0x0027=] he grumbles.[=0x0022=].[=0x000A=][=0x000A=]The gnome carries dragon topic, Quinnabel topic, personality topic, drawbridge topic, and weather topic.[=0x000A=][=0x000A=]The description of Cozy Shack is [=0x0022=]Strewn with bric-a-brac; your eyes are drawn immediately to the prominent [lever] on the riverward wall.[=0x0022=]. The exits text of Cozy Shack is [=0x0022=]The only place to go is back [outside].[=0x0022=]. Instead of going outside in Cozy Shack, try going south. Instead of exiting in Cozy Shack, try going south.[=0x000A=][=0x000A=]A lever is an undescribed device in Cozy Shack. Instead of pushing or pulling the lever, try switching on the lever. After switching on the lever: now drawbridge is open; say [=0x0022=]You hear a splash and a creak from outside the shack.[=0x0022=].[=0x000A=][=0x000A=]After going to Treasure-Strewn Wonderland for the first time: say [=0x0022=]You enter the land of treasure. Congratulations![=0x0022=]; end the story saying [=0x0022=]You have won[=0x0022=]. Understand [=0x0022=]wonderland[=0x0022=] as east when location is Gnome[=0x0027=]s Garden.[=0x000A=][=0x000A=]Test me with [=0x0022=]copy / drawbridge / door / open door / path / x path / gnome / drawbridge / dragon / Quinnabel / personality / path / unlock door / open it / exits / door / pull lever / out / wonderland[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1004()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;The Gnome's Holiday&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Keyword Interface by Aaron Reed. Use American dialect.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Topic keyword highlighting is true. Parser highlighting is true. Keywords required is true.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After printing the banner text: say &quot;First time players type ABOUT for more instructions.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Section - Conversation</font></blockquote>
+<p>
+<blockquote><font color="#000080"> keyword-asking is an action applying to one thing. Understand &quot;[a speakable]&quot; as keyword-asking when the number of other people in location &gt; 0.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Carry out keyword-asking:<br>&nbsp;&nbsp;&nbsp;&nbsp; let subject be a random other person in the location;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;[response of noun][paragraph break]&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A speakable is a kind of thing. A speakable has some text called the response. Instead of doing anything other than keyword-asking to a speakable: say &quot;That's merely a topic of conversation.&quot;. Does the player mean doing something other than keyword-asking to a speakable: it is very unlikely.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Section - Exits</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Every room has some text called the exits text.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> First carry out listing exits:<br>&nbsp;&nbsp;&nbsp;&nbsp; unless the exits text of location is &quot;&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say the exits text of location;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say line break;<br>&nbsp;&nbsp;&nbsp;&nbsp; stop the action.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After looking: try listing exits.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Section - Instructions</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Understand &quot;about&quot; as requesting the about text. Requesting the about text is an action out of world applying to nothing. Carry out requesting the about text: show KI message for keyword-introduction.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Section - Game</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Gnome's Garden is a room with description &quot;Brightly pastel flowers dot this well-kept garden, bordering a button-cute shack with whimsical stylings on the edge of the river, which is spanned here by a [drawbridge].&quot; and exits text &quot;A [d]path[x] of cherry-colored bricks winds off towards some distant hills, while the [if shack door is open][d]door[x] to the gnome's shack stands open[else]door to the gnome's shack is closed[end if][if drawbridge is open]. The lowered drawbridge spans the river to a treasure-strewn [d]wonderland[x][end if].&quot;. Understand &quot;path&quot; as west when location is Gnome's Garden.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A stone table is a keywordless fixed in place supporter in Gnome's Garden. On the table is a copy of the Daily Gnomon with description &quot;You can't read gnomish, but you can make a great gnocchi.&quot; The keyword of the Daily Gnomon is &quot;copy&quot;. The button-cute shack is scenery in Gnome's Garden. Instead of entering shack, try going north.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The shack door is a closed locked undescribed door with keyword &quot;door&quot;. It is north of Gnome's Garden and south of Cozy Shack. The can't go through undescribed doors rule is not listed in any rulebook. Instead of going inside in Gnome's Garden, try going north.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The drawbridge is a closed unopenable door. &quot;[if closed]The drawbridge is raised, allowing passage by a steady stream of tiny steamboats, but preventing access to the treasure-strewn wonderland on the other side of the river[else]Wee steamboats queue impatiently behind the lowered drawbridge[end if].&quot;. It is east of Gnome's Garden and west of the Treasure-Strewn Wonderland. The description of drawbridge is &quot;[if closed]If only you could find a way to lower it and cross the river![else]The treasure-strewn wonderland across the river awaits![end if]&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The cherry-brick path is a backdrop. It is everywhere. Understand &quot;cherry/cherry-colored/colored&quot; as path.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Golden Pasture is a room with description &quot;The grass here is thick and heavy, sparkling with gold and amber hues.&quot; and exits text &quot;Only the [d]path[x] back to the garden is clear.&quot; Golden Pasture is west of Gnome's Garden. Understand &quot;path&quot; as east when location is Golden Pasture.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The gnome is a person in Golden Pasture. &quot;A [gnome] perches on a checkered toadstool here, stroking his beard in relaxed contentment.&quot; The description is &quot;Dressed in brightly colored clothes, he has the cheerful air of someone on holiday.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After examining the gnome, say &quot;You could ask him about his [t]dragon[x], the [t]weather[x], or the [t]drawbridge[x].&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A pet dragon creature is a female animal in Golden Pasture. &quot;Clinging anxiously to the gnome's cap is a tiny bronze [o]creature[x].&quot;. The description is &quot;Looking closer, you see she is a beautiful baby dragon. She regards you [if we have keyword-asked the personality topic]with a friendly twinkle in her eye[else]fearfully, clutching the gnome's hat with an almost comically tight grip[end if].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The dragon topic is a speakable with response &quot;'You like her?' the gnome says fondly, petting the dragon which watches you nervously. 'She's named [t]Quinnabel[x].'&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Quinnabel topic is a speakable with response &quot;'Found her in an old mushroom mine,' the gnome says, warming to his subject. The dragon sniffs you tentatively. 'She's got quite a [t]personality[x].'&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The personality topic is a speakable with response &quot;'Oh, she's shy at first, but she'll warm up to you right away if you let her.' And sure enough, the dragon finally seems to take a liking to you, and purrs contentedly as you scratch it behind the ears.&quot;. After keyword-asking the personality topic for the first time: say &quot;'See, you're not such a bad sort,' the gnome says. 'Why don't you take this key and see to that drawbridge yourself.' And he hands you a scuffed silver key (oversized even for you).&quot;; move silver key to player. The silver key unlocks the shack door.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The drawbridge topic is a speakable with response &quot;'Hrmph,' the gnome mutters, crossing his arms defiantly, 'I'm supposed to be on vacation.'&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The weather topic is a speakable with response &quot;'Looks like another day of beautiful sunshine again,' he grumbles.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The gnome carries dragon topic, Quinnabel topic, personality topic, drawbridge topic, and weather topic.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The description of Cozy Shack is &quot;Strewn with bric-a-brac; your eyes are drawn immediately to the prominent [lever] on the riverward wall.&quot;. The exits text of Cozy Shack is &quot;The only place to go is back [outside].&quot;. Instead of going outside in Cozy Shack, try going south. Instead of exiting in Cozy Shack, try going south.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A lever is an undescribed device in Cozy Shack. Instead of pushing or pulling the lever, try switching on the lever. After switching on the lever: now drawbridge is open; say &quot;You hear a splash and a creak from outside the shack.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After going to Treasure-Strewn Wonderland for the first time: say &quot;You enter the land of treasure. Congratulations!&quot;; end the story saying &quot;You have won&quot;. Understand &quot;wonderland&quot; as east when location is Gnome's Garden.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;copy / drawbridge / door / open door / path / x path / gnome / drawbridge / dragon / Quinnabel / personality / path / unlock door / open it / exits / door / pull lever / out / wonderland&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

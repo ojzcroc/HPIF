@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode2905(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include After Not Doing Something by Ron Newcomb.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2905()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>After Not Doing Something<font color="#404040"> by </font>Ron Newcomb</b><p><small></small><p>Allows us to write rules that happen after an action fails, such as 'After not examining or searching something'<p><p><hr><p>
+<p>
+ Inform has always allowed us to write rules which take place after a character has done something.
+<p>
+<blockquote><font color="#000080"> After doing something to the fragile wineglass, say &quot;Careful, that's real crystal.&quot;</font></blockquote>
+<p>
+ But Inform doesn't allow us the same flexibility if whatever action we were attempting failed. This extension addresses this by allowing us to write &quot;after not&quot; rules.
+<p>
+<blockquote><font color="#000080"> After not taking or climbing something, say &quot;Maybe if you washed the butter off your fingers?&quot;</font></blockquote>
+<p>
+ Just like the After and Instead rules, the After Not rules will only run the single most applicable rule, unless of course that rule ends with &quot;make no decision&quot;.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="After Not Doing Something.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="After Not Doing Something.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">I Try, and I Try</font></b></a><br>Some people are never happy.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode2906(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]I Try, and I Try[=0x0022=][=0x000A=][=0x000A=]Include after not doing something by Ron Newcomb.[=0x000A=][=0x000A=]Your parent[=0x0027=]s house is a room. Your disapproving mother is a woman, here. A TV is fixed in place, here.[=0x000A=][=0x000A=]After not doing something, say [=0x0022=]In the background, you hear your mother sigh.  [=0x0027=]Oh if you[=0x0027=]d only worked harder, [the current action] wouldn[=0x0027=]t be a problem now, would it?[=0x0027=][=0x0022=][=0x000A=][=0x000A=]After not pushing or rubbing something, say [=0x0022=]Your mother sighs.  [=0x0027=]Here, *I[=0x0027=]ll* get it for you.[=0x0027=][=0x0022=][=0x000A=][=0x000A=]Test me with [=0x0022=]sing / sorry / turn on TV / dust TV / push TV / nap[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2906()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;I Try, and I Try&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include after not doing something by Ron Newcomb.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Your parent's house is a room. Your disapproving mother is a woman, here. A TV is fixed in place, here.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After not doing something, say &quot;In the background, you hear your mother sigh.  'Oh if you'd only worked harder, [the current action] wouldn't be a problem now, would it?'&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After not pushing or rubbing something, say &quot;Your mother sighs.  'Here, *I'll* get it for you.'&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;sing / sorry / turn on TV / dust TV / push TV / nap&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

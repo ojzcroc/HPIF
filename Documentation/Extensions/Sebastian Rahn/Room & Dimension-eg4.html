@@ -1,0 +1,633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1153(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Room [=0x0026=] Dimension by Sebastian Rahn.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1153()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Room &amp; Dimension<font color="#404040"> by </font>Sebastian Rahn</b><p><small></small><p><p><hr><p>
+<p>
+ This extension provides the possibility to put an extra 2D layer upon rooms. This can be handy, if visual feedback is required while moving the player or other things inside a room manually.
+<p>
+ It requires both the Glulx Text Effects and Basic Screen Effects by Emily Short to run properly. The extension uses one Glulx custom style (special-style-2) and defines say &quot;[default letters]&quot; as say &quot;[roman type]&quot;.
+<p>
+ First, we will need to create a Table to save objects and to print the map of the room we want to visualize. For this we can use one of the templates that are provided within the extension (look the last example below), depending on how broad we want the room to be (in this version it is limited to 28 sectors maximum). The width is both visible in the name of the table, in case of the templates, and the actual Width Entry.
+<p>
+ The Width Entry is crucial for the program to determine the columns it has access to and must always fit the actual map width otherwise it will create a bug (this is also true for the Height Entry in the current version).
+<p>
+ There are two types of templates that can be identified by the bracketed number next to the table name: extended (the one with the 0. and 1. numeration) and normal (with no punctuation). Since the number of columns seems to be limited in Inform 7, the program is tricked to jump from one table to another. Therefore, the table with the (0.x) number represents the left side of the map and the one with the (1.x) the extended right side.
+<p>
+ It is important for both tables to have a correct Height and Width Entry.
+<p>
+ We must then signalise that this room is actually printable. For this we use the location name and connect it with one or more table names. This happens in a continuation of the Table 997 - 'Sectors' which looks like this:
+<p>
+<blockquote><font color="#000080"> Table 997 - Sectors (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Sector Room</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 2</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> My Room</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 100</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> My Room 2</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 101</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 102</font></font></td></tr></table></blockquote>
+<p>
+ 'My Room 2' uses an extended table with the table in the Table Entry representing the left side of the map and the one in the Table 2 Entry the right side.
+<p>
+ After we decided on Height and Width and established a connection between rooms and tables we can start to fill the map with objects. Every thing has two parameters to save its current coordinates: X-Axis -&gt; a number representing the current row position and Y-Axis -&gt; a text representing the current column position. We don't have to declare those manually however. It is sufficient if we place the objects on the map and make sure our source code includes:
+<p>
+<blockquote><font color="#000080"> When play begins:<br> Spread coordinates.</font></blockquote>
+<p>
+ The program will then run through all maps and give coordinates to every object it can find automatically. It should be noted however that an object on a map doesn't have to be in the room that it is corresponding to (and won't be moved there with any of the commands this extension provides except for &quot;switch maps&quot; which is not supposed to be used by ourselves). This might cause confusion within the program so we always have to make sure that an object on a map of a room is actually in said room.
+<p>
+ Since we want to see those objects on the map, we will have to provide them with Avatars (we can hardly want to use its printed name or its description for that matter). To do this we have to continue yet another table:
+<p>
+<blockquote><font color="#000080"> Table 991 - Avatars (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Entity</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Avatar</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Dummy</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;D&quot;</font></font></td></tr></table></blockquote>
+<p>
+ The program differs between the Avatar of a person and of anything else. A person's Avatar will always be printed in extra bold letters while the ones of others will not.
+<p>
+ Whenever the truth state 'Show Map' is true, the program will print the map of the location in which the player is moving (he himself is always represented by an arrow).
+<p>
+ Next to the objects that we create for our program, there are three special kinds of things that are provided with the extension. They all have in common that they've actually no coherent position on the map, since they are either not suppose to represent one entity or their presence is only temporary (in case of Entrance Points).
+<p>
+ 1. None -&gt; Is a thing and refers to empty space. An object on the map can move on a None field without anything happening.
+<p>
+ 2. Wall -&gt; Is a kind. Every object, that is a Wall, will not allow anything to take its place. If an object tries anyways, a short message will appear (can be avoided by changing the truth state of 'uncommented' to true) and the action will be stopped.
+<p>
+ 3. Entrance Points -&gt; Again a kind. They enable the player to switch between rooms, while 'Show Map' is true. It should be noted that the coordinates of an object will currently not change if it should go into another room while 'Show Map' is false.
+<p>
+ There are also two new kinds of persons: hostile person and friendly person. A friendly person will switch places with the player if the player walks into him while hostile ones serve as another kind of wall in a sense. If the player walks into an object which the extension doesn't know for certain (that would be anything that wasn't mentioned above) it will create an ugly bug.
+<p>
+ The extension differs between dark rooms and normal rooms when printing the map. A normal will always show the whole map while a dark room without a light source will only show the actual surroundings of the player.
+<p>
+ It should be mentioned that the status line will undergo slight changes once 'Show Map' is true. It will then show the current position on the map where the player is standing. To remove this effect either ignore the Map headline rule or change Table 801 - Map Headline in section 2.6. In case the player is in a dark room a question mark is used instead of coordinates.
+<p>
+ The following examples should serve as a quick overview about what is possible with the extension as it will explain several important commands in a more practical way.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">One Room creation</font></b></a><br>Creating a small test room and a command that will either make the corresponding map appear or disappear.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Lair of Don Capone</font></b></a><br>A small game scenario to test room connections, if a person stands next to another and if the program will recognize obstacles like walls and hostile persons.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg3><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension-eg3.html#eg3" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>C</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension-eg3.html#eg3" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Curse of Quapeck</font></b></a><br>A longer example where several possibilities of how to use the given tools are experimented with.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg4><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension.html#eg4" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>D</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension.html#eg4" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Templates</font></b></a><br>Provides Copy &amp; Paste templates for easy use.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ Width: 28
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1154(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9960 - Template (0.28)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]28[=0x000A=][=0x000A=]Table 9959 - Template (1.28)[=0x000A=]Number[=0x0009=]Q17[=0x0009=]R18[=0x0009=]S19[=0x0009=]T20[=0x0009=]U21[=0x0009=]V22[=0x0009=]W23[=0x0009=]X24[=0x0009=]Y25[=0x0009=]Z26[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]28[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1154()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9960 - Template (0.28)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 28</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9959 - Template (1.28)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> R18</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> S19</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> T20</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> U21</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> V22</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> W23</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> X24</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Y25</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Z26</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 28</font></font></td></tr></table></blockquote>
+<p>
+ Width: 27
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1155(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9997 - Template (0.27)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]27[=0x000A=][=0x000A=]Table 9996 - Template (1.27)[=0x000A=]Number[=0x0009=]Q17[=0x0009=]R18[=0x0009=]S19[=0x0009=]T20[=0x0009=]U21[=0x0009=]V22[=0x0009=]W23[=0x0009=]X24[=0x0009=]Y25[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]27[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1155()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9997 - Template (0.27)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 27</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9996 - Template (1.27)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> R18</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> S19</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> T20</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> U21</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> V22</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> W23</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> X24</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Y25</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 27</font></font></td></tr></table></blockquote>
+<p>
+ Width: 26
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1156(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9995 - Template (0.26)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]26[=0x000A=][=0x000A=]Table 9994 - Template (1.26)[=0x000A=]Number[=0x0009=]Q17[=0x0009=]R18[=0x0009=]S19[=0x0009=]T20[=0x0009=]U21[=0x0009=]V22[=0x0009=]W23[=0x0009=]X24[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]26[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1156()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9995 - Template (0.26)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 26</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9994 - Template (1.26)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> R18</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> S19</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> T20</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> U21</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> V22</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> W23</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> X24</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 26</font></font></td></tr></table></blockquote>
+<p>
+ Width: 25
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1157(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9993 - Template (0.25)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]25[=0x000A=][=0x000A=]Table 9992 - Template (1.25)[=0x000A=]Number[=0x0009=]Q17[=0x0009=]R18[=0x0009=]S19[=0x0009=]T20[=0x0009=]U21[=0x0009=]V22[=0x0009=]W23[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]25[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1157()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9993 - Template (0.25)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 25</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9992 - Template (1.25)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> R18</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> S19</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> T20</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> U21</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> V22</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> W23</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 25</font></font></td></tr></table></blockquote>
+<p>
+ Width: 24
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1158(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9991 - Template (0.24)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]24[=0x000A=][=0x000A=]Table 9990 - Template (1.24)[=0x000A=]Number[=0x0009=]Q17[=0x0009=]R18[=0x0009=]S19[=0x0009=]T20[=0x0009=]U21[=0x0009=]V22[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]24[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1158()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9991 - Template (0.24)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 24</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9990 - Template (1.24)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> R18</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> S19</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> T20</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> U21</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> V22</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 24</font></font></td></tr></table></blockquote>
+<p>
+ Width: 23
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1159(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9989 - Template (0.23)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]23[=0x000A=][=0x000A=]Table 9988 - Template (1.23)[=0x000A=]Number[=0x0009=]Q17[=0x0009=]R18[=0x0009=]S19[=0x0009=]T20[=0x0009=]U21[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]23[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1159()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9989 - Template (0.23)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 23</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9988 - Template (1.23)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> R18</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> S19</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> T20</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> U21</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 23</font></font></td></tr></table></blockquote>
+<p>
+ Width: 22
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1160(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9987 - Template (0.22)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]22[=0x000A=][=0x000A=]Table 9986 - Template (1.22)[=0x000A=]Number[=0x0009=]Q17[=0x0009=]R18[=0x0009=]S19[=0x0009=]T20[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]22[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1160()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9987 - Template (0.22)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 22</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9986 - Template (1.22)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> R18</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> S19</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> T20</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 22</font></font></td></tr></table></blockquote>
+<p>
+ Width: 21
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1161(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9985 - Template (0.21)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]21[=0x000A=][=0x000A=]Table 9984 - Template (1.21)[=0x000A=]Number[=0x0009=]Q17[=0x0009=]R18[=0x0009=]S19[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]21[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1161()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9985 - Template (0.21)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 21</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9984 - Template (1.21)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> R18</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> S19</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 21</font></font></td></tr></table></blockquote>
+<p>
+ Width: 20
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1162(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9983 - Template (0.20)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]20[=0x000A=][=0x000A=]Table 9982 - Template (1.20)[=0x000A=]Number[=0x0009=]Q17[=0x0009=]R18[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]20[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1162()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9983 - Template (0.20)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 20</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9982 - Template (1.20)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> R18</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 20</font></font></td></tr></table></blockquote>
+<p>
+ Width: 19
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1163(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9981 - Template (0.19)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]19[=0x000A=][=0x000A=]Table 9980 - Template (1.19)[=0x000A=]Number[=0x0009=]Q17[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]19[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1163()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9981 - Template (0.19)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 19</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9980 - Template (1.19)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 19</font></font></td></tr></table></blockquote>
+<p>
+ Width: 18
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1164(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9979 - Template (0.18)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]18[=0x000A=][=0x000A=]Table 9978 - Template (1.18)[=0x000A=]Number[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]a number[=0x0009=]18[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1164()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9979 - Template (0.18)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> a number None None None None None None None None None None None None None None None None None a number 18</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 9978 - Template (1.18)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> a number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 18</font></font></td></tr></table></blockquote>
+<p>
+ Width: 17
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1165(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9977 - Template (17)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]17[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1165()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9977 - Template (17)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 RE Height Width<br> a number None None None None None None None None None None None None None None None None None a number 17</font></blockquote>
+<p>
+ Width: 16
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1166(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9976 - Template (16)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]16[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1166()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9976 - Template (16)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 RE Height Width<br> a number None None None None None None None None None None None None None None None None a number 16</font></blockquote>
+<p>
+ Width: 15
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1167(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9975 - Template (15)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]15[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1167()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9975 - Template (15)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 RE Height Width<br> a number None None None None None None None None None None None None None None None a number 15</font></blockquote>
+<p>
+ Width: 14
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1168(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9974 - Template (14)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]14[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1168()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9974 - Template (14)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 RE Height Width<br> a number None None None None None None None None None None None None None None a number 14</font></blockquote>
+<p>
+ Width: 13
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1169(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9973 - Template (13)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]13[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1169()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9973 - Template (13)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 RE Height Width<br> a number None None None None None None None None None None None None None a number 13</font></blockquote>
+<p>
+ Width: 12
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1170(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9972 - Template (12)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]12[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1170()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9972 - Template (12)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 RE Height Width<br> a number None None None None None None None None None None None None a number 12</font></blockquote>
+<p>
+ Width: 11
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1171(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9971 - Template (11)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]11[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1171()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9971 - Template (11)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 RE Height Width<br> a number None None None None None None None None None None None a number 11</font></blockquote>
+<p>
+ Width: 10
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1172(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9970 - Template (10)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]10[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1172()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9970 - Template (10)<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 RE Height Width<br> a number None None None None None None None None None None a number 10</font></blockquote>
+<p>
+ Width: 9
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1173(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9969 - Template (9)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]9[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1173()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9969 - Template (9)<br> Number LE A1 B2 C3 D4 E5 F6 G7 RE Height Width<br> a number None None None None None None None None None a number 9</font></blockquote>
+<p>
+ Width: 8
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1174(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9968 - Template (8)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]8[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1174()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9968 - Template (8)<br> Number LE A1 B2 C3 D4 E5 F6 RE Height Width<br> a number None None None None None None None None a number 8</font></blockquote>
+<p>
+ Width: 7
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1175(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9967 - Template (7)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]7[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1175()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9967 - Template (7)<br> Number LE A1 B2 C3 D4 E5 RE Height Width<br> a number None None None None None None None a number 7</font></blockquote>
+<p>
+ Width: 6
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1176(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9966 - Template (6)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]6[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1176()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9966 - Template (6)<br> Number LE A1 B2 C3 D4 RE Height Width<br> a number None None None None None None a number 6</font></blockquote>
+<p>
+ Width: 5
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1177(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9965 - Template (5)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]5[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1177()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9965 - Template (5)<br> Number LE A1 B2 C3 RE Height Width<br> a number None None None None None a number 5</font></blockquote>
+<p>
+ Width: 4
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1178(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9964 - Template (4)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]4[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1178()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9964 - Template (4)<br> Number LE A1 B2 RE Height Width<br> a number None None None None a number 4</font></blockquote>
+<p>
+ Width: 3
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1179(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9963 - Template (3)[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]3[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1179()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9963 - Template (3)<br> Number LE A1 RE Height Width<br> a number None None None a number 3</font></blockquote>
+<p>
+ Width: 2
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1180(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9962 - Template (2)[=0x000A=]Number[=0x0009=]LE[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]None[=0x0009=]a number[=0x0009=]2[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1180()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9962 - Template (2)<br> Number LE RE Height Width<br> a number None None a number 2</font></blockquote>
+<p>
+ Width: 1
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1181(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 9961 - Template (1)[=0x000A=]Number[=0x0009=]LE[=0x0009=]Height[=0x0009=]Width[=0x000A=]a number[=0x0009=]None[=0x0009=]a number[=0x0009=]1[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1181()"><img border=0 src=inform:/doc_images/paste.png></a> Table 9961 - Template (1)<br> Number LE Height Width<br> a number None a number 1</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

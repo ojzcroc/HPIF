@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1031(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Conversation Responses by Eric Eve.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1031()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Conversation Responses<font color="#404040"> by </font>Eric Eve</b><p><small></small><p><p><hr><p><b><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Chapter 1: Various Responses</font></a></b><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Chapter 2: Hello and Goodbye</font></a></b><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Conversation Responses-eg1.html#eg1"><font color="#000000">A: Bob's Lost Wallet</font></a><br><p><hr><p><p><hr><p>
+<p>
+<p><a name=docsec1><b><font color="#800000">Chapter 1: Various Responses</b></font>
+<p>
+ Conversation Responses allows response rules for various conversational commands to be written in the following forms:
+<p>
+<blockquote><font color="#000080"> Response of Bob when asked about Bob:<br> Response of Bob when asked about &quot;life&quot;:<br> Response of Bob when told about &quot;[money]&quot;:<br> Response of Bob when asked about a container:<br> Response of Bob when asked about something fixed in place:<br> Response of Bob when told about Jim:<br> Response of Bob when shown the wallet:<br> Response of Bob when given the wallet:<br> Response of Bob when asked for the wallet:<br> Response of Bob when asked for &quot;sympathy&quot;:<br> Response of Bob when anwered that &quot;probably&quot;:<br> Response of Bob when saying yes:<br> Response of Bob when saying no:<br> Response of Bob when saying sorry:</font></blockquote>
+<p>
+ This may seem to have little advantage over writing rules like &quot;After asking Bob about life&quot;, but it also allows the following forms for ask/tell or give/show:
+<p>
+<blockquote><font color="#000080"> Response of Bob when asked-or-told about &quot;life&quot;:<br> Response of Bob when asked-or-told about the wallet:<br> Response of Bob when given-or-shown the gold coin:</font></blockquote>
+<p>
+ It also avoids using the After rulebook, since all these Response rules are triggered from the action-specific Report rules (which may be more efficient when there would otherwise need to be a lot of action-generic after rules to cater for a large number of conversational responses).
+<p>
+ But this extension only really comes into its own when combined into others (such as Conversational Defaults and Conversation Nodes), where using these Response rules helps ensures that the various rulebooks are consulted in the right order.
+<p>
+<p><hr><p><a name=docsec2><b><font color="#800000">Chapter 2: Hello and Goodbye</b></font>
+<p>
+ This extension also provides special report rules for saying hello and goodbye to NPCs:
+<p>
+<blockquote><font color="#000080"> Greeting response for Bob:<br> Implicit greeting response for Bob:<br> Farewell response for Bob:<br> Implicit farewell response for Bob:</font></blockquote>
+<p>
+ An implicit greeting is triggered if we address an NPC without explicitly saying hello. An implicit farewell is triggered is we walk away from an NPC in mid-conversation without first saying goodbye. In the former case the extension will use an Implicit Greeting Response if present, or a Greeting Response if no Implicit Greeting Response has been defined. Likewise if we walk away from the current interlocutor in mid-conversation, the extension will trigger an Implicit Farewell Response if one has been provided, but will otherwise fall back on the appropriate Farewell Response. If neither an Implicit Farewell Response nor a Farewell Response has been defined, then no kind of implicit farewell will be displayed (and likewise with an implicit greeting).
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Conversation Responses.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Conversation Responses.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Bob's Lost Wallet</font></b></a><br>A brief conversation illustrating the use of response rules.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1032(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Bob[=0x0027=]s Lost Wallet[=0x0022=][=0x000A=][=0x000A=]Include Conversation Responses by Eric Eve.[=0x000A=][=0x000A=]The Hall is a Room. [=0x0022=]As befits a grand old manor house, the hall is imposingly large, with acres of polished wooden floorboards and scores of ancient family portraits hung about the walls.[=0x0022=][=0x000A=][=0x000A=]Some ancient family portraits are scenery in the Hall.[=0x000A=]Understand [=0x0022=]ancestors[=0x0022=] as the ancient family portraits.[=0x000A=][=0x000A=]Bob is a man in the Hall. [=0x0022=]Bob is standing in the middle of the hall, looking rather worried.[=0x0022=][=0x000A=][=0x000A=]After saying hello to Bob:[=0x000A=]say [=0x0022=][=0x0027=]Hello there, Bob![=0x0027=][paragraph break][=0x0027=]Good morning,[=0x0027=] he replies.[=0x0022=][=0x000A=][=0x000A=]Response of Bob when asked about Bob:[=0x000A=]say [=0x0022=][=0x0027=][one of]How are you today? You look worried![=0x0027=] you remark.[paragraph break][=0x0027=]I[=0x0027=]ve lost my wallet,[=0x0027=] he tells you[make lost wallet known][or]Are you okay - apart from your wallet?[=0x0027=] you ask.[paragraph break][=0x0027=]Fine, but I[=0x0027=]m so worried about my wallet![=0x0027=] he replies[stopping].[=0x0022=][=0x000A=][=0x000A=]Response of Bob when asked about the lost wallet:[=0x000A=]say [=0x0022=][=0x0027=]Where did you last see your wallet?[=0x0027=] you ask.[paragraph break][=0x0027=]I can[=0x0027=]t remember,[=0x0027=] he replies.[=0x0022=][=0x000A=][=0x000A=]Response of Bob when asked-or-told about [=0x0022=][theft][=0x0022=] and the lost wallet is known:[=0x000A=]say [=0x0022=][=0x0027=][one of]Could your wallet have been stolen, do you think?[=0x0027=] you ask.[paragraph break][=0x0027=]I don[=0x0027=]t know,[=0x0027=] he answers miserably[or]Have you tried telling the police?[=0x0027=] you suggest.[paragraph break][=0x0027=]No, I[=0x0027=]d feel such a fool if it just turned up,[=0x0027=] he replies[stopping].[=0x0022=][=0x000A=][=0x000A=]Response of Bob when saying sorry and the lost wallet is known:[=0x000A=]say [=0x0022=][=0x0027=]Well, I[=0x0027=]m sorry you can[=0x0027=]t find your wallet,[=0x0027=] you say.[paragraph break][=0x0027=]So am I,[=0x0027=] he tells you.[=0x0022=][=0x000A=][=0x000A=]Response of Bob when asked-or-told about the ancient family portraits:[=0x000A=]say [=0x0022=][=0x0027=][one of]Who are all those people in the portraits?[=0x0027=] you ask.[paragraph break][=0x0027=]Oh, just my ancestors. I expect half of them were hung for sheep-stealing,[=0x0027=] he replies[or]I don[=0x0027=]t think your ancestors look that disreputable,[=0x0027=] you remark.[paragraph break][make lost wallet known][=0x0027=]Never mind my ancestors - it[=0x0027=]s my wallet I[=0x0027=]m worried about![=0x0027=] he replies[stopping].[=0x0022=][=0x000A=][=0x000A=]Response of Bob when shown the silver dollar:[=0x000A=]say [=0x0022=][=0x0027=]Is this any good to you?[=0x0027=] you ask.[paragraph break][=0x0027=]One dollar?[=0x0027=] he asks, [=0x0027=]Thanks, but no thanks. It[=0x0027=]s not the cash I[=0x0027=]m so worried about, it[=0x0027=]s the credit cards![=0x0027=][=0x0022=][=0x000A=][=0x000A=]The silver dollar is carried by the player.[=0x000A=][=0x000A=]The lost wallet is a thing.[=0x000A=][=0x000A=]Understand [=0x0022=]bob[=0x0027=]s[=0x0022=] or [=0x0022=]his[=0x0022=] as the lost wallet.[=0x000A=][=0x000A=]Understand [=0x0022=]theft[=0x0022=] or [=0x0022=]thief[=0x0022=] or [=0x0022=]stolen[=0x0022=] or [=0x0022=]police[=0x0022=] as [=0x0022=][theft][=0x0022=].[=0x000A=][=0x000A=]Test me with [=0x0022=]Ask bob about himself/a bob/a wallet/a portraits/a ancestors/a theft/t police/show dollar[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1032()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Bob's Lost Wallet&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Conversation Responses by Eric Eve.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Hall is a Room. &quot;As befits a grand old manor house, the hall is imposingly large, with acres of polished wooden floorboards and scores of ancient family portraits hung about the walls.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Some ancient family portraits are scenery in the Hall.<br> Understand &quot;ancestors&quot; as the ancient family portraits.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Bob is a man in the Hall. &quot;Bob is standing in the middle of the hall, looking rather worried.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After saying hello to Bob:<br> say &quot;'Hello there, Bob!'[paragraph break]'Good morning,' he replies.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Response of Bob when asked about Bob:<br> say &quot;'[one of]How are you today? You look worried!' you remark.[paragraph break]'I've lost my wallet,' he tells you[make lost wallet known][or]Are you okay - apart from your wallet?' you ask.[paragraph break]'Fine, but I'm so worried about my wallet!' he replies[stopping].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Response of Bob when asked about the lost wallet:<br> say &quot;'Where did you last see your wallet?' you ask.[paragraph break]'I can't remember,' he replies.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Response of Bob when asked-or-told about &quot;[theft]&quot; and the lost wallet is known:<br> say &quot;'[one of]Could your wallet have been stolen, do you think?' you ask.[paragraph break]'I don't know,' he answers miserably[or]Have you tried telling the police?' you suggest.[paragraph break]'No, I'd feel such a fool if it just turned up,' he replies[stopping].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Response of Bob when saying sorry and the lost wallet is known:<br> say &quot;'Well, I'm sorry you can't find your wallet,' you say.[paragraph break]'So am I,' he tells you.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Response of Bob when asked-or-told about the ancient family portraits:<br> say &quot;'[one of]Who are all those people in the portraits?' you ask.[paragraph break]'Oh, just my ancestors. I expect half of them were hung for sheep-stealing,' he replies[or]I don't think your ancestors look that disreputable,' you remark.[paragraph break][make lost wallet known]'Never mind my ancestors - it's my wallet I'm worried about!' he replies[stopping].&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Response of Bob when shown the silver dollar:<br> say &quot;'Is this any good to you?' you ask.[paragraph break]'One dollar?' he asks, 'Thanks, but no thanks. It's not the cash I'm so worried about, it's the credit cards!'&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The silver dollar is carried by the player.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The lost wallet is a thing.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Understand &quot;bob's&quot; or &quot;his&quot; as the lost wallet.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Understand &quot;theft&quot; or &quot;thief&quot; or &quot;stolen&quot; or &quot;police&quot; as &quot;[theft]&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;Ask bob about himself/a bob/a wallet/a portraits/a ancestors/a theft/t police/show dollar&quot;</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

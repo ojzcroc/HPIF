@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode2851(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Automap by Mark Tilford.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2851()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>automap<font color="#404040"> by </font>mark tilford</b><p><small><p>Version 4</small><p>An extension to automatically draw a map.<p>Kinds: <b>Map zoomedness</b>, <b>Map displayness</b><p>Values that vary: <b>Current zoom</b>, <b>Current displayness</b>, <b>Map drawn room</b>, <b>Map drawn direction</b>, <b>automap size</b><p>Values: <b>map zoomed out</b>, <b>map zoomed in</b>, <b>map absent</b>, <b>map display ascii</b>, <b>map display automatic</b>, <b>map display fancy</b>, <b>map display unicode</b><p>Actions: <b>Zooming in</b>, <b>Zooming out</b>, <b>Zooming away</b>, <b>ZoomingMisc</b>, <b>Map displaying unicode</b>, <b>Map displaying fancy</b>, <b>Map displaying ascii</b>, <b>Gargoyle workaround</b>, <b>Map displaying automatic</b>, <b>Map viewing</b>, <b>Map dumping</b>, <b>Map link dumping</b><p>Adjectives: <b>mappable</b>, <b>unmappable</b>, <b>currently_mapped</b><p>Properties: <b>map_x</b>, <b>map_y</b>, <b>mappable</b>, <b>unmappable</b>, <b>currently_mapped</b><p>Use options: <b>automap manual exploration</b>, <b>automap manual display</b>, <b>automap visible background</b>, <b>automap hide paths through closed doors</b>, <b>automap reserved area</b>, <b>automap static allocation</b>, <b>automap hyperlinks</b><p><p><hr><p>
+<p>
+ Automap will watch what rooms the player has visited and create a Beyond Zork style automap.
+<p>
+ Kinds: Mappable Room. All rooms which are to show on the map must be of this kind.
+<p>
+ By default, rooms will be placed one unit away in the appropriate direction. If the path should be longer, you can manually set the distance.
+<p>
+ It is the responsibility of the author to make the map has a consistent geography and that no two rooms overlap.
+<p>
+ Activities:
+<p>
+ - The &quot;Automap work&quot; is activity is being handled while the program is attempting to explore a room or draw the map (that is, the times when it might perform the &quot;which room is (direction) from (room)&quot; decision). It is provided if you need to have anything work differently during such a test.
+<p>
+ Use options:
+<p>
+ - Use automap manual display: The program will not display the map to the status line on its own.
+<p>
+ - Use automap manual exploration: The program will not add rooms to the map unless you explicitly run the &quot;(room) is explored&quot; decision.
+<p>
+ - Use automap hide paths through closed doors: The program will not add paths that go through closed doors.
+<p>
+ - Use automap static allocation: Causes a glulx game to allocate memory for the automap at compile time. Reduces flexibility, but allows the game to run on more interpreters. (Automatically set when compiling to zcode.)
+<p>
+ - Use automap reserved area of at least N: Sets the amount of memory the game will use for drawing the map. Must be at least (map rows) * (map columns). This option is ignored when compiling to glulx, unless the &quot;use automap static allocation&quot; option is set.
+<p>
+ - Use automap visible background: Spaces that would ordinarily be blank will be shown as periods. Meant for experimenting with the size of the map while testing and is not meant for release.
+<p>
+ New source code syntax:
+<p>
+<blockquote><font color="#000080"> decision: &quot;(mappable room) is placed (number) and (number) from (mappable room)&quot;: If the player has visited both rooms, it will attempt to arrange the map so that they will appear in the given relative positions. Returns yes unless doing so creates an inconsistency. It will not be necessary to use this decision in your own code unless you want to have rooms that would not ordinarily be on the same map region together. (For example, if a closet is connected to the main room by in / out, this would put it on the map with the rest of the rooms.)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> decision: &quot;(room) is explored&quot;: Attempts to connect (room) with any adjacent rooms. It probably will not be necessary to use this unless you want to add rooms the player hasn't visited, or you are using the manual exploration option. Returns no if doing so creates any inconsistencies, and yes otherwise.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> phrase: &quot;explore (room)&quot; / &quot;remap (room)&quot;: Attempt to add the room to the automap. Prints an error if there are any problems. Again, it probably will not be necessary to use this unless you want to add rooms the player hasn't visited, or you are using the manual exploration option.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> phrase: &quot;unmap (mappable room)&quot;: Removes the room from the automap. Will be needed if you want to change its position relative to other rooms.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> phrase: &quot;fill status bar with (selected table - a table-name) and map&quot;: Will print the calculated automap. Should only be necessary if you are using the manual display option.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> phrase: &quot;reserve automap memory of (number) rows by (number) cols&quot;: Sets the size of the displayed map. Must be called for any map to display. May be changed at any time. (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17,...)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> phrase: &quot;reserve automap memory of (number) rows&quot;: Sets the size of displayed map. Width is the current width of the status line. If using static allocation, and this would require more memory than is allocated, width is trimmed to what will fit. (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17,...)</font></blockquote>
+<p>
+ New in-game commands:
+<p>
+ - &quot;zoom in&quot;: Shows the map so that rooms have 3x3 grids.
+<p>
+ - &quot;zoom out&quot;: Shows the map so that rooms have 1x1 grids. (the default)
+<p>
+ - &quot;zoom away&quot;: Removes the map entirely.
+<p>
+ - &quot;zoom&quot;: Rotates through the various zoom modes.
+<p>
+ To set the zoom manually, change the current zoom variable to map zoomed in, map zoomed out, or map absent.
+<p>
+ - &quot;map automatic&quot;: Try to use the font 3 characters. If the interpreter does not support them, convert down to ASCII characters.
+<p>
+ - &quot;map fancy&quot;: Force using the font 3 characters, whether the interpreter supports them or not.
+<p>
+ - &quot;map plain&quot;: Convert down to ASCII characters. Don't even try to use font 3. (the default)
+<p>
+ If the game is run on a buggy interpreter, using the command &quot;gargoyle bug workaround&quot; should prevent problems.
+<p>
+ - &quot;map view&quot; (not for release): shows information
+<p>
+ Thanks to Jesse McGrew and Mike Talbert for help with overriding decisions. Thanks to Cristoph Ender and Andrew Plotkin for help with Unicode. Thanks to Andrew Plotkin and Jesse McGrew for help with joining I6 and I7. Thanks to S. John Ross for testing and feedback. Thanks to Aaron Reed for feedback and a minimal example. Lots and lots of thanks to Peter Pears for heavy testing and feedback. Erik Temple prepared version 4 for submission to the extensions library.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Automap-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Automap-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">&quot;The Test&quot; by Aaron Reed</font></b></a><br>A minimal test. Note that, as of late October 2010, this example will crash in some interpreters (such as Zoom and the IDE interpreter on Mac OS X) under Glulx. Include the &quot;automap static allocation&quot; use option to prevent this kind of crash.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Automap.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Automap.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Demonstration</font></b></a><br>A simple demonstration.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode2852(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]The demonstration[=0x0022=] by Mark Tilford.[=0x000A=][=0x000A=]Include Automap by Mark Tilford.[=0x000A=]Use automap hide paths through closed doors;[=0x000A=]Use automap reserved area of at least 400;[=0x000A=]Include Basic Hyperlinks by Emily Short;[=0x000A=]Use automap hyperlinks;[=0x000A=][=0x000A=]When play begins: now current zoom is map zoomed in.[=0x000A=][=0x000A=][=0x000A=]The heavy door is south of the western hall and north of the office. It is a door.[=0x000A=]The southern hall is southeast of western hall and southwest of eastern hall. The eastern hall is east of western hall.[=0x000A=]The heavy door is a door. It is south of the western hall and north of the office.[=0x000A=][=0x000A=]Fooing is an action applying to nothing. Understand [=0x0022=]foo[=0x0022=] as fooing.[=0x000A=][=0x000A=]Before fooing when the player is in eastern hall or the player is in western hall:[=0x000A=][=0x0009=]say [=0x0022=]To make a longer path, the distance must be declared both ways.[=0x0022=][=0x000A=]To decide what number is the distance (d - east) from (r - western hall): decide on 2.[=0x000A=]To decide what number is the distance (d - west) from (r - eastern hall): decide on 2.[=0x000A=][=0x000A=][=0x000A=]The western balcony is up from western hall and west from central balcony.[=0x000A=]The eastern balcony is east from central balcony and up from eastern hall.[=0x000A=][=0x000A=]Outside Building is a mappable room. It is west from western balcony.[=0x000A=][=0x000A=]Before fooing when the player is in western balcony or the player is in eastern balcony:[=0x000A=][=0x0009=]say [=0x0022=]By default, rooms connected with up / down / in / out are not placed on the same map.  If you want to put them on the same map, you can position them manually.[=0x0022=][=0x000A=][=0x000A=]Before constructing the status line:[=0x000A=][=0x0009=]unless western balcony is placed 0 and -1 from western hall, say [=0x0022=]*** Error placing west balcony ***[=0x0022=];[=0x000A=][=0x0009=]unless eastern balcony is placed 0 and -1 from eastern hall, say [=0x0022=]*** Error placing east balcony ***[=0x0022=];[=0x000A=][=0x0009=]unless upstairs closet is placed -1 and 0 from upstairs office, say [=0x0022=]*** Error placing upstairs closet ***[=0x0022=].[=0x000A=][=0x000A=][=0x000A=]Upstairs office is north of western balcony.[=0x000A=]Upstairs closet is inside from upstairs office.[=0x000A=][=0x000A=]Stupid room is a mappable room. It is east from upstairs office.[=0x000A=][=0x000A=]Alpha room is east of stupid room.[=0x000A=]Beta room is north of alpha room and northeast of stupid room.[=0x000A=]Gamma room is west of beta room and northwest of alpha room and north of stupid room.[=0x000A=]Joe[=0x0027=]s room is southeast of beta room.[=0x000A=]Fred[=0x0027=]s room is northeast of beta room and north of Joe[=0x0027=]s room.[=0x000A=]Jane[=0x0027=]s room is east of beta room and southeast of fred[=0x0027=]s room and northeast of Joe[=0x0027=]s room.[=0x000A=]To decide what number is the distance (d - east) from (r - beta room): decide on 2.[=0x000A=]To decide what number is the distance (d - west) from (r - jane[=0x0027=]s room): decide on 2.[=0x000A=]To decide what number is the distance (d - north) from (r - joe[=0x0027=]s room): decide on 2.[=0x000A=]To decide what number is the distance (d - south) from (r - fred[=0x0027=]s room): decide on 2.[=0x000A=][=0x000A=]Before fooing in elevator:[=0x000A=][=0x0009=]say [=0x0022=]If you want to move a room on the map, you[=0x0027=]ll have to unmap it first.[=0x0022=][=0x000A=][=0x000A=]The elevator is a mappable room. The elevator can be high or low. It is low.[=0x000A=]The elevator is east of eastern hall.[=0x000A=]The button is in the elevator. It is fixed in place.[=0x000A=]Instead of pushing the button:[=0x000A=][=0x0009=]say [=0x0022=]The doors shut; the elevator shakes briefly, then the doors open again.[=0x0022=];[=0x000A=][=0x0009=]unmap the elevator;[=0x000A=][=0x0009=]If the elevator is low begin;[=0x000A=][=0x0009=][=0x0009=]now the elevator is high;[=0x000A=][=0x0009=][=0x0009=]change the east exit of eastern hall to nothing;[=0x000A=][=0x0009=][=0x0009=]change the east exit of eastern balcony to elevator;[=0x000A=][=0x0009=][=0x0009=]change the west exit of elevator to eastern balcony;[=0x000A=][=0x0009=]otherwise;[=0x000A=][=0x0009=][=0x0009=]now the elevator is low;[=0x000A=][=0x0009=][=0x0009=]change the east exit of eastern hall to elevator;[=0x000A=][=0x0009=][=0x0009=]change the east exit of eastern balcony to nothing;[=0x000A=][=0x0009=][=0x0009=]change the west exit of elevator to eastern hall;[=0x000A=][=0x0009=]end if.[=0x000A=][=0x000A=]before fooing when the player is in western balcony or the player is in outside building:[=0x000A=][=0x0009=]say [=0x0022=]If you want to split rooms into separate map regions despite them being reachable from each other by compass points, you can override the decision so that it has a different value while working with the automap than when making ordinary movement.[=0x0022=][=0x000A=][=0x000A=]Phony Room is an unmappable room. It is west of office and southwest of western hall.[=0x000A=][=0x000A=]To decide what room is the room (dir - west) from (room - western balcony):[=0x000A=][=0x0009=]if handling the automap work activity, decide on Phony Room.[=0x000A=][=0x000A=]To decide what room is the room (dir - east) from (room - outside building):[=0x000A=][=0x0009=]if handling the automap work activity, decide on Phony Room.[=0x000A=][=0x000A=]To decide what number is the distance (dir - west) from (room - western balcony): decide on 3.[=0x000A=][=0x000A=]before fooing when the player is in western balcony or the player is in eastern balcony:[=0x000A=][=0x0009=]say [=0x0022=](Current versions of Inform do not go through the decision mechanism when responding to the player[=0x0027=]s compass movements, so the [=0x0027=]if handling the automap work activity[=0x0027=] check may not be necessary.  Something like [=0x0027=]decide on nothing / nowhere[=0x0027=] end should theoretically allow hiding a passage completely, but all I got were syntax errors.)[line break][=0x0022=][=0x000A=][=0x000A=]before fooing the first time:[=0x000A=][=0x0009=]say [=0x0022=]You must set the displayed size of the map before it is displayed.  This can be changed at any time not during automap work.[line break][=0x0009=]To fix the size at the start, use something like [=0x0027=]When play begins: Reserve automap memory of 13 rows by 17 cols;[=0x0027=].[line break][=0x0009=]Omitting the columns will have it allocate memory to fill the width of the screen, but you must readjust each time the status line is rebuilt.[line break][=0x0009=]In Glulx games, it will automatically allocate memory as needed.  In Zcode games, you must reserve that memory in advance:[=0x0009=]Use automap reserved area of at least 400.  (It[=0x0027=]s okay to put such a line in a Glulx game; it will be ignored.)[line break][=0x0009=]In ZCode mode, you must print at least as many blank lines as your map is high so that the text will start out below the automap.[line break][=0x0009=]Map sizes are in characters; a room is 1 character square in zoomed out mode, 3 characters square in zoomed in mode.[=0x0022=][=0x000A=][=0x000A=]Section 99Z (for Z-machine only)[=0x000A=][=0x000A=]When play begins: say [=0x0022=][map height blank lines][=0x0022=][=0x000A=][=0x000A=]Section 1[=0x000A=][=0x000A=]before fooing the first time: say [=0x0022=]If you want something other than the usual line above your map, you[=0x0027=]ll need to build the status line yourself.[line break][=0x0022=][=0x000A=][=0x000A=]The first for constructing the status line rule:[=0x000A=][=0x0009=]reserve automap memory of 13 rows;[=0x000A=][=0x0009=]fill status bar with table of mostly ordinary status and map.[=0x000A=][=0x000A=]Table of Mostly Ordinary Status[=0x000A=]left[=0x0009=]central[=0x0009=]right[=0x000A=][=0x0022=][location][=0x0022=][=0x0009=][=0x0022=][=0x0022=][=0x0009=][=0x0022=][score]/[turn count][=0x0022=][=0x000A=][=0x0022=]---[=0x0022=][=0x0009=][=0x0022=]---[=0x0022=][=0x0009=][=0x0022=]---[=0x0022=][=0x000A=][=0x000A=]Section 98 (for use with Basic Hyperlinks by Emily Short)[=0x000A=][=0x000A=]Current autowalk destination is a room that varies. Autowalk destination set is a truth state that varies.[=0x000A=][=0x000A=]autowalking is an action applying to one topic. Understand [=0x0022=]autowalk to [text][=0x0022=] as autowalking.[=0x000A=][=0x000A=]Carry out autowalking:[=0x000A=][=0x0009=]if autowalk destination set is true begin;[=0x000A=][=0x0009=][=0x0009=]now autowalk destination set is false;[=0x000A=][=0x0009=][=0x0009=]try hyperlink moving to room current autowalk destination;[=0x000A=][=0x0009=]otherwise;[=0x000A=][=0x0009=][=0x0009=]say [=0x0022=](Autowalk is meant to be generated by hyperlinks, not typed directly.)[=0x0022=];[=0x000A=][=0x0009=]end if.[=0x000A=][=0x000A=]The first clicking hyperlink rule:[=0x000A=][=0x0009=]if current link number codes a glulx object begin;[=0x000A=][=0x0009=][=0x0009=]change current autowalk destination to glulx equivalent of current link number;[=0x000A=][=0x0009=][=0x0009=]now autowalk destination set is true;[=0x000A=][=0x0009=][=0x0009=]now glulx replacement command is [=0x0022=]autowalk to [current autowalk destination][=0x0022=];[=0x000A=][=0x0009=][=0x0009=]rule succeeds;[=0x000A=][=0x0009=]end if;[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2852()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;The demonstration&quot; by Mark Tilford.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Automap by Mark Tilford.<br> Use automap hide paths through closed doors;<br> Use automap reserved area of at least 400;<br> Include Basic Hyperlinks by Emily Short;<br> Use automap hyperlinks;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> When play begins: now current zoom is map zoomed in.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The heavy door is south of the western hall and north of the office. It is a door.<br> The southern hall is southeast of western hall and southwest of eastern hall. The eastern hall is east of western hall.<br> The heavy door is a door. It is south of the western hall and north of the office.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Fooing is an action applying to nothing. Understand &quot;foo&quot; as fooing.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Before fooing when the player is in eastern hall or the player is in western hall:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;To make a longer path, the distance must be declared both ways.&quot;<br> To decide what number is the distance (d - east) from (r - western hall): decide on 2.<br> To decide what number is the distance (d - west) from (r - eastern hall): decide on 2.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The western balcony is up from western hall and west from central balcony.<br> The eastern balcony is east from central balcony and up from eastern hall.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Outside Building is a mappable room. It is west from western balcony.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Before fooing when the player is in western balcony or the player is in eastern balcony:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;By default, rooms connected with up / down / in / out are not placed on the same map.  If you want to put them on the same map, you can position them manually.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Before constructing the status line:<br>&nbsp;&nbsp;&nbsp;&nbsp; unless western balcony is placed 0 and -1 from western hall, say &quot;*** Error placing west balcony ***&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; unless eastern balcony is placed 0 and -1 from eastern hall, say &quot;*** Error placing east balcony ***&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; unless upstairs closet is placed -1 and 0 from upstairs office, say &quot;*** Error placing upstairs closet ***&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Upstairs office is north of western balcony.<br> Upstairs closet is inside from upstairs office.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Stupid room is a mappable room. It is east from upstairs office.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Alpha room is east of stupid room.<br> Beta room is north of alpha room and northeast of stupid room.<br> Gamma room is west of beta room and northwest of alpha room and north of stupid room.<br> Joe's room is southeast of beta room.<br> Fred's room is northeast of beta room and north of Joe's room.<br> Jane's room is east of beta room and southeast of fred's room and northeast of Joe's room.<br> To decide what number is the distance (d - east) from (r - beta room): decide on 2.<br> To decide what number is the distance (d - west) from (r - jane's room): decide on 2.<br> To decide what number is the distance (d - north) from (r - joe's room): decide on 2.<br> To decide what number is the distance (d - south) from (r - fred's room): decide on 2.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Before fooing in elevator:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;If you want to move a room on the map, you'll have to unmap it first.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The elevator is a mappable room. The elevator can be high or low. It is low.<br> The elevator is east of eastern hall.<br> The button is in the elevator. It is fixed in place.<br> Instead of pushing the button:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;The doors shut; the elevator shakes briefly, then the doors open again.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; unmap the elevator;<br>&nbsp;&nbsp;&nbsp;&nbsp; If the elevator is low begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now the elevator is high;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; change the east exit of eastern hall to nothing;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; change the east exit of eastern balcony to elevator;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; change the west exit of elevator to eastern balcony;<br>&nbsp;&nbsp;&nbsp;&nbsp; otherwise;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now the elevator is low;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; change the east exit of eastern hall to elevator;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; change the east exit of eastern balcony to nothing;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; change the west exit of elevator to eastern hall;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> before fooing when the player is in western balcony or the player is in outside building:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;If you want to split rooms into separate map regions despite them being reachable from each other by compass points, you can override the decision so that it has a different value while working with the automap than when making ordinary movement.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Phony Room is an unmappable room. It is west of office and southwest of western hall.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To decide what room is the room (dir - west) from (room - western balcony):<br>&nbsp;&nbsp;&nbsp;&nbsp; if handling the automap work activity, decide on Phony Room.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To decide what room is the room (dir - east) from (room - outside building):<br>&nbsp;&nbsp;&nbsp;&nbsp; if handling the automap work activity, decide on Phony Room.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To decide what number is the distance (dir - west) from (room - western balcony): decide on 3.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> before fooing when the player is in western balcony or the player is in eastern balcony:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;(Current versions of Inform do not go through the decision mechanism when responding to the player's compass movements, so the 'if handling the automap work activity' check may not be necessary.  Something like 'decide on nothing / nowhere' end should theoretically allow hiding a passage completely, but all I got were syntax errors.)[line break]&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> before fooing the first time:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You must set the displayed size of the map before it is displayed.  This can be changed at any time not during automap work.[line break]	To fix the size at the start, use something like 'When play begins: Reserve automap memory of 13 rows by 17 cols;'.[line break]	Omitting the columns will have it allocate memory to fill the width of the screen, but you must readjust each time the status line is rebuilt.[line break]	In Glulx games, it will automatically allocate memory as needed.  In Zcode games, you must reserve that memory in advance:	Use automap reserved area of at least 400.  (It's okay to put such a line in a Glulx game; it will be ignored.)[line break]	In ZCode mode, you must print at least as many blank lines as your map is high so that the text will start out below the automap.[line break]	Map sizes are in characters; a room is 1 character square in zoomed out mode, 3 characters square in zoomed in mode.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Section 99Z (for Z-machine only)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> When play begins: say &quot;[map height blank lines]&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Section 1</font></blockquote>
+<p>
+<blockquote><font color="#000080"> before fooing the first time: say &quot;If you want something other than the usual line above your map, you'll need to build the status line yourself.[line break]&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The first for constructing the status line rule:<br>&nbsp;&nbsp;&nbsp;&nbsp; reserve automap memory of 13 rows;<br>&nbsp;&nbsp;&nbsp;&nbsp; fill status bar with table of mostly ordinary status and map.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Mostly Ordinary Status</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> left</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> central</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> right</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[location]&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;[score]/[turn count]&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;---&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;---&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;---&quot;</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> Section 98 (for use with Basic Hyperlinks by Emily Short)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Current autowalk destination is a room that varies. Autowalk destination set is a truth state that varies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> autowalking is an action applying to one topic. Understand &quot;autowalk to [text]&quot; as autowalking.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Carry out autowalking:<br>&nbsp;&nbsp;&nbsp;&nbsp; if autowalk destination set is true begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now autowalk destination set is false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try hyperlink moving to room current autowalk destination;<br>&nbsp;&nbsp;&nbsp;&nbsp; otherwise;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;(Autowalk is meant to be generated by hyperlinks, not typed directly.)&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The first clicking hyperlink rule:<br>&nbsp;&nbsp;&nbsp;&nbsp; if current link number codes a glulx object begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; change current autowalk destination to glulx equivalent of current link number;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now autowalk destination set is true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now glulx replacement command is &quot;autowalk to [current autowalk destination]&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rule succeeds;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x02464E70" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x0B585B88"/>
+  <item nodeId="node-0x02464E70">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Robo&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 130423 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Experimentation Chamber&#x000A;Robo, your prototype tin companion, stands awkwardly beside you. In the middle of his chest is a red enamel button, currently un-depressed.&#x000A;&#x000A;You can also see a red block and a blue cylinder here.&#x000A;&#x000A;Robo watches you looking impassively.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x02464EE0"/>
+      <child nodeId="node-0x02465030"/>
+      <child nodeId="node-0x02465110"/>
+      <child nodeId="node-0x0B5871F8"/>
+      <child nodeId="node-0x0B587578"/>
+      <child nodeId="node-0x0B585798"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02464EE0">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Table Office&#x000A;The Succession, a ponderous list of English monarchs, takes pride of place.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02464F50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02464F50">
+    <command xml:space="preserve">test</command>
+    <result xml:space="preserve">&gt;--&gt; The following tests are available:&#x000A;'test me'&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02464FC0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02464FC0">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] examine succession&#x000A;The Succession List runs as follows...&#x000A;1702: Anne (Stuart).&#x000A;1714: George I (Hanover).&#x000A;1720: George II (Hanover).&#x000A;1760: George III (Hanover).&#x000A;1820: George IV (Hanover).&#x000A;1830: William IV (Hanover).&#x000A;1837: Victoria (Hanover).&#x000A;1901: Edward VII (Saxe-Coburg-Gotha).&#x000A;1910: George V (Windsor).&#x000A;1936: Edward VIII (Windsor).&#x000A;1936: George VI (Windsor).&#x000A;1952: Elizabeth II (Windsor).&#x000A;&#x000A;&gt;[2] attack it&#x000A;You deface the English succession, making suitable amendments with a quill pen. Considering it is supposed to be mightier than the sword the effect is a little disappointing.&#x000A;&#x000A;&gt;[3] examine it&#x000A;The Succession List runs as follows...&#x000A;1702: Anne (Stuart).&#x000A;1714: George I (Hanover).&#x000A;1720: George II (Stuart).&#x000A;1760: Graham I (Hanover).&#x000A;1820: Trixibelle IV (Hanover).&#x000A;1830: William IV (Hanover).&#x000A;1837: Victoria (Hanover).&#x000A;1901: Edward VII (Saxe-Coburg-Gotha).&#x000A;1910: George V (Windsor).&#x000A;1936: Edward VIII (Windsor).&#x000A;1936: George VI (Windsor).&#x000A;1952: Elizabeth II (Windsor).&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02465030">
+    <command xml:space="preserve">test md</command>
+    <result xml:space="preserve">&gt;--&gt; The following tests are available:&#x000A;'test me'&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x024650A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x024650A0">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] examine succession&#x000A;The Succession List runs as follows...&#x000A;1702: Anne (Stuart).&#x000A;1714: George I (Hanover).&#x000A;1720: George II (Hanover).&#x000A;1760: George III (Hanover).&#x000A;1820: George IV (Hanover).&#x000A;1830: William IV (Hanover).&#x000A;1837: Victoria (Hanover).&#x000A;1901: Edward VII (Saxe-Coburg-Gotha).&#x000A;1910: George V (Windsor).&#x000A;1936: Edward VIII (Windsor).&#x000A;1936: George VI (Windsor).&#x000A;1952: Elizabeth II (Windsor).&#x000A;&#x000A;&gt;[2] attack it&#x000A;You deface the English succession, making suitable amendments with a quill pen. Considering it is supposed to be mightier than the sword the effect is a little disappointing.&#x000A;&#x000A;&gt;[3] examine it&#x000A;The Succession List runs as follows...&#x000A;1702: Anne (Stuart).&#x000A;1714: George I (Hanover).&#x000A;1720: George II (Stuart).&#x000A;1760: Graham I (Hanover).&#x000A;1820: Trixibelle IV (Hanover).&#x000A;1830: William IV (Hanover).&#x000A;1837: Victoria (Hanover).&#x000A;1901: Edward VII (Saxe-Coburg-Gotha).&#x000A;1910: George V (Windsor).&#x000A;1936: Edward VIII (Windsor).&#x000A;1936: George VI (Windsor).&#x000A;1952: Elizabeth II (Windsor).&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02465110">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] hit gladiator with mace&#x000A;You attack the gladiator with the mace, causing 3 points of damage!&#x000A;&#x000A;The gladiator attacks you with the trident, causing 1 point of damage!&#x000A;&#x000A;&gt;[2] kill gladiator&#x000A;(with the mace)&#x000A;You attack the gladiator with the mace, causing 1 point of damage!&#x000A;&#x000A;The gladiator attacks you with the net, causing 1 point of damage!&#x000A;&#x000A;&gt;[3] drop mace&#x000A;Dropped.&#x000A;&#x000A;The gladiator attacks you with the trident, causing 2 points of damage!&#x000A;&#x000A;&gt;[4] attack gladiator&#x000A;What do you want to attack the gladiator with?&#x000A;&#x000A;&gt;[5] attack gladiator with mace&#x000A;(first taking the mace)&#x000A;You attack the gladiator with the mace, causing 3 points of damage!&#x000A;&#x000A;The gladiator attacks you with the net, causing 1 point of damage!&#x000A;&#x000A;&gt;[6] g&#x000A;You attack the gladiator with the mace, causing 3 points of damage!&#x000A;&#x000A;The gladiator attacks you with the net, causing 1 point of damage!&#x000A;&#x000A;&gt;[7] g&#x000A;You attack the gladiator with the mace, causing 1 point of damage!&#x000A;&#x000A;The gladiator attacks you with the trident, causing 1 point of damage!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02465180"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02465180">
+    <command xml:space="preserve">diagnose me</command>
+    <result xml:space="preserve">You have 28 out of a possible 35 hit points remaining.&#x000A;&#x000A;The gladiator attacks you with the trident, causing 4 points of damage!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B587118"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B587118">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] hit gladiator with mace&#x000A;You attack the gladiator with the mace, causing 2 points of damage!&#x000A;&#x000A;The gladiator attacks you with the trident, causing 3 points of damage!&#x000A;&#x000A;&gt;[2] kill gladiator&#x000A;(with the mace)&#x000A;You attack the gladiator with the mace, causing 1 point of damage!&#x000A;&#x000A;The gladiator attacks you with the net, causing 1 point of damage!&#x000A;&#x000A;&gt;[3] drop mace&#x000A;Dropped.&#x000A;&#x000A;The gladiator attacks you with the net, causing 1 point of damage!&#x000A;&#x000A;&gt;[4] attack gladiator&#x000A;What do you want to attack the gladiator with?&#x000A;&#x000A;&gt;[5] attack gladiator with mace&#x000A;(first taking the mace)&#x000A;You attack the gladiator with the mace, causing 1 point of damage!&#x000A;&#x000A;The gladiator attacks you with the trident, causing 1 point of damage!&#x000A;&#x000A;&gt;[6] g&#x000A;You attack the gladiator with the mace, causing 1 point of damage!&#x000A;&#x000A;The gladiator attacks you with the trident, causing 1 point of damage!&#x000A;&#x000A;&gt;[7] g&#x000A;You attack the gladiator with the mace, causing 1 point of damage!&#x000A;&#x000A;The gladiator attacks you with the net, causing 1 point of damage!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B587188"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B587188">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] hit gladiator with mace&#x000A;You attack the gladiator with the mace, causing 1 point of damage!&#x000A;&#x000A;The gladiator attacks you with the net, causing 1 point of damage!&#x000A;&#x000A;&gt;[2] kill gladiator&#x000A;(with the mace)&#x000A;You attack the gladiator with the mace, causing 1 point of damage!&#x000A;&#x000A;The gladiator attacks you with the net, causing 1 point of damage!&#x000A;&#x000A;&gt;[3] drop mace&#x000A;Dropped.&#x000A;&#x000A;The gladiator attacks you with the trident, causing 5 points of damage!&#x000A;&#x000A;&gt;[4] attack gladiator&#x000A;What do you want to attack the gladiator with?&#x000A;&#x000A;&gt;[5] attack gladiator with mace&#x000A;(first taking the mace)&#x000A;You attack the gladiator with the mace, causing 3 points of damage!&#x000A;&#x000A;The gladiator attacks you with the trident, causing 5 points of damage!&#x000A;&#x000A;&gt;[6] g&#x000A;You attack the gladiator with the mace, causing 3 points of damage!&#x000A;&#x000A;The gladiator attacks you with the trident, causing 4 points of damage!&#x000A;&#x000A;&gt;[7] g&#x000A;You attack with the mace, killing the gladiator!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0B5871F8">
+    <command xml:space="preserve">test </command>
+    <result xml:space="preserve">Pause.&#x000A;&#x000A;YOU:</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B587268"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B587268">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">Pause.&#x000A;&#x000A;YOU:</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B5872D8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B5872D8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Pause.&#x000A;&#x000A;YOU:</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B587348"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B587348">
+    <command xml:space="preserve">hi</command>
+    <result xml:space="preserve">Pause.&#x000A;&#x000A;YOU:</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B5873B8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B5873B8">
+    <command xml:space="preserve">greek</command>
+    <result xml:space="preserve">Pause.&#x000A;&#x000A;YOU:</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B587428"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B587428">
+    <command xml:space="preserve">zeus</command>
+    <result xml:space="preserve">CHORUS: Mud's sister, not herself, adorns thy boots.&#x000A;&#x000A;YOU:</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B587498"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B587498">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Are you sure you want to restart?</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B587508"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B587508">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">Fragment of a Greek Tragedy&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 130402 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;CHORUS: O suitably-attired-in-leather-boots Head of a traveller, wherefore seeking whom Whence by what way how purposed art thou come To this well-nightingaled vicinity? My object in inquiring is to know. But if you happen to be deaf and dumb And do not understand a word I say, Then wave your hand, to signify as much.&#x000A;&#x000A;YOU:</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0B587578">
+    <command xml:space="preserve">shoot gun at robot</command>
+    <result xml:space="preserve">ZAP! The dangerous robot twinkles out of existence! The robotic head, the drill arm, the needle arm, the crushing leg and the kicking leg clatter to the ground! &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B5875E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B5875E8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Deathbot Assembly Line&#x000A;Here is the heart of the whole operation, where your opponents are assembled fresh from scrap metal and bits of old car.&#x000A;&#x000A;You can see a kicking leg, a crushing leg, a needle arm, a drill arm and a robotic head here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B587658"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B587658">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">kicking leg: Taken.&#x000A;crushing leg: Taken.&#x000A;needle arm: Taken.&#x000A;drill arm: Taken.&#x000A;robotic head: Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B5876C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B5876C8">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:&#x000A;  a robotic head&#x000A;  a drill arm&#x000A;  a needle arm&#x000A;  a crushing leg&#x000A;  a kicking leg&#x000A;  a Decomposition Ray Gun&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B587738"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B587738">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] x robot&#x000A;You can't see any such thing.&#x000A;&#x000A;&gt;[2] shoot robot&#x000A;You can't see any such thing.&#x000A;&#x000A;&gt;[3] fire at kicking leg&#x000A;(with the Decomposition Ray Gun)&#x000A;ZAP! The kicking leg twinkles out of existence! &#x000A;&#x000A;&gt;[4] shoot gun at drill arm&#x000A;ZAP! The drill arm twinkles out of existence! &#x000A;&#x000A;&gt;[5] look&#x000A;Deathbot Assembly Line&#x000A;Here is the heart of the whole operation, where your opponents are assembled fresh from scrap metal and bits of old car.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B5877A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B5877A8">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:&#x000A;  a robotic head&#x000A;  a needle arm&#x000A;  a crushing leg&#x000A;  a Decomposition Ray Gun&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B587818"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B587818">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Deathbot Assembly Line&#x000A;Here is the heart of the whole operation, where your opponents are assembled fresh from scrap metal and bits of old car.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0B585798">
+    <command xml:space="preserve">test</command>
+    <result xml:space="preserve">&gt;--&gt; The following tests are available:&#x000A;'test me'&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B585878"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B585878">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] z&#x000A;Robo watches you waiting, his yellow eyes lamp-like and observant.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;&gt;[2] take cylinder&#x000A;Robo watches you taking the blue cylinder, his brushed-copper handlebar moustaches twitching.&#x000A;&#x000A;Taken.&#x000A;&#x000A;&gt;[3] take block&#x000A;Robo watches you taking the red block, his yellow eyes lamp-like and observant.&#x000A;&#x000A;Taken.&#x000A;&#x000A;&gt;[4] put cylinder on counter&#x000A;Robo watches you putting the blue cylinder on the counter. In his metal head, gears whirr.&#x000A;&#x000A;You put the blue cylinder on the counter.&#x000A;&#x000A;&gt;[5] put block on counter&#x000A;Robo watches you putting the red block on the counter impassively.&#x000A;&#x000A;You put the red block on the counter.&#x000A;&#x000A;&gt;[6] x robo&#x000A;You see nothing special about Robo.&#x000A;&#x000A;Robo watches you examining Robo, his brushed-copper handlebar moustaches twitching.&#x000A;&#x000A;&gt;[7] x me&#x000A;As good-looking as ever.&#x000A;&#x000A;Robo watches you examining yourself. In his metal head, gears whirr.&#x000A;&#x000A;&gt;[8] get block&#x000A;Robo watches you taking the red block, his brushed-copper handlebar moustaches twitching.&#x000A;&#x000A;Taken.&#x000A;&#x000A;&gt;[9] drop block&#x000A;Robo watches you dropping the red block, his yellow eyes lamp-like and observant.&#x000A;&#x000A;Dropped.&#x000A;&#x000A;&gt;[10] press red button&#x000A;CLICK! Robo is now in play-back mode.&#x000A;&#x000A;Robo looks around.&#x000A;&#x000A;&gt;[11] z&#x000A;Time passes.&#x000A;&#x000A;Robo waits.&#x000A;&#x000A;&gt;[12] z&#x000A;Time passes.&#x000A;&#x000A;Robo needs several attempts to get his metal fingers around the blue cylinder -- they are not designed for grasping small objects elegantly. But at last he succeeds.&#x000A;&#x000A;&gt;[13] z&#x000A;Time passes.&#x000A;&#x000A;Robo picks up the red block.&#x000A;&#x000A;&gt;[14] z&#x000A;Time passes.&#x000A;&#x000A;Robo puts the blue cylinder on the counter.&#x000A;&#x000A;&gt;[15] z&#x000A;Time passes.&#x000A;&#x000A;Robo puts the red block on the counter.&#x000A;&#x000A;&gt;[16] z&#x000A;Time passes.&#x000A;&#x000A;Robo examines each of his hands in turn, then each of his legs (bending over mostly double in the middle to do this).&#x000A;&#x000A;&gt;[17] z&#x000A;Time passes.&#x000A;&#x000A;Robo stares at you, unblinkingly, for several seconds together.&#x000A;&#x000A;&gt;[18] z&#x000A;Time passes.&#x000A;&#x000A;Robo picks up the red block.&#x000A;&#x000A;&gt;[19] z&#x000A;Time passes.&#x000A;&#x000A;Robo puts down the red block.&#x000A;&#x000A;&gt;[20] z&#x000A;Time passes.&#x000A;&#x000A;Robo has run out of behavior and grinds to an (expectant) halt.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B5858E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B5858E8">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Are you sure you want to restart?</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B585958"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B585958">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">Robo&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 130423 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Experimentation Chamber&#x000A;Robo, your prototype tin companion, stands awkwardly beside you. In the middle of his chest is a red enamel button, currently un-depressed.&#x000A;&#x000A;You can also see a red block and a blue cylinder here.&#x000A;&#x000A;Robo watches you looking, his yellow eyes lamp-like and observant.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B5859C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B5859C8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Experimentation Chamber&#x000A;Robo, your prototype tin companion, stands awkwardly beside you. In the middle of his chest is a red enamel button, currently un-depressed.&#x000A;&#x000A;You can also see a red block and a blue cylinder here.&#x000A;&#x000A;Robo watches you looking, his brushed-copper handlebar moustaches twitching.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B585A38"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B585A38">
+    <command xml:space="preserve">press button</command>
+    <result xml:space="preserve">CLICK! Robo is now in play-back mode.&#x000A;&#x000A;Robo looks around.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B585AA8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B585AA8">
+    <command xml:space="preserve">showme current instruction set</command>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B585B18"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B585B18">
+    <command xml:space="preserve">showme me</command>
+    <result xml:space="preserve">yourself - person&#x000A;location: in the Experimentation Chamber&#x000A;singular-named, proper-named; unlit, inedible, portable; male&#x000A;printed name: "yourself"&#x000A;printed plural name: "people"&#x000A;indefinite article: none&#x000A;description: "As good-looking as ever."&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B585B88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B585B88">
+    <command xml:space="preserve">showme robo</command>
+    <result xml:space="preserve">Robo - man&#x000A;    red button (part of Robo) - device&#x000A;location: in the Experimentation Chamber&#x000A;singular-named, proper-named; unlit, inedible, portable; male&#x000A;printed name: "Robo"&#x000A;printed plural name: "men"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: "Robo, your prototype tin companion, stands awkwardly beside you. In the middle of his chest is a red enamel button, currently depressed."&#x000A;carrying capacity: 100&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>

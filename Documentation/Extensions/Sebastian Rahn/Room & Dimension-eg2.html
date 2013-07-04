@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1127(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Room [=0x0026=] Dimension by Sebastian Rahn.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1127()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Room &amp; Dimension<font color="#404040"> by </font>Sebastian Rahn</b><p><small></small><p><p><hr><p>
+<p>
+ This extension provides the possibility to put an extra 2D layer upon rooms. This can be handy, if visual feedback is required while moving the player or other things inside a room manually.
+<p>
+ It requires both the Glulx Text Effects and Basic Screen Effects by Emily Short to run properly. The extension uses one Glulx custom style (special-style-2) and defines say &quot;[default letters]&quot; as say &quot;[roman type]&quot;.
+<p>
+ First, we will need to create a Table to save objects and to print the map of the room we want to visualize. For this we can use one of the templates that are provided within the extension (look the last example below), depending on how broad we want the room to be (in this version it is limited to 28 sectors maximum). The width is both visible in the name of the table, in case of the templates, and the actual Width Entry.
+<p>
+ The Width Entry is crucial for the program to determine the columns it has access to and must always fit the actual map width otherwise it will create a bug (this is also true for the Height Entry in the current version).
+<p>
+ There are two types of templates that can be identified by the bracketed number next to the table name: extended (the one with the 0. and 1. numeration) and normal (with no punctuation). Since the number of columns seems to be limited in Inform 7, the program is tricked to jump from one table to another. Therefore, the table with the (0.x) number represents the left side of the map and the one with the (1.x) the extended right side.
+<p>
+ It is important for both tables to have a correct Height and Width Entry.
+<p>
+ We must then signalise that this room is actually printable. For this we use the location name and connect it with one or more table names. This happens in a continuation of the Table 997 - 'Sectors' which looks like this:
+<p>
+<blockquote><font color="#000080"> Table 997 - Sectors (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Sector Room</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 2</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> My Room</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 100</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> My Room 2</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 101</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 102</font></font></td></tr></table></blockquote>
+<p>
+ 'My Room 2' uses an extended table with the table in the Table Entry representing the left side of the map and the one in the Table 2 Entry the right side.
+<p>
+ After we decided on Height and Width and established a connection between rooms and tables we can start to fill the map with objects. Every thing has two parameters to save its current coordinates: X-Axis -&gt; a number representing the current row position and Y-Axis -&gt; a text representing the current column position. We don't have to declare those manually however. It is sufficient if we place the objects on the map and make sure our source code includes:
+<p>
+<blockquote><font color="#000080"> When play begins:<br> Spread coordinates.</font></blockquote>
+<p>
+ The program will then run through all maps and give coordinates to every object it can find automatically. It should be noted however that an object on a map doesn't have to be in the room that it is corresponding to (and won't be moved there with any of the commands this extension provides except for &quot;switch maps&quot; which is not supposed to be used by ourselves). This might cause confusion within the program so we always have to make sure that an object on a map of a room is actually in said room.
+<p>
+ Since we want to see those objects on the map, we will have to provide them with Avatars (we can hardly want to use its printed name or its description for that matter). To do this we have to continue yet another table:
+<p>
+<blockquote><font color="#000080"> Table 991 - Avatars (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Entity</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Avatar</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Dummy</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;D&quot;</font></font></td></tr></table></blockquote>
+<p>
+ The program differs between the Avatar of a person and of anything else. A person's Avatar will always be printed in extra bold letters while the ones of others will not.
+<p>
+ Whenever the truth state 'Show Map' is true, the program will print the map of the location in which the player is moving (he himself is always represented by an arrow).
+<p>
+ Next to the objects that we create for our program, there are three special kinds of things that are provided with the extension. They all have in common that they've actually no coherent position on the map, since they are either not suppose to represent one entity or their presence is only temporary (in case of Entrance Points).
+<p>
+ 1. None -&gt; Is a thing and refers to empty space. An object on the map can move on a None field without anything happening.
+<p>
+ 2. Wall -&gt; Is a kind. Every object, that is a Wall, will not allow anything to take its place. If an object tries anyways, a short message will appear (can be avoided by changing the truth state of 'uncommented' to true) and the action will be stopped.
+<p>
+ 3. Entrance Points -&gt; Again a kind. They enable the player to switch between rooms, while 'Show Map' is true. It should be noted that the coordinates of an object will currently not change if it should go into another room while 'Show Map' is false.
+<p>
+ There are also two new kinds of persons: hostile person and friendly person. A friendly person will switch places with the player if the player walks into him while hostile ones serve as another kind of wall in a sense. If the player walks into an object which the extension doesn't know for certain (that would be anything that wasn't mentioned above) it will create an ugly bug.
+<p>
+ The extension differs between dark rooms and normal rooms when printing the map. A normal will always show the whole map while a dark room without a light source will only show the actual surroundings of the player.
+<p>
+ It should be mentioned that the status line will undergo slight changes once 'Show Map' is true. It will then show the current position on the map where the player is standing. To remove this effect either ignore the Map headline rule or change Table 801 - Map Headline in section 2.6. In case the player is in a dark room a question mark is used instead of coordinates.
+<p>
+ The following examples should serve as a quick overview about what is possible with the extension as it will explain several important commands in a more practical way.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">One Room creation</font></b></a><br>Creating a small test room and a command that will either make the corresponding map appear or disappear.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Lair of Don Capone</font></b></a><br>A small game scenario to test room connections, if a person stands next to another and if the program will recognize obstacles like walls and hostile persons.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ We have to make some slight changes compared to the first example since this time, we want to print the map every turn from start to finish. Therefore, we place the starting room before the extensions and let its description print the map for the very first time.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1128(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The Streets is a room. [=0x0022=]It is a lively day on Chepston Streets as usual. The Don Capone, restaurant of the rich and morally challenged, stands before you. The place where you want to go. [If Streets is unvisited][paragraph break][map][end if][=0x0022=].[=0x000A=][=0x000A=]Include Room [=0x0026=] Dimension by Sebastian Rahn.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1128()"><img border=0 src=inform:/doc_images/paste.png></a> The Streets is a room. &quot;It is a lively day on Chepston Streets as usual. The Don Capone, restaurant of the rich and morally challenged, stands before you. The place where you want to go. [If Streets is unvisited][paragraph break][map][end if]&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Room &amp; Dimension by Sebastian Rahn.</font></blockquote>
+<p>
+ Let's start again by creating our first room. This time thought we will need a so called Entrance Point. Since we place the entrance of the restaurant to the South at it is seen on the map below, this will be a South Entrance Point. We may not forget to put all Entrance Points in the EP Room.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1129(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 100 - The Streets[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]7[=0x0009=]5[=0x000A=]2[=0x0009=]Jenny[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]3[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]4[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]5[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]6[=0x0009=]None[=0x0009=]Bully2[=0x0009=]Bully1[=0x0009=]Bully3[=0x0009=]None[=0x000A=]7[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]Southdoor[=0x0009=]-Wall[=0x0009=]-Wall[=0x000A=][=0x000A=]Table 997 - Sectors (continued)[=0x000A=]Sector Room[=0x0009=]Table[=0x000A=]Streets[=0x0009=]Table 100[=0x000A=][=0x000A=]Southdoor is a South Entrance Point in EP.[=0x000A=]Bully1 is a hostile person in Streets. The printed name of Bully1 is [=0x0022=]Bulky Bully[=0x0022=]. The description of Bully1 is [=0x0022=]Gee, that[=0x0027=]s a big fellow![=0x0022=]. Understand [=0x0022=]Bulky Bully[=0x0022=] as Bully1.[=0x000A=]Bully2 is a hostile person in Streets. The printed name of Bully2 is [=0x0022=]Slimy Bully[=0x0022=]. The description of Bully2 is [=0x0022=]You can tell by the looks of him that you won[=0x0027=]t become friends.[=0x0022=].[=0x000A=]Understand [=0x0022=]Slimy Bully[=0x0022=] as Bully2.[=0x000A=]Bully3 is a hostile person in Streets. The printed name of Bully3 is [=0x0022=]Bland Bully[=0x0022=]. The description of Bully3 is [=0x0022=]Now you know what pure average looks like.[=0x0022=].[=0x000A=]Understand [=0x0022=]Bland Bully[=0x0022=] as Bully3.[=0x000A=]Jenny is a friendly person in Streets. The description of Jenny is [=0x0022=]Flatear Jenny is an old acquaintance of yours and always helpful when it comes to this kind of situations. Maybe you should talk to her.[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1129()"><img border=0 src=inform:/doc_images/paste.png></a> Table 100 - The Streets<br> Number LE A1 B2 C3 RE Height Width<br> 1 -Wall -Wall -Wall -Wall -Wall 7 5<br> 2 Jenny None None None None<br> 3 None None None None None<br> 4 None None None None None<br> 5 None None None None None<br> 6 None Bully2 Bully1 Bully3 None<br> 7 -Wall -Wall Southdoor -Wall -Wall</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 997 - Sectors (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Sector Room</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Streets</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 100</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> Southdoor is a South Entrance Point in EP.<br> Bully1 is a hostile person in Streets. The printed name of Bully1 is &quot;Bulky Bully&quot;. The description of Bully1 is &quot;Gee, that's a big fellow!&quot;. Understand &quot;Bulky Bully&quot; as Bully1.<br> Bully2 is a hostile person in Streets. The printed name of Bully2 is &quot;Slimy Bully&quot;. The description of Bully2 is &quot;You can tell by the looks of him that you won't become friends.&quot;.<br> Understand &quot;Slimy Bully&quot; as Bully2.<br> Bully3 is a hostile person in Streets. The printed name of Bully3 is &quot;Bland Bully&quot;. The description of Bully3 is &quot;Now you know what pure average looks like.&quot;.<br> Understand &quot;Bland Bully&quot; as Bully3.<br> Jenny is a friendly person in Streets. The description of Jenny is &quot;Flatear Jenny is an old acquaintance of yours and always helpful when it comes to this kind of situations. Maybe you should talk to her.&quot;.</font></blockquote>
+<p>
+ Since we got other people in the room except the player, we must prepare Avatars so that the map will print out properly.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1130(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 991 - Avatars (continued)[=0x000A=]Entity[=0x0009=]Avatar[=0x000A=]Bully1[=0x0009=][=0x0022=]B[=0x0022=][=0x000A=]Bully2[=0x0009=][=0x0022=]s[=0x0022=][=0x000A=]Bully3[=0x0009=][=0x0022=]b[=0x0022=][=0x000A=]Jenny[=0x0009=][=0x0022=]J[=0x0022=][=0x000A=][=0x000A=]Talking to is an action applying to one visible thing.[=0x000A=]Understand [=0x0022=]Talk to [person][=0x0022=] or [=0x0022=]Talk [person][=0x0022=] as Talking to.[=0x000A=][=0x000A=]Carry out Talking to someone (called actor):[=0x000A=]If actor is not Jenny, say [=0x0022=]That wouldn[apostrophe]t achieve anything[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1130()"><img border=0 src=inform:/doc_images/paste.png></a> Table 991 - Avatars (continued)<br> Entity Avatar<br> Bully1 &quot;B&quot;<br> Bully2 &quot;s&quot;<br> Bully3 &quot;b&quot;<br> Jenny &quot;J&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Talking to is an action applying to one visible thing.<br> Understand &quot;Talk to [person]&quot; or &quot;Talk [person]&quot; as Talking to.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Carry out Talking to someone (called actor):<br> If actor is not Jenny, say &quot;That wouldn[apostrophe]t achieve anything&quot;.</font></blockquote>
+<p>
+ We want the player to only be able to greet Jenny while she is in a neighbouring field. Therefore:
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1131(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Check Talking to Jenny:[=0x000A=]If Jenny is not connected with player[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]say [=0x0022=]Flatear Jenny won[apostrophe]t hear you as long as you don[=0x0027=]t come closer.[=0x0022=];[=0x000A=][=0x0009=]stop the action;[=0x000A=]end if.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1131()"><img border=0 src=inform:/doc_images/paste.png></a> Check Talking to Jenny:<br> If Jenny is not connected with player<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;Flatear Jenny won[apostrophe]t hear you as long as you don't come closer.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; stop the action;<br> end if.</font></blockquote>
+<p>
+ There is also the possibility to ask &quot;If [thing] is connected with [thing]&quot; although this is not neccessary here. Anyways, after the player talks to Jenny she and the bullies will be completely removed from the map, meaning that they will also be removed from the game since we no longer need them. If we want them to remain in game we can use the &quot;remove [person] from map&quot; command instead. This would not remove them from the room however.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1132(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Carry out Talking to Jenny:[=0x000A=]say [=0x0022=]You have a little conversation in which both of you repeatedly turn your heads over to the musclemen that block the entrance of the restaurant. After you pass a few bills, Jenny walks over to them. Two [=0x0009=]minutes later your path is clear. Jenny has proven reliable as always.[=0x0022=].[=0x000A=]completely remove Jenny from map;[=0x000A=]completely remove Bully1 from map;[=0x000A=]completely remove Bully2 from map;[=0x000A=]completely remove Bully3 from map.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1132()"><img border=0 src=inform:/doc_images/paste.png></a> Carry out Talking to Jenny:<br> say &quot;You have a little conversation in which both of you repeatedly turn your heads over to the musclemen that block the entrance of the restaurant. After you pass a few bills, Jenny walks over to them. Two 	minutes later your path is clear. Jenny has proven reliable as always.&quot;.<br> completely remove Jenny from map;<br> completely remove Bully1 from map;<br> completely remove Bully2 from map;<br> completely remove Bully3 from map.</font></blockquote>
+<p>
+ Onwards into the restaurant.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1133(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The Restaurant is a room. The Restaurant is south of Streets. The description of restaurant is [=0x0022=]This place isn[apostrophe]t as grand as you thought it would be. But this comes with the advantage that the food counter isn[apostrophe]t too far away neither.[=0x0022=].[=0x000A=][=0x000A=]Table 101 - The Restaurant[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]/Corner[=0x0009=]Northdoor[=0x0009=][=0x005C=]Corner[=0x0009=]6[=0x0009=]3[=0x000A=]2[=0x0009=]|Wall[=0x0009=]None[=0x0009=]|Wall[=0x000A=]3[=0x0009=]|Wall[=0x0009=]None[=0x0009=]|Wall[=0x000A=]4[=0x0009=]|Wall[=0x0009=]-Wall[=0x0009=]|Wall[=0x000A=]5[=0x0009=]|Wall[=0x0009=]Waiter[=0x0009=]|Wall[=0x000A=]6[=0x0009=][=0x005C=]Corner[=0x0009=]-Wall[=0x0009=]/Corner[=0x000A=][=0x000A=]Table 997 - Sectors (continued)[=0x000A=]Sector Room[=0x0009=]Table[=0x000A=]Restaurant[=0x0009=]Table 101[=0x000A=][=0x000A=]Northdoor is a North Entrance Point in EP.[=0x000A=]Waiter is a person in restaurant. The description of Waiter is [=0x0022=]This man looks quiet bored.[=0x0022=].[=0x000A=][=0x000A=]Table 991 - Avatars (continued)[=0x000A=]Entity[=0x0009=]Avatar[=0x000A=]Waiter[=0x0009=][=0x0022=]W[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1133()"><img border=0 src=inform:/doc_images/paste.png></a> The Restaurant is a room. The Restaurant is south of Streets. The description of restaurant is &quot;This place isn[apostrophe]t as grand as you thought it would be. But this comes with the advantage that the food counter isn[apostrophe]t too far away neither.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 101 - The Restaurant</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> LE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> A1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> /Corner</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Northdoor</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> \Corner</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 6</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 3</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 2</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |Wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |Wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 3</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |Wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |Wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 4</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |Wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> -Wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |Wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 5</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |Wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Waiter</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |Wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 6</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> \Corner</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> -Wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> /Corner</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 997 - Sectors (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Sector Room</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Restaurant</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 101</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> Northdoor is a North Entrance Point in EP.<br> Waiter is a person in restaurant. The description of Waiter is &quot;This man looks quiet bored.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 991 - Avatars (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Entity</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Avatar</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Waiter</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;W&quot;</font></font></td></tr></table></blockquote>
+<p>
+ We set up a winning condition for the game: get food!
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1134(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Every turn when player is in restaurant:[=0x000A=]If X-Axis of player is 3[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]say [=0x0022=][apostrophe]Hello Sir, may I take your order?[apostrophe] You are delighted. This evening is going to be delicious![=0x0022=];[=0x000A=][=0x0009=]end the game in victory;[=0x000A=]end if.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1134()"><img border=0 src=inform:/doc_images/paste.png></a> Every turn when player is in restaurant:<br> If X-Axis of player is 3<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;[apostrophe]Hello Sir, may I take your order?[apostrophe] You are delighted. This evening is going to be delicious!&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; end the game in victory;<br> end if.</font></blockquote>
+<p>
+ We now have two Entrance Points: Southdoor in Streets and Northdoor in the Restaurant. If we want to connect them, we'll have to expand this Table:
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1135(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 994 - Junctures (continued)[=0x000A=]Entrance[=0x0009=]Exit Point[=0x0009=]Exit Room[=0x0009=]Position_1[=0x0009=]Position_2[=0x0009=]Position_3[=0x0009=]Height_1[=0x0009=]Height_2[=0x0009=]Height_3[=0x0009=]Entrance_Height[=0x000A=]Southdoor[=0x0009=]Northdoor[=0x0009=]Restaurant[=0x0009=][=0x0022=][=0x0022=][=0x0009=][=0x0022=]A[=0x0022=][=0x0009=][=0x0022=][=0x0022=][=0x0009=]0[=0x0009=]0[=0x0009=]0[=0x0009=]2[=0x000A=]Northdoor[=0x0009=]Southdoor[=0x0009=]Streets[=0x0009=][=0x0022=]A[=0x0022=][=0x0009=][=0x0022=]B[=0x0022=][=0x0009=][=0x0022=]C[=0x0022=][=0x0009=]0[=0x0009=]0[=0x0009=]0[=0x0009=]6[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1135()"><img border=0 src=inform:/doc_images/paste.png></a> Table 994 - Junctures (continued)<br> Entrance Exit Point Exit Room Position_1 Position_2 Position_3 Height_1 Height_2 Height_3 Entrance_Height<br> Southdoor Northdoor Restaurant &quot;&quot; &quot;A&quot; &quot;&quot; 0 0 0 2<br> Northdoor Southdoor Streets &quot;A&quot; &quot;B&quot; &quot;C&quot; 0 0 0 6</font></blockquote>
+<p>
+ Granted that this looks rather complicated. Basically, we declare an Entrance Point that we enter (Entrance Entry) and the one we leave (Entrance Point). Those two are important for the program to recognize which maps should be used (the ones where each Entrance Point is located, at least on the map). The Exit Room Entry is simply the room where the moving actor is taken to. The three Position_x Entries are exclusively for South and North Entrance Points. With them we can determine in which column the actor will appear. The program will try first to move the actor to Position 2 and then work its way back to 3. If all of them are either occupied or not available (marked with &quot;&quot; as demonstrated in the first row of the above example) the actor will not move to the Exit Room but remains where he is. The Height_x Entries do pretty much the same for the West and East Entrance Points as Position_x for North and South but, as we can see, use numbers instead of Letters (0 equals &quot;&quot; in this case). The Entrance_Height Entry is only important for South and North Entrance Points as it determines the row in which the actor is placed.
+<p>
+ The last function that is introduced in this example is the &quot;change sector [Y-Axis] and [X-Axis] in [room] to [thing]&quot; to place the player on the map. Objects that are placed with this command won't be moved from room to room and the old Entry on the map will also not be removed meaning that, before we use this command to move an object, we first have to delete it from the map, move it to its destination and then use the command. We can use either the corresponding letter for the Y-Axis (like &quot;A&quot; for the A1 Entry. The left and right ends of the map are reffered to as &quot;LE&quot; and &quot;RE&quot;) or a number while the X-Axis is always a number. If there is an object in the picked sector it will only be overwritten on the map and not removed from the room. There is also another command that works in a similar fashion called &quot;pick sector [Y-Axis] and [X-Axis] in [room]&quot;, that will not change the chosen sector but takes its object and save it under the parameter 'Tmp_Picked'.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1136(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('When play begins:[=0x000A=]change sector [=0x0022=]B[=0x0022=] and 5 in Streets to player;[=0x000A=]Spread Coordinates;[=0x000A=]Change Show Map to true.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1136()"><img border=0 src=inform:/doc_images/paste.png></a> When play begins:<br> change sector &quot;B&quot; and 5 in Streets to player;<br> Spread Coordinates;<br> Change Show Map to true.</font></blockquote>
+<p>
+</font></td></tr></table><p><hr><p><a name=eg3><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension-eg3.html#eg3" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>C</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension-eg3.html#eg3" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Curse of Quapeck</font></b></a><br>A longer example where several possibilities of how to use the given tools are experimented with.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg4><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension-eg4.html#eg4" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>D</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension-eg4.html#eg4" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Templates</font></b></a><br>Provides Copy &amp; Paste templates for easy use.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

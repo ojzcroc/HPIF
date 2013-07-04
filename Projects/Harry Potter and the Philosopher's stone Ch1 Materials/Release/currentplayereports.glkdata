@@ -1,0 +1,96 @@
+* //C8A63770-6D0B-11E2-B933-F96839AE4917// currentplayereports
+Action: looking: Success
+
+
+
+Game tester: Orion
+Command: script
+Failed
+
+Game tester: Orion
+Command: look
+Action: looking: Success
+
+
+
+Game tester: Orion
+Command: cheats on
+Action: switching cheats on: Success
+
+
+
+Game tester: Orion
+Command: i
+Action: taking inventory: Success
+
+
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+
+
+Game tester: Orion
+Command: odghdogdfjh
+Failed
+
+Game tester: Orion
+Command: look
+Action: looking: Success
+
+
+
+Game tester: Orion
+Command: open sesame
+Action: universal opening: Success
+
+
+
+Game tester: Orion
+Command: move mr mason to me
+Action: moving to Mr. Mason: Failed
+
+Game tester: Orion
+Command: move mobilel to box
+Action: moving to mobilel: Failed
+
+Game tester: Orion
+Command: i
+Action: taking inventory: Success
+
+
+
+Game tester: Orion
+Command: change to mr mason
+Action: changing player Mr. Mason: Success
+
+
+
+Game tester: Orion
+Command: look at watch
+Action: examining the watch: 

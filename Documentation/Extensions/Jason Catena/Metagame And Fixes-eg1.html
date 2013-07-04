@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1056(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Metagame And Fixes by Jason Catena.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1056()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Metagame and Fixes<font color="#404040"> by </font>Jason Catena</b><p><small></small><p><p><hr><p>
+<p>
+ For Glulx, fix italics.
+<p>
+ A text-presentation nicety: in square brackets, recognize /p and /l as kinds of paragraph and line breaks. They're actually not completely interchangeable with paragraph break and line break, so you may want to play with them a bit.
+<p>
+ For beta-testers, any leading punctuation (&gt;? TOO CONFUSING) is rejected as a comment in the transcript. If you use this feature you should change the printed message to contain your own email address.
+<p>
+ RECALL lists things seen in rooms visited, so a player can more easily remember what went where. Especially useful with stores, large maps, or limited player inventory.
+<p>
+ Three new properties help players work with the game: a destination (room) for each thing; and a hint (some text) and a credit (some text), for each seen thing and visited room. A few new actions work with these.
+<p>
+ TELEPORT WITH... (or ZIP BY...) takes you immediately to the destination of a thing, even if you have not been there. This is a game breaker, so is set &quot;not for release&quot;. TRAVEL WITH... (or GUIDE BY...) takes you one step towards a thing's destination, to provide a literal step in the right direction for stuck or lost players.
+<p>
+ HINT... displays the hint property, and notes whether you are at, have visited, or have not found where the thing belongs. The hint itself should be coded so that it detects whether the thing has been used, and displays something like &quot;You solved it.&quot; if you're done with the thing.
+<p>
+ CREDIT..., for one specific thing, and CREDITS, for everything seen so far, lets you shout out to your sources.
+<p>
+ SIDENOTE..., for one specific thing, and SIDENOTES, for everything seen so far, lets you provide extra, development, or out-of-game information on something.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Metagame And Fixes.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Metagame And Fixes.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Stalling the Steward</font></b></a><br>Present out-of-world information and perform in-game actions.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1057(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Stalling the Steward[=0x0022=][=0x000A=][=0x000A=]Include Metagame and Fixes by Jason Catena.[=0x000A=][=0x000A=]Stall is a room.[=0x000A=][=0x000A=]A container called ceramic toilet is in stall.[=0x000A=][=0x000A=]toilet paper is in stall. The hint is [=0x0022=][if toilet paper is in the ceramic toilet]Now flush.[otherwise]Guess where this goes?[end if][=0x0022=]. The destination is stall. The credit is [=0x0022=]Charming is the squeeziest![=0x0022=] The sidenote is [=0x0022=]Visible in restroom.[=0x0022=][=0x000A=][=0x000A=]A room called Restroom is outside of stall.[=0x000A=][=0x000A=]Steward is a person in Restroom.[=0x000A=][=0x000A=]A persuasion rule for asking Steward to try doing something: persuasion succeeds.[=0x000A=][=0x000A=]Test me with [=0x0022=]recall/x paper/recall/hint paper/credit paper/sidenote paper/out/hint paper/in/get paper/recall/put paper in ceramic toilet/l/recall/hint paper/out/steward, in/in/steward, get paper/recall/steward, out/out/steward, teleport with paper/l/in/steward, out/out/steward, travel with paper/l/in/recall/steward, put paper in ceramic toilet/recall[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1057()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Stalling the Steward&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Metagame and Fixes by Jason Catena.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Stall is a room.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A container called ceramic toilet is in stall.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> toilet paper is in stall. The hint is &quot;[if toilet paper is in the ceramic toilet]Now flush.[otherwise]Guess where this goes?[end if]&quot;. The destination is stall. The credit is &quot;Charming is the squeeziest!&quot; The sidenote is &quot;Visible in restroom.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A room called Restroom is outside of stall.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Steward is a person in Restroom.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A persuasion rule for asking Steward to try doing something: persuasion succeeds.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;recall/x paper/recall/hint paper/credit paper/sidenote paper/out/hint paper/in/get paper/recall/put paper in ceramic toilet/l/recall/hint paper/out/steward, in/in/steward, get paper/recall/steward, out/out/steward, teleport with paper/l/in/steward, out/out/steward, travel with paper/l/in/recall/steward, put paper in ceramic toilet/recall&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

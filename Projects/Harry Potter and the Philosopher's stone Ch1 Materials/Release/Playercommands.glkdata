@@ -1,0 +1,1066 @@
+* //C8A63770-6D0B-11E2-B933-F96839AE4917// Playercommands
+
+
+Game tester: Orion
+Command: restart
+Action: looking: Success
+
+Game tester: william saunders
+Command: help
+Action: asking for help: Action: looking: Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: e
+Action: going east: Failed
+
+Game tester: william saunders
+Command: out of bed
+Failed
+
+Game tester: william saunders
+Command: get out of bed
+Action: exiting: Success
+
+Game tester: william saunders
+Command: e
+Action: going east: Action: opening bedroom door: Success
+
+Game tester: william saunders
+Command: open latched panel
+Action: opening a latched panel: Failed
+
+Game tester: william saunders
+Command: go up stairs
+Action: going a latched panel: Success
+
+Game tester: william saunders
+Command: report error "walk up stairs" means go up stairs
+Action: error reporting "" walk up stairs " means go up stairs": Success
+
+Game tester: william saunders
+Command: open dusty box
+Action: opening dusty box: Success
+
+Game tester: william saunders
+Command: report error "books in dusty box aren't labelled as books"
+Action: error reporting "" books in dusty box aren't labelled as books "": Success
+
+Game tester: william saunders
+Command: read 101 pompous complaints
+Action: examining 101 pompous complaints: Success
+
+Game tester: william saunders
+Command: report error "description of 101 complaints says a list the, not a list of the."
+Action: error reporting "" description of 101 complaints says a list the , not a list of the . "": Success
+
+Game tester: william saunders
+Command: read diary
+Action: examining Petunia's diary: Success
+
+Game tester: william saunders
+Command: read letter
+Action: examining letter: Success
+
+Game tester: william saunders
+Command: read schoolbook
+Action: examining the smeltings schoolbook: Success
+
+Game tester: william saunders
+Command: examine me
+Action: examining yourself: Success
+
+Game tester: william saunders
+Command: go downstairs
+Failed
+
+Game tester: william saunders
+Command: why not?
+Failed
+
+Game tester: william saunders
+Command: go upstairs
+Failed
+
+Game tester: william saunders
+Command: go north
+Action: going north: Failed
+
+Game tester: william saunders
+Command: go south
+Action: going south: Failed
+
+Game tester: william saunders
+Command: go east
+Action: going east: Failed
+
+Game tester: william saunders
+Command: go west
+Action: going west: Failed
+
+Game tester: william saunders
+Command: go to bedroom
+Failed
+
+Game tester: william saunders
+Command: take off pyjamas
+Action: taking off Pyjamas: Success
+
+Game tester: william saunders
+Command: put on clothes
+Failed
+
+Game tester: william saunders
+Command: have a bath
+Failed
+
+Game tester: william saunders
+Command: go down stairs
+Action: going Attic stairs: Success
+
+Game tester: william saunders
+Command: report error "go downstairs should mean go down stairs."
+Action: error reporting "" go downstairs should mean go down stairs . "": Success
+
+Game tester: william saunders
+Command: i
+Action: taking inventory: Success
+
+Game tester: william saunders
+Command: drop pyjamas
+Action: dropping Pyjamas: Success
+
+Game tester: william saunders
+Command: wear kilt
+Failed
+
+Game tester: william saunders
+Command: go to bedroom
+Failed
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: go wets
+Failed
+
+Game tester: william saunders
+Command: go west
+Action: going west: Success
+
+Game tester: william saunders
+Command: open wardrobe
+Action: opening Wardrobe: Success
+
+Game tester: william saunders
+Command: put on wizard's robes
+Failed
+
+Game tester: william saunders
+Command: put on wizards robes
+Action: wearing wizards robes: Action: taking wizards robes: Success
+
+Game tester: william saunders
+Command: look in mirror
+Action: examining the mirror: Success
+
+Game tester: william saunders
+Command: what is vibrant shade
+Failed
+
+Game tester: william saunders
+Command: report error 'mirror should say that outfit is a very nice shade."
+Action: error reporting "'mirror should say that outfit is a very nice shade . "": Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: go east
+Action: going east: Success
+
+Game tester: william saunders
+Command: open white door
+Action: opening white door: Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: go through white door
+Action: entering white door (north): Action: going white door: Success
+
+Game tester: william saunders
+Command: go north
+Action: going north: Action: opening Front door: Success
+
+Game tester: william saunders
+Command: open garage
+Action: opening garage: Success
+
+Game tester: william saunders
+Command: turn on light
+Action: switching on light switch: Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: open car door
+Failed
+
+Game tester: william saunders
+Command: report error "open car door should mean open car, same with garage."
+Action: error reporting "" open car door should mean open car , same with garage . "": Success
+
+Game tester: william saunders
+Command: open car
+Action: opening the car: Failed
+
+Game tester: william saunders
+Command: unlock car
+Failed
+
+Game tester: william saunders
+Command: find keys
+Failed
+
+Game tester: william saunders
+Command: where are keys
+Failed
+
+Game tester: william saunders
+Command: go south
+Action: going south: Success
+
+Game tester: william saunders
+Command: keys
+Failed
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: unlock case
+Action: error reporting "                                                                ": Success
+
+Game tester: william saunders
+Command: report error "Should say suitcase is unlocked by a number"
+Action: error reporting "" should say suitcase is unlocked by a number "": Success
+
+Game tester: william saunders
+Command: open suitcase
+Action: opening suitcase: Failed
+
+Game tester: william saunders
+Command: get suitcase
+Action: taking suitcase: Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: gosouth
+Failed
+
+Game tester: william saunders
+Command: go south
+Action: going south: Success
+
+Game tester: william saunders
+Command: go south
+Action: going south: Failed
+
+Game tester: william saunders
+Command: go north
+Action: going north: Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: s
+Action: going south: Success
+
+Game tester: william saunders
+Command: go west
+Action: going west: Success
+
+Game tester: william saunders
+Command: look at clock
+Action: examining the clock: Success
+
+Game tester: william saunders
+Command: open drawer
+Action: opening bedside drawer: Success
+
+Game tester: william saunders
+Command: read paper
+Action: examining the scrap of paper: Success
+
+Game tester: william saunders
+Command: i
+Action: taking inventory: Success
+
+Game tester: william saunders
+Command: 005
+Action: inputting 5: Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: open suitcase
+Action: opening suitcase: Success
+
+Game tester: william saunders
+Command: look at papers
+Action: examining three papers: Success
+
+Game tester: william saunders
+Command: take keys
+Action: taking keys: Success
+
+Game tester: william saunders
+Command: go east
+Action: going east: Success
+
+Game tester: william saunders
+Command: go down stairs
+Failed
+
+Game tester: william saunders
+Command: go nrth
+Failed
+
+Game tester: william saunders
+Command: go north
+Action: going north: Success
+
+Game tester: william saunders
+Command: go north
+Action: going north: Success
+
+Game tester: william saunders
+Command: unlock car with keys
+Action: unlocking the car with keys: Success
+
+Game tester: william saunders
+Command: get in car
+Action: entering the car: Failed
+
+Game tester: william saunders
+Command: opn ddor
+Failed
+
+Game tester: william saunders
+Command: open car
+Action: opening the car: Success
+
+Game tester: william saunders
+Command: error report
+Action: error report retrieving: Success
+
+Game tester: william saunders
+Command: error report
+Action: error report retrieving: Success
+
+Game tester: william saunders
+Command: player report
+Action: reading current player command report: Success
+
+Game tester: william saunders
+Command: cheats on
+Action: switching cheats on: Success
+
+Game tester: william saunders
+Command: help
+Action: asking for help: Action: looking: Success
+
+Game tester: william saunders
+Command: apparate to bedroom
+Action: teleporting to Dursley's bedroom: Failed
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: take wardrobe
+Action: taking Wardrobe: Success
+
+Game tester: william saunders
+Command: take bedroom door
+Action: taking bedroom door (east): Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: i
+Action: taking inventory: Success
+
+Game tester: william saunders
+Command: drop door
+Action: dropping bedroom door (east): Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: go through doo
+Failed
+
+Game tester: william saunders
+Command: go through door
+Action: entering bedroom door (east): Action: going bedroom door: Success
+
+Game tester: william saunders
+Command: open sesame
+Action: universal opening: Success
+
+Game tester: william saunders
+Command: increase score by 20
+Action: point increasing 20: Failed
+
+Game tester: william saunders
+Command: increase score by 20
+Action: point increasing 20: Failed
+
+Game tester: william saunders
+Command: increase score by 20
+Action: point increasing 20: Failed
+
+Game tester: william saunders
+Command: increase score by 20
+Action: point increasing 20: Failed
+
+Game tester: william saunders
+Command: restore score
+Action: restoring score: Success
+
+Game tester: william saunders
+Command: help
+Action: asking for help: Action: looking: Success
+
+Game tester: william saunders
+Command: remove stairs from play
+Action: removing Attic stairs (up): Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: go up stairs
+Action: going Attic stairs: Failed
+
+Game tester: william saunders
+Command: go up
+Action: going up: Failed
+
+Game tester: william saunders
+Command: put back stairs
+Failed
+
+Game tester: william saunders
+Command: put stairs back
+Action: putting back stairs (up): Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: go up stair
+Failed
+
+Game tester: william saunders
+Command: go up stairs
+Action: going stairs: Success
+
+Game tester: william saunders
+Command: change to dudley
+Action: changing player Dudley: Success
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: report error "fix descriptions when another player, for cheats."
+Action: error reporting "" fix descriptions when another player , for cheats . "": Success
+
+Game tester: william saunders
+Command: move mobilel to me
+Action: moving to mobilel: Failed
+
+Game tester: william saunders
+Command: i
+Action: taking inventory: Success
+
+Game tester: william saunders
+Command: call 8953
+Action: dialling 8953 on mobilel: Failed
+
+Game tester: william saunders
+Command: i
+Action: taking inventory: Success
+
+Game tester: william saunders
+Command: go through stairs
+Failed
+
+Game tester: william saunders
+Command: teleport to hal
+Failed
+
+Game tester: william saunders
+Command: teleport to hall
+Action: teleporting to the hall: Failed
+
+Game tester: william saunders
+Command: look
+Action: looking: Success
+
+Game tester: william saunders
+Command: move attic stairs to me
+Action: moving to Attic stairs (up): Failed
+
+Game tester: william saunders
+Command: go up stairs
+Failed
+
+Game tester: william saunders
+Command: drop stairs
+Action: dropping Attic stairs (up): Success
+
+Game tester: william saunders
+Command: go up stairs
+Action: going Attic stairs: Action: taking position standing: Success
+
+Game tester: william saunders
+Command: remove mobilel from play
+Action: removing mobilel: Success
+
+Game tester: william saunders
+Command: move mobilel to me
+Action: moving to mobilel: Failed
+
+Game tester: william saunders
+Command: i
+Action: taking inventory: Success
+
+Game tester: william saunders
+Command: move me to attic
+Action: moving to yourself: Action: looking: Success
+
+Game tester: william saunders
+Command: move me to kitchen
+Action: moving to yourself: Action: looking: Success
+
+Game tester: william saunders
+Command: move kitchen to me
+Action: looking: Success
+
+Game tester: Orion
+Command: look
+Action: looking: Success
+
+Game tester: Orion
+Command: i
+Action: taking inventory: Success
+
+Game tester: Orion
+Command: cheats on
+Action: switching cheats on: Success
+
+Game tester: Orion
+Command: i
+Action: taking inventory: Action: looking: Success
+
+Game tester: Orion
+Command: cheats on
+Action: switching cheats on: Success
+
+Game tester: Orion
+Command: i
+Action: taking inventory: Success
+
+Game tester: Orion
+Command: eat door
+Action: eating magic door: Failed
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Action: looking: Success
+
+Game tester: John Derrick
+Command: yes
+Failed
+
+Game tester: John Derrick
+Command: help
+Action: asking for help: Action: looking: Success
+
+Game tester: John Derrick
+Command: report error dgfdfgfrfggfgh
+Action: error reporting "dgfdfgfrfggfgh": Success
+
+Game tester: John Derrick
+Command: open wardrobe
+Failed
+
+Game tester: John Derrick
+Command: wake up
+Action: waking up: Failed
+
+Game tester: John Derrick
+Command: clothes on
+Failed
+
+Game tester: John Derrick
+Command: trousers on
+Failed
+
+Game tester: John Derrick
+Command: get up
+Action: exiting: Success
+
+Game tester: John Derrick
+Command: check clock
+Action: examining the clock: Success
+
+Game tester: John Derrick
+Command: have breakfast
+Failed
+
+Game tester: John Derrick
+Command: get dressed
+Failed
+
+Game tester: John Derrick
+Command: turn light on
+Failed
+
+Game tester: John Derrick
+Command: open wardrobe
+Action: opening Wardrobe: Success
+
+Game tester: John Derrick
+Command: get robe
+Failed
+
+Game tester: John Derrick
+Command: get robes
+Action: taking wizards robes: Success
+
+Game tester: John Derrick
+Command: open door
+Action: opening bedroom door: Success
+
+Game tester: John Derrick
+Command: name door
+Failed
+
+Game tester: John Derrick
+Command: look door
+Action: examining bedroom door (east): Success
+
+Game tester: John Derrick
+Command: go east
+Action: going east: Success
+
+Game tester: John Derrick
+Command: enter panel
+Action: entering a latched panel (up): Action: going a latched panel: Action: opening a latched panel: Success
+
+Game tester: John Derrick
+Command: open box
+Action: opening dusty box: Success
+
+Game tester: John Derrick
+Command: read cookbook
+Action: examining the High calorie cookbook: Success
+
+Game tester: John Derrick
+Command: exit room
+Failed
+
+Game tester: John Derrick
+Command: open latched panel
+Action: opening Attic stairs: Failed
+
+Game tester: John Derrick
+Command: look exit
+Failed
+
+Game tester: John Derrick
+Command: look
+Action: looking: Success
+
+Game tester: John Derrick
+Command: exit stairs
+Failed
+
+Game tester: John Derrick
+Command: walk down stairs
+Action: going Attic stairs: Success
+
+Game tester: John Derrick
+Command: enter white door
+Action: entering white door (north): Action: going white door: Action: opening white door: Success
+
+Game tester: John Derrick
+Command: open fridge
+Action: opening fridge: Success
+
+Game tester: John Derrick
+Command: cook steak
+Failed
+
+Game tester: John Derrick
+Command: eat steak
+Action: eating steak: Success
+
+Game tester: John Derrick
+Command: vomit steak
+Failed
+
+Game tester: John Derrick
+Command: eat toast
+Action: eating the piece of toast: Success
+
+Game tester: John Derrick
+Command: drink coffee
+Action: drinking coffee: Success
+
+Game tester: John Derrick
+Command: sit on chair
+Failed
+
+Game tester: John Derrick
+Command: exit white door
+Failed
+
+Game tester: John Derrick
+Command: exit kithen
+Failed
+
+Game tester: John Derrick
+Command: open suitcase
+Action: opening suitcase: Failed
+
+Game tester: John Derrick
+Command: get key suitcase
+Failed
+
+Game tester: John Derrick
+Command: take suitcase
+Action: taking suitcase: Success
+
+Game tester: John Derrick
+Command: walk
+Failed
+
+Game tester: John Derrick
+Command: walk east
+Action: going east: Failed
+
+Game tester: John Derrick
+Command: walk south
+Action: going south: Success
+
+Game tester: John Derrick
+Command: enter west bedroom door
+Failed
+
+Game tester: John Derrick
+Command: enter west
+Action: entering west: Failed
+
+Game tester: John Derrick
+Command: enter bedroom door (west)
+Failed
+
+Game tester: John Derrick
+Command: h
+Failed
+
+Game tester: John Derrick
+Command: enter cupboard
+Failed
+
+Game tester: John Derrick
+Command: enter white door
+Action: entering white door (north): Action: going white door: Success
+
+Game tester: John Derrick
+Command: enter bedroom door
+Failed
+
+Game tester: John Derrick
+Command: talk to Dudley
+Action: saying hello to Dudley: Failed
+
+Game tester: John Derrick
+Command: don't be silly Dudley
+Failed
+
+Game tester: John Derrick
+Command: error report
+Action: error report retrieving: Success
+
+Game tester: John Derrick
+Command: all error reports
+Action: error report retrieving: Success
+
+Game tester: John Derrick
+Command: player report
+Action: reading current player command report: Action: looking: Success
+
+Game tester: Orion
+Command: error report
+Action: error report retrieving: Success
+
+Game tester: Orion
+Command: all error reports
+Action: error report retrieving: Success
+
+Game tester: Orion
+Command: cheats on
+Action: switching cheats on: Success
+
+Game tester: Orion
+Command: i
+Action: taking inventory: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: clear error reports
+Action: clearing error report: Success
+
+Game tester: Orion
+Command: error report
+Action: error report retrieving: Success
+
+Game tester: Orion
+Command: clear all error reports
+Action: clearing error report: Success
+
+Game tester: Orion
+Command: all error reports
+Action: error report retrieving: Success
+
+Game tester: Orion
+Command: player report
+Action: reading current player command report: Success
+
+Game tester: Orion
+Command: all player reports
+Action: reading player command report: Action: looking: Success
+
+Game tester: Orion
+Command: look
+Action: looking: Success
+
+Game tester: Orion
+Command: get up
+Action: exiting: Success
+
+Game tester: Orion
+Command: cheats on
+Action: switching cheats on: Success
+
+Game tester: Orion
+Command: i
+Action: taking inventory: Success
+
+Game tester: Orion
+Command: go through magic door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: drop magic door
+Action: dropping magic door: Success
+
+Game tester: Orion
+Command: i
+Action: taking inventory: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: q
+Action: looking: Success
+
+Game tester: Orion
+Command: Script
+Failed
+
+Game tester: Orion
+Command: Script
+Failed
+
+Game tester: Orion
+Command: look
+Action: looking: Success
+
+Game tester: Orion
+Command: get up
+Action: exiting: Success
+
+Game tester: Orion
+Command: cheats on
+Action: switching cheats on: Success
+
+Game tester: Orion
+Command: go through magic dooe
+Failed
+
+Game tester: Orion
+Command: go through magic door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through magic door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through magic door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: quit
+Action: looking: Success
+
+Game tester: Orion
+Command: script
+Failed
+
+Game tester: Orion
+Command: look
+Action: looking: Success
+
+Game tester: Orion
+Command: cheats on
+Action: switching cheats on: Success
+
+Game tester: Orion
+Command: i
+Action: taking inventory: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: go through door
+Action: entering magic door: Action: going magic door: Action: looking: Success
+
+Game tester: Orion
+Command: odghdogdfjh
+Failed
+
+Game tester: Orion
+Command: look
+Action: looking: Success
+
+Game tester: Orion
+Command: open sesame
+Action: universal opening: Success
+
+Game tester: Orion
+Command: move mr mason to me
+Action: moving to Mr. Mason: Failed
+
+Game tester: Orion
+Command: move mobilel to box
+Action: moving to mobilel: Failed
+
+Game tester: Orion
+Command: i
+Action: taking inventory: Success
+
+Game tester: Orion
+Command: change to mr mason
+Action: changing player Mr. Mason: Success
+
+Game tester: Orion
+Command: look at watch
+Action: examining the watch: 

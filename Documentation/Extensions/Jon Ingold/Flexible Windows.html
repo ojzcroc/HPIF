@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1066(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Flexible Windows by Jon Ingold.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1066()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Flexible Windows<font color="#404040"> by </font>Jon Ingold</b><p><small></small><p><p><hr><p><b><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Chapter 1: Introduction</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 1.1: Overview</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Chapter 2: Constructing a Layout</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 2.1: Concepts</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Section 2.2: Positioning windows</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Section 2.3: Sizing Windows</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec7><font color="#000000">Section 2.4: Specifying Window Type</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec8><font color="#000000">Section 2.5: Defaults and Corrections</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec9><font color="#000000">Section 2.6: Rock values</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec10><font color="#000000">Chapter 3: Using Windows</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec11><font color="#000000">Section 3.1: Overview</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec12><font color="#000000">Section 3.2: Opening Windows</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec13><font color="#000000">Section 3.3: Closing Windows</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec14><font color="#000000">Section 3.4: Window Rules</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec15><font color="#000000">Section 3.5: Locating the current window</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec16><font color="#000000">Section 3.6: Placing the cursor (text-grids only)</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec17><font color="#000000">Section 3.7: Redrawing windows</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec18><font color="#000000">Chapter 4: Debugging verbs</font></a></b><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec19><font color="#000000">Chapter 5: Special features</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec20><font color="#000000">Section 5.1: Overview</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec21><font color="#000000">Section 5.2: Background Colour</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec22><font color="#000000">Section 5.3: Borders</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec23><font color="#000000">Section 5.4: Status Line</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec24><font color="#000000">Chapter 6: Alternative input</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec25><font color="#000000">Section 6.1: Character input (single keystroke)</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec26><font color="#000000">Section 6.2: Hyperlinked text</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec27><font color="#000000">Chapter 7: Echo streams and the transcript</font></a></b><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec28><font color="#000000">Chapter 8: Change log</font></a></b><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Flexible Windows-eg1.html#eg1"><font color="#000000">A: Inventory Window</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Flexible Windows-eg2.html#eg2"><font color="#000000">B: Inventory Window and Picture</font></a><br><p><hr><p><p><hr><p>
+<p>
+<p><a name=docsec1><b><font color="#800000">Chapter 1: Introduction</b></font>
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 1.1: Overview</b></font>
+<p>
+ Flexible Windows allows the Glulx author to construct and fill a series of multiple windows, which can be created and destroyed safely during the course of play. Restarts and restores are all handled properly. Windows can be graphical, text-buffers (like the main window is) or text-grids (in which case, glk calls can be used to place characters anywhere within them).
+<p>
+ Although Flexible Windows does not supply any rules for using graphical windows beyond the most basic, several can be found in Emily Short's Simple Graphical Window extension. The examples below demonstrate some ideas. However, Flexible Windows is not compatible with Simple Graphical Window. The Glimmr family of extensions provides extensive support for graphics in Flexible Windows.
+<p>
+ Flexible Windows requires Glulx Entry Points by Emily Short.
+<p>
+ Note that as of version 9, the method of specifying drawing rules for windows has changed. See the Window Rules section below.
+<p>
+<p><hr><p><a name=docsec3><b><font color="#800000">Chapter 2: Constructing a Layout</b></font>
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 2.1: Concepts</b></font>
+<p>
+ All games start, by default, with a status bar along the top of the screen, and the main window below. Glulx windows are formed from the main window by carving off segments using either horizontal or vertical strokes, with each stroke creating one new window, from which further windows can be cut. This automatically creates a tree-structure for windows, with each new window being sliced from one that came before. The extension refers to this process as &quot;spawning&quot;, and you set up your layout of windows by telling the game which window spawns which.
+<p>
+ These relationships - which window spawns which - must be inflexible throughout the game: although they may be multiple structures which the game can chop and change between, altering which window spawns which will likely cause UNDO and RESTORE commands to fail in strange ways. However, in practice this isn't too much of a restriction, as two windows with different names can easily be made to do the same things (see the section on Using the Windows, below).
+<p>
+ One g-window object is created by default, though its properties are unimportant. It is called main-window, and its purpose is to spawn other windows.
+<p>
+<p><a name=docsec5><b><font color="#000000">Section 2.2: Positioning windows</b></font>
+<p>
+ Each window is a thing of the kind g-window, which has several properties relating to its layout.
+<p>
+ The position of each new window is specified using one of four positions, g-placeabove, g-placebelow, g-placeleft and g-placeright. Note, these indicate where the new window will be, rather than the direction of the slice taken.
+<p>
+ So for example, to creating a banner between the main screen and the status, we would write
+<p>
+<blockquote><font color="#000080"> The banner-window is a g-window. The main-window spawns the banner-window. The position of the banner-window is g-placeabove.</font></blockquote>
+<p>
+ For a more complicated layout, akin to a standard email client, with folder list, contacts, preview and files windows, we would write
+<p>
+<blockquote><font color="#000080"> The contacts-pane, folder-list and preview-window are g-windows. The main-window spawns the preview-window and the contacts-pane. The contacts-pane spawns the folder-list.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The position of the preview-window is g-placebelow. The position of the contacts-pane is g-placeleft. The position of the folder-list is g-placeabove.</font></blockquote>
+<p>
+ (Try sketching it out on a piece of paper.)
+<p>
+<p><a name=docsec6><b><font color="#000000">Section 2.3: Sizing Windows</b></font>
+<p>
+ Once the rough positions of the windows has been decided, the next thing to allocate is their size. This can be done two ways, either by taking a proportional of the window being spawned from (so a 40% slice or a 15% slice), or taking a window of fixed size (in pixels for graphics windows, and in columns/rows for text windows). The proportion to take, or the width of a fixed size side-window (equivalently, the height of a top or bottom window) is set using the &quot;measurement&quot; property of the g-window. So we could write
+<p>
+<blockquote><font color="#000080"> The scale method of the side-window is g-proportional. The measurement of the side-window is 25.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The scale method of the banner-window is g-fixed-size. The measure of the banner-window is 30.</font></blockquote>
+<p>
+ Finally, if we are using proportional windows, we can optionally set a &quot;minimum size&quot;, which if the window gets below, it will take, rather than using the proportional scale.
+<p>
+<p><a name=docsec7><b><font color="#000000">Section 2.4: Specifying Window Type</b></font>
+<p>
+ As mentioned above there are three types of Glulx window, text-buffer, text-grid and graphics. A text-buffer is a teletype-style stream of text (akin to the main window), a graphics screen cannot accept text but can render images, and a text-grid allows for flexible positioning of text characters using cursor-movement functions.
+<p>
+ There are two potential ways to define a window's type. One is to declare it to be of the appropriate kind:
+<p>
+<blockquote><font color="#000080"> The side-window is a text-buffer g-window<br> The side-window is a text-grid g-window<br> The side-window is a graphics g-window</font></blockquote>
+<p>
+ The other way is to set the &quot;type&quot; property to one of g-text-buffer, g-text-grid, or g-graphics. This is useful when we can't use one of the kinds given above. For example, the &quot;bordered g-window&quot; kind described below can potentially be any of the three types, so it is best to simply specify it by using the property. The following statements are true (although they don't actually appear anywhere in the extension):
+<p>
+<blockquote><font color="#000080"> The type of the main-window is g-text-buffer.<br> The type of the status-window is g-text-grid.</font></blockquote>
+<p>
+ Window type can be changed during the game, however, it will only take effect when the window is opened.
+<p>
+<p><a name=docsec8><b><font color="#000000">Section 2.5: Defaults and Corrections</b></font>
+<p>
+ Opening a new window is an activity that gets called for the pending window. This activity is the &quot;constructing something&quot; activity, and it's used to set background colours, neatly arranged unpositioned new windows, and apply the minimum width rules. New rules can be written before and after this activity. These rules may refer to &quot;the pending g-window&quot;; note that before, this window will not yet be in existence on the screen but its properties can be changed, and after it should be present on the screen.
+<p>
+ Should you want to make changes to the styles for the windows, this is also the place to do it (see the Glk spec for more information on this). During the before phase, set the stylehint you want. During the after phase, remove it again, so that it doesn't affect other newly created windows. (See background colour rules for an example of this).
+<p>
+<p><a name=docsec9><b><font color="#000000">Section 2.6: Rock values</b></font>
+<p>
+ Internally, Glulx windows are dynamic objects, created as they are opened. Our g-windows, on the other hand, are static objects. When Flexible Windows opens a window, it gives the window a number, called the &quot;rock&quot; This rock value serves to identify the dynamic Glk/Glulx window object as the current instantiation of the static g-window object that shares the same rock.
+<p>
+ Normally, Flexible Windows will set the rock values for all g-windows automatically, and the whole process occurs behind the scenes. There may be times, however, when we want to set a g-window's rock to a particular value. For example, Quixe, the javascript Glulx interpreter, uses rock values to identify windows for styling with CSS. In that system, the CSS for a window with rock value 210 might look like this:
+<p>
+<blockquote><font color="#000080">. WindowRock_210 { background-color: blue; }</font></blockquote>
+<p>
+ Rocks should be numbered 200 and above. It is customary, though not necessary, to skip 10 when adding a new window; that is, for three windows, we'd have 200, 210, and 220. In fact, this is how Flexible Windows will assign them if we don't intervene. To ensure that a g-window gets a particular rock value, we can set it like so:
+<p>
+<blockquote><font color="#000080"> The rock-value of the graphics-window is 245.</font></blockquote>
+<p>
+ If we set numbers ending in 5 for our manual rocks, we will never conflict with the automated numbering.
+<p>
+<p><hr><p><a name=docsec10><b><font color="#800000">Chapter 3: Using Windows</b></font>
+<p>
+<p><a name=docsec11><b><font color="#000000">Section 3.1: Overview</b></font>
+<p>
+ This extension provides little in the way of support for graphics windows or text-grid windows, both of which can display images and draw shapes in a full range of colours. Text-grids can also locate the cursor (so, say, could be used to make a pac-man game). A few useful phrases for text-buffer windows are supplied.
+<p>
+<p><a name=docsec12><b><font color="#000000">Section 3.2: Opening Windows</b></font>
+<p>
+<blockquote><font color="#000080"> open up side-window<br> open up banner-window</font></blockquote>
+<p>
+ The only point to note is that the &quot;open up&quot; command will, if necessary, also open any sub-windows required to reach the window you've asked for. So if the side-window is a spawn of the banner-window, and the banner-window is currently not open, the &quot;open up side-window&quot; command will open both. As mentioned above, spawning order is not editable once the game has started, so if you need flexibility on this, you'll need to make multiple, identical-acting windows (see Window Rules, below).
+<p>
+ We set the cursor using
+<p>
+<blockquote><font color="#000080"> set the cursor to the main-window;</font></blockquote>
+<p>
+ When writing and drawing to windows we should be careful they exist, otherwise the game will crash strangely. You can check the existence of a window at any time by testing for the g-present property.
+<p>
+<blockquote><font color="#000080"> if side-window is g-present...<br> if side-window is g-unpresent...</font></blockquote>
+<p>
+ Since a lot of I6 code comes along with Glulx windows, these attributes exist cleanly in I6 too, (note the underscore replacing the hyphen).
+<p>
+<blockquote><font color="#000080"> if ((+side-window+) has g_present)...<br> if ((+banner-window+) hasnt g_present)...</font></blockquote>
+<p>
+<p><a name=docsec13><b><font color="#000000">Section 3.3: Closing Windows</b></font>
+<p>
+<blockquote><font color="#000080"> shut down side-window</font></blockquote>
+<p>
+ The point above applies here, in reverse: shutting a window will also shut all sub-windows contained by it.
+<p>
+<p><a name=docsec14><b><font color="#000000">Section 3.4: Window Rules</b></font>
+<p>
+ When a window is opened or redrawn, the window-drawing rules for that window are consulted. The window-drawing rule should (ideally) be able to reconstruct entirely the contents of the window (otherwise, after an UNDO or a RESTORE, information will be lost). Rules for graphical drawing will want to use glk calls to place images--see Simple Graphical Window for examples.
+<p>
+ Text windows are supplied with three important phrases: one to move the focus to a different window, one to clear that window (if required), and one to shift the focus back. A drawing rule for a window designed to display the player's inventory would use all three, and take the following form:
+<p>
+<blockquote><font color="#000080"> A window-drawing rule for the side-window (this is the display inventory in side-window rule):<br>&nbsp;&nbsp;&nbsp;&nbsp; move focus to side-window, clearing the window;<br>&nbsp;&nbsp;&nbsp;&nbsp; try taking inventory;<br>&nbsp;&nbsp;&nbsp;&nbsp; return to main screen;</font></blockquote>
+<p>
+ Any text window can be cleared at any time using
+<p>
+<blockquote><font color="#000080"> clear main-window;<br> clear side-window;</font></blockquote>
+<p>
+ Note that Version 9's handling of drawing rules is different from earlier versions', and will require some changes to existing source code:
+<p>
+<blockquote><font color="#000080"> 1) The &quot;drawing rule&quot; property for windows no longer exists. References to this property should be removed.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> 2) The rule preamble for drawing rules should be changed to the form:</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A window-drawing rule for the side-window</font></blockquote>
+<p>
+<blockquote><font color="#000080"> 3) Specific invocations of drawing rules should be changed to read as follows:</font></blockquote>
+<p>
+<blockquote><font color="#000080"> follow the window-drawing rules for the side-window</font></blockquote>
+<p>
+<p><a name=docsec15><b><font color="#000000">Section 3.5: Locating the current window</b></font>
+<p>
+ Side windows taking inventories and such-like might want to be able to tell the usual game rules that they're the ones doing so. Throughout the game, the variable &quot;current g-window&quot; tells the game where the output is going. So
+<p>
+<blockquote><font color="#000080"> Rule for printing the name of the old book while taking inventory and the current g-window is side-window:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;The Meteor, the Stone (etc.)&quot; instead.</font></blockquote>
+<p>
+<p><a name=docsec16><b><font color="#000000">Section 3.6: Placing the cursor (text-grids only)</b></font>
+<p>
+ We can position the cursor in text-grid windows using the following phrase
+<p>
+<blockquote><font color="#000080">... position the cursor in side-window at row 2 column 1;</font></blockquote>
+<p>
+ where row and column start from (1,1) in the top left.
+<p>
+<p><a name=docsec17><b><font color="#000000">Section 3.7: Redrawing windows</b></font>
+<p>
+ We can redraw a specific window by saying
+<p>
+<blockquote><font color="#000080"> follow the window-drawing rules for the side-window</font></blockquote>
+<p>
+ though this should really be more careful that the side-window exists at present. Better yet is
+<p>
+<blockquote><font color="#000080"> if side-window is g-present, follow the window-drawing rules for the side window</font></blockquote>
+<p>
+ If we want to update all the sub-windows quickly, we can invoke the refresh window rule
+<p>
+<blockquote><font color="#000080"> follow the refresh windows rule<br> refresh windows</font></blockquote>
+<p>
+ which does just that, carefully, and without bothering windows that aren't there.
+<p>
+<p><hr><p><a name=docsec18><b><font color="#800000">Chapter 4: Debugging verbs</b></font>
+<p>
+ This may or may not be helpful!
+<p>
+<blockquote><font color="#000080"> Throw open any window - force open the window<br> Slam shut any window - force close the window</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Track window to window - counts the number of spawn steps from noun to second (and back again, so you don't need to get the order right)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Peep through window - Debug info on the window: what does it spawn, what spawns from it, and what Flexible Window attributes does it carry.</font></blockquote>
+<p>
+<p><hr><p><a name=docsec19><b><font color="#800000">Chapter 5: Special features</b></font>
+<p>
+<p><a name=docsec20><b><font color="#000000">Section 5.1: Overview</b></font>
+<p>
+ Note: these don't render well across the spectrum of Glulx interpreters.
+<p>
+<p><a name=docsec21><b><font color="#000000">Section 5.2: Background Colour</b></font>
+<p>
+ Windows can have a back-colour, specified as one from the (reasonably large) Table of Common Color Values (based on but extended from Glulx Text Effects, by Emily Short). The possible colours are:
+<p>
+<blockquote><font color="#000080"> g-darkgreen, g-green, g-lime, g-midnightblue, g-steelblue, g-terracotta, g-navy, g-mediumblue, g-blue, g-indigo, g-cornflowerblue, g-mediumslateblue, g-maroon, g-red, g-deeppink, g-brown, g-darkviolet, g-khaki, g-silver, g-crimson, g-orangered, g-gold, g-darkorange, g-lavender, g-yellow, g-pink.</font></blockquote>
+<p>
+ and they are assigned by including a line like so:
+<p>
+<blockquote><font color="#000080"> The side-window has back-colour g-red.<br> The main-window has back-colour g-darkgreen.</font></blockquote>
+<p>
+ At present, colours in graphics windows are reasonably well-supported (and if not, are unlikely to do any harm). Background colours in text windows can cause a series of ugly effects; such as the colour only appearing behind printed characters, or the background colour copying itself into all other text windows.
+<p>
+ The main-window can be supplied a background colour in the same way.
+<p>
+<p><a name=docsec22><b><font color="#000000">Section 5.3: Borders</b></font>
+<p>
+ A window can be defined as a &quot;bordered g-window&quot;, and it will then be produced with a border of &quot;border-measure&quot; thickness and &quot;border-colour&quot; colour. (This is wastefully done; it actually places four thin windows around the window constructed, but harmlessly so).
+<p>
+ The main-window can be bordered too, by declaring that &quot;the main-window is a bordered g-window&quot;.
+<p>
+<p><a name=docsec23><b><font color="#000000">Section 5.4: Status Line</b></font>
+<p>
+ By default, Glulx games will incorporate a status line. To turn this off quickly, a use option is provided:
+<p>
+<blockquote><font color="#000080"> Use no status line.</font></blockquote>
+<p>
+<p><hr><p><a name=docsec24><b><font color="#800000">Chapter 6: Alternative input</b></font>
+<p>
+<p><a name=docsec25><b><font color="#000000">Section 6.1: Character input (single keystroke)</b></font>
+<p>
+ The built-in extension Basic Screen Effects already handles single keystroke input (also known as &quot;char input&quot; or &quot;character input&quot;), but it can do so only in the main window. Even in a multiple window layout, this if often sufficient, since in nearly all games the main window will always be open, and thus always available for input. However, there may be some situations in which we want to accept character input in other windows, such as when another window has been opened &quot;in front&quot; of the main-window for some special purpose. For these situations we offer the following phrases. Note that most of them are simply extensions of the Basic Screen Effects phrases to allow specification of the window:
+<p>
+<blockquote><font color="#000080"> wait for any key in the side-window<br> wait for the SPACE key in the side-window</font></blockquote>
+<p>
+<blockquote><font color="#000080">... the character code entered in the side-window</font></blockquote>
+<p>
+ The latter phrase both checks for a keypress and return a representation of the input as a numerical code. For example, the following would check for a keypress on startup, and print something if the key pressed was the spacebar:
+<p>
+<blockquote><font color="#000080"> When play begins:<br>&nbsp;&nbsp;&nbsp;&nbsp; if the character code entered in the main-window is 32:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You pressed the space bar. Good work.&quot;</font></blockquote>
+<p>
+<p><a name=docsec26><b><font color="#000000">Section 6.2: Hyperlinked text</b></font>
+<p>
+ Flexible Windows also offers the ability to place hyperlinks in text windows. The hyperlink functionality in Flexible Windows is based on that in Emily Short's Basic Hyperlinks extension. In fact, if you are moving an existing project to Flexible Windows, you may simply include Basic Hyperlinks to avoid making any changes to your existing hyperlink code. If you are starting a new project, though, it is recommended that you simply use the Flexible Windows commands (Though the functionality is similar, Flexible Windows uses a different namespace from Basic Hyperlinks.)
+<p>
+ By default, Flexible Windows's response to a clicked hyperlink is to enter a replacement command at the prompt on behalf of the player. To set a hyperlink, enclose the text to be linked between &quot;set link &lt;number&gt;&quot; and &quot;end link&quot; phrases:
+<p>
+<blockquote><font color="#000080"> say &quot;To the [set link 1]north[end link] a wide field opens, while to the [set link 2]south[end link] a narrow path winds into dark woods.&quot;</font></blockquote>
+<p>
+ Hyperlink replacement commands are defined by the Table of Glulx Hyperlink Replacement Commands. Hyperlinks are numbered, starting from 1:
+<p>
+<blockquote><font color="#000080"> Table of Glulx Hyperlink Replacement Commands (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> link ID</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> replacement</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;GO NORTH&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 2</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;GO SOUTH&quot;</font></font></td></tr></table></blockquote>
+<p>
+ If a link ID number has no corresponding text command in the table of replacement commands, nothing will happen when the link is clicked.
+<p>
+ To define custom behavior for a particular link, we write a new rule for the hyperlink processing rulebook. For example, to have a hyperlink simply clear the screen immediately, without pasting any text to the command line:
+<p>
+<blockquote><font color="#000080"> Hyperlink processing rule when the current hyperlink ID is 1:<br>&nbsp;&nbsp;&nbsp;&nbsp; clear the main-window;<br>&nbsp;&nbsp;&nbsp;&nbsp; silently try looking;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;[command prompt][run paragraph on]&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; rule succeeds.</font></blockquote>
+<p>
+ When we use this type of rule, we need not put anything in the Table of Glulx Hyperlink Replacement Commands. This table is only consulted when the default hyperlink processing rule is run.
+<p>
+ Note that Flexible Windows will also register hyperlinks in the status line. We define these like we do any other hyperlink, e.g.:
+<p>
+<blockquote><font color="#000080"> When play begins:<br>&nbsp;&nbsp;&nbsp;&nbsp; now the right hand status line is &quot;[set link 1]clear screen[end link]&quot;</font></blockquote>
+<p>
+<p><hr><p><a name=docsec27><b><font color="#800000">Chapter 7: Echo streams and the transcript</b></font>
+<p>
+ With multiwindowed layouts, we may run into questions about what should be written to the transcript--if we have three windows, all of them displaying text, which of these should go to the transcript. The Inform library provides for only the main window to write to the transcript, but by using &quot;echo streams&quot; we can exercise much more control over what gets written.
+<p>
+ Glulx allows each window to specify a maximum of one echo stream. An echo stream is another window or more often, a file on the hard disk, to which the output of the stream is &quot;echoed&quot;. The most common use for this functionality is to allow for the main window to be echoed to the transcript file (the standard behavior of Inform after the player has entered the SCRIPT ON command). Flexible Windows provides a number of phrases that allow for the testing, assignment, and specification of echo streams.
+<p>
+ First, we can test whether a given window has an echo stream like so:
+<p>
+<blockquote><font color="#000080"> if the side-window has an echo stream</font></blockquote>
+<p>
+ This will be true whether the side-window is echoing to the transcript or to another window.
+<p>
+ We can also find out whether the transcript is currently be written to an external file (in other words, whether the transcript stream itself currently exists or not):
+<p>
+<blockquote><font color="#000080"> if we are writing to the transcript</font></blockquote>
+<p>
+ And we can directly set any window to write to the transcript:
+<p>
+<blockquote><font color="#000080"> echo the stream of the side-window to the transcript</font></blockquote>
+<p>
+ Any number of windows can be simultaneously echoed to the transcript.
+<p>
+ We can also direct windows to echo to other windows--essentially, both windows will display the same text at the same time. This probably has no real use apart from brief special effects, but is available nonetheless. These two phrases set the echo stream of the side window so that it will echo the main window's content:
+<p>
+<blockquote><font color="#000080"> set the echo stream of the side-window to the stream of the main-window<br> echo the stream of the main-window to the stream of the side-window</font></blockquote>
+<p>
+ We can also set a window's echo stream to be the same as the echo stream of another window:
+<p>
+<blockquote><font color="#000080"> set the echo stream of the side-window to the echo-stream of the main-window</font></blockquote>
+<p>
+ A window stops echoing when either the window itself, or the stream to which it was echoing, is closed. We can also manually cease echoing a window's ouput:
+<p>
+<blockquote><font color="#000080"> shut down the echo stream of the side-window</font></blockquote>
+<p>
+ Finally, it is possible to write directly to the echo stream of a window, bypassing the window itself. This is likely to be most useful for selectively streaming information to the transcript:
+<p>
+<blockquote><font color="#000080"> say &quot;[echo stream of main-window]This text goes only to the transcript. [stream of main-window]This text goes to both the main-window and the transcript.&quot;</font></blockquote>
+<p>
+<p><hr><p><a name=docsec28><b><font color="#800000">Chapter 8: Change log</b></font>
+<p>
+ Version 9 - 27/5/10
+<p>
+<blockquote><font color="#000080"> Updated for use with Inform build 6Exx.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Implemented a new object-based rulebook for window-drawing. This requires minor changes to existing source code.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Added support for character input and textual hyperlinks, as well as limited support for echo streams. Improved behavior of window background colors under Gargoyle.</font></blockquote>
+<p>
+ Version 8 - 26/6/09
+<p>
+<blockquote><font color="#000080"> Changed code for clearing graphics windows to make it faster under Zoom for Mac (thanks to Erik Temple for this.) Note this clears the window by repainting it in its background colour, so this will have to be set for this to work correctly.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Added use option for no status line (thanks to Aaron Reed for this.)</font></blockquote>
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Flexible Windows-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Flexible Windows-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Inventory Window</font></b></a><br>A simple example showing how to place an side window displaying the player's inventory.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Flexible Windows-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Flexible Windows-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Inventory Window and Picture</font></b></a><br>A more complex example, that also provides an image panel above the inventory.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

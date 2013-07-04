@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x0616CE18" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x0616D198"/>
+  <item nodeId="node-0x0616CE18">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Player Name generation&#x000A;An Interactive Fiction by Orion Zymaris&#x000A;Release 1 / Serial number 130403 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;factory&#x000A;You can see player object here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0616D198"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0616D198">
+    <command xml:space="preserve">hullabaloo</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>

@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x0AFF6E20" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x0AFF6E20"/>
+  <item nodeId="node-0x0AFF6E20">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Vega Journey&#x000A;An Interactive Fiction by Orion Zymaris&#x000A;Release 1 / Serial number 130604 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;What is your name?</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0AFF6DB0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF6DB0">
+    <command xml:space="preserve">turn on computer</command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;   Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0AFF6F00"/>
+      <child nodeId="node-0x0AFF6FE0"/>
+      <child nodeId="node-0x0B037628"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF6F00">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Space (in Space ship)&#x000A;In Space ship you can see the ship's computer.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0AFF6F70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF6F70">
+    <command xml:space="preserve">look computer</command>
+    <result xml:space="preserve">the ship's computer is currently switched on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0AFF6FE0">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">&gt; Controls&#x000A;   Map of Journey</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0AFF7050"/>
+      <child nodeId="node-0x0B02F560"/>
+      <child nodeId="node-0x0B036218"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF7050">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0AFF8658"/>
+      <child nodeId="node-0x0AFF8818"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF8658">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;&#x000A; &gt; Navigation</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0AFF86C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF86C8">
+    <command xml:space="preserve">q</command>
+    <result xml:space="preserve">&gt; Navigation</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0AFF8738"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF8738">
+    <command xml:space="preserve">q</command>
+    <result xml:space="preserve">Living Quarters&#x000A;You can see the ship's computer here.&#x000A;&#x000A;You switch the ship's computer on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0AFF87A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF87A8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Living Quarters&#x000A;You can see the ship's computer here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0AFF8818">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Done.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0AFF8888"/>
+      <child nodeId="node-0x0B02F100"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF8888">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">&gt; Navigation</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0AFF88F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF88F8">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">&gt; Navigation</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0AFF8968"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0AFF8968">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">-----------*-----------&#x000A;-----------**-----------&#x000A;-----------***-----------&#x000A;-----------******---------&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0B02F100">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;&#x000A; &gt; Navigation</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F170"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F170">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">.&#x000A; *&#x000A; .                       .                   . &#x000A; .               ,"`. &#x000A; .                   _____                 `..'&#x000A; _,odO8O8888bo._         . &#x000A; ,odOoOoOoOOOO8O888bo.                  *&#x000A; *     ,dOoOoOoOoOoOO8O8O88@8@b.           . &#x000A; ,d8o:o:o:o:o:ooOoOOOO8O88@8b. &#x000A; do:o:o:o:o:o:ooooOoOO8O88@8@@@b&#x000A; .       do::.:.:.:.:.::o:ooooOOOO8888@@@b           . &#x000A; .o::::.:.:.:.::::o:ooOoOO8O88@@@@@. . &#x000A; .  |::.:.. . . ..:.::o:ooOoOO8O88@8@@|&#x000A; |o::.:.. . ..:.::o:ooOoOO8O88@8@@@|&#x000A; |::.:.. . . ..:.::o:ooOoOO8O88@8@@|&#x000A; 'o::::.:.:.:.::::o:ooOoOO8O88@@@@@'     .         *&#x000A; Y8::.:.:.:.:.::o:ooooOOOO8888@@@P&#x000A; `Y8:o:o:o:o:o:ooooOoOO8O88@8@@@P'&#x000A; `Y:o:o:o:o:o:ooOoOOOO8O88@8@P     .        . &#x000A; .        . `YOoOoOoOoOoOO8O8O88@8@@P'&#x000A; `YoOoOoOoOOOO8O8888@P'     . &#x000A; `"*YO8O8888@P*"'&#x000A; .                          *             .       . &#x000A; &#x000A; .                      . &#x000A; *            .                       .         &#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F1E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F1E0">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;&#x000A; &gt; Navigation</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F250"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F250">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">.&#x000A; *&#x000A; .                       .                   . &#x000A; .               ,"`. &#x000A; .                   _____                 `..'&#x000A; _,odO8O8888bo._         . &#x000A; ,odOoOoOoOOOO8O888bo.                  *&#x000A; *     ,dOoOoOoOoOoOO8O8O88@8@b.           . &#x000A; ,d8o:o:o:o:o:ooOoOOOO8O88@8b. &#x000A; do:o:o:o:o:o:ooooOoOO8O88@8@@@b&#x000A; .       do::.:.:.:.:.::o:ooooOOOO8888@@@b           . &#x000A; .o::::.:.:.:.::::o:ooOoOO8O88@@@@@. . &#x000A; .  |::.:.. . . ..:.::o:ooOoOO8O88@8@@|&#x000A; |o::.:.. . ..:.::o:ooOoOO8O88@8@@@|&#x000A; |::.:.. . . ..:.::o:ooOoOO8O88@8@@|&#x000A; 'o::::.:.:.:.::::o:ooOoOO8O88@@@@@'     .         *&#x000A; Y8::.:.:.:.:.::o:ooooOOOO8888@@@P&#x000A; `Y8:o:o:o:o:o:ooooOoOO8O88@8@@@P'&#x000A; `Y:o:o:o:o:o:ooOoOOOO8O88@8@P     .        . &#x000A; .        . `YOoOoOoOoOoOO8O8O88@8@@P'&#x000A; `YoOoOoOoOOOO8O8888@P'     . &#x000A; `"*YO8O8888@P*"'&#x000A; .                          *             .       . &#x000A; &#x000A; .                      . &#x000A; *            .                       .         &#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F2C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F2C0">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;&#x000A; &gt; Navigation</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F330"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F330">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">.&#x000A; *&#x000A; .                       .                   . &#x000A; .               ,"`. &#x000A; .                   _____                 `..'&#x000A; _,odO8O8888bo._         . &#x000A; ,odOoOoOoOOOO8O888bo.                  *&#x000A; *     ,dOoOoOoOoOoOO8O8O88@8@b.           . &#x000A; ,d8o:o:o:o:o:ooOoOOOO8O88@8b. &#x000A; do:o:o:o:o:o:ooooOoOO8O88@8@@@b&#x000A; .       do::.:.:.:.:.::o:ooooOOOO8888@@@b           . &#x000A; .o::::.:.:.:.::::o:ooOoOO8O88@@@@@. . &#x000A; .  |::.:.. . . ..:.::o:ooOoOO8O88@8@@|&#x000A; |o::.:.. . ..:.::o:ooOoOO8O88@8@@@|&#x000A; |::.:.. . . ..:.::o:ooOoOO8O88@8@@|&#x000A; 'o::::.:.:.:.::::o:ooOoOO8O88@@@@@'     .         *&#x000A; Y8::.:.:.:.:.::o:ooooOOOO8888@@@P&#x000A; `Y8:o:o:o:o:o:ooooOoOO8O88@8@@@P'&#x000A; `Y:o:o:o:o:o:ooOoOOOO8O88@8@P     .        . &#x000A; .        . `YOoOoOoOoOoOO8O8O88@8@@P'&#x000A; `YoOoOoOoOOOO8O8888@P'     . &#x000A; `"*YO8O8888@P*"'&#x000A; .                          *             .       . &#x000A; &#x000A; .                      . &#x000A; *            .                       .         &#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F3A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F3A0">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve"></result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F410"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F410">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;&#x000A; &gt; Navigation</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F480"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F480">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">.&#x000A; *&#x000A; .                       .                   . &#x000A; .               ,"`. &#x000A; .                   _____                 `..'&#x000A; _,odO8O8888bo._         . &#x000A; ,odOoOoOoOOOO8O888bo.                  *&#x000A; *     ,dOoOoOoOoOoOO8O8O88@8@b.           . &#x000A; ,d8o:o:o:o:o:ooOoOOOO8O88@8b. &#x000A; do:o:o:o:o:o:ooooOoOO8O88@8@@@b&#x000A; .       do::.:.:.:.:.::o:ooooOOOO8888@@@b           . &#x000A; .o::::.:.:.:.::::o:ooOoOO8O88@@@@@. . &#x000A; .  |::.:.. . . ..:.::o:ooOoOO8O88@8@@|&#x000A; |o::.:.. . ..:.::o:ooOoOO8O88@8@@@|&#x000A; |::.:.. . . ..:.::o:ooOoOO8O88@8@@|&#x000A; 'o::::.:.:.:.::::o:ooOoOO8O88@@@@@'     .         *&#x000A; Y8::.:.:.:.:.::o:ooooOOOO8888@@@P&#x000A; `Y8:o:o:o:o:o:ooooOoOO8O88@8@@@P'&#x000A; `Y:o:o:o:o:o:ooOoOOOO8O88@8@P     .        . &#x000A; .        . `YOoOoOoOoOoOO8O8O88@8@@P'&#x000A; `YoOoOoOoOOOO8O8888@P'     . &#x000A; `"*YO8O8888@P*"'&#x000A; .                          *             .       . &#x000A; &#x000A; .                      . &#x000A; *            .                       .         &#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F4F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F4F0">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;&#x000A; &gt; Navigation</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0B02F560">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F5D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F5D0">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F640"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F640">
+    <command xml:space="preserve">v</command>
+    <result xml:space="preserve"></result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F6B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F6B0">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;   On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F720"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F720">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F790"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F790">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F800"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F800">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B02F870"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B02F870">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0343F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0343F8">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034468"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034468">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0344D8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0344D8">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034548"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034548">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0345B8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0345B8">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034628"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034628">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034698"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034698">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034708"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034708">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034778"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034778">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0347E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0347E8">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034858"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034858">
+    <command xml:space="preserve">[up]</command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;   On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0348C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0348C8">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034938"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034938">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0349A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0349A8">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034A18"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034A18">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034A88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034A88">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034AF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034AF8">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B034B68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B034B68">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B035BF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B035BF8">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B035C68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B035C68">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B035CD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B035CD8">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B035D48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B035D48">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B035DB8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B035DB8">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B035E28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B035E28">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B035E98"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B035E98">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B035F08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B035F08">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B035F78"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B035F78">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B035FE8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B035FE8">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B036058"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B036058">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0360C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0360C8">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B036138"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B036138">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0361A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0361A8">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; On&#x000A;&#x000A; &gt; Navigation&#x000A;   On</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0B036218">
+    <command xml:space="preserve">q</command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;   Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B036288"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B036288">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; Map of Ship&#x000A;&#x000A;   Navigation&#x000A; &gt; Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0362F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0362F8">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">*** Run-time problem P23: Attempt to look up a non-existent entry at column 3, row 2 of the table 'Table of options'.&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B036368"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B036368">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; Map of Ship&#x000A;&#x000A;   Navigation&#x000A; &gt; Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0373F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0373F8">
+    <command xml:space="preserve">[esc]</command>
+    <result xml:space="preserve">Living Quarters&#x000A;You can see the ship's computer here.&#x000A;&#x000A;You switch the ship's computer on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037468"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037468">
+    <command xml:space="preserve">turn on computer</command>
+    <result xml:space="preserve">That's already on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0374D8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0374D8">
+    <command xml:space="preserve">off</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037548"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037548">
+    <command xml:space="preserve">turn off</command>
+    <result xml:space="preserve">(the ship's computer)&#x000A;You switch the ship's computer off.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0375B8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0375B8">
+    <command xml:space="preserve">turn on</command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;   Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0B037628">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; Map of Ship&#x000A;&#x000A;   Navigation&#x000A; &gt; Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037698"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037698">
+    <command xml:space="preserve">[up]</command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;   Map of Ship&#x000A;&#x000A; &gt; Navigation&#x000A;   Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037708"/>
+      <child nodeId="node-0x0B038C68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037708">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; Map of Ship&#x000A;&#x000A;   Navigation&#x000A; &gt; Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037778"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037778">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">*** Run-time problem P23: Attempt to look up a non-existent entry at column 3, row 2 of the table 'Table of options'.&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0377E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0377E8">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Navigation&#x000A; &gt; Map of Ship&#x000A;&#x000A;   Navigation&#x000A; &gt; Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037858"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037858">
+    <command xml:space="preserve">[up]</command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;   Map of Ship&#x000A;&#x000A; &gt; Navigation&#x000A;   Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0378C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0378C8">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">&gt; Controls&#x000A;   Map of Journey</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037938"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037938">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0379A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0379A8">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">&gt; Controls&#x000A;   Map of Journey&#x000A;&#x000A; &gt; Controls&#x000A;   Map of Journey</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037A18"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037A18">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Controls&#x000A; &gt; Map of Journey&#x000A;&#x000A;   Controls&#x000A; &gt; Map of Journey</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037A88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037A88">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037AF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037AF8">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Controls&#x000A; &gt; Map of Journey&#x000A;&#x000A;   Controls&#x000A; &gt; Map of Journey</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B037B68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B037B68">
+    <command xml:space="preserve">q</command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;   Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B038BF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B038BF8">
+    <command xml:space="preserve">q</command>
+    <result xml:space="preserve">Living Quarters&#x000A;You can see the ship's computer here.&#x000A;&#x000A;You switch the ship's computer on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0B038C68">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">&gt; Controls&#x000A;   Map of Journey</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B038CD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B038CD8">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B038D48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B038D48">
+    <command xml:space="preserve">v</command>
+    <result xml:space="preserve"></result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B038DB8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B038DB8">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">&gt; Controls&#x000A;   Map of Journey&#x000A;&#x000A; &gt; Controls&#x000A;   Map of Journey</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B038E28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B038E28">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">Controls&#x000A; &gt; Map of Journey&#x000A;&#x000A;   Controls&#x000A; &gt; Map of Journey</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B038E98"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B038E98">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B038F08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B038F08">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Controls&#x000A; &gt; Map of Journey&#x000A;&#x000A;   Controls&#x000A; &gt; Map of Journey</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B038F78"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B038F78">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B038FE8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B038FE8">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">Controls&#x000A; &gt; Map of Journey&#x000A;&#x000A;   Controls&#x000A; &gt; Map of Journey</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B039058"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B039058">
+    <command xml:space="preserve">q</command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;   Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0390C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0390C8">
+    <command xml:space="preserve">q</command>
+    <result xml:space="preserve">Living Quarters&#x000A;You can see the ship's computer here.&#x000A;&#x000A;You switch the ship's computer on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B039138"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B039138">
+    <command xml:space="preserve">turn off</command>
+    <result xml:space="preserve">(the ship's computer)&#x000A;You switch the ship's computer off.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B0391A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B0391A8">
+    <command xml:space="preserve">turn on</command>
+    <result xml:space="preserve">Rerouting apathetic delay circuits...</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0B039218"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0B039218">
+    <command xml:space="preserve">[back]</command>
+    <result xml:space="preserve">&gt; Navigation&#x000A;   Map of Ship</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1039(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Conversational Defaults by Eric Eve.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1039()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Conversational Defaults<font color="#404040"> by </font>Eric Eve</b><p><small></small><p><p><hr><p>
+<p>
+ However assiduous we are in providing conversational responses for things the player may try to tell or ask our NPCs about, we cannot possibly cover them all. Even if one of our NPCs is a banker, it's unlikely that we'll have provided responses to ASK BANKER ABOUT NORTHEN ROCK and ASK BANKER ABOUT LATEST INTEREST RATE CUT and ASK BANKER ABOUT DETAILS OF INTERNET SAVINGS ACCOUNTS. In such cases we need to provide default responses, responses which in practice mean &quot;I have not be programmed to respond to that input&quot; without making our NPCs look too robotic. This extension defines a number of rules and rulebooks to ease the process of defining such default responses. These enable us to write rules of the form:
+<p>
+<blockquote><font color="#000080"> default ask response for the banker:<br> default answer response for the banker:<br> default tell response for the banker:<br> default ask-tell response for the banker:</font></blockquote>
+<p>
+<blockquote><font color="#000080"> defaullt give response for the banker:<br> default show response for the banker:<br> default give-show response for the banker:</font></blockquote>
+<p>
+<blockquote><font color="#000080"> default ask-for response for the banker:<br> default yes-no response for the banker:</font></blockquote>
+<p>
+<blockquote><font color="#000080"> default response for the banker:</font></blockquote>
+<p>
+ Note that there's a hierarchy here. If we define a default ask response and a default tell response for the banker, we don't need a default ask-tell response since it would then never be reached. Either we define separate a default ask response and default tell response (if we want to handle them differently) or we define a default ask-tell response if we want to use the same default response whether the player typed ASK or TELL. Similarly, we can define separate default give and default show responses for an NPC if we want to handle them differently, or a single default give-show response to handle both GIVE and SHOW.
+<p>
+ A slightly subtler point: if we don't define a default answer response for an NPC, a command like ANSWER BANKER THAT FOO or SAY FOO TO BANKER, will first be handled by our default tell response rule (if we've defined one), or failing that by our default ask-tell response rule (if we've defined one), or failing that by a default response rule.
+<p>
+ The default response rule is a catch-all for all the other cases we haven't explicitly defined. If we liked, we could just define a single &quot;default response for banker&quot; rule that handled all conversational commands addressed to the banker for which we haven't defined particular responses.
+<p>
+ Note also that these rules effectively kick in at the report stage. This allows us to define our particular responses at the after stage, e.g.:
+<p>
+<blockquote><font color="#000080"> after asking banker about &quot;savings accounts&quot;:<br> &quot;'We offer a very attractive range of savings accounts,' he assures you, 'indeed, we boast the highest interest rates of any bank in the country. Of course, you understand that [italic type]we[roman type] charge [italic type]you[roman type] the interest for looking after your money.'&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> after quizzing banker about Pluto Crat:<br> &quot;'You know very well I can't discuss my other clients with you,' he replies sternly, 'bankers have a rigorous code of ethics, you know.'&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> default ask response for the banker:<br> &quot;'[one of]This really isn't the best time to discuss that[or]I'd rather not talk about that right now[or]You'll need to make another appointment to discuss that[or]I hardly think that's an appropriate question to ask your bank manager[in random order],' he replies.&quot;</font></blockquote>
+<p>
+ An alternative would be to use Conversational Defaults alongside Conversation Responses. Then instead of the above we could write:
+<p>
+<blockquote><font color="#000080"> response of banker when asked about &quot;savings accounts&quot;:<br> &quot;'We offer a very attractive range of savings accounts,' he assures you, 'indeed, we boast the highest interest rates of any bank in the country. Of course, you understand that [italic type]we[roman type] charge [italic type]you[roman type] the interest for looking after your money.'&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> response of banker when asked about Pluto Crat:<br> &quot;'You know very well I can't discuss my other clients with you,' he replies sternly, 'bankers have a rigorous code of ethics, you know.'&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> default ask response for the banker:<br> &quot;'[one of]This really isn't the best time to discuss that[or]I'd rather not talk about that right now[or]You'll need to make another appointment to discuss that[or]I hardly think that's an appropriate question to ask your bank manager[in random order],' he replies.&quot;</font></blockquote>
+<p>
+ The two examples illustrate these two methods further.
+<p>
+ One other thing to note: our default answer response for the banker would be reached whenever the player enters the command ASK BANKER ABOUT FOO, when we haven't implemented a response for foo, whether the parser matches &quot;ASK BANKER ABOUT FOO&quot; to the asking it about action or the quizzing it about action. Similarly a default tell response is triggered whether we TELL BANKER ABOUT THING or TELL BANKER ABOUT &quot;TOPIC&quot;, and a default ask-for response whether we ASK BANKER FOR THING or ASK BANKER FOR &quot;TOPIC&quot;.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Conversational Defaults.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Conversational Defaults.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Sisko's Briefing</font></b></a><br>A brief conversation with defaults.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1040(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Sisko[=0x0027=]s Briefing[=0x0022=][=0x000A=][=0x000A=]Include Conversational Defaults by Eric Eve.[=0x000A=][=0x000A=]Captain Sisko[=0x0027=]s Office is a Room.[=0x000A=][=0x0022=]Behind the desk a pair of large windows overlook the stars that seem to surround the wormhole.[=0x0022=][=0x000A=][=0x000A=]The large desk is a scenery supporter in Captain Sisko[=0x0027=]s Office.[=0x000A=][=0x000A=]Benjamin Sisko is a man in Captain Sisko[=0x0027=]s Office. [=0x0022=]Captain Sisko is seated behind his desk.[=0x0022=][=0x000A=]Understand [=0x0022=]ben[=0x0022=] or [=0x0022=]captain[=0x0022=] as Benjamin Sisko.[=0x000A=][=0x000A=]After quizzing Sisko about the dominion war:[=0x000A=]say [=0x0022=][=0x0027=]It[=0x0027=]s not going as well as I[=0x0027=]d like; we[=0x0027=]re taking far too many casualties,[=0x0027=] he tells you.[=0x0022=][=0x000A=][=0x000A=]After quizzing Sisko about Gul Dukat:[=0x000A=]say [=0x0022=][=0x0027=]He[=0x0027=]s a very evil man,[=0x0027=] Sisko opines.[=0x0022=][=0x000A=][=0x000A=]After quizzing Sisko about Sisko:[=0x000A=]say [=0x0022=][=0x0027=]I am quite well, thank you,[=0x0027=] he assures you.[=0x0022=][=0x000A=][=0x000A=]After informing Sisko about Quark:[=0x000A=]say [=0x0022=][=0x0027=]Up to his usual tricks, no doubt,[=0x0027=] he nods.[=0x0022=][=0x000A=][=0x000A=]default ask-tell response for Sisko:[=0x000A=]say [=0x0022=][=0x0027=]Let[=0x0027=]s talk about that some other time,[=0x0027=] he suggests.[=0x0022=][=0x000A=][=0x000A=]default ask-for response for Sisko:[=0x000A=]say [=0x0022=][=0x0027=]I[=0x0027=]m afraid I can[=0x0027=]t help you with that just now,[=0x0027=] he tells you.[=0x0022=][=0x000A=][=0x000A=]default yes-no response for Sisko:[=0x000A=]say [=0x0022=][=0x0027=]I wasn[=0x0027=]t aware I had just asked you something,[=0x0027=] Sisko remarks.[=0x0022=][=0x000A=][=0x000A=]The dominion war is a familiar thing.[=0x000A=]Gul Dukat is a familiar man.[=0x000A=]Quark is a familiar man.[=0x000A=][=0x000A=]Test me with [=0x0022=]a sisko/a war/a quark/t quark/ask for promotion/a dukat/a bashir/t dax[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1040()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Sisko's Briefing&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Conversational Defaults by Eric Eve.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Captain Sisko's Office is a Room.<br> &quot;Behind the desk a pair of large windows overlook the stars that seem to surround the wormhole.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The large desk is a scenery supporter in Captain Sisko's Office.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Benjamin Sisko is a man in Captain Sisko's Office. &quot;Captain Sisko is seated behind his desk.&quot;<br> Understand &quot;ben&quot; or &quot;captain&quot; as Benjamin Sisko.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After quizzing Sisko about the dominion war:<br> say &quot;'It's not going as well as I'd like; we're taking far too many casualties,' he tells you.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After quizzing Sisko about Gul Dukat:<br> say &quot;'He's a very evil man,' Sisko opines.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After quizzing Sisko about Sisko:<br> say &quot;'I am quite well, thank you,' he assures you.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After informing Sisko about Quark:<br> say &quot;'Up to his usual tricks, no doubt,' he nods.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> default ask-tell response for Sisko:<br> say &quot;'Let's talk about that some other time,' he suggests.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> default ask-for response for Sisko:<br> say &quot;'I'm afraid I can't help you with that just now,' he tells you.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> default yes-no response for Sisko:<br> say &quot;'I wasn't aware I had just asked you something,' Sisko remarks.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The dominion war is a familiar thing.<br> Gul Dukat is a familiar man.<br> Quark is a familiar man.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;a sisko/a war/a quark/t quark/ask for promotion/a dukat/a bashir/t dax&quot;</font></blockquote>
+<p>
+</font></td></tr></table><p><hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Conversational Defaults-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Conversational Defaults-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Sisko's Extended Briefing</font></b></a><br>A longer version of the first example, using the Conversation Responses extension as well.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

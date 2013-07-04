@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1055(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Graphical Window Animation by Erik Temple.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1055()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Graphical Window Animation<font color="#404040"> by </font>Erik Temple</b><p><small></small><p><p><hr><p><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Section 1: Setting Up an Animation</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 2: Playing an Animation</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 3: Altering Currently Playing Animations</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 4: Some Details and Fine Points</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Section 5: A Note on Frame Rates and Performance</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Section 6: Change Log</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Graphical Window Animation-eg1.html#eg1"><font color="#000000">A: Ghostly Rider</font></a><br><p><hr><p><p><hr><p>
+<p>
+ Graphical Window Animation allows an author to animate images in a Glulx graphics window created and defined using Emily Short's Simple Graphical Window extension. Building on the hack described by Adam Cadre in his Gull documentation (http://adamcadre.ac/gull/), it uses Glulx's real-time capabilities to manage the display of individual images, producing an animated sequence. By default, the extension is set up to display animations in response to triggered events within a single room (such as button pushes, characters speaking, and so on), but can easily be configured to display animations while moving between rooms, or to play an image sequence associated with a room.
+<p>
+ Graphical Window Animation version 3 was designed to work with Inform build 5Z71 and requires both Emily Short's Simple Graphical Window (version 6) as well as her Glulx Entry Points extension. The images used in the example below are available for download at http://www.sendspace.com/file/wcsqei. Two other example games, including source text and image files, illustrate more advanced applications and can be downloaded from http://www.sendspace.com/file/lzlaro.
+<p>
+<p><a name=docsec1><b><font color="#000000">Section 1: Setting Up an Animation</b></font>
+<p>
+ Graphical Window Animation uses &quot;reels&quot; to organize and play animations. A reel is simply a list of figure-names (see Chapter 20 of the Inform manual for information on lists), and the author defines them as follows:
+<p>
+<blockquote><font color="#000080"> The example reel is a list of figure-names that varies. The example reel is { Figure of Rider 01, Figure of Rider 02, Figure of Rider 03, Figure of Rider 04, Figure of Rider 05 }.</font></blockquote>
+<p>
+ When the animation is played (see below), the figures in the reel will be shown one after the other, in list order. Each entry in the list is thus a frame of the animation. Note that images must be declared elsewhere in the source to be used as part of an animation reel (see Chapter 21 of the Inform manual). Once defined, a reel can be manipulated using all of the capabilities Inform provides for lists. Any number of reels may be defined.
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 2: Playing an Animation</b></font>
+<p>
+ An animation shows each of the figures that we have defined in sequence, at a specified rate of speed, given in frames per second (fps). Animations always play from a reel called &quot;the current reel&quot; which the author should set before invoking the animation:
+<p>
+<blockquote><font color="#000080"> now the current reel is (name of the reel);<br> animate the current reel at (number) fps</font></blockquote>
+<p>
+ The &quot;animate...&quot; phrase shows each of the images defined in the current reel, in order, at the given frame rate (a number that specifies the frames per second). For example:
+<p>
+<blockquote><font color="#000080"> now the current reel is the example reel;<br> animate the current reel at 5 fps</font></blockquote>
+<p>
+ will display each of the five frames defined in the example reel in sequence, ideally for 1/5 of a second each.
+<p>
+ We can also loop through the animation without end (until interrupted; see below). We do this by adding &quot;looping&quot; to the end of the phrase:
+<p>
+<blockquote><font color="#000080"> animate the current reel at 12 fps, looping</font></blockquote>
+<p>
+ When the final frame of the reel is reached, we begin again with the first frame.
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 3: Altering Currently Playing Animations</b></font>
+<p>
+ Graphical Window Animation provides a number of phrases which alter animations that are currently in progress. Under normal circumstances, these will be useful only for looped animations.
+<p>
+ If we do not want to loop through the entire animation but only the latter portion of it, we can follow the &quot;animate&quot; command with this instruction:
+<p>
+<blockquote><font color="#000080"> loop animation from frame (a number)</font></blockquote>
+<p>
+ For example:
+<p>
+<blockquote><font color="#000080"> animate the current reel at 5 fps, looping;<br> loop animation from frame 3</font></blockquote>
+<p>
+ This would play the animation in full once, then loop continuously through the final three frames. (The frame number is simply the position of the desired entry in the reel's list of figure-names, with the first figure enumerated as 1.)
+<p>
+ The phrase
+<p>
+<blockquote><font color="#000080"> interrupt animation</font></blockquote>
+<p>
+ immediately halts an animation already in progress. By default, any animation in progress is stopped when the player looks or moves from room to room. The extension defines two rules which the author can use to control the default behavior, the stop animation when going rule and the stop animation when looking rule, and authors can interfere with these rules as needed to obtain the desired effect.
+<p>
+ If we want to bring a looping animation to a smooth end, we can use the phrase:
+<p>
+<blockquote><font color="#000080"> stop looping animation</font></blockquote>
+<p>
+ This will allow the animation to continue to the final frame (as defined in the &quot;animate&quot; phrase), and will then halt it. For completeness, a &quot;loop animation&quot; phrase is provided. This causes an originally unlooped animation to begin looping once it reaches the final frame; this is unlikely to be useful, however, because under normal circumstances we can't be sure that an unlooped animation will receive the command before it ends; once an animation has ended, it cannot be altered by further commands.
+<p>
+ The author may want to change the speed of a looped animation while it is still playing. This can be done with the phrase:
+<p>
+<blockquote><font color="#000080"> change the animation speed to (number) fps</font></blockquote>
+<p>
+ Any currently running animation will speed up or slow down to the new frame-rate (in frames per second) defined in this phrase.
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 4: Some Details and Fine Points</b></font>
+<p>
+ Animations are drawn using the current graphics drawing rule (see the Simple Graphical Window extension). When an animation ends, it returns control of the window to the currently shown picture as defined in the source. (If you are also using Emily Short's Location Images extension, this will be the current room illustration.) If the currently shown picture is undefined, the behavior of the window will depend on which rule is defined (the default rule fills the window with black). We can, of course, set any image to display on termination of the animation by placing the following line in the source directly after the &quot;animate&quot; phrase:
+<p>
+<blockquote><font color="#000080"> now the currently shown picture is (the chosen image)</font></blockquote>
+<p>
+ This might be useful if, for example, we want to ensure that the last frame of the animation persists on screen until any other screen-drawing rules are invoked (for example, by moving between rooms or by looking).
+<p>
+ It is important to emphasize that animations, once triggered, are advanced independently of most rules that do not affect the Glulx timer (the glulx timed activity rules defined by Emily Short's Glulx Entry Points extension, on which Graphical Window Animation depends). Thus, we should not expect that this code block
+<p>
+<blockquote><font color="#000080"> now the current reel is the sleigh bells reel;<br> animate the current reel at 10 fps;<br> now the current reel is the slay bells reel;<br> animate the current reel at 10 fps.</font></blockquote>
+<p>
+ will display the two animations, one after the other. Rather, the second animation is triggered immediately after the first, and thus supersedes it. The commands that alter running animations are thus really only of use on looping animations, because we can write our code to be sure that these are called while the animation is still running.
+<p>
+ If we want to ensure that the player sees the full animation before the game continues, we can pause all input and output with the phrase
+<p>
+<blockquote><font color="#000080"> wait for animation to end</font></blockquote>
+<p>
+ This will pause the game until the animation ends, or until the player presses the ESC key. This phrase will have no effect when used with looping animations.
+<p>
+ Finally, the author can test conditions surround the animation in progress using the following descriptions:
+<p>
+<blockquote><font color="#000080"> when animation occurs<br> the current reel<br> the current frame</font></blockquote>
+<p>
+ &quot;When animation occurs&quot; is used to inquire whether an animation is currently ongoing. We can also ask what reel is the current reel (e.g., &quot;if the current reel is the reel of destruction&quot;), and what frame is the current frame (&quot;if the current frame is 7&quot;). The latter could be used, for example, to trigger another event (such as a playing a sound) when a given frame is reached. For the most part, these should be used in the course of rules in the glulx timed activities and glulx picture selection rulebooks (defined in Emily Short's Glulx Entry Points).
+<p>
+<p><a name=docsec5><b><font color="#000000">Section 5: A Note on Frame Rates and Performance</b></font>
+<p>
+ While Simple Graphical Window strives to produce the absolute frame rate defined by the author, the actual frame rate of an animation will depend on many factors, including the size of the images, the processing power of the computer, the interpreter's handling of images, and so on. You will probably want to test actual performance on different interpreters and platforms to verify performance. As of January 2009, the extension has been tested with Zoom and Spatterlight on OS X, and on Git and Windows Glulxe on Windows. Zoom and Git seem to perform best, with Windows Glulxe a close second, and Spatterlight rather slower.
+<p>
+<p><a name=docsec6><b><font color="#000000">Section 6: Change Log</b></font>
+<p>
+ Version 3: Altered the &quot;wait for animation to end&quot; phrase so that it does not function in conjunction with looped animations. Changed the &quot;interrupt animation&quot; phrase so that it no longer triggers a redraw. Fixed examples to work properly with the Gluxle and Git interpreters (thanks to David Kinder). Incorporated Ghostly Rider example.
+<p>
+ Version 2: Updated for compatibility with Inform build 5U92. Extension rewritten to incorporate Inform's then-new list manipulation capabilities, introducing the more flexible &quot;reels&quot; as the basis for building animation. Added the &quot;wait for animation to end&quot; command. Released 12/17/2008.
+<p>
+ Version 1: Released 5/15/2007.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Graphical Window Animation.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Graphical Window Animation.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Ghostly Rider</font></b></a><br>A simple animation sequence that fires when we enter a particular location.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ This example provides a sample of the kind of event-based animations that the Graphical Window Animation extension provides by default. Each room has its own illustration, displayed in the graphics window using a modified version of the code from Emily Short's Location Images extension. The animation shows a simple sequence of images built on one of the location illustrations; when the animation ends, the graphics window reverts automatically to the location illustration. While the images depict a figure moving over the room background, the animation is not sprite-based; the background is included in each frame of the animation. The images used in this example, which are modified from Cyril Pedrosa's excellent graphic novel Three Shadows, can be downloaded from http://www.sendspace.com/file/wcsqei. More complex animation examples that use sprites and pseudo-sprites can be downloaded from http://www.sendspace.com/file/lzlaro.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1056(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Ghostly Rider[=0x0022=][=0x000A=][=0x000A=]Include Graphical Window Animation by Erik Temple.[=0x000A=][=0x000A=]Rule for starting the virtual machine:[=0x000A=][=0x0009=]now the current graphics drawing rule is the standard placement rule.[=0x000A=][=0x000A=]The stop animation when looking rule is listed first in the carry out looking rulebook.[=0x000A=][=0x000A=]A room has a figure-name called room-illustration.[=0x000A=][=0x000A=]The image-setting rule is listed in the carry out looking rules.[=0x000A=][=0x000A=]This is the image-setting rule:[=0x000A=][=0x0009=]change currently shown picture to the room-illustration of the location;[=0x000A=][=0x0009=]follow the current graphics drawing rule.[=0x000A=][=0x000A=]Figure of Dark Street is the file [=0x0022=]Street.png[=0x0022=]. Figure of Bright Street is the file [=0x0022=]Bright Street.png[=0x0022=]. Figure of Rider 01 is the file [=0x0022=]Rider 01.png[=0x0022=]. Figure of Rider 02 is the file [=0x0022=]Rider 02.png[=0x0022=]. Figure of Rider 03 is the file [=0x0022=]Rider 03.png[=0x0022=]. Figure of Rider 04 is the file [=0x0022=]Rider 04.png[=0x0022=]. Figure of Rider 05 is the file [=0x0022=]Rider 05.png[=0x0022=]. Figure of Rider 06 is the file [=0x0022=]Rider 06.png[=0x0022=]. Figure of Rider 07 is the file [=0x0022=]Rider 07.png[=0x0022=]. Figure of Rider 08 is the file [=0x0022=]Rider 08.png[=0x0022=]. Figure of Rider 09 is the file [=0x0022=]Rider 09.png[=0x0022=]. Figure of Rider 10 is the file [=0x0022=]Rider 10.png[=0x0022=]. Figure of Rider 11 is the file [=0x0022=]Rider 11.png[=0x0022=]. Figure of Rider 12 is the file [=0x0022=]Rider 12.png[=0x0022=]. Figure of Rider 13 is the file [=0x0022=]Rider 13.png[=0x0022=]. Figure of Rider 14 is the file [=0x0022=]Rider 14.png[=0x0022=]. Figure of Rider 15 is the file [=0x0022=]Rider 15.png[=0x0022=]. Figure of Rider 16 is the file [=0x0022=]Rider 16.png[=0x0022=]. Figure of Rider 17 is the file [=0x0022=]Rider 17.png[=0x0022=]. Figure of Rider 18 is the file [=0x0022=]Rider 18.png[=0x0022=]. Figure of Rider 19 is the file [=0x0022=]Rider 19.png[=0x0022=]. Figure of Rider 20 is the file [=0x0022=]Rider 20.png[=0x0022=]. Figure of Rider 21 is the file [=0x0022=]Rider 21.png[=0x0022=].[=0x000A=][=0x000A=]The Ghostly Rider reel is a list of figure-names that varies. The ghostly rider reel is { Figure of Rider 01, Figure of Rider 02, Figure of Rider 03, Figure of Rider 04, Figure of Rider 05, Figure of Rider 06, Figure of Rider 07, Figure of Rider 08, Figure of Rider 09, Figure of Rider 10, Figure of Rider 11, Figure of Rider 12, Figure of Rider 13, Figure of Rider 14, Figure of Rider 15, Figure of Rider 16, Figure of Rider 17, Figure of Rider 18, Figure of Rider 19, Figure of Rider 20, Figure of Rider 21 }.[=0x000A=][=0x000A=]Quiet Street is a room. [=0x0022=]The street is silent. [if unvisited]Stucco glows in the moonlight. The street passes through a portico to the south.[otherwise if Silent Street is visited]There is no sign of the rider.[=0x0022=] The room-illustration is Figure of Bright Street.[=0x000A=][=0x000A=]Silent Street is south of Quiet Street. [=0x0022=]The only sound is your footfall on the gravel street. [if unvisited]A ghostly rider approaches from the south. It glides north, passing you noiselessly.[otherwise]There is a chill in the air. The rider is gone.[=0x0022=] The room-illustration is Figure of Dark Street.[=0x000A=][=0x000A=]Carry out looking when the player is in Silent Street and Silent Street is unvisited:[=0x000A=][=0x0009=]Now the current reel is the ghostly rider reel;[=0x000A=][=0x0009=]Animate the current reel at 6 fps;[=0x000A=][=0x0009=]Wait for animation to end.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1056()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Ghostly Rider&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Graphical Window Animation by Erik Temple.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Rule for starting the virtual machine:<br>&nbsp;&nbsp;&nbsp;&nbsp; now the current graphics drawing rule is the standard placement rule.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The stop animation when looking rule is listed first in the carry out looking rulebook.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A room has a figure-name called room-illustration.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The image-setting rule is listed in the carry out looking rules.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> This is the image-setting rule:<br>&nbsp;&nbsp;&nbsp;&nbsp; change currently shown picture to the room-illustration of the location;<br>&nbsp;&nbsp;&nbsp;&nbsp; follow the current graphics drawing rule.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Figure of Dark Street is the file &quot;Street.png&quot;. Figure of Bright Street is the file &quot;Bright Street.png&quot;. Figure of Rider 01 is the file &quot;Rider 01.png&quot;. Figure of Rider 02 is the file &quot;Rider 02.png&quot;. Figure of Rider 03 is the file &quot;Rider 03.png&quot;. Figure of Rider 04 is the file &quot;Rider 04.png&quot;. Figure of Rider 05 is the file &quot;Rider 05.png&quot;. Figure of Rider 06 is the file &quot;Rider 06.png&quot;. Figure of Rider 07 is the file &quot;Rider 07.png&quot;. Figure of Rider 08 is the file &quot;Rider 08.png&quot;. Figure of Rider 09 is the file &quot;Rider 09.png&quot;. Figure of Rider 10 is the file &quot;Rider 10.png&quot;. Figure of Rider 11 is the file &quot;Rider 11.png&quot;. Figure of Rider 12 is the file &quot;Rider 12.png&quot;. Figure of Rider 13 is the file &quot;Rider 13.png&quot;. Figure of Rider 14 is the file &quot;Rider 14.png&quot;. Figure of Rider 15 is the file &quot;Rider 15.png&quot;. Figure of Rider 16 is the file &quot;Rider 16.png&quot;. Figure of Rider 17 is the file &quot;Rider 17.png&quot;. Figure of Rider 18 is the file &quot;Rider 18.png&quot;. Figure of Rider 19 is the file &quot;Rider 19.png&quot;. Figure of Rider 20 is the file &quot;Rider 20.png&quot;. Figure of Rider 21 is the file &quot;Rider 21.png&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Ghostly Rider reel is a list of figure-names that varies. The ghostly rider reel is { Figure of Rider 01, Figure of Rider 02, Figure of Rider 03, Figure of Rider 04, Figure of Rider 05, Figure of Rider 06, Figure of Rider 07, Figure of Rider 08, Figure of Rider 09, Figure of Rider 10, Figure of Rider 11, Figure of Rider 12, Figure of Rider 13, Figure of Rider 14, Figure of Rider 15, Figure of Rider 16, Figure of Rider 17, Figure of Rider 18, Figure of Rider 19, Figure of Rider 20, Figure of Rider 21 }.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Quiet Street is a room. &quot;The street is silent. [if unvisited]Stucco glows in the moonlight. The street passes through a portico to the south.[otherwise if Silent Street is visited]There is no sign of the rider.&quot; The room-illustration is Figure of Bright Street.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Silent Street is south of Quiet Street. &quot;The only sound is your footfall on the gravel street. [if unvisited]A ghostly rider approaches from the south. It glides north, passing you noiselessly.[otherwise]There is a chill in the air. The rider is gone.&quot; The room-illustration is Figure of Dark Street.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Carry out looking when the player is in Silent Street and Silent Street is unvisited:<br>&nbsp;&nbsp;&nbsp;&nbsp; Now the current reel is the ghostly rider reel;<br>&nbsp;&nbsp;&nbsp;&nbsp; Animate the current reel at 6 fps;<br>&nbsp;&nbsp;&nbsp;&nbsp; Wait for animation to end.</font></blockquote>
+<p>
+</font></td></tr></table><p>
+<p>
+<p></body></html>

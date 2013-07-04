@@ -1,0 +1,35 @@
+* //C8A63770-6D0B-11E2-B933-F96839AE4917// currentplayereports
+Action: looking 
+
+Game tester: Orion
+Command: all player reports
+Game tester: Orion
+Command: clear all player reports
+Game tester: Orion
+Command: gonear living room
+Game tester: Orion
+Command: look mantlepiece
+Action: examining the mantlepiece 
+
+Game tester: Orion
+Command: look photos
+Game tester: Orion
+Command: look photo
+Action: examining the photo 
+
+Game tester: Orion
+Command: take photos
+Action: taking the photo 
+
+Action: taking the photo 
+
+Action: taking the photo 
+
+Action: taking the photo 
+
+Action: taking the photo 
+
+Game tester: Orion
+Command: look photo
+Action: examining the photo 
+

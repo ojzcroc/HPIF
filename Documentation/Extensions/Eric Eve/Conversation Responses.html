@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1030(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Conversation Responses by Eric Eve.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1030()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Conversation Responses<font color="#404040"> by </font>Eric Eve</b><p><small></small><p><p><hr><p><b><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Chapter 1: Various Responses</font></a></b><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Chapter 2: Hello and Goodbye</font></a></b><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Conversation Responses-eg1.html#eg1"><font color="#000000">A: Bob's Lost Wallet</font></a><br><p><hr><p><p><hr><p>
+<p>
+<p><a name=docsec1><b><font color="#800000">Chapter 1: Various Responses</b></font>
+<p>
+ Conversation Responses allows response rules for various conversational commands to be written in the following forms:
+<p>
+<blockquote><font color="#000080"> Response of Bob when asked about Bob:<br> Response of Bob when asked about &quot;life&quot;:<br> Response of Bob when told about &quot;[money]&quot;:<br> Response of Bob when asked about a container:<br> Response of Bob when asked about something fixed in place:<br> Response of Bob when told about Jim:<br> Response of Bob when shown the wallet:<br> Response of Bob when given the wallet:<br> Response of Bob when asked for the wallet:<br> Response of Bob when asked for &quot;sympathy&quot;:<br> Response of Bob when anwered that &quot;probably&quot;:<br> Response of Bob when saying yes:<br> Response of Bob when saying no:<br> Response of Bob when saying sorry:</font></blockquote>
+<p>
+ This may seem to have little advantage over writing rules like &quot;After asking Bob about life&quot;, but it also allows the following forms for ask/tell or give/show:
+<p>
+<blockquote><font color="#000080"> Response of Bob when asked-or-told about &quot;life&quot;:<br> Response of Bob when asked-or-told about the wallet:<br> Response of Bob when given-or-shown the gold coin:</font></blockquote>
+<p>
+ It also avoids using the After rulebook, since all these Response rules are triggered from the action-specific Report rules (which may be more efficient when there would otherwise need to be a lot of action-generic after rules to cater for a large number of conversational responses).
+<p>
+ But this extension only really comes into its own when combined into others (such as Conversational Defaults and Conversation Nodes), where using these Response rules helps ensures that the various rulebooks are consulted in the right order.
+<p>
+<p><hr><p><a name=docsec2><b><font color="#800000">Chapter 2: Hello and Goodbye</b></font>
+<p>
+ This extension also provides special report rules for saying hello and goodbye to NPCs:
+<p>
+<blockquote><font color="#000080"> Greeting response for Bob:<br> Implicit greeting response for Bob:<br> Farewell response for Bob:<br> Implicit farewell response for Bob:</font></blockquote>
+<p>
+ An implicit greeting is triggered if we address an NPC without explicitly saying hello. An implicit farewell is triggered is we walk away from an NPC in mid-conversation without first saying goodbye. In the former case the extension will use an Implicit Greeting Response if present, or a Greeting Response if no Implicit Greeting Response has been defined. Likewise if we walk away from the current interlocutor in mid-conversation, the extension will trigger an Implicit Farewell Response if one has been provided, but will otherwise fall back on the appropriate Farewell Response. If neither an Implicit Farewell Response nor a Farewell Response has been defined, then no kind of implicit farewell will be displayed (and likewise with an implicit greeting).
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Conversation Responses-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Conversation Responses-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Bob's Lost Wallet</font></b></a><br>A brief conversation illustrating the use of response rules.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

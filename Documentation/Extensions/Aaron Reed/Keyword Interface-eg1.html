@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1001(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Keyword Interface by Aaron Reed.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1001()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Keyword Interface<font color="#404040"> by </font>Aaron Reed</b><p><small></small><p><p><hr><p><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Section 1: Basic Usage</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 2: Objects</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 3: Directions</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 4: Topics</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Section 5: Parser Messages</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Section 6: Control</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec7><font color="#000000">Section 7: Screen Reader Mode</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec8><font color="#000000">Section 8: Disambiguation</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Keyword Interface-eg1.html#eg1"><font color="#000000">A: Sense of Direction</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Keyword Interface-eg2.html#eg2"><font color="#000000">B: The Gnome's Holiday</font></a><br><p><hr><p><p><hr><p>
+<p>
+ This extension emulates the emphasized keyword system for streamlining common IF input, as seen in &quot;Blue Lacuna.&quot; Nouns, directions, and topics are highlighted and can be typed without verbs to examine, move, or discuss, respectively. (Topics are implemented only in skeletal form to allow for integration with any conversation system; Keywords for Conversation by Matt Wigdahl, for instance, will integrate it with Eric Eve's Conversation Package extensions.) A full system for letting the player select his own preferred color scheme and keeping games backwards-compatible for players on screen readers or with no color support is also included. The extension is compatible with either z-code or Glulx.
+<p>
+ A warning: Inform authors using color have poor options on either platform. In z-code games, colors can be freely adjusted, but are limited to a palette of eight neon shades, only a few of which will be readable on any given backdrop. Glulx users can select from a palette of sixteen million colors, but can only make two of these available at a time, and these cannot be changed during play. On z-code, all eight colors are made available to the user and can be adjusted by player or author at any time; on Glulx, the two defaults are blue and green, and only authors can customize this. On both platforms, bold, italics, and fixed-width are offered as alternatives to colored keywords.
+<p>
+<p><a name=docsec1><b><font color="#000000">Section 1: Basic Usage</b></font>
+<p>
+ Keyword Interface allows an emphasis style to be set for one of four possible categories. Each of these can be enabled or disabled independently by the author or player. By default, they are set as follows:
+<p>
+<blockquote><font color="#000080"> Object keyword highlighting is usually true.<br> Direction keyword highlighting is usually true.<br> Topic keyword highlighting is usually false.<br> Parser highlighting is usually false.</font></blockquote>
+<p>
+ These can be enabled or disabled at any time during play through a &quot;now&quot; statement, or globally by making a more definitive assertion:
+<p>
+<blockquote><font color="#000080"> Object keyword highlighting is false.</font></blockquote>
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 2: Objects</b></font>
+<p>
+ When object keyword highlighting is set to true, the extension will automatically emphasize non-scenery objects listed by the parser. Objects may also be manually emphasized in any text by wrapping them in and substitutions.
+<p>
+<blockquote><font color="#000080"> The Office is a room. &quot;Only a bare [o]bulb[x] illuminates this dim office, empty except for a solitary desk.&quot;. A desk and a bare bulb are scenery in the office. On the desk is a telephone book and the lamp.</font></blockquote>
+<p>
+ This produces output like the following (where emphasis is marked with asterisks):
+<p>
+<blockquote><font color="#000080"> The Office<br> Only a bare *bulb* illuminates this dim office, empty except for a solitary desk.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> On the desk are a telephone *book* and a *lamp*.</font></blockquote>
+<p>
+ If you want scenery items to be automatically emphasized, you can manually set them as keyworded, or include a line like the following (which would add emphasis to &quot;desk&quot; in the final line above):
+<p>
+<blockquote><font color="#000080"> When play begins: now every scenery thing is keyworded.</font></blockquote>
+<p>
+ The emphasized word will be the final word of the object's printed name. To change this, you can use the object's &quot;keyword&quot; text property, which should be one of the other words in the printed name. You can also define an object as &quot;keywordless,&quot; in which case it will never be automatically emphasized.
+<p>
+<blockquote><font color="#000080"> A book of memories with keyword &quot;book&quot; is in the Office. Some scattered cigarettes are a keywordless thing in the Office.</font></blockquote>
+<p>
+ Produces:
+<p>
+<blockquote><font color="#000080"> &quot;You can also see a *book* of memories and some scattered cigarettes here.&quot;</font></blockquote>
+<p>
+ Automatic emphasis normally occurs when looking, opening or taking inventory. If you want to disable one of these you can use code like the following:
+<p>
+<blockquote><font color="#000080"> The Keyword Interface highlight objects when looking rule is not listed in any rulebook.</font></blockquote>
+<p>
+ Conversely, if you want object highlighting during other times, you can use code like this:
+<p>
+<blockquote><font color="#000080"> Rule for printing the name of a thing (called item) while asking which do you mean:<br>&nbsp;&nbsp;&nbsp;&nbsp; carry out the object keywording activity with item.</font></blockquote>
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 3: Directions</b></font>
+<p>
+ When direction keyword highlighting is set to true and cardinal directions are wrapped in brackets in room descriptions, these will be emphasized as they are printed.
+<p>
+<blockquote><font color="#000080"> &quot;Gloomy passages depart to the [south] and [east].&quot;</font></blockquote>
+<p>
+ Compassless navigation as seen in Blue Lacuna can be implemented by adding a directional keyword as a synonym for the intended direction, limiting this to the specific room in which that keyword is valid, and wrapping the relevant word in &quot;d&quot; and &quot;x&quot; tags in the descriptive text.
+<p>
+<blockquote><font color="#000080"> &quot;Gloomy passages depart down a dusty set of [d]stairs[x] and through a wide [d]passage[x].&quot; Understand &quot;stairs&quot; as south when location is Gloomy Tunnel. Understand &quot;passage&quot; as east when location is Gloomy Tunnel.</font></blockquote>
+<p>
+ An &quot;exits&quot; verb is included with Keyword Interface to assist blind users or those without color interpreters (who in the above example would have no way of knowing which words correspond to movement). EXITS lists all of the cardinal exits from the current location. If your game uses compassless navigation, you may want to extend this verb to print your keywords instead (see the &quot;Gnome's Holiday&quot; example below for one way to do this).
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 4: Topics</b></font>
+<p>
+ Since there are so many different conversation systems, support for highlighting conversation topics is only vestigial. It's turned on when &quot;topic keyword highlighting&quot; is set to true and you can invoke it with the &quot;[t]topic[x]&quot; wrapper, but everything else will have to be done by hand to match your own conversation system. Again, see &quot;Gnome's Holiday&quot; for a simple example of a keyword-based conversation system.
+<p>
+<p><a name=docsec5><b><font color="#000000">Section 5: Parser Messages</b></font>
+<p>
+ The extension can also style parser messages differently from normal game text. This may be useful to authors who wish to differentiate error messages (&quot;I didn't understand the first part of that.&quot;) from in-game admonishments (&quot;You wouldn't be caught dead wearing that.&quot;)
+<p>
+ Parser error highlighting is disabled by default; you can turn it on with
+<p>
+<blockquote><font color="#000080"> Parser highlighting is true.</font></blockquote>
+<p>
+ If your game defines new parser error messages or rewrites existing ones, you should wrap them in the &quot;as the parser&quot; and &quot;as normal&quot; say statements:
+<p>
+<blockquote><font color="#000080"> Understand &quot;floop&quot; as a mistake (&quot;[as the parser]To cast a spell, you must cast it on something, like FLOOP THE MATTRESS.[as normal]&quot;).</font></blockquote>
+<p>
+<p><a name=docsec6><b><font color="#000000">Section 6: Control</b></font>
+<p>
+ As noted above, authors can enable or disable keyword highlighting for any component. Players also have control over emphasis style through the KEYWORD verb, which brings up a menu with flexible options, customized to which keywords are enabled and with instructions for activating a screen reader mode for blind players.
+<p>
+ If keywords are a crucial component of your game, you can add the following:
+<p>
+<blockquote><font color="#000080"> Keywords required is true.</font></blockquote>
+<p>
+ This will bring up a message before your game begins ensuring that players can see the keyword highlighting, and giving them an option to adjust styles.
+<p>
+ You can show some stock explanatory text, customized to which keywords are enabled, by using the following phrase, perhaps in the carry out rule for an &quot;about&quot; command:
+<p>
+<blockquote><font color="#000080"> show KI message for keyword-introduction</font></blockquote>
+<p>
+ To change the default color values at the start of play, authors can use syntax like:
+<p>
+<blockquote><font color="#000080"> The style of object-word is keyword-cyan.</font></blockquote>
+<p>
+ The four modes are object-word, direction-word, topic-word, and parser-word. For Glulx games, possible styles are keyword-color1-style and keyword-color2-style; for z-code games, they are keyword-red, keyword-green, keyword-yellow, keyword-blue, keyword-magenta, keyword-cyan, keyword-white, and keyword-black. Both VMs provide the additional styles keyword-bold-style, keyword-italics-style, keyword-fixedwidth-style, and keyword-no-style.
+<p>
+ To change the Glulx colors, you can adjust g-color1 and g-color2 by amending the Table of Common Color Values-- see the documentation for &quot;Glulx Text Effects&quot; by Emily Short for more information.
+<p>
+<blockquote><font color="#000080"> Table of Common Color Values (amended)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> glulx color value</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> assigned number</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> g-color1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 15645627</font></font></td></tr></table></blockquote>
+<p>
+ All messages the extension prints are customizable by amending the Table of Keyword Interface messages. Open up the extension source to see the full list of messages.
+<p>
+<p><a name=docsec7><b><font color="#000000">Section 7: Screen Reader Mode</b></font>
+<p>
+ By typing &quot;screen reader&quot; or selecting the appropriate option from the keyword customization menu, players can set the internal variable &quot;screen reader mode&quot; to true. Blind players and those without color interpreters can activate this mode. This might be useful to provide an alternative if your game contains other visual components such as a map, or uses color in puzzles.
+<p>
+ The extension provides two verbs to assist color-challenged players: a &quot;things&quot; command which prints a list of nearby objects, and an &quot;exits&quot; command which summarizes the nearby directions. If you're using compassless navigation, you may want to customize the exits command to make use of your custom direction names. Additionally, if your game features conversation, strongly consider building a &quot;topics&quot; command to round out the set.
+<p>
+<p><a name=docsec8><b><font color="#000000">Section 8: Disambiguation</b></font>
+<p>
+ Inform's normal disambiguation assumes that every command begins with a verb, which means conflicts between keywords, and between keywords and verbs, are hard or impossible to control. The best solution is to make sure your object, direction, and topic keywords have no overlap.
+<p>
+ *If an object and direction keyword* are in the same scope, the parser silently assumes the player means the direction keyword, and will print a seemingly useless &quot;(the object)&quot; clarification if the player manually examines that object instead.
+<p>
+ *If a highlighted keyword matches a verb*, the verb will take precedence. For example, typing &quot;set&quot; to reference a chess set would instead produce the message &quot;What do you want to set?&quot; The best way to avoid this is to change the keyword and description of the object to avoid mentioning the verb word-- in this case &quot;chessboard&quot; might be a good substitute. You could also disable the verb if it's not one your story uses (see &quot;Overriding existing commands&quot; in the docs).
+<p>
+ *Conversation systems should take precedence over objects* since this is what players will expect. See the example below for one implementation of this.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Keyword Interface.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Keyword Interface.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Sense of Direction</font></b></a><br>A simple usage of the extension to print bold compass directions.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ The flexibility of Keyword Interface means it can be used for multiple purposes. Here we strip away and focus some of its functionality to simply print compass directions in bold.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1002(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Sense of Direction[=0x0022=][=0x000A=][=0x000A=]Include Keyword Interface by Aaron Reed.[=0x000A=][=0x000A=]Object keyword highlighting is false. The style of direction-word is keyword-bold-style.[=0x000A=][=0x000A=]Labyrinth is south of Passage and west of Halls. Halls is south of Dungeon and west of Pit. Pit is south of Harrows. Harrows is east of Dungeon and south of Caverns. Dungeon is east of Passage and south of Abyss. Passage is south of Abattoir. Abbattoir is west of Abyss and north of Passage. Abyss is west of Caverns.[=0x000A=][=0x000A=]After looking: try listing exits.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1002()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Sense of Direction&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Keyword Interface by Aaron Reed.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Object keyword highlighting is false. The style of direction-word is keyword-bold-style.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Labyrinth is south of Passage and west of Halls. Halls is south of Dungeon and west of Pit. Pit is south of Harrows. Harrows is east of Dungeon and south of Caverns. Dungeon is east of Passage and south of Abyss. Passage is south of Abattoir. Abbattoir is west of Abyss and north of Passage. Abyss is west of Caverns.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After looking: try listing exits.</font></blockquote>
+<p>
+</font></td></tr></table><p><hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Keyword Interface-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Keyword Interface-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Gnome's Holiday</font></b></a><br>A full example of emphasized objects, compassless directions, and conversation topics.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

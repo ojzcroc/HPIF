@@ -1,0 +1,40 @@
+*ame tester: look
+Command: all player reports
+Action: reading player command report 
+
+Action: looking 
+
+Game tester: look
+Command: all error reports
+Action: error report retrieving 
+
+Game tester: look
+Command: clear error reports
+Action: clearing error report 
+
+Game tester: look
+Command: look
+Action: looking 
+
+Game tester: look
+Command: all error
+Game tester: look
+Command: all error reports
+Action: error report retrieving 
+
+Game tester: look
+Command: look
+Action: looking 
+
+Game tester: look
+Command: player report
+Action: reading current player command report 
+
+Game tester: look
+Command: all player reports
+Action: reading player command report 
+
+Game tester: look
+Command: all player reports
+Action: reading player command report 
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode2889(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Real-Time Delays by Erik Temple.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2889()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Real-Time Delays<font color="#404040"> by </font>Erik Temple</b><p><small>for Glulx only&nbsp;<img border=0 src=inform:/doc_images/vm_glulx.png>&nbsp;<p>Version 1/100607</small><p>Allows the author to specify a delay of a given number of seconds/milliseconds before continuing the action.<p>Values that vary: <b>waiting flag</b>, <b>Timer</b><p><p><hr><p>
+<p>
+ Real-Time Delays allows an author to request a delay of a given number of seconds. This delay occurs immediately, and no input or output can occur until the specified time has elapsed. It requires both Glulx Entry Points (built in) and Michael Callaghan's Fixed Point Maths extension.
+<p>
+ The use of the extension is quite simple. The length of the delay is specified in milliseconds, e.g. 1000 represents one second. We may write a phrase such as
+<p>
+<blockquote><font color="#000080"> wait 1450 milliseconds before continuing<br> wait 14500 ms before continuing</font></blockquote>
+<p>
+ at virtually any point in our source code. The delay is triggered immediately, and the action will not advance until the specified period has passed. However, we may tap the Return/Enter, Space, or ESC key at any time to immediately end the delay. To disable this for the Enter and Space keys, add &quot;strictly&quot; to the instruction:
+<p>
+<blockquote><font color="#000080"> wait 1450 milliseconds before continuing, strictly</font></blockquote>
+<p>
+ The Escape key will always allow the action to continue, no matter which version of the phrase is used.
+<p>
+ The extension will ignore calls to the real-time functions on interpreters that don't support them. If you'd like to subsititute an alternate effect on those interpreters, you can use this phrasing to fork between the two treatments:
+<p>
+<blockquote><font color="#000080"> if glulx timekeeping is supported</font></blockquote>
+<p>
+ See the documentation for Glulx Entry Points for more information.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Real-Time Delays.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Real-Time Delays.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Chamber</font></b></a><br>A simple illustration of basic usage.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode2890(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]The Chamber[=0x0022=][=0x000A=][=0x000A=]Include Real-Time Delays by Erik Temple.[=0x000A=][=0x000A=]The Tanatalus Chamber is a room. The chocolate bar is in the chamber.[=0x000A=][=0x000A=]Instead of taking the chocolate bar:[=0x000A=][=0x0009=]say [=0x0022=]You pause. Do you really want...[paragraph break][=0x0022=];[=0x000A=][=0x0009=]if glulx timekeeping is supported:[=0x000A=][=0x0009=][=0x0009=]wait 2000 milliseconds before continuing;[=0x000A=][=0x0009=]say [=0x0022=]...God! Of course you do! You devour it without removing the wrapper.[=0x0022=];[=0x000A=][=0x0009=]remove the chocolate bar from play.[=0x000A=][=0x000A=]Test me with [=0x0022=]take bar[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2890()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;The Chamber&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Real-Time Delays by Erik Temple.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Tanatalus Chamber is a room. The chocolate bar is in the chamber.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of taking the chocolate bar:<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You pause. Do you really want...[paragraph break]&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; if glulx timekeeping is supported:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wait 2000 milliseconds before continuing;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;...God! Of course you do! You devour it without removing the wrapper.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; remove the chocolate bar from play.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;take bar&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p><hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Real-Time Delays-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Real-Time Delays-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Teletype</font></b></a><br>Shows how to use real-time delays to mimic a teletype effect, with a short pause after each letter, and a longer pause after each line. The code here makes use of three global variables to set the speed for different types of output--delay for line breaks and paragraph breaks can be set separately from other characters. A few other phrases are included to show how common tasks such as changing the basic teletype rate can be made easier.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

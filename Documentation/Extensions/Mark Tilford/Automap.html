@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode2848(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Automap by Mark Tilford.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2848()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>automap<font color="#404040"> by </font>mark tilford</b><p><small><p>Version 4</small><p>An extension to automatically draw a map.<p>Kinds: <b>Map zoomedness</b>, <b>Map displayness</b><p>Values that vary: <b>Current zoom</b>, <b>Current displayness</b>, <b>Map drawn room</b>, <b>Map drawn direction</b>, <b>automap size</b><p>Values: <b>map zoomed out</b>, <b>map zoomed in</b>, <b>map absent</b>, <b>map display ascii</b>, <b>map display automatic</b>, <b>map display fancy</b>, <b>map display unicode</b><p>Actions: <b>Zooming in</b>, <b>Zooming out</b>, <b>Zooming away</b>, <b>ZoomingMisc</b>, <b>Map displaying unicode</b>, <b>Map displaying fancy</b>, <b>Map displaying ascii</b>, <b>Gargoyle workaround</b>, <b>Map displaying automatic</b>, <b>Map viewing</b>, <b>Map dumping</b>, <b>Map link dumping</b><p>Adjectives: <b>mappable</b>, <b>unmappable</b>, <b>currently_mapped</b><p>Properties: <b>map_x</b>, <b>map_y</b>, <b>mappable</b>, <b>unmappable</b>, <b>currently_mapped</b><p>Use options: <b>automap manual exploration</b>, <b>automap manual display</b>, <b>automap visible background</b>, <b>automap hide paths through closed doors</b>, <b>automap reserved area</b>, <b>automap static allocation</b>, <b>automap hyperlinks</b><p><p><hr><p>
+<p>
+ Automap will watch what rooms the player has visited and create a Beyond Zork style automap.
+<p>
+ Kinds: Mappable Room. All rooms which are to show on the map must be of this kind.
+<p>
+ By default, rooms will be placed one unit away in the appropriate direction. If the path should be longer, you can manually set the distance.
+<p>
+ It is the responsibility of the author to make the map has a consistent geography and that no two rooms overlap.
+<p>
+ Activities:
+<p>
+ - The &quot;Automap work&quot; is activity is being handled while the program is attempting to explore a room or draw the map (that is, the times when it might perform the &quot;which room is (direction) from (room)&quot; decision). It is provided if you need to have anything work differently during such a test.
+<p>
+ Use options:
+<p>
+ - Use automap manual display: The program will not display the map to the status line on its own.
+<p>
+ - Use automap manual exploration: The program will not add rooms to the map unless you explicitly run the &quot;(room) is explored&quot; decision.
+<p>
+ - Use automap hide paths through closed doors: The program will not add paths that go through closed doors.
+<p>
+ - Use automap static allocation: Causes a glulx game to allocate memory for the automap at compile time. Reduces flexibility, but allows the game to run on more interpreters. (Automatically set when compiling to zcode.)
+<p>
+ - Use automap reserved area of at least N: Sets the amount of memory the game will use for drawing the map. Must be at least (map rows) * (map columns). This option is ignored when compiling to glulx, unless the &quot;use automap static allocation&quot; option is set.
+<p>
+ - Use automap visible background: Spaces that would ordinarily be blank will be shown as periods. Meant for experimenting with the size of the map while testing and is not meant for release.
+<p>
+ New source code syntax:
+<p>
+<blockquote><font color="#000080"> decision: &quot;(mappable room) is placed (number) and (number) from (mappable room)&quot;: If the player has visited both rooms, it will attempt to arrange the map so that they will appear in the given relative positions. Returns yes unless doing so creates an inconsistency. It will not be necessary to use this decision in your own code unless you want to have rooms that would not ordinarily be on the same map region together. (For example, if a closet is connected to the main room by in / out, this would put it on the map with the rest of the rooms.)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> decision: &quot;(room) is explored&quot;: Attempts to connect (room) with any adjacent rooms. It probably will not be necessary to use this unless you want to add rooms the player hasn't visited, or you are using the manual exploration option. Returns no if doing so creates any inconsistencies, and yes otherwise.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> phrase: &quot;explore (room)&quot; / &quot;remap (room)&quot;: Attempt to add the room to the automap. Prints an error if there are any problems. Again, it probably will not be necessary to use this unless you want to add rooms the player hasn't visited, or you are using the manual exploration option.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> phrase: &quot;unmap (mappable room)&quot;: Removes the room from the automap. Will be needed if you want to change its position relative to other rooms.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> phrase: &quot;fill status bar with (selected table - a table-name) and map&quot;: Will print the calculated automap. Should only be necessary if you are using the manual display option.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> phrase: &quot;reserve automap memory of (number) rows by (number) cols&quot;: Sets the size of the displayed map. Must be called for any map to display. May be changed at any time. (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17,...)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> phrase: &quot;reserve automap memory of (number) rows&quot;: Sets the size of displayed map. Width is the current width of the status line. If using static allocation, and this would require more memory than is allocated, width is trimmed to what will fit. (Maps will center better if the height and width are 1 more than a multiple of 4: 1, 5, 9, 13, 17,...)</font></blockquote>
+<p>
+ New in-game commands:
+<p>
+ - &quot;zoom in&quot;: Shows the map so that rooms have 3x3 grids.
+<p>
+ - &quot;zoom out&quot;: Shows the map so that rooms have 1x1 grids. (the default)
+<p>
+ - &quot;zoom away&quot;: Removes the map entirely.
+<p>
+ - &quot;zoom&quot;: Rotates through the various zoom modes.
+<p>
+ To set the zoom manually, change the current zoom variable to map zoomed in, map zoomed out, or map absent.
+<p>
+ - &quot;map automatic&quot;: Try to use the font 3 characters. If the interpreter does not support them, convert down to ASCII characters.
+<p>
+ - &quot;map fancy&quot;: Force using the font 3 characters, whether the interpreter supports them or not.
+<p>
+ - &quot;map plain&quot;: Convert down to ASCII characters. Don't even try to use font 3. (the default)
+<p>
+ If the game is run on a buggy interpreter, using the command &quot;gargoyle bug workaround&quot; should prevent problems.
+<p>
+ - &quot;map view&quot; (not for release): shows information
+<p>
+ Thanks to Jesse McGrew and Mike Talbert for help with overriding decisions. Thanks to Cristoph Ender and Andrew Plotkin for help with Unicode. Thanks to Andrew Plotkin and Jesse McGrew for help with joining I6 and I7. Thanks to S. John Ross for testing and feedback. Thanks to Aaron Reed for feedback and a minimal example. Lots and lots of thanks to Peter Pears for heavy testing and feedback. Erik Temple prepared version 4 for submission to the extensions library.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Automap-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Automap-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">&quot;The Test&quot; by Aaron Reed</font></b></a><br>A minimal test. Note that, as of late October 2010, this example will crash in some interpreters (such as Zoom and the IDE interpreter on Mac OS X) under Glulx. Include the &quot;automap static allocation&quot; use option to prevent this kind of crash.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Automap-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Automap-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Demonstration</font></b></a><br>A simple demonstration.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

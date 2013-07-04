@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x02AF3A28" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x02AF3718"/>
+  <item nodeId="node-0x02AF3A28">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur. Hi omnes lingua, institutis, legibus inter se differunt. Gallos ab Aquitanis Garumna flumen, a Belgis Matrona et Sequana dividit.&#x000A;&#x000A;Horum omnium fortissimi sunt Belgae, propterea quod a cultu atque humanitate provinciae longissime absunt, minimeque ad eos mercatores saepe commeant atque ea quae ad effeminandos animos pertinent important, proximique sunt Germanis, qui trans Rhenum incolunt, quibuscum continenter bellum gerunt. Qua de causa Helvetii quoque reliquos Gallos virtute praecedunt, quod fere cotidianis proeliis cum Germanis contendunt, cum aut suis finibus eos prohibent aut ipsi in eorum finibus bellum gerunt.&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x02AF37F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02AF37F8">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">The Gallic War&#x000A;An interactive campaign by Julius Caesar&#x000A;Release 1 / Serial number 130623 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Lessons&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02AF38D8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02AF38D8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Lessons&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02AF3718"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02AF3718">
+    <command xml:space="preserve">test me</command>
+    <result xml:space="preserve">&gt;--&gt; No test scripts exist for this game.&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>

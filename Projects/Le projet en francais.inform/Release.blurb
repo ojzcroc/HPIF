@@ -1,0 +1,37 @@
+! Blurb file created by Inform build 6G60
+
+status "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\CblorbModel.html" "D:\zym0001\Documents\Inform\Projects\Le projet en francais.inform\Build\StatusCblorb.html"
+
+
+! Identification
+
+project folder "D:\zym0001\Documents\Inform\Projects\Le projet en francais.inform"
+release to "D:\zym0001\Documents\Inform\Projects\Le projet en francais Materials\Release"
+
+! Blorb instructions
+
+storyfile leafname "Le Roi de Fihnargaia.zblorb"
+storyfile "D:\zym0001\Documents\Inform\Projects\Le projet en francais.inform\Build\output.z5" include
+ifiction "D:\zym0001\Documents\Inform\Projects\Le projet en francais.inform\Metadata.iFiction" include
+cover "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
+picture 1 "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
+
+! Placeholder variables
+
+placeholder [IFID] = "9C35D23C-6F6D-469B-80A0-DE1C156B3915"
+placeholder [RELEASE] = "1"
+placeholder [YEAR] = "2009"
+placeholder [TITLE] = "Le Roi de Fihnargaia"
+placeholder [AUTHOR] = "Eric Forgeot"
+placeholder [BLURB] = "La rencontre du héros et de la famille royale"
+
+! Other material to release
+
+status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc391.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with a website'&nbsp;<a href=inform:/doc393.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc394.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the "Such-and-Such" file called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc389.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc398.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc392.html><img border=0 src=inform:/help.png></a>||

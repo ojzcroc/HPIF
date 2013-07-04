@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x02533B20" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x04F55B38"/>
+  <item nodeId="node-0x02533B20">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Nearly ten years had passed since the Dursleys had woken up to find their nephew in the front step, but Privet Drive had hardly changed at all. The sun rose on the same tidy front gardens and lit up the brass number four on the Dursley's front door; it crept into their living-room, which was almost exactly the same as it had been on the night when Mr Dursley had seen that fateful news report about the owls.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x02533420"/>
+      <child nodeId="node-0x02534060"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533420">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cupboard under the stairs&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533AB0"/>
+      <child nodeId="node-0x02533730"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533AB0">
+    <command xml:space="preserve">showme me</command>
+    <result xml:space="preserve">yourself - person&#x000A;location: in Harry's Room&#x000A;singular-named, proper-named; unlit, inedible, portable; male&#x000A;printed name: "Harry Potter"&#x000A;printed plural name: "people"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02533730">
+    <command xml:space="preserve">help</command>
+    <result xml:space="preserve">&gt; General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x025335E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x025335E0">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A; &gt; What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary&#x000A;   &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A; &gt; What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533B90"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533B90">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A; &gt; Acknowledgements&#x000A;   Itinerary&#x000A;   &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A; &gt; Acknowledgements&#x000A;   Itinerary</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533C00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533C00">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary&#x000A;   &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533C70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533C70">
+    <command xml:space="preserve">[down]</command>
+    <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary&#x000A; &gt; &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary&#x000A; &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533CE0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533CE0">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">*** Run-time problem P23: Attempt to look up a non-existent entry at column 1, row 5 of the table 'Table of Options'.&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533D50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533D50">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary&#x000A; &gt; &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary&#x000A; &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533DC0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533DC0">
+    <command xml:space="preserve">[up]</command>
+    <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary&#x000A;   &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533EA0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533EA0">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">'allo&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533F10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533F10">
+    <command xml:space="preserve"> </command>
+    <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary&#x000A;   &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533F80"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533F80">
+    <command xml:space="preserve">[esc]</command>
+    <result xml:space="preserve">Cupboard under the stairs&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02533FF0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02533FF0">
+    <command xml:space="preserve"> look</command>
+    <result xml:space="preserve">Cupboard under the stairs&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02534060">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Only the photographs on the mantlepiece really showed how much time had passed. Ten years ago, there had been lots of pictures of what looked like a large pink beach ball wearing different-coloured bobble hats - but Dudley Dursley was no longer a baby, and now the photographs showed a large, blond boy riding his first bicycle, on a roundabout at the fair, playing a computer game with his father, being hugged and kissed by his mother.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DA70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DA70">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;The room held no sign at all that another boy lived in the house too.&#x000A;    Yet Harry Potter was still there, asleep at the moment, but not for long. His Aunt Petunia was awake and it was her shrill voice which made the first noise of the day.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DAE0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DAE0">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Up! Get up! Now!</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DB50"/>
+      <child nodeId="node-0x04F0E090"/>
+      <child nodeId="node-0x04F0E170"/>
+      <child nodeId="node-0x04F55828"/>
+      <child nodeId="node-0x04F55B38"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DB50">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cupboard under the stairs&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DBC0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DBC0">
+    <command xml:space="preserve">rape</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DC30"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DC30">
+    <command xml:space="preserve">rape</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DCA0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DCA0">
+    <command xml:space="preserve">wte</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DD10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DD10">
+    <command xml:space="preserve">ewfwrgdtg</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DD80"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DD80">
+    <command xml:space="preserve">ffff</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DDF0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DDF0">
+    <command xml:space="preserve">alex</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DE60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DE60">
+    <command xml:space="preserve">petunia</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DED0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DED0">
+    <command xml:space="preserve">eat</command>
+    <result xml:space="preserve">(yourself)&#x000A;(first taking yourself)&#x000A;You are always self-possessed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DF40"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DF40">
+    <command xml:space="preserve">actions</command>
+    <result xml:space="preserve">Actions listing on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0DFB0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0DFB0">
+    <command xml:space="preserve">grge</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0E020"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0E020">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">[hailing]&#x000A;There's no one here but you.&#x000A;[hailing - failed the check what's being hailed rule]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x04F0E090">
+    <command xml:space="preserve">hel</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0E100"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0E100">
+    <command xml:space="preserve">dsfd</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x04F0E170">
+    <command xml:space="preserve"></command>
+    <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F0E1E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F0E1E0">
+    <command xml:space="preserve">fdgfg</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x04F55828">
+    <command xml:space="preserve">sdte</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F55898"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F55898">
+    <command xml:space="preserve">999</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F55908"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F55908">
+    <command xml:space="preserve">989</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x04F55B38">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Harry Potter and the philosopher's stone&#x000A;An Interactive Fiction by Orion Zymaris&#x000A;Release 1 / Serial number 130704 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;Cupboard under the stairs (in Bed)&#x000A;You can barely see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (south), a pair of socks, a pair of shoes, a chess set, a roll of sellotape and glasses here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F55C18"/>
+      <child nodeId="node-0x04F55BA8"/>
+      <child nodeId="node-0x04F55F28"/>
+      <child nodeId="node-0x09E37E20"/>
+      <child nodeId="node-0x0905EE68"/>
+      <child nodeId="node-0x0905EED8"/>
+      <child nodeId="node-0x0905F418"/>
+      <child nodeId="node-0x09F75B30"/>
+      <child nodeId="node-0x09E9D490"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F55C18">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fic tion version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;The room held no sign at all that another boy lived in the house too.&#x000A;    Yet Harry Potter was still there, asleep at the moment, but not for long. His Aunt Petunia was awake and it was her shrill voice which made the first noise of the day.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F55C88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F55C88">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Nearly ten years had passed since the Dursleys had woken up to find their nephew in the front step, but Privet Drive had hardly changed at all. The sun rose on the same tidy front gardens and lit up the brass number four on the Dursley's front door; it crept into their living-room, which was almost exactly the same as it had been on the night when Mr Dursley had seen that fateful news report about the owls.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F55CF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F55CF8">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Only the photographs on the mantlepiece really showed how much time had passed. Ten years ago, there had been lots of pictures of what looked like a large pink beach ball wearing different-coloured bobble hats - but Dudley Dursley was no longer a baby, and now the photographs showed a large, blond boy riding his first bicycle, on a roundabout at the fair, playing a computer game with his father, being hugged and kissed by his mother.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F55D68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F55D68">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fic tion version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;The room held no sign at all that another boy lived in the house too.&#x000A;    Yet Harry Potter was still there, asleep at the moment, but not for long. His Aunt Petunia was awake and it was her shrill voice which made the first noise of the day.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F55DD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F55DD8">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Only the photographs on the mantlepiece really showed how much time had passed. Ten years ago, there had been lots of pictures of what looked like a large pink beach ball wearing different-coloured bobble hats - but Dudley Dursley was no longer a baby, and now the photographs showed a large, blond boy riding his first bicycle, on a roundabout at the fair, playing a computer game with his father, being hugged and kissed by his mother.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F55E48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F55E48">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve"></result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x04F55BA8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cupboard under the stairs (in Bed)&#x000A;You can barely see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (west), a pair of socks, a pair of shoes, a chess set, a roll of sellotape and glasses here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F55EB8"/>
+      <child nodeId="node-0x08F698E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F55EB8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cupboard under the stairs (in Bed)&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;"Up!" Screeches Petunia.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E38050"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E38050">
+    <command xml:space="preserve"> Fine jerk</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E380C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E380C0">
+    <command xml:space="preserve">get up</command>
+    <result xml:space="preserve">You get out of Bed.&#x000A;&#x000A;Cupboard under the stairs&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Bed (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E38130"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E38130">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cupboard under the stairs&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Bed (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x08F698E0">
+    <command xml:space="preserve">get up</command>
+    <result xml:space="preserve">"Up!" Screeches Petunia.&#x000A;&#x000A;You get out of Bed.&#x000A;&#x000A;Cupboard under the stairs&#x000A;You can barely see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (west), Bed (empty), a pair of socks, a pair of shoes, a chess set, a roll of sellotape and glasses here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x08F69950"/>
+    </children>
+  </item>
+  <item nodeId="node-0x08F69950">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening Cupboard door)&#x000A;"Get a move on, I want you to look after the bacon. And don't you dare let it burn, I want everything perfect on Duddy's birthday."&#x000A;&#x000A;Hall&#x000A;You can see Cupboard door (east) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x08F699C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x08F699C0">
+    <command xml:space="preserve">groan</command>
+    <result xml:space="preserve">It's not sexy times yet.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x04F55F28">
+    <command xml:space="preserve">get up</command>
+    <result xml:space="preserve">You get out of Bed.&#x000A;&#x000A;Cupboard under the stairs&#x000A;You can barely see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (south), Bed (empty), a pair of socks, a pair of shoes, a chess set, a roll of sellotape and glasses here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x04F55F98"/>
+      <child nodeId="node-0x09008B48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x04F55F98">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cupboard under the stairs&#x000A;You can see Bed (empty) here.&#x000A;&#x000A;"Up!" Screeches Petunia.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x09008B48">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening Cupboard door)&#x000A;"Up!" Screeches Petunia.&#x000A;&#x000A;"Get a move on, I want you to look after the bacon. And don't you dare let it burn, I want everything perfect on Duddy's birthday.". You see the kitchen door slam as Petunia walks through and closes it.&#x000A;&#x000A;Hall&#x000A;You can see white door (west) and Cupboard door (north) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09008AD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09008AD8">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">(first opening white door)&#x000A;&#x000A;Kitchen&#x000A;You can see white door (east) and Aunt Petunia here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09008A68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09008A68">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">(addressing Aunt Petunia)&#x000A;You say hello to Aunt Petunia.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09008BB8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09008BB8">
+    <command xml:space="preserve">bye</command>
+    <result xml:space="preserve">You say goodbye to Aunt Petunia.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09008C28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09008C28">
+    <command xml:space="preserve">bye petunia</command>
+    <result xml:space="preserve">I only understood you as far as wanting to bye.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x09E37E20">
+    <command xml:space="preserve">examine me</command>
+    <result xml:space="preserve">You see nothing special about yourself.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E37E90"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E37E90">
+    <command xml:space="preserve">get up</command>
+    <result xml:space="preserve">"Up!" Screeches Petunia.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0905EE68">
+    <command xml:space="preserve">wear socks</command>
+    <result xml:space="preserve">(first taking Pair of socks)&#x000A;You put on Pair of socks.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0905EED8">
+    <command xml:space="preserve">Wear socks</command>
+    <result xml:space="preserve">(first taking pair of socks)&#x000A;You flick a spider off the socks and hurriedly put them on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0905EF48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0905EF48">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:&#x000A;  pair of socks (being worn)&#x000A;&#x000A;"Up!" Screeches Petunia.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0905F418">
+    <command xml:space="preserve">locate all</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0905F488"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0905F488">
+    <command xml:space="preserve">loook</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75900"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75900">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cupboard under the stairs (in Bed)&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (west), pair of socks and Shoes here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75970"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75970">
+    <command xml:space="preserve">get up</command>
+    <result xml:space="preserve">"Up!" Screeches Petunia.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75A50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75A50">
+    <command xml:space="preserve">wear shoes</command>
+    <result xml:space="preserve">(first taking Shoes)&#x000A;You put on Shoes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75AC0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75AC0">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying nothing. You are wearing Shoes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x09F75B30">
+    <command xml:space="preserve">wear shoes</command>
+    <result xml:space="preserve">(first taking the pair of shoes)&#x000A;What, with no socks?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75C10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75C10">
+    <command xml:space="preserve">wear socks</command>
+    <result xml:space="preserve">(first taking the pair of socks)&#x000A;"Up!" Screeches Petunia.&#x000A;&#x000A;"Up!" Screeches Petunia.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75C80"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75C80">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying a pair of shoes. You are wearing a pair of socks.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75CF0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75CF0">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Are you sure you want to restart?</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75D60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75D60">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Nearly ten years had passed since the Dursleys had woken up to find their nephew in the front step, but Privet Drive had hardly changed at all. The sun rose on the same tidy front gardens and lit up the brass number four on the Dursley's front door; it crept into their living-room, which was almost exactly the same as it had been on the night when Mr Dursley had seen that fateful news report about the owls.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75DD0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75DD0">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Only the photographs on the mantlepiece really showed how much time had passed. Ten years ago, there had been lots of pictures of what looked like a large pink beach ball wearing different-coloured bobble hats - but Dudley Dursley was no longer a baby, and now the photographs showed a large, blond boy riding his first bicycle, on a roundabout at the fair, playing a computer game with his father, being hugged and kissed by his mother.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75E40"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75E40">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;The room held no sign at all that another boy lived in the house too.&#x000A;    Yet Harry Potter was still there, asleep at the moment, but not for long. His Aunt Petunia was awake and it was her shrill voice which made the first noise of the day.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75EB0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75EB0">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Up! Get up! Now!</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75F20"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75F20">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Harry Potter and the philosopher's stone&#x000A;An Interactive Fiction by Orion Zymaris&#x000A;Release 1 / Serial number 130704 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;Cupboard under the stairs (in Bed)&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (west), a pair of socks and a pair of shoes here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F75F90"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F75F90">
+    <command xml:space="preserve">wear shoes</command>
+    <result xml:space="preserve">(first taking the pair of shoes)&#x000A;What, with no socks?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F76000"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F76000">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying a pair of shoes.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09F76070"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09F76070">
+    <command xml:space="preserve">wear socks</command>
+    <result xml:space="preserve">(first taking the pair of socks)&#x000A;You flick a spider off the socks and hurriedly put them on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E37D40"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E37D40">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cupboard under the stairs (in Bed)&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (west) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D260"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D260">
+    <command xml:space="preserve">turn count</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D2D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D2D0">
+    <command xml:space="preserve">turn</command>
+    <result xml:space="preserve">What do you want to turn?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D3B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D3B0">
+    <command xml:space="preserve">showme turn count</command>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D340"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D340">
+    <command xml:space="preserve">showme turn</command>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D420"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D420">
+    <command xml:space="preserve">showme turncount</command>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x09E9D490">
+    <command xml:space="preserve">turn count</command>
+    <result xml:space="preserve">0&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D500"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D500">
+    <command xml:space="preserve">turn count</command>
+    <result xml:space="preserve">1&#x000A;"Up!" Screeches Petunia.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D570"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D570">
+    <command xml:space="preserve">turn count</command>
+    <result xml:space="preserve">3&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D5E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D5E0">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Are you sure you want to restart?</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D650"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D650">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Nearly ten years had passed since the Dursleys had woken up to find their nephew in the front step, but Privet Drive had hardly changed at all. The sun rose on the same tidy front gardens and lit up the brass number four on the Dursley's front door; it crept into their living-room, which was almost exactly the same as it had been on the night when Mr Dursley had seen that fateful news report about the owls.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D6C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D6C0">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Only the photographs on the mantlepiece really showed how much time had passed. Ten years ago, there had been lots of pictures of what looked like a large pink beach ball wearing different-coloured bobble hats - but Dudley Dursley was no longer a baby, and now the photographs showed a large, blond boy riding his first bicycle, on a roundabout at the fair, playing a computer game with his father, being hugged and kissed by his mother.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D730"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D730">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;The room held no sign at all that another boy lived in the house too.&#x000A;    Yet Harry Potter was still there, asleep at the moment, but not for long. His Aunt Petunia was awake and it was her shrill voice which made the first noise of the day.</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D7A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D7A0">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Up! Get up! Now!</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D810"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D810">
+    <command xml:space="preserve">[enter]</command>
+    <result xml:space="preserve">Harry Potter and the philosopher's stone&#x000A;An Interactive Fiction by Orion Zymaris&#x000A;Release 1 / Serial number 130704 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;Cupboard under the stairs (in Bed)&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (west), a pair of socks and a pair of shoes here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D880"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D880">
+    <command xml:space="preserve">wear shoes</command>
+    <result xml:space="preserve">(first taking the pair of shoes)&#x000A;What, with no socks?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D8F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D8F0">
+    <command xml:space="preserve">wear socks</command>
+    <result xml:space="preserve">(first taking the pair of socks)&#x000A;"Up!" Screeches Petunia.&#x000A;&#x000A;You flick a spider off the socks and hurriedly put them on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D960"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D960">
+    <command xml:space="preserve">remove socks</command>
+    <result xml:space="preserve">You take off the pair of socks.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x09E9D9D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x09E9D9D0">
+    <command xml:space="preserve">wear socks</command>
+    <result xml:space="preserve">You flick a spider off the socks and hurriedly put them on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>

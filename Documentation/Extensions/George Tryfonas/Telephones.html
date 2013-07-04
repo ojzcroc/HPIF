@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode2893(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Telephones by George Tryfonas.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode2893()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Telephones<font color="#404040"> by </font>George Tryfonas</b><p><small></small><p>Telephones, standard and portable.<p>Kinds: <b>telephone</b> (a kind of thing)<p>Actions: <b>Dialling it on</b>, <b>Hanging up</b><p>Verbs: to <b>reach</b><p>Adjectives: <b>inuse</b><p>Properties: <b>calling number</b>, <b>owner</b>, <b>inuse</b>, <b>other party</b><p><p><hr><p>
+<p>
+ The Telephones extension is a slight reworking of the &quot;Four Cheeses&quot; sample from the manual. It provides a new kind called telephone, which has two properties: an owner and a calling number.
+<p>
+<blockquote><font color="#000080"> The office phone is a telephone. The owner of the office phone is John. The calling number of the office phone is 1234.</font></blockquote>
+<p>
+ A new action called &quot;dialling&quot; is created and a new command &quot;dial&quot; (or &quot;call&quot; or &quot;phone&quot; or &quot;telephone&quot;) is provided to the player. The player may optionally specifiy the telephone on which to place the call:
+<p>
+<blockquote><font color="#000080"> &gt; call 1234<br> &gt; dial 1234 on the office phone<br> &gt; phone 1234 using the office phone<br> &gt; telephone 1234</font></blockquote>
+<p>
+ If the telephone is carried by the player then they may move around the map while still on the line. A telephone which is fixed in place is meant to be a landline while a portable phone is meant to be a mobile. We should provide appropriate descriptions to help the player distinguish that:
+<p>
+<blockquote><font color="#000080"> The office phone is a telephone which is scenery. The description is &quot;The office phone sits on your desk. A long cord connects it to the phone plug on the back wall.&quot; The player carries a telephone called the cellphone. The description is &quot;Your trusty cellphone. It's a vintage model.&quot;</font></blockquote>
+<p>
+ We provide a Hanging up action which is nounless. The action itself decides which phone to hang up since we only support one connection at a time.
+<p>
+ To achieve the effect of making a connection, we bring the connected party into the player's scope. This means that we are free to choose whichever strategy is more appropriate to implement conversing with it, as if it were in the player's presence.
+<p>
+ Finally, we provide the Table of Misdialled Numbers as a way of printing a customised message when the player dials a (well known) number which they are not meant to use.
+<p>
+<blockquote><font color="#000080"> Table of Misdialled Numbers (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> retort</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1471</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;The number that last called you is not available.&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 999</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;In this country, making prank calls to the police is frowned upon.&quot;</font></font></td></tr></table></blockquote>
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Telephones-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Telephones-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Chatter</font></b></a><br>Calling a somebody on the phone to make idle chit chat.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

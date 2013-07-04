@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x025146B8" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x025146B8"/>
+  <item nodeId="node-0x025146B8">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Scooby doo&#x000A;An Interactive Fiction by Orion Z&#x000A;Release 1 / Serial number 130408 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Road (in Mystery machine)&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x02514648"/>
+      <child nodeId="node-0x02514D48"/>
+      <child nodeId="node-0x0A2B9378"/>
+      <child nodeId="node-0x0A2BD450"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514648">
+    <command xml:space="preserve">eat</command>
+    <result xml:space="preserve">(the Ghost)&#x000A;As you try eating the Ghost, all of the copies.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514798"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514798">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:&#x000A;  a Ghost&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514808"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514808">
+    <command xml:space="preserve">eat the ghost</command>
+    <result xml:space="preserve">He's plainly inedible.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514878"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514878">
+    <command xml:space="preserve">eat ghost</command>
+    <result xml:space="preserve">He's plainly inedible.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x025148E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x025148E8">
+    <command xml:space="preserve">drop ghost</command>
+    <result xml:space="preserve">Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514958"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514958">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Mystery room&#x000A;You can see twenty Ghosts here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x025149C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x025149C8">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">There are none at all available!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514A38"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514A38">
+    <command xml:space="preserve">take ghost</command>
+    <result xml:space="preserve">I don't suppose the Ghost would care for that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514AA8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514AA8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Mystery room&#x000A;You can see twenty Ghosts here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514B18"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514B18">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Mystery room&#x000A;You can see twenty Ghosts here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514B88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514B88">
+    <command xml:space="preserve">eat</command>
+    <result xml:space="preserve">(the Ghost)&#x000A;He's plainly inedible.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514BF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514BF8">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514C68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514C68">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514CD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514CD8">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">There are none at all available!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02514D48">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Road (in Mystery machine)&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514DB8"/>
+      <child nodeId="node-0x0A2B91B8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514DB8">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">There are none at all available!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514E28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514E28">
+    <command xml:space="preserve">eat</command>
+    <result xml:space="preserve">(the Ghost)&#x000A;As you try eating the Ghost, all of the copies.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514E98"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514E98">
+    <command xml:space="preserve">eat</command>
+    <result xml:space="preserve">(the Ghost)&#x000A;He's plainly inedible.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02514F08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02514F08">
+    <command xml:space="preserve">drop</command>
+    <result xml:space="preserve">(the Ghost)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2B91B8">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">(addressing Velma Dinkley)&#x000A;That would be a terrible idea.&#x000A;&#x000A;You say hello to Velma Dinkley.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B9228"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B9228">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">You are already talking to Velma Dinkley.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B9298"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B9298">
+    <command xml:space="preserve">hello shaggy</command>
+    <result xml:space="preserve">I only understood you as far as wanting to hello.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B9308"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B9308">
+    <command xml:space="preserve">shaggy, hello</command>
+    <result xml:space="preserve">That would be a terrible idea.&#x000A;&#x000A;You say hello to Shaggy Rogers.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2B9378">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">(addressing Velma Dinkley)&#x000A;""Are you well?" Actually, we have a mystery to solve now. do you want to go north?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B93E8"/>
+      <child nodeId="node-0x0A2B94C8"/>
+      <child nodeId="node-0x0A2B9928"/>
+      <child nodeId="node-0x0A2BAE30"/>
+      <child nodeId="node-0x0A2BB140"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B93E8">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">You are already talking to Velma Dinkley.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B9458"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B9458">
+    <command xml:space="preserve">bye</command>
+    <result xml:space="preserve">"Bye!" says Velma Dinkley&#x000A;You say goodbye to Velma Dinkley.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2B94C8">
+    <command xml:space="preserve">actions</command>
+    <result xml:space="preserve">Actions listing on.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B9538"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B9538">
+    <command xml:space="preserve">goodbye</command>
+    <result xml:space="preserve">[leavetaking]&#x000A;[(1) saying goodbye to Daphne Blake]&#x000A;"Bye!" says Daphne Blake&#x000A;You say goodbye to Daphne Blake.&#x000A;&#x000A;[(1) saying goodbye to Daphne Blake - succeeded]&#x000A;&#x000A;[leavetaking - succeeded]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B95A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B95A8">
+    <command xml:space="preserve">actions of</command>
+    <result xml:space="preserve">I only understood you as far as wanting to actions.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B9618"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B9618">
+    <command xml:space="preserve">actions off</command>
+    <result xml:space="preserve">Actions listing off.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B9688"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B9688">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">(addressing Daphne Blake)&#x000A;""Hello!"  Says Daphne Blake. &#x000A;You say hello to Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B9768"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B9768">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">You are already talking to Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B97D8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B97D8">
+    <command xml:space="preserve">bye</command>
+    <result xml:space="preserve">"Bye!" says Daphne Blake&#x000A;You say goodbye to Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B9848"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B9848">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">(addressing Fred Jones)&#x000A;"How are you?" asks Fred Jones. Actually, we have a mystery to solve now. do you want to go north?&#x000A;&#x000A;You say hello to Fred Jones.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2B98B8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2B98B8">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">"Bye!" says Fred Jones&#x000A;Haunted house (in Mystery machine)&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2B9928">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">"Bye!" says Velma Dinkley.&#x000A;&#x000A;yard (in Mystery machine)&#x000A;As you pull up to the house, you see ghosts roaming around the yard. however, they seem harmless enough. to the north is a house.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BAB90"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BAB90">
+    <command xml:space="preserve">get out</command>
+    <result xml:space="preserve">You get out of Mystery machine.&#x000A;&#x000A;yard&#x000A;As you pull up to the house, you see ghosts roaming around the yard. however, they seem harmless enough. to the north is a house.&#x000A;&#x000A;You can see Mystery machine (in which are Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BAC00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BAC00">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">House&#x000A;A typical haunted house. you look around to the sight of ghosts everywhere. there is a cupboard to your right.&#x000A;&#x000A;You can see cupboard (closed) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BACE0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BACE0">
+    <command xml:space="preserve">open cupboard</command>
+    <result xml:space="preserve">You open cupboard, revealing a lever.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BAD50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BAD50">
+    <command xml:space="preserve">pull lever</command>
+    <result xml:space="preserve">As you pull on the lever, a secret panel opens in the wall of the cupboard.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BADC0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BADC0">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">House&#x000A;A typical haunted house. you look around to the sight of ghosts everywhere. there is a cupboard to your right.&#x000A;&#x000A;You can see cupboard (in which is a lever) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2BAE30">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Road (in Mystery machine)&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BAEA0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BAEA0">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BAF10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BAF10">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BAF80"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BAF80">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">"Bye!" says Shaggy Rogers.&#x000A;&#x000A;yard (in Mystery machine)&#x000A;As you pull up to the house, you see ghosts roaming around the yard. however, they seem harmless enough. to the north is a house.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BAFF0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BAFF0">
+    <command xml:space="preserve">get out</command>
+    <result xml:space="preserve">You get out of Mystery machine.&#x000A;&#x000A;yard&#x000A;As you pull up to the house, you see ghosts roaming around the yard. however, they seem harmless enough. to the north is a house.&#x000A;&#x000A;You can see Mystery machine (in which are Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BB060"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BB060">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">House&#x000A;A typical haunted house. you look around to the sight of ghosts everywhere. there is a cupboard and two doors here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BB0D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BB0D0">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">yard&#x000A;As you pull up to the house, you see ghosts roaming around the yard. however, they seem harmless enough. to the north is a house.&#x000A;&#x000A;You can see Mystery machine (in which are Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2BB140">
+    <command xml:space="preserve">hello daphne</command>
+    <result xml:space="preserve">I only understood you as far as wanting to hello.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BB1B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BB1B0">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">(addressing Shaggy Rogers)&#x000A;"How are you?" asks Shaggy Rogers. &#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BB220"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BB220">
+    <command xml:space="preserve">hello velma</command>
+    <result xml:space="preserve">I only understood you as far as wanting to hello.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BB290"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BB290">
+    <command xml:space="preserve">velma, hello</command>
+    <result xml:space="preserve">""Hello!"  Says Velma Dinkley. Actually, we have a mystery to solve now. do you want to go north?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BB300"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BB300">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">yard (in Mystery machine)&#x000A;As you pull up to the house, you see ghosts roaming around the yard. however, they seem harmless enough. to the north is a house.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD3E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD3E0">
+    <command xml:space="preserve">get out</command>
+    <result xml:space="preserve">You get out of Mystery machine.&#x000A;&#x000A;yard&#x000A;As you pull up to the house, you see ghosts roaming around the yard. however, they seem harmless enough. to the north is a house.&#x000A;&#x000A;You can see Mystery machine (in which are Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2BD450">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">yard (in Mystery machine)&#x000A;As you pull up to the house, you see ghosts roaming around the yard. however, they seem harmless enough. to the north is a house.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD4C0"/>
+      <child nodeId="node-0x0A2BD760"/>
+      <child nodeId="node-0x0A2BF600"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD4C0">
+    <command xml:space="preserve">get out</command>
+    <result xml:space="preserve">You get out of Mystery machine.&#x000A;&#x000A;yard&#x000A;As you pull up to the house, you see ghosts roaming around the yard. however, they seem harmless enough. to the north is a house.&#x000A;&#x000A;You can see Mystery machine (in which are Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD530"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD530">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">House&#x000A;A typical haunted house. you look around to the sight of ghosts everywhere. there is a cupboard and two doors here.&#x000A;&#x000A;You can see cupboard (closed) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD5A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD5A0">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Corridor&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD610"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD610">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Main room&#x000A;You can see an organ here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD680"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD680">
+    <command xml:space="preserve">play organ</command>
+    <result xml:space="preserve">You press one of the keys, and a  burst of sound emenates from the organ's pipes. Quickly, you remove your hand and back away.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD6F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD6F0">
+    <command xml:space="preserve">play organ</command>
+    <result xml:space="preserve">You shouldn't do that again.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2BD760">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">House (in Mystery machine)&#x000A;A typical haunted house. you look around to the sight of ghosts everywhere. there is a cupboard and two doors here.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD7D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD7D0">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">cupboard (in Mystery machine)&#x000A;You can see a lever here.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD840"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD840">
+    <command xml:space="preserve">pull lever</command>
+    <result xml:space="preserve">As you pull on the lever, a secret panel opens in the wall of the cupboard.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD8B0"/>
+      <child nodeId="node-0x0A2BEFE0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD8B0">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">cupboard (in Mystery machine)&#x000A;Inside the cupboard, there is an open panel to your north.&#x000A;&#x000A;You can see a lever here.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD920"/>
+      <child nodeId="node-0x0A2BDA00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD920">
+    <command xml:space="preserve">get out</command>
+    <result xml:space="preserve">You get out of Mystery machine.&#x000A;&#x000A;cupboard&#x000A;You can see Mystery machine (in which are Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake) and a lever here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BD990"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BD990">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">cupboard&#x000A;You can see Mystery machine (in which are Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake) and a lever here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2BDA00">
+    <command xml:space="preserve">close panel</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BDA70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BDA70">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">secret room (in Mystery machine)&#x000A;You can see panel here.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BDAE0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BDAE0">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">cupboard (in Mystery machine)&#x000A;Inside the cupboard, there is an open panel to your north.&#x000A;&#x000A;You can see a lever here.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BDB50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BDB50">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">secret room (in Mystery machine)&#x000A;You can see panel here.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BEF00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BEF00">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">secret room (in Mystery machine)&#x000A;You can see panel here.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BEF70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BEF70">
+    <command xml:space="preserve">close panel</command>
+    <result xml:space="preserve">You close panel.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2BEFE0">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">secret room (in Mystery machine)&#x000A;You can see Villain and panel here.&#x000A;&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF050"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF050">
+    <command xml:space="preserve">villain, n</command>
+    <result xml:space="preserve">That would be a terrible idea.&#x000A;&#x000A;Villain is unable to do that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF0C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF0C0">
+    <command xml:space="preserve">fred, eat me</command>
+    <result xml:space="preserve">That would be a terrible idea.&#x000A;&#x000A;(Fred Jones first taking yourself)&#x000A;Fred Jones is unable to do that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF130"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF130">
+    <command xml:space="preserve">fred, go north</command>
+    <result xml:space="preserve">Fred Jones is unable to do that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF1A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF1A0">
+    <command xml:space="preserve">fred, get out of car</command>
+    <result xml:space="preserve">There is no reply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF210"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF210">
+    <command xml:space="preserve">fred, get out of mystery machine</command>
+    <result xml:space="preserve">There is no reply.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF2F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF2F0">
+    <command xml:space="preserve">fred, get out</command>
+    <result xml:space="preserve">Fred Jones gets out of Mystery machine.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF360"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF360">
+    <command xml:space="preserve">shaggy, give me rope</command>
+    <result xml:space="preserve">That would be a terrible idea.&#x000A;&#x000A;Shaggy Rogers is unable to do that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF3D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF3D0">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Are you sure you want to restart?</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF440"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF440">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">Scooby doo&#x000A;An Interactive Fiction by Orion z&#x000A;Release 1 / Serial number 130304 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Road (in Mystery machine)&#x000A;In Mystery machine you can see Velma Dinkley, Shaggy Rogers, Fred Jones and Daphne Blake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF4B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF4B0">
+    <command xml:space="preserve">take all</command>
+    <result xml:space="preserve">rope: That seems to belong to Shaggy Rogers.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF520"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF520">
+    <command xml:space="preserve">shaggy, give me rope</command>
+    <result xml:space="preserve">That would be a terrible idea.&#x000A;&#x000A;Shaggy Rogers is unable to do that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF590"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF590">
+    <command xml:space="preserve">shaggy, give me all</command>
+    <result xml:space="preserve">(the rope)&#x000A;Shaggy Rogers is unable to do that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0A2BF600">
+    <command xml:space="preserve">out</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2BF670"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2BF670">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">yard&#x000A;As you pull up to the house, you see ghosts roaming around the yard. however, they seem harmless enough. to the north is a house.&#x000A;&#x000A;You can see Daphne Blake, Fred Jones, Shaggy Rogers, Velma Dinkley and Mystery machine (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C1D30"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C1D30">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">(addressing Shaggy Rogers)&#x000A;""Are you well?" Actually, we have a mystery to solve now. do you want to go north?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C1DA0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C1DA0">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">House&#x000A;A typical haunted house. you look around to the sight of ghosts everywhere. there is a cupboard and two doors here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C1E10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C1E10">
+    <command xml:space="preserve">open cupboard</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C1E80"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C1E80">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">House&#x000A;A typical haunted house. you look around to the sight of ghosts everywhere. there is a cupboard and two doors here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C1EF0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C1EF0">
+    <command xml:space="preserve">k</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C1F60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C1F60">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">cupboard&#x000A;You can see a lever here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C1FD0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C1FD0">
+    <command xml:space="preserve">pull lever</command>
+    <result xml:space="preserve">As you pull on the lever, a secret panel opens in the wall of the cupboard.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C2040"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C2040">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">cupboard&#x000A;Inside the cupboard, there is an open panel to your north.&#x000A;&#x000A;You can see a lever here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C20B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C20B0">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">secret room&#x000A;You can see Villain and panel here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C2120"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C2120">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">secret room&#x000A;You can see Villain and panel here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C2190"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C2190">
+    <command xml:space="preserve">hello</command>
+    <result xml:space="preserve">(addressing Villain)&#x000A;"How are you?" asks Villain. &#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x0A2C2200"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0A2C2200">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>

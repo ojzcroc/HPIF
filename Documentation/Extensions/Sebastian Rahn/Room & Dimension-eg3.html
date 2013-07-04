@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1137(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Room [=0x0026=] Dimension by Sebastian Rahn.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1137()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Room &amp; Dimension<font color="#404040"> by </font>Sebastian Rahn</b><p><small></small><p><p><hr><p>
+<p>
+ This extension provides the possibility to put an extra 2D layer upon rooms. This can be handy, if visual feedback is required while moving the player or other things inside a room manually.
+<p>
+ It requires both the Glulx Text Effects and Basic Screen Effects by Emily Short to run properly. The extension uses one Glulx custom style (special-style-2) and defines say &quot;[default letters]&quot; as say &quot;[roman type]&quot;.
+<p>
+ First, we will need to create a Table to save objects and to print the map of the room we want to visualize. For this we can use one of the templates that are provided within the extension (look the last example below), depending on how broad we want the room to be (in this version it is limited to 28 sectors maximum). The width is both visible in the name of the table, in case of the templates, and the actual Width Entry.
+<p>
+ The Width Entry is crucial for the program to determine the columns it has access to and must always fit the actual map width otherwise it will create a bug (this is also true for the Height Entry in the current version).
+<p>
+ There are two types of templates that can be identified by the bracketed number next to the table name: extended (the one with the 0. and 1. numeration) and normal (with no punctuation). Since the number of columns seems to be limited in Inform 7, the program is tricked to jump from one table to another. Therefore, the table with the (0.x) number represents the left side of the map and the one with the (1.x) the extended right side.
+<p>
+ It is important for both tables to have a correct Height and Width Entry.
+<p>
+ We must then signalise that this room is actually printable. For this we use the location name and connect it with one or more table names. This happens in a continuation of the Table 997 - 'Sectors' which looks like this:
+<p>
+<blockquote><font color="#000080"> Table 997 - Sectors (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Sector Room</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 2</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> My Room</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 100</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> My Room 2</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 101</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Table 102</font></font></td></tr></table></blockquote>
+<p>
+ 'My Room 2' uses an extended table with the table in the Table Entry representing the left side of the map and the one in the Table 2 Entry the right side.
+<p>
+ After we decided on Height and Width and established a connection between rooms and tables we can start to fill the map with objects. Every thing has two parameters to save its current coordinates: X-Axis -&gt; a number representing the current row position and Y-Axis -&gt; a text representing the current column position. We don't have to declare those manually however. It is sufficient if we place the objects on the map and make sure our source code includes:
+<p>
+<blockquote><font color="#000080"> When play begins:<br> Spread coordinates.</font></blockquote>
+<p>
+ The program will then run through all maps and give coordinates to every object it can find automatically. It should be noted however that an object on a map doesn't have to be in the room that it is corresponding to (and won't be moved there with any of the commands this extension provides except for &quot;switch maps&quot; which is not supposed to be used by ourselves). This might cause confusion within the program so we always have to make sure that an object on a map of a room is actually in said room.
+<p>
+ Since we want to see those objects on the map, we will have to provide them with Avatars (we can hardly want to use its printed name or its description for that matter). To do this we have to continue yet another table:
+<p>
+<blockquote><font color="#000080"> Table 991 - Avatars (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Entity</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Avatar</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Dummy</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;D&quot;</font></font></td></tr></table></blockquote>
+<p>
+ The program differs between the Avatar of a person and of anything else. A person's Avatar will always be printed in extra bold letters while the ones of others will not.
+<p>
+ Whenever the truth state 'Show Map' is true, the program will print the map of the location in which the player is moving (he himself is always represented by an arrow).
+<p>
+ Next to the objects that we create for our program, there are three special kinds of things that are provided with the extension. They all have in common that they've actually no coherent position on the map, since they are either not suppose to represent one entity or their presence is only temporary (in case of Entrance Points).
+<p>
+ 1. None -&gt; Is a thing and refers to empty space. An object on the map can move on a None field without anything happening.
+<p>
+ 2. Wall -&gt; Is a kind. Every object, that is a Wall, will not allow anything to take its place. If an object tries anyways, a short message will appear (can be avoided by changing the truth state of 'uncommented' to true) and the action will be stopped.
+<p>
+ 3. Entrance Points -&gt; Again a kind. They enable the player to switch between rooms, while 'Show Map' is true. It should be noted that the coordinates of an object will currently not change if it should go into another room while 'Show Map' is false.
+<p>
+ There are also two new kinds of persons: hostile person and friendly person. A friendly person will switch places with the player if the player walks into him while hostile ones serve as another kind of wall in a sense. If the player walks into an object which the extension doesn't know for certain (that would be anything that wasn't mentioned above) it will create an ugly bug.
+<p>
+ The extension differs between dark rooms and normal rooms when printing the map. A normal will always show the whole map while a dark room without a light source will only show the actual surroundings of the player.
+<p>
+ It should be mentioned that the status line will undergo slight changes once 'Show Map' is true. It will then show the current position on the map where the player is standing. To remove this effect either ignore the Map headline rule or change Table 801 - Map Headline in section 2.6. In case the player is in a dark room a question mark is used instead of coordinates.
+<p>
+ The following examples should serve as a quick overview about what is possible with the extension as it will explain several important commands in a more practical way.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">One Room creation</font></b></a><br>Creating a small test room and a command that will either make the corresponding map appear or disappear.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Lair of Don Capone</font></b></a><br>A small game scenario to test room connections, if a person stands next to another and if the program will recognize obstacles like walls and hostile persons.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg3><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension.html#eg3" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>C</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension.html#eg3" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">The Curse of Quapeck</font></b></a><br>A longer example where several possibilities of how to use the given tools are experimented with.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ This example will use some commands from the AI extension namely &quot;[thing] follows [thing]&quot; and &quot;calculate minimum distance between [thing] and [thing]&quot;. The first command allows an objects to move to another object on the map. Both objects have to be in the same room for the command to work. The second will save the direct (preferably in a straight line) distance between two objects under the parameter 'Stepscounter'.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1138(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The Tomb is a room. [=0x0022=]You can hardly see anything since the torches you lit earlier (at least you believe it was you) are barely enough to light the centre of the Tomb. A primitive altar out of stone stands there surrounded by four pillars. You remember that there is an Entry to the south although it is hidden in the dark.[=0x0022=].[=0x000A=][=0x000A=]Include Room [=0x0026=] Dimension by Sebastian Rahn.[=0x000A=]Include AI Moving by Sebastian Rahn.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1138()"><img border=0 src=inform:/doc_images/paste.png></a> The Tomb is a room. &quot;You can hardly see anything since the torches you lit earlier (at least you believe it was you) are barely enough to light the centre of the Tomb. A primitive altar out of stone stands there surrounded by four pillars. You remember that there is an Entry to the south although it is hidden in the dark.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Room &amp; Dimension by Sebastian Rahn.<br> Include AI Moving by Sebastian Rahn.</font></blockquote>
+<p>
+ Let us begin by placing the player on the map and spread the coordinates. While we are at it: a short introducing couldn't hurt. The map will always be shown this time.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1139(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('When play begins:[=0x000A=]Change Sector [=0x0022=]I[=0x0022=] and 10 in Tomb to player;[=0x000A=]spread coordinates;[=0x000A=]Change Show Map to true;[=0x000A=]say [=0x0022=][apostrophe]Outch! That hurts![apostrophe] is the first thing that comes to your mind as you reach for your chest followed by [apostrophe]What the hell happened?[apostrophe]. [line break]You lie face down on muddy floor, you[apostrophe]ve got trouble breathing since every bit of air you inhale is accompanied by even more pain and to top it off your short-term memory seems to take a vacation. Then it dawns you. [apostrophe]Oh my god! I must[apostrophe]ve had an heart attack! Bob even warned me that it was a bad idea climbing down here without having my medicine handy.[apostrophe] Other memories start to tinkle in slowly as you get up. Where are you? A cave? No, you are certain it is a Tomb. The Shapes in your sight become clearer forming space, objects, people. (Why is it so quiet?) As your blurry vision starts to gain more focus you are abruptly confronted with two insights. First that something really horrible just happened and, more importantly, that you are still in danger![paragraph break](Press any key to continue)[paragraph break][=0x0022=];[=0x000A=]wait for any key.[=0x000A=][=0x000A=]Maximum score is 1.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1139()"><img border=0 src=inform:/doc_images/paste.png></a> When play begins:<br> Change Sector &quot;I&quot; and 10 in Tomb to player;<br> spread coordinates;<br> Change Show Map to true;<br> say &quot;[apostrophe]Outch! That hurts![apostrophe] is the first thing that comes to your mind as you reach for your chest followed by [apostrophe]What the hell happened?[apostrophe]. [line break]You lie face down on muddy floor, you[apostrophe]ve got trouble breathing since every bit of air you inhale is accompanied by even more pain and to top it off your short-term memory seems to take a vacation. Then it dawns you. [apostrophe]Oh my god! I must[apostrophe]ve had an heart attack! Bob even warned me that it was a bad idea climbing down here without having my medicine handy.[apostrophe] Other memories start to tinkle in slowly as you get up. Where are you? A cave? No, you are certain it is a Tomb. The Shapes in your sight become clearer forming space, objects, people. (Why is it so quiet?) As your blurry vision starts to gain more focus you are abruptly confronted with two insights. First that something really horrible just happened and, more importantly, that you are still in danger![paragraph break](Press any key to continue)[paragraph break]&quot;;<br> wait for any key.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Maximum score is 1.</font></blockquote>
+<p>
+ This is the map of the starting location:
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1140(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 100 - The Tomb[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]J10[=0x0009=]K11[=0x0009=]L12[=0x0009=]M13[=0x0009=]N14[=0x0009=]O15[=0x0009=]P16[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]/Corner[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]12[=0x0009=]20[=0x000A=]2[=0x0009=]|wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]3[=0x0009=]|wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]4[=0x0009=]|wall[=0x0009=]None[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]-Wall[=0x000A=]5[=0x0009=]|wall[=0x0009=]None[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]Adam[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]-Wall[=0x000A=]6[=0x0009=]|wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]7[=0x0009=]|wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]8[=0x0009=]|wall[=0x0009=]None[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]-Wall[=0x000A=]9[=0x0009=]|wall[=0x0009=]None[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]-Wall[=0x000A=]10[=0x0009=]|wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]11[=0x0009=]|wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]12[=0x0009=][=0x005C=]Corner[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]Tomb_South[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]-wall[=0x000A=][=0x000A=]Table 101 - The Tomb_2[=0x000A=]Number[=0x0009=]Q17[=0x0009=]R18[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]-wall[=0x0009=]-wall[=0x0009=][=0x005C=]Corner[=0x0009=]12[=0x0009=]20[=0x000A=]2[=0x0009=]None[=0x0009=]None[=0x0009=]|wall[=0x000A=]3[=0x0009=]None[=0x0009=]None[=0x0009=]|wall[=0x000A=]4[=0x0009=]-Wall[=0x0009=]None[=0x0009=]|wall[=0x000A=]5[=0x0009=]-Wall[=0x0009=]None[=0x0009=]|wall[=0x000A=]6[=0x0009=]None[=0x0009=]None[=0x0009=]|wall[=0x000A=]7[=0x0009=]None[=0x0009=]None[=0x0009=]|wall[=0x000A=]8[=0x0009=]-Wall[=0x0009=]None[=0x0009=]|wall[=0x000A=]9[=0x0009=]-Wall[=0x0009=]None[=0x0009=]|wall[=0x000A=]10[=0x0009=]None[=0x0009=]None[=0x0009=]|wall[=0x000A=]11[=0x0009=]None[=0x0009=]Bob[=0x0009=]|wall[=0x000A=]12[=0x0009=]-wall[=0x0009=]-wall[=0x0009=]/Corner[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1140()"><img border=0 src=inform:/doc_images/paste.png></a> Table 100 - The Tomb<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Height Width<br> 1 /Corner -wall -wall -wall -wall -wall -wall -wall -wall -wall -wall -wall -wall -wall -wall -wall -wall 12 20<br> 2 |wall None None None None None None None None None None None None None None None None<br> 3 |wall None None None None None None None None None None None None None None None None<br> 4 |wall None -Wall -Wall None None None None None None None None None None None None -Wall<br> 5 |wall None -Wall -Wall None None None None None Adam None None None None None None -Wall<br> 6 |wall None None None None None None None None -Wall -Wall None None None None None None<br> 7 |wall None None None None None None None None None None None None None None None None<br> 8 |wall None -Wall -Wall None None None None None None None None None None None None -Wall<br> 9 |wall None -Wall -Wall None None None None None None None None None None None None -Wall<br> 10 |wall None None None None None None None None None None None None None None None None<br> 11 |wall None None None None None None None None None None None None None None None None<br> 12 \Corner -wall -wall -wall -wall -wall -wall -wall -wall -wall Tomb_South -wall -wall -wall -wall -wall -wall</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 101 - The Tomb_2</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Number</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Q17</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> R18</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> RE</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Width</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> -wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> -wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> \Corner</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 12</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 20</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 2</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 3</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 4</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> -Wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 5</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> -Wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 6</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 7</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 8</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> -Wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 9</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> -Wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 10</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 11</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> None</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Bob</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> |wall</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> 12</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> -wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> -wall</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> /Corner</font></font></td></tr></table></blockquote>
+<p>
+ The goal of the first room is to try to rescue Bob, who is located at the lower right corner, by moving to a field next to him. If the player is there, Bob will panic and try to flee the room. After he has left, Adam will start to chase the player. The player, on the other hand, will die if Adam reaches a field next to him. If the player manages to escape, Adam will be placed directly in front of the Entrance Point, preventing the player to re-enter the tomb. We'll need some truth states for this.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1141(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Bob running is a truth state that varies.[=0x000A=]Adam chasing is a truth state that varies.[=0x000A=][=0x000A=]Pillars is a thing in Tomb. [=0x0022=]These pillars have been carved by real craftsmen no doubt although craze craftsmen perhaps. You can see skulls of strange creatures, bizarre hybrids of men and beasts, which are apparently [=0x0009=]clashed together in a never ending struggle. They always spin around and around the pillar only to start all over again.[=0x0022=].[=0x000A=]The description of Pillars is [=0x0022=]These pillars have been carved by real craftsmen no doubt although craze craftsmen perhaps. You can see skulls of strange creatures, bizarre hybrids of men and beasts, which are apparently [=0x0009=]clashed together in a never ending struggle. They always spin around and around the pillar only to start all over again.[=0x0022=].[=0x000A=]Understand [=0x0022=]Pillar[=0x0022=] as Pillars.[=0x000A=]Instead of doing anything other than examining pillars: say [=0x0022=]You rather don[apostrophe]t touch them. They could bite.[=0x0022=].[=0x000A=][=0x000A=]Altar is a thing in Tomb. [=0x0022=]The Altar itself is an ungodly ugly thing that seems old enough to originate from the early Bronze Age. Maybe even from the Stone Age for all you care. You feel something strongly repulsive [=0x0009=]about it as if all your instincts would deliberately try to keep you away. With all the fresh blood spilled on and around the altar you are not certain if you even *want* to get closer.[=0x0022=].[=0x000A=]The description of Altar is [=0x0022=]This ungodly ugly thing seems old enough to originate from the early Bronze Age. Maybe even from the Stone Age for all you care. You feel something strongly repulsive about it as if all your i[=0x0009=]nstincts would deliberately try to keep you away. With all the fresh blood spilled on and around the altar you are not certain if you even *want* to get closer.[=0x0022=].[=0x000A=]Instead of doing anything other than examining altar: say [=0x0022=]You would have to get closer first.[=0x0022=].[=0x000A=][=0x000A=]Adam is a Hostile person in Tomb. [=0x0022=][If Adam chasing is false]Professor Adam stands next to the altar of Quapeck (from where is that name?). The evil spirits of this place have turned this once affable, well educated [=0x0009=]man into a monstrous corruption of his former self. He stares at you with a satisfied grin. His teeth covered in red. Your chest starts to hurt even more by the sheer look of it. It is clear that you must get away from [=0x0009=]that person as fast as possible.[otherwise]It is Professor Adam. Still insane and still with a knife.[end if][=0x0022=].[=0x000A=]The description of Adam is [=0x0022=][If Adam chasing is false]Professor Adam stands next to the stone altar of Quapeck (from where is that name?). The evil spirits of this place have turned this once affable, well educated [=0x0009=]man into a monstrous corruption of his former self. He stares at you with a satisfied grin. His teeth covered in red. Your chest starts to hurt even more by the sheer look of it. It is clear that you must get away from [=0x0009=]that person as fast as possible.[otherwise]It is Professor Adam. Still insane and still with a knife.[end if][=0x0022=].[=0x000A=]Instead of doing anything other than examining Adam: say [=0x0022=]You prefer to keep your distance from him.[=0x0022=].[=0x000A=][=0x000A=]Bob is a Friendly person in Tomb. [=0x0022=][If Bob running is false]Bob, your once loyal assistant, cowers in a far away corner of the Tomb muttering to himself in madness. You doubt that he will be much of assistance right [=0x0009=]now. [otherwise] Bob seems to have completely lost his mind. He runs screaming to the only visible Entry to the south.[end if][If Tomb is not visited][paragraph break][map][end if][=0x0022=].[=0x000A=]The description of Bob is [=0x0022=][If Bob running is false]Bob, your once loyal assistant, cowers in a far away corner of the Tomb muttering to himself in madness. You doubt that he will be much of assistance right now. [=0x0009=][otherwise] Bob seems to have completely lost his mind. He runs screaming to the only visible Entry to the south.[end if][=0x0022=].[=0x000A=]Instead of doing anything other than examining or talking to Bob: say [=0x0022=]That wouldn[=0x0027=]t help him.[=0x0022=].[=0x000A=][=0x000A=]Talking to is an action applying to one thing.[=0x000A=]Understand [=0x0022=]Talk to [person][=0x0022=] or [=0x0022=]Talk [person][=0x0022=] or [=0x0022=]call [person][=0x0022=] or [=0x0022=]call out for [person][=0x0022=] as talking to.[=0x000A=][=0x000A=]Carry out talking to Bob when Bob running is false:[=0x000A=]say [=0x0022=]You try to call out for him to get his attention but he is not reacting. Perhaps you[apostrophe]ll have to get closer?[=0x0022=].[=0x000A=][=0x000A=]Carry out talking to Bob when Bob running is true:[=0x000A=]say [=0x0022=]That wouldn[apostrophe]t help. His hysteric screaming would easily drown everything you could muster at the moment.[=0x0022=].[=0x000A=][=0x000A=]Check examining nothing:[=0x000A=]say [=0x0022=]There is no time for this nonsense![=0x0022=];[=0x000A=]stop the action.[=0x000A=][=0x000A=]Instead of doing something with nothing:[=0x000A=]say [=0x0022=]There is no time for this nonsense![=0x0022=].[=0x000A=][=0x000A=]Check waiting:[=0x000A=]say [=0x0022=]That is clearly one of the last things you want to do right now.[=0x0022=];[=0x000A=]stop the action.[=0x000A=][=0x000A=]Check examining yourself:[=0x000A=]say [=0x0022=]You can leave the medical examination for later![=0x0022=];[=0x000A=]stop the action.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1141()"><img border=0 src=inform:/doc_images/paste.png></a> Bob running is a truth state that varies.<br> Adam chasing is a truth state that varies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Pillars is a thing in Tomb. &quot;These pillars have been carved by real craftsmen no doubt although craze craftsmen perhaps. You can see skulls of strange creatures, bizarre hybrids of men and beasts, which are apparently 	clashed together in a never ending struggle. They always spin around and around the pillar only to start all over again.&quot;.<br> The description of Pillars is &quot;These pillars have been carved by real craftsmen no doubt although craze craftsmen perhaps. You can see skulls of strange creatures, bizarre hybrids of men and beasts, which are apparently 	clashed together in a never ending struggle. They always spin around and around the pillar only to start all over again.&quot;.<br> Understand &quot;Pillar&quot; as Pillars.<br> Instead of doing anything other than examining pillars: say &quot;You rather don[apostrophe]t touch them. They could bite.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Altar is a thing in Tomb. &quot;The Altar itself is an ungodly ugly thing that seems old enough to originate from the early Bronze Age. Maybe even from the Stone Age for all you care. You feel something strongly repulsive 	about it as if all your instincts would deliberately try to keep you away. With all the fresh blood spilled on and around the altar you are not certain if you even *want* to get closer.&quot;.<br> The description of Altar is &quot;This ungodly ugly thing seems old enough to originate from the early Bronze Age. Maybe even from the Stone Age for all you care. You feel something strongly repulsive about it as if all your i	nstincts would deliberately try to keep you away. With all the fresh blood spilled on and around the altar you are not certain if you even *want* to get closer.&quot;.<br> Instead of doing anything other than examining altar: say &quot;You would have to get closer first.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Adam is a Hostile person in Tomb. &quot;[If Adam chasing is false]Professor Adam stands next to the altar of Quapeck (from where is that name?). The evil spirits of this place have turned this once affable, well educated 	man into a monstrous corruption of his former self. He stares at you with a satisfied grin. His teeth covered in red. Your chest starts to hurt even more by the sheer look of it. It is clear that you must get away from 	that person as fast as possible.[otherwise]It is Professor Adam. Still insane and still with a knife.[end if]&quot;.<br> The description of Adam is &quot;[If Adam chasing is false]Professor Adam stands next to the stone altar of Quapeck (from where is that name?). The evil spirits of this place have turned this once affable, well educated 	man into a monstrous corruption of his former self. He stares at you with a satisfied grin. His teeth covered in red. Your chest starts to hurt even more by the sheer look of it. It is clear that you must get away from 	that person as fast as possible.[otherwise]It is Professor Adam. Still insane and still with a knife.[end if]&quot;.<br> Instead of doing anything other than examining Adam: say &quot;You prefer to keep your distance from him.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Bob is a Friendly person in Tomb. &quot;[If Bob running is false]Bob, your once loyal assistant, cowers in a far away corner of the Tomb muttering to himself in madness. You doubt that he will be much of assistance right 	now. [otherwise] Bob seems to have completely lost his mind. He runs screaming to the only visible Entry to the south.[end if][If Tomb is not visited][paragraph break][map][end if]&quot;.<br> The description of Bob is &quot;[If Bob running is false]Bob, your once loyal assistant, cowers in a far away corner of the Tomb muttering to himself in madness. You doubt that he will be much of assistance right now. 	[otherwise] Bob seems to have completely lost his mind. He runs screaming to the only visible Entry to the south.[end if]&quot;.<br> Instead of doing anything other than examining or talking to Bob: say &quot;That wouldn't help him.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Talking to is an action applying to one thing.<br> Understand &quot;Talk to [person]&quot; or &quot;Talk [person]&quot; or &quot;call [person]&quot; or &quot;call out for [person]&quot; as talking to.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Carry out talking to Bob when Bob running is false:<br> say &quot;You try to call out for him to get his attention but he is not reacting. Perhaps you[apostrophe]ll have to get closer?&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Carry out talking to Bob when Bob running is true:<br> say &quot;That wouldn[apostrophe]t help. His hysteric screaming would easily drown everything you could muster at the moment.&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check examining nothing:<br> say &quot;There is no time for this nonsense!&quot;;<br> stop the action.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Instead of doing something with nothing:<br> say &quot;There is no time for this nonsense!&quot;.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check waiting:<br> say &quot;That is clearly one of the last things you want to do right now.&quot;;<br> stop the action.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check examining yourself:<br> say &quot;You can leave the medical examination for later!&quot;;<br> stop the action.</font></blockquote>
+<p>
+ Let's not forget to give Adam and Bob some Avatars.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1142(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 991 - Avatars (continued)[=0x000A=]Entity[=0x0009=]Avatar[=0x000A=]Adam[=0x0009=][=0x0022=]A[=0x0022=][=0x000A=]Bob[=0x0009=][=0x0022=]B[=0x0022=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1142()"><img border=0 src=inform:/doc_images/paste.png></a> Table 991 - Avatars (continued)<br> Entity Avatar<br> Adam &quot;A&quot;<br> Bob &quot;B&quot;</font></blockquote>
+<p>
+ Since it can't be an interest of the player to get closer to a dangerous lunatic, we'll try to prevent him from doing so.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1143(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Closer Look is a Truth State that varies.[=0x000A=][=0x000A=]Check going a direction (called destination) in Tomb (this is the Lookout rule):[=0x000A=]Change Closer Look to false;[=0x000A=]Ignore the Lookout rule.[=0x000A=][=0x000A=]The Lookout rule is listed first in the before rules.[=0x000A=][=0x000A=]Check going west in Tomb:[=0x000A=]If Y-Axis of player is [=0x0022=]R[=0x0022=][=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]If X-Axis of player [=0x003C=] 8[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If X-Axis of player [=0x003E=] 5[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if.[=0x000A=][=0x000A=]Check going northwest in Tomb:[=0x000A=]If Y-Axis of player is [=0x0022=]R[=0x0022=][=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]If X-Axis of player [=0x003C=] 9[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If X-Axis of player [=0x003E=] 5[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if;[=0x000A=]If X-Axis of player is 10[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]Choose row with Letters20 of Y-Axis of player in Table 200;[=0x000A=][=0x0009=]If Number Entry [=0x003E=] 4[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If Number Entry [=0x003C=] 18[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if.[=0x000A=][=0x000A=]Check going southwest in Tomb:[=0x000A=]If Y-Axis of player is [=0x0022=]R[=0x0022=][=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]If X-Axis of player [=0x003C=] 8[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If X-Axis of player [=0x003E=] 4[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if;[=0x000A=]If X-Axis of player is 3[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]Choose row with Letters20 of Y-Axis of player in Table 200;[=0x000A=][=0x0009=]If Number Entry [=0x003E=] 4[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If Number Entry [=0x003C=] 18[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if.[=0x000A=][=0x000A=]Check going east in Tomb:[=0x000A=]If Y-Axis of player is [=0x0022=]A[=0x0022=][=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]If X-Axis of player [=0x003C=] 8[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If X-Axis of player [=0x003E=] 5[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if.[=0x000A=][=0x000A=]Check going northeast in Tomb:[=0x000A=]If Y-Axis of player is [=0x0022=]A[=0x0022=][=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]If X-Axis of player [=0x003C=] 9[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If X-Axis of player [=0x003E=] 5[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if;[=0x000A=]If X-Axis of player is 10[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]Choose row with Letters20 of Y-Axis of player in Table 200;[=0x000A=][=0x0009=]If Number Entry [=0x003E=] 3[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If Number Entry [=0x003C=] 17[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if.[=0x000A=][=0x000A=]Check going southeast in Tomb:[=0x000A=]If Y-Axis of player is [=0x0022=]A[=0x0022=][=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]If X-Axis of player [=0x003C=] 8[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If X-Axis of player [=0x003E=] 4[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if;[=0x000A=]If X-Axis of player is 3[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]Choose row with Letters20 of Y-Axis of player in Table 200;[=0x000A=][=0x0009=]If Number Entry [=0x003E=] 3[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If Number Entry [=0x003C=] 17[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if.[=0x000A=][=0x000A=]Check going south in Tomb:[=0x000A=]If X-Axis of player is 3[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]Choose row with Letters20 of Y-Axis of player in Table 200;[=0x000A=][=0x0009=]If Number Entry [=0x003E=] 4[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If Number Entry [=0x003C=] 17[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if.[=0x000A=][=0x000A=]Check going north in Tomb:[=0x000A=]If X-Axis of player is 10[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]Choose row with Letters20 of Y-Axis of player in Table 200;[=0x000A=][=0x0009=]If Number Entry [=0x003E=] 4[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]If Number Entry [=0x003C=] 17[=0x000A=][=0x0009=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=][=0x0009=]Change Closer Look to true;[=0x000A=][=0x0009=][=0x0009=]end if;[=0x000A=][=0x0009=]end if;[=0x000A=]end if.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1143()"><img border=0 src=inform:/doc_images/paste.png></a> Closer Look is a Truth State that varies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check going a direction (called destination) in Tomb (this is the Lookout rule):<br> Change Closer Look to false;<br> Ignore the Lookout rule.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Lookout rule is listed first in the before rules.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check going west in Tomb:<br> If Y-Axis of player is &quot;R&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &lt; 8<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &gt; 5<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check going northwest in Tomb:<br> If Y-Axis of player is &quot;R&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &lt; 9<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &gt; 5<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if;<br> If X-Axis of player is 10<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; Choose row with Letters20 of Y-Axis of player in Table 200;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &gt; 4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &lt; 18<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check going southwest in Tomb:<br> If Y-Axis of player is &quot;R&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &lt; 8<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &gt; 4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if;<br> If X-Axis of player is 3<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; Choose row with Letters20 of Y-Axis of player in Table 200;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &gt; 4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &lt; 18<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check going east in Tomb:<br> If Y-Axis of player is &quot;A&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &lt; 8<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &gt; 5<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check going northeast in Tomb:<br> If Y-Axis of player is &quot;A&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &lt; 9<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &gt; 5<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if;<br> If X-Axis of player is 10<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; Choose row with Letters20 of Y-Axis of player in Table 200;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &gt; 3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &lt; 17<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check going southeast in Tomb:<br> If Y-Axis of player is &quot;A&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &lt; 8<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player &gt; 4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if;<br> If X-Axis of player is 3<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; Choose row with Letters20 of Y-Axis of player in Table 200;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &gt; 3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &lt; 17<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check going south in Tomb:<br> If X-Axis of player is 3<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; Choose row with Letters20 of Y-Axis of player in Table 200;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &gt; 4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &lt; 17<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Check going north in Tomb:<br> If X-Axis of player is 10<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; Choose row with Letters20 of Y-Axis of player in Table 200;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &gt; 4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Number Entry &lt; 17<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Closer Look to true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if.</font></blockquote>
+<p>
+ Now to the part when the player tries to go somewhere where he's not supposed to (except he 'rescued' Bob). To determine if the player wants to use the southern Entry we use a technique that will also come in handy for the next room. Basically, we mime the check run of the original 'Moving player' rule (from &quot;Change Compass to player;&quot; to &quot;check sector;&quot;), that changes the parameter 'Freespace' to the object that is present in the sector the player wants to go. Since it is a more specific rule than the 'moving player' rule the new rule will always be called first.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1144(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Check going a direction (called destination) in Tomb (this is the Tomb Script rule):[=0x000A=]If Closer Look is true[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]say [=0x0022=]You try to get closer to the altar but as you step between the pillars sudden, intense agony fills your body. Adam laughs hysterically as you stumble back writhing in pain.[=0x0022=];[=0x000A=][=0x0009=]stop the action;[=0x000A=]end if;[=0x000A=]Change Compass to player;[=0x000A=]Change Tmp_Direction to destination;[=0x000A=]turn around;[=0x000A=]check sector;[=0x000A=]If Freespace is Tomb_South[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]If Bob is in Tomb[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]say [=0x0022=]You look back to see Bob still sitting in his corner. Despite all your fear, you can[Apostrophe]t just leave him behind with this madman.[=0x0022=];[=0x000A=][=0x0009=][=0x0009=]stop the action;[=0x000A=][=0x0009=]end if;[=0x000A=][=0x0009=]If Adam chasing is true[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]remove adam from map;[=0x000A=][=0x0009=][=0x0009=]Change sector [=0x0022=]J[=0x0022=] and 11 in Tomb to Adam;[=0x000A=][=0x0009=][=0x0009=]Change Adam chasing to false;[=0x000A=][=0x0009=]end if;[=0x000A=]end if.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1144()"><img border=0 src=inform:/doc_images/paste.png></a> Check going a direction (called destination) in Tomb (this is the Tomb Script rule):<br> If Closer Look is true<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You try to get closer to the altar but as you step between the pillars sudden, intense agony fills your body. Adam laughs hysterically as you stumble back writhing in pain.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; stop the action;<br> end if;<br> Change Compass to player;<br> Change Tmp_Direction to destination;<br> turn around;<br> check sector;<br> If Freespace is Tomb_South<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Bob is in Tomb<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You look back to see Bob still sitting in his corner. Despite all your fear, you can[Apostrophe]t just leave him behind with this madman.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stop the action;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Adam chasing is true<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; remove adam from map;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change sector &quot;J&quot; and 11 in Tomb to Adam;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Adam chasing to false;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if.</font></blockquote>
+<p>
+ This segment handles the situation where either Bob is fleeing or Adam is chasing the player. The 'Tomb_South' must be moved to the tomb to make the &quot;Bob follows Tomb_South;&quot; line taking any effect. We also try out the &quot;calculate minimum distance&quot; command so we can leave a comment if Adam comes closer. (Disclaimer: Since some bizarre timing thing, that I couldn't figure out yet, you'll have to place the calculating distance command before the following command)
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1145(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Every turn (this is the Bob discovered rule):[=0x000A=]If Bob running is true[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]move Tomb_South to Tomb;[=0x000A=][=0x0009=]If Bob is connected with Tomb_South[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]Completely remove Bob from map;[=0x000A=][=0x0009=][=0x0009=]Change Bob running to false;[=0x000A=][=0x0009=][=0x0009=]say [=0x0022=]Shortly after you[Apostrophe]ve lost Bob out of sight you can hear an unpleasant crunching noise followed by eerie silence. [Apostrophe]Poor Bob,[Apostrophe] Adam looks amused [Apostrophe]never was the cautious type. But we should attend to our own little agenda now. Isn[Apostrophe]t that right, Mr. Anderson?[Apostrophe] He comes out from behind the altar. Judging by the large knife he is holding you think it is time to depart.[=0x0022=];[=0x000A=][=0x0009=][=0x0009=]Change Adam chasing to true;[=0x000A=][=0x0009=]otherwise;[=0x000A=][=0x0009=][=0x0009=]Bob follows Tomb_South;[=0x000A=][=0x0009=]end if;[=0x000A=][=0x0009=]move Tomb_South to EP;[=0x000A=]end if;[=0x000A=]If Bob is in Tomb[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]If player is connected with Bob[=0x000A=][=0x0009=][=0x0009=]begin;[=0x000A=][=0x0009=][=0x0009=]say [=0x0022=]You place your hand on Bob[Apostrophe]s shoulder who finally turns around to face you. The expression of utter despair that marks his face is truly shocking. As your eyes meet he seems to be trapped in a moment of disbelief. Then he suddenly starts to scream at the top of his lungs and pushes you away with all his strength. You stumble back in surprise and brutally collide with the pillar behind you. While you try to get back on your feet you can see his silhouette running to the southern exit, still screaming.[=0x0022=];[=0x000A=][=0x0009=][=0x0009=]remove Bob from map;[=0x000A=][=0x0009=][=0x0009=]Change sector [=0x0022=]L[=0x0022=] and 11 in Tomb to Bob;[=0x000A=][=0x0009=][=0x0009=]remove player from map;[=0x000A=][=0x0009=][=0x0009=]Change sector [=0x0022=]P[=0x0022=] and 10 in Tomb to player;[=0x000A=][=0x0009=][=0x0009=]Change Looking Direction of player to Face South;[=0x000A=][=0x0009=][=0x0009=]Change Bob running to true;[=0x000A=][=0x0009=]end if;[=0x000A=]end if.[=0x000A=][=0x000A=]The Bob discovered rule is listed before the Print map rule in the every turn rules.[=0x000A=][=0x000A=]Every turn (this is the Adam chasing player rule):[=0x000A=]If Adam is connected with player[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]say [=0x0022=]The pain finally gets the better of you and forces you to your knees. You prepare for cold steel to cut your throat as Adam reaches you. Suddenly, Adams lowers his knife and touches your chest with the other hand muttering in a tongue you don[Apostrophe]t understand. Cognizance strikes you as you start to lose consciousness, never to awake again.[=0x0022=];[=0x000A=][=0x0009=]end the game in death;[=0x000A=]end if;[=0x000A=]If Adam chasing is true[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]calculate minimum distance between player and Adam;[=0x000A=][=0x0009=]Adam follows player;[=0x000A=][=0x0009=]If stepscounter is 3, say [=0x0022=]You can feel your heart pounding faster while the distance between you and Adam diminishes.[=0x0022=];[=0x000A=][=0x0009=]If stepscounter is 2, say [=0x0022=]Your chest starts to hurt.[=0x0022=];[=0x000A=][=0x0009=]If stepscounter is 1, say [=0x0022=]Your torso seems to vibrate in pain. You need to get out of here![=0x0022=];[=0x000A=]end if.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1145()"><img border=0 src=inform:/doc_images/paste.png></a> Every turn (this is the Bob discovered rule):<br> If Bob running is true<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; move Tomb_South to Tomb;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Bob is connected with Tomb_South<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Completely remove Bob from map;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Bob running to false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;Shortly after you[Apostrophe]ve lost Bob out of sight you can hear an unpleasant crunching noise followed by eerie silence. [Apostrophe]Poor Bob,[Apostrophe] Adam looks amused [Apostrophe]never was the cautious type. But we should attend to our own little agenda now. Isn[Apostrophe]t that right, Mr. Anderson?[Apostrophe] He comes out from behind the altar. Judging by the large knife he is holding you think it is time to depart.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Adam chasing to true;<br>&nbsp;&nbsp;&nbsp;&nbsp; otherwise;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bob follows Tomb_South;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br>&nbsp;&nbsp;&nbsp;&nbsp; move Tomb_South to EP;<br> end if;<br> If Bob is in Tomb<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; If player is connected with Bob<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You place your hand on Bob[Apostrophe]s shoulder who finally turns around to face you. The expression of utter despair that marks his face is truly shocking. As your eyes meet he seems to be trapped in a moment of disbelief. Then he suddenly starts to scream at the top of his lungs and pushes you away with all his strength. You stumble back in surprise and brutally collide with the pillar behind you. While you try to get back on your feet you can see his silhouette running to the southern exit, still screaming.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; remove Bob from map;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change sector &quot;L&quot; and 11 in Tomb to Bob;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; remove player from map;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change sector &quot;P&quot; and 10 in Tomb to player;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Looking Direction of player to Face South;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Bob running to true;<br>&nbsp;&nbsp;&nbsp;&nbsp; end if;<br> end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Bob discovered rule is listed before the Print map rule in the every turn rules.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Every turn (this is the Adam chasing player rule):<br> If Adam is connected with player<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;The pain finally gets the better of you and forces you to your knees. You prepare for cold steel to cut your throat as Adam reaches you. Suddenly, Adams lowers his knife and touches your chest with the other hand muttering in a tongue you don[Apostrophe]t understand. Cognizance strikes you as you start to lose consciousness, never to awake again.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; end the game in death;<br> end if;<br> If Adam chasing is true<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; calculate minimum distance between player and Adam;<br>&nbsp;&nbsp;&nbsp;&nbsp; Adam follows player;<br>&nbsp;&nbsp;&nbsp;&nbsp; If stepscounter is 3, say &quot;You can feel your heart pounding faster while the distance between you and Adam diminishes.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; If stepscounter is 2, say &quot;Your chest starts to hurt.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; If stepscounter is 1, say &quot;Your torso seems to vibrate in pain. You need to get out of here!&quot;;<br> end if.</font></blockquote>
+<p>
+ Continue on to the next room.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1146(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 102 - Tunnel[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]/Corner[=0x0009=]-Wall[=0x0009=]Tunnel_North[=0x0009=]-Wall[=0x0009=][=0x005C=]Corner[=0x0009=]9[=0x0009=]5[=0x000A=]2[=0x0009=]|Wall[=0x0009=]None[=0x0009=]None[=0x0009=]Trap[=0x0009=]|Wall[=0x000A=]3[=0x0009=]|Wall[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]|Wall[=0x000A=]4[=0x0009=]|Wall[=0x0009=]Trap[=0x0009=]None[=0x0009=]Trap[=0x0009=]|Wall[=0x000A=]5[=0x0009=]Tunnel_West[=0x0009=]Trap[=0x0009=]None[=0x0009=]None[=0x0009=]|Wall[=0x000A=]6[=0x0009=]|Wall[=0x0009=]None[=0x0009=]Trap[=0x0009=]None[=0x0009=]|Wall[=0x000A=]7[=0x0009=]|Wall[=0x0009=]None[=0x0009=]Trap[=0x0009=]Trap[=0x0009=]|Wall[=0x000A=]8[=0x0009=]|Wall[=0x0009=]Trap[=0x0009=]None[=0x0009=]Trap[=0x0009=]|Wall[=0x000A=]9[=0x0009=][=0x005C=]Corner[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]-Wall[=0x0009=]/Corner[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1146()"><img border=0 src=inform:/doc_images/paste.png></a> Table 102 - Tunnel<br> Number LE A1 B2 C3 RE Height Width<br> 1 /Corner -Wall Tunnel_North -Wall \Corner 9 5<br> 2 |Wall None None Trap |Wall<br> 3 |Wall None None None |Wall<br> 4 |Wall Trap None Trap |Wall<br> 5 Tunnel_West Trap None None |Wall<br> 6 |Wall None Trap None |Wall<br> 7 |Wall None Trap Trap |Wall<br> 8 |Wall Trap None Trap |Wall<br> 9 \Corner -Wall -Wall -Wall /Corner</font></blockquote>
+<p>
+ There are some traps placed here to hinder the player in his escape. To make thing a little bit more interesting, it is also completely dark.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1147(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Tunnel is a dark room.[=0x000A=]Tunnel is south of Tomb.[=0x000A=]Trap is a thing.[=0x000A=][=0x000A=]Table 991 - Avatars (continued)[=0x000A=]Entity[=0x0009=]Avatar[=0x000A=]Trap[=0x0009=][=0x0022=]x[=0x0022=][=0x000A=][=0x000A=]Check going a direction (called destination) in Tunnel (this is the Tunnel Script rule):[=0x000A=]Change Compass to player;[=0x000A=]Change Tmp_Direction to destination;[=0x000A=]turn around;[=0x000A=]check sector;[=0x000A=]If Freespace is trap[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]say [=0x0022=]You stumble forward in your desperate attempt to escape as you come to realize that there is actually no floor to stand on. The scream that leaves your mouth as you fall into a void of blackness will haunt [=0x0009=][=0x0009=]this place for all eternity.[=0x0022=];[=0x000A=][=0x0009=]end the game in death;[=0x000A=]end if;[=0x000A=]If Freespace is Tunnel_West[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]remove player from map;[=0x000A=][=0x0009=]move player to Void;[=0x000A=][=0x0009=]say [=0x0022=][Apostrophe]Do you allready want to leave us, Mr. Anderson?[Apostrophe][paragraph break]You find yourself...somewhere..else.[=0x0022=];[=0x000A=][=0x0009=]Change sector [=0x0022=]D[=0x0022=] and 5 in void to player;[=0x000A=][=0x0009=]move Void_East to Void;[=0x000A=][=0x0009=]remove Void_East from map;[=0x000A=][=0x0009=]move Void_East to EP;[=0x000A=][=0x0009=]stop the action;[=0x000A=]end if.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1147()"><img border=0 src=inform:/doc_images/paste.png></a> Tunnel is a dark room.<br> Tunnel is south of Tomb.<br> Trap is a thing.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 991 - Avatars (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Entity</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Avatar</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Trap</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;x&quot;</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> Check going a direction (called destination) in Tunnel (this is the Tunnel Script rule):<br> Change Compass to player;<br> Change Tmp_Direction to destination;<br> turn around;<br> check sector;<br> If Freespace is trap<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You stumble forward in your desperate attempt to escape as you come to realize that there is actually no floor to stand on. The scream that leaves your mouth as you fall into a void of blackness will haunt 		this place for all eternity.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; end the game in death;<br> end if;<br> If Freespace is Tunnel_West<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; remove player from map;<br>&nbsp;&nbsp;&nbsp;&nbsp; move player to Void;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;[Apostrophe]Do you allready want to leave us, Mr. Anderson?[Apostrophe][paragraph break]You find yourself...somewhere..else.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; Change sector &quot;D&quot; and 5 in void to player;<br>&nbsp;&nbsp;&nbsp;&nbsp; move Void_East to Void;<br>&nbsp;&nbsp;&nbsp;&nbsp; remove Void_East from map;<br>&nbsp;&nbsp;&nbsp;&nbsp; move Void_East to EP;<br>&nbsp;&nbsp;&nbsp;&nbsp; stop the action;<br> end if.</font></blockquote>
+<p>
+ Now for the final destination:
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1148(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 103 - The Void[=0x000A=]Number[=0x0009=]LE[=0x0009=]A1[=0x0009=]B2[=0x0009=]C3[=0x0009=]D4[=0x0009=]E5[=0x0009=]F6[=0x0009=]G7[=0x0009=]H8[=0x0009=]I9[=0x0009=]RE[=0x0009=]Height[=0x0009=]Width[=0x000A=]1[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]11[=0x0009=]11[=0x000A=]2[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]3[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]4[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]5[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]6[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]7[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]8[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]9[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]10[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=]11[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x0009=]None[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1148()"><img border=0 src=inform:/doc_images/paste.png></a> Table 103 - The Void<br> Number LE A1 B2 C3 D4 E5 F6 G7 H8 I9 RE Height Width<br> 1 None None None None None None None None None None None 11 11<br> 2 None None None None None None None None None None None<br> 3 None None None None None None None None None None None<br> 4 None None None None None None None None None None None<br> 5 None None None None None None None None None None None<br> 6 None None None None None None None None None None None<br> 7 None None None None None None None None None None None<br> 8 None None None None None None None None None None None<br> 9 None None None None None None None None None None None<br> 10 None None None None None None None None None None None<br> 11 None None None None None None None None None None None</font></blockquote>
+<p>
+ We'll find out what happens if we decrease the Height and Width Entry of a map.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1149(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('The Void is a room. The description of void is [=0x0022=][if Void is visited]There is nothing to say. That is exactly why this place is so scary in the first place.[end if][=0x0022=].[=0x000A=]The Void is west of Tunnel.[=0x000A=]Listcounter is a number that varies.[=0x000A=][=0x000A=]Comment counter is a number that varies.[=0x000A=][=0x000A=]Every turn when player is in the Void (this is the Void Script rule):[=0x000A=]Increase Comment counter by 1;[=0x000A=]Change compass to player;[=0x000A=]calculate coordinates;[=0x000A=]choose row with Letters28 of Y-Axis of player in Table 200;[=0x000A=]Change Listcounter to Number Entry;[=0x000A=]choose row 1 in Table 103;[=0x000A=]If Height Entry [=0x003E=] 1[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]Change Height Entry to Height Entry - 1;[=0x000A=][=0x0009=]Change Width Entry to Width Entry - 1;[=0x000A=][=0x0009=]If X-Axis of player is (Height Entry + 1), decrease X-Axis of player by 1;[=0x000A=][=0x0009=]If Listcounter is Width Entry, Change Y-Axis of player to [=0x0022=]RE[=0x0022=];[=0x000A=][=0x0009=]If Width Entry is 1, Change Y-Axis of player to [=0x0022=]LE[=0x0022=];[=0x000A=][=0x0009=]let X be X-Axis of player;[=0x000A=][=0x0009=]let Y be Y-Axis of player;[=0x000A=][=0x0009=]remove player from map;[=0x000A=][=0x0009=]Change sector Y and X in Void to player;[=0x000A=]end if;[=0x000A=]If Comment counter is 1, say [=0x0022=]This is certainly not a place you[apostrophe]ve seen before. Where are you?[=0x0022=];[=0x000A=]If Comment counter is 2, say [=0x0022=]You desperately turn from one direction into another. There must be a way out![=0x0022=];[=0x000A=]If Comment counter is 3, say [=0x0022=]There was something you[apostrophe]ve heard earlier. It was something important. Why can[apostrophe]t you remember?[=0x0022=];[=0x000A=]If Comment counter is 4, say [=0x0022=]What was it? Some Voodoo Mumbo Jumbo.[=0x0022=];[=0x000A=]If Comment counter is 5, say [=0x0022=]Mind? Body? You can[apostrophe]t make a sense of it.[=0x0022=];[=0x000A=]If Comment counter is 6, say [=0x0022=]First, the body is struck down and torn open. That will prepare the vessel.[=0x0022=];[=0x000A=]If Comment counter is 7, say [=0x0022=]You can hear Adam laughing in a distance.[=0x0022=];[=0x000A=]If Comment counter is 8, say [=0x0022=]A very important thing from the body is stolen.[=0x0022=];[=0x000A=]If Comment counter is 9, say [=0x0022=]Your chest pain returns.[=0x0022=];[=0x000A=]If Comment counter is 10, say [=0x0022=]This is a mere preparation to ensure that the mind will be destroyed as well.[=0x0022=];[=0x000A=]If Comment counter is 11, say [=0x0022=]You lower your gaze to examine the source of your torment. It becomes clear by closer inspection that someone, probably Adam, took the freedom to cut you open, remove your ribs [=0x0009=]and take the heart. For some strange reasons you find this quiet amusing.[=0x0022=];[=0x000A=]If Comment counter is 12[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]say [=0x0022=]And when the mind has faded the Soul shall join our choir to bring forth and speak truly in the name of Quapeck![=0x0022=];[=0x000A=][=0x0009=]Increase Score by 1;[=0x000A=][=0x0009=]end the game saying [=0x0022=]You[apostrophe]ve finally found your true calling.[=0x0022=];[=0x000A=]end if.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1149()"><img border=0 src=inform:/doc_images/paste.png></a> The Void is a room. The description of void is &quot;[if Void is visited]There is nothing to say. That is exactly why this place is so scary in the first place.[end if]&quot;.<br> The Void is west of Tunnel.<br> Listcounter is a number that varies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Comment counter is a number that varies.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Every turn when player is in the Void (this is the Void Script rule):<br> Increase Comment counter by 1;<br> Change compass to player;<br> calculate coordinates;<br> choose row with Letters28 of Y-Axis of player in Table 200;<br> Change Listcounter to Number Entry;<br> choose row 1 in Table 103;<br> If Height Entry &gt; 1<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; Change Height Entry to Height Entry - 1;<br>&nbsp;&nbsp;&nbsp;&nbsp; Change Width Entry to Width Entry - 1;<br>&nbsp;&nbsp;&nbsp;&nbsp; If X-Axis of player is (Height Entry + 1), decrease X-Axis of player by 1;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Listcounter is Width Entry, Change Y-Axis of player to &quot;RE&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Width Entry is 1, Change Y-Axis of player to &quot;LE&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; let X be X-Axis of player;<br>&nbsp;&nbsp;&nbsp;&nbsp; let Y be Y-Axis of player;<br>&nbsp;&nbsp;&nbsp;&nbsp; remove player from map;<br>&nbsp;&nbsp;&nbsp;&nbsp; Change sector Y and X in Void to player;<br> end if;<br> If Comment counter is 1, say &quot;This is certainly not a place you[apostrophe]ve seen before. Where are you?&quot;;<br> If Comment counter is 2, say &quot;You desperately turn from one direction into another. There must be a way out!&quot;;<br> If Comment counter is 3, say &quot;There was something you[apostrophe]ve heard earlier. It was something important. Why can[apostrophe]t you remember?&quot;;<br> If Comment counter is 4, say &quot;What was it? Some Voodoo Mumbo Jumbo.&quot;;<br> If Comment counter is 5, say &quot;Mind? Body? You can[apostrophe]t make a sense of it.&quot;;<br> If Comment counter is 6, say &quot;First, the body is struck down and torn open. That will prepare the vessel.&quot;;<br> If Comment counter is 7, say &quot;You can hear Adam laughing in a distance.&quot;;<br> If Comment counter is 8, say &quot;A very important thing from the body is stolen.&quot;;<br> If Comment counter is 9, say &quot;Your chest pain returns.&quot;;<br> If Comment counter is 10, say &quot;This is a mere preparation to ensure that the mind will be destroyed as well.&quot;;<br> If Comment counter is 11, say &quot;You lower your gaze to examine the source of your torment. It becomes clear by closer inspection that someone, probably Adam, took the freedom to cut you open, remove your ribs 	and take the heart. For some strange reasons you find this quiet amusing.&quot;;<br> If Comment counter is 12<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;And when the mind has faded the Soul shall join our choir to bring forth and speak truly in the name of Quapeck!&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; Increase Score by 1;<br>&nbsp;&nbsp;&nbsp;&nbsp; end the game saying &quot;You[apostrophe]ve finally found your true calling.&quot;;<br> end if.</font></blockquote>
+<p>
+ This rule is a precaution in case the player wants to go to a sector that no longer exists.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1150(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Check going a direction (called destination) in Void (this is the Second Void Script rule):[=0x000A=]choose row with Letters28 of Y-Axis of player in Table 200;[=0x000A=]Change Listcounter to Number Entry;[=0x000A=]Choose row 1 in Table 103;[=0x000A=]If Height Entry is not 1[=0x000A=][=0x0009=]begin;[=0x000A=][=0x0009=]If Listcounter is Width Entry, stop the action;[=0x000A=]end if.[=0x000A=][=0x000A=]The Void Script rule is listed before the print map rule in the every turn rules.[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1150()"><img border=0 src=inform:/doc_images/paste.png></a> Check going a direction (called destination) in Void (this is the Second Void Script rule):<br> choose row with Letters28 of Y-Axis of player in Table 200;<br> Change Listcounter to Number Entry;<br> Choose row 1 in Table 103;<br> If Height Entry is not 1<br>&nbsp;&nbsp;&nbsp;&nbsp; begin;<br>&nbsp;&nbsp;&nbsp;&nbsp; If Listcounter is Width Entry, stop the action;<br> end if.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The Void Script rule is listed before the print map rule in the every turn rules.</font></blockquote>
+<p>
+ Now we'll connect rooms and tables.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1151(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Table 997 - Sectors (continued)[=0x000A=]Sector Room[=0x0009=]Table[=0x0009=]Table 2[=0x000A=]The Tomb[=0x0009=]Table 100[=0x0009=]Table 101[=0x000A=]Tunnel[=0x0009=]Table 102[=0x000A=]The Void[=0x0009=]Table 103[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1151()"><img border=0 src=inform:/doc_images/paste.png></a> Table 997 - Sectors (continued)<br> Sector Room Table Table 2<br> The Tomb Table 100 Table 101<br> Tunnel Table 102<br> The Void Table 103</font></blockquote>
+<p>
+ And here we declare our Entrance Points. Note that we actually don't need the Void_East Entrance Point anymore but we'll keep it in case that we might want to test if the West and East Entrance Points works properly.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1152(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Tomb_South is a South Entrance Point in EP room.[=0x000A=]Tunnel_North is a North Entrance Point in EP room.[=0x000A=]Tunnel_West is a West Entrance Point in EP room.[=0x000A=]Void_East is a East Entrance Point in EP room.[=0x000A=][=0x000A=]Table 994 - Junctures (continued)[=0x000A=]Entrance[=0x0009=]Exit Point[=0x0009=]Exit Room[=0x0009=]Position_1[=0x0009=]Position_2[=0x0009=]Position_3[=0x0009=]Height_1[=0x0009=]Height_2[=0x0009=]Height_3[=0x0009=]Entrance_Height[=0x000A=]Tunnel_North[=0x0009=]Tomb_South[=0x0009=]The Tomb[=0x0009=][=0x0022=][=0x0022=][=0x0009=][=0x0022=]J[=0x0022=][=0x0009=][=0x0022=][=0x0022=][=0x0009=]0[=0x0009=]0[=0x0009=]0[=0x0009=]11[=0x000A=]Tomb_South[=0x0009=]Tunnel_North[=0x0009=]Tunnel[=0x0009=][=0x0022=]A[=0x0022=][=0x0009=][=0x0022=]B[=0x0022=][=0x0009=][=0x0022=]C[=0x0022=][=0x0009=]0[=0x0009=]0[=0x0009=]0[=0x0009=]2[=0x000A=]Tunnel_West[=0x0009=]Void_East[=0x0009=]The Void[=0x0009=][=0x0022=][=0x0022=][=0x0009=][=0x0022=][=0x0022=][=0x0009=][=0x0022=][=0x0022=][=0x0009=]4[=0x0009=]5[=0x0009=]6[=0x0009=]5[=0x000A=]Void_East[=0x0009=]Tunnel_West[=0x0009=]Tunnel[=0x0009=][=0x0022=][=0x0022=][=0x0009=][=0x0022=][=0x0022=][=0x0009=][=0x0022=][=0x0022=][=0x0009=]4[=0x0009=]5[=0x0009=]6[=0x0009=]5[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1152()"><img border=0 src=inform:/doc_images/paste.png></a> Tomb_South is a South Entrance Point in EP room.<br> Tunnel_North is a North Entrance Point in EP room.<br> Tunnel_West is a West Entrance Point in EP room.<br> Void_East is a East Entrance Point in EP room.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table 994 - Junctures (continued)</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> Entrance</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Exit Point</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Exit Room</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Position_1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Position_2</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Position_3</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height_1</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height_2</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Height_3</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Entrance_Height</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Tunnel_North</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Tomb_South</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> The Tomb</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;J&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 11</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Tomb_South</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Tunnel_North</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Tunnel</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;A&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;B&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;C&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 0</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 2</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Tunnel_West</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Void_East</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> The Void</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 4</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 5</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 6</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 5</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> Void_East</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Tunnel_West</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> Tunnel</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 4</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 5</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 6</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 5</font></font></td></tr></table></blockquote>
+<p>
+</font></td></tr></table><p><hr><p><a name=eg4><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Room & Dimension-eg4.html#eg4" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>D</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Room & Dimension-eg4.html#eg4" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Templates</font></b></a><br>Provides Copy &amp; Paste templates for easy use.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

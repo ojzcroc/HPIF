@@ -1,0 +1,184 @@
+Start of a transcript of
+
+Harry Potter and the Philosopher's stone
+Based on "Harry Potter and the Philosopher's stone" by J.K. Rowling. by Orion Zymaris
+Release 1 / Serial number 130317 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) 
+
+Welcome to An Interactive Fiction version of Harry Potter.
+                (If you ever need help, type help.)
+
+Mr and Mrs Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much. They were the last people you'd expect to be involved in anything strange or mysterious,  because they, or rather you, just didn't hold with such nonsense.
+
+As you wake up, on a dull, grey Tuesday, you can hardly imagine that soon strange things would be happening all over the country.
+You are Mr  Vernon Dursley, and are in your bedroom.
+
+Identification number: //C8A63770-6D0B-11E2-B933-F96839AE4917//
+Interpreter version 0.4.7 / VM 3.1.2 / Library serial number 080126
+Standard Rules version 2/090402 by Graham Nelson
+Rideable Vehicles version 3 by Graham Nelson
+Snippetage version 2 by Dave Robinson
+Epistemology version 6 by Eric eve
+Conversation Framework version 10 by Eric Eve
+Real-Time Delays version 1/100607 by Erik Temple
+Telephones by George Tryfonas
+Postures by Emily Short
+
+>look
+Dursley's bedroom (in bed)
+You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the east.
+
+You can see bedroom door (east), bedroom window (providing light), a clock, Wardrobe (closed) and bedside table here.
+
+>get up
+You get out of bed.
+
+Dursley's bedroom
+You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the east.
+
+You can see bedroom door (east), bedroom window (providing light), bed (empty), a clock, Wardrobe (closed) and bedside table here.
+
+>cheats on
+Now cheats are on.
+>go through magic dooe
+You can't see any such thing.
+
+>go through magic door
+kitchen
+You enter the kitchen to say goodbye to Petunia and Dudley. Dudley is having a major tantrum, and is throwing cereal everywhere.
+
+You can see Front door (north), white door (south), Petunia, highchair (on which is Dudley), the kitchen table (on which are two pieces of toast and a coffee cup), the fridge (closed), suitcase (closed) and window here.
+
+>go through magic door
+Work office
+as you enter your office, you see your desk, with a phone on it.
+
+You can see an office door (south), desk (on which are an office phone, an important customer service document, a rolodex, notepad and pen), a window, office chair and a filing cabinet here.
+
+>go through magic door
+garden
+you look around and see a driveway with the car on it, the garage where the car came out of, and the highway to the north.
+
+You can see Front door (south), garage (closed) and a car (closed) here.
+
+>quit
+Save failed.
+
+Are you sure you want to quit? y
+Start of a transcript of
+
+Harry Potter and the Philosopher's stone
+Based on "Harry Potter and the Philosopher's stone" by J.K. Rowling. by Orion Zymaris
+Release 1 / Serial number 130317 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) 
+
+Welcome to An Interactive Fiction version of Harry Potter.
+                (If you ever need help, type help.)
+
+Mr and Mrs Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much. They were the last people you'd expect to be involved in anything strange or mysterious,  because they, or rather you, just didn't hold with such nonsense.
+
+As you wake up, on a dull, grey Tuesday, you can hardly imagine that soon strange things would be happening all over the country.
+You are Mr  Vernon Dursley, and are in your bedroom.
+
+Identification number: //C8A63770-6D0B-11E2-B933-F96839AE4917//
+Interpreter version 0.4.7 / VM 3.1.2 / Library serial number 080126
+Standard Rules version 2/090402 by Graham Nelson
+Rideable Vehicles version 3 by Graham Nelson
+Snippetage version 2 by Dave Robinson
+Epistemology version 6 by Eric eve
+Conversation Framework version 10 by Eric Eve
+Real-Time Delays version 1/100607 by Erik Temple
+Telephones by George Tryfonas
+Postures by Emily Short
+
+>look
+Dursley's bedroom (in bed)
+You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the east.
+
+You can see bedroom door (east), bedroom window (providing light), a clock, Wardrobe (closed) and bedside table here.
+
+>cheats on
+Now cheats are on.
+>i
+You are carrying:
+  magic door
+  a watch (being worn)
+  Pyjamas (being worn)
+
+You are carrying magic door. You are wearing a watch and Pyjamas.
+
+>go through door
+(magic door)
+corridor
+You can see an office door (north) and stairs (down) here.
+
+>go through door
+(magic door)
+Grunnings Carpark
+You can see stairs (up), red car (closed), blue car (closed), rainbow car (closed), green car (closed) and elevator (in which is elevator button) here.
+
+>go through door
+(magic door)
+cupboard
+You walk in to the cupboard to be greeted by the sight of years of accumulated junk that Petunia insisted was kept away from the rest of the suspiciously clean house.
+
+You can see a few bits of rubbish, three bags, four socks, twenty pencils and broom here.
+
+>go through door
+Work office
+as you enter your office, you see your desk, with a phone on it.
+
+You can see an office door (south), desk (on which are an office phone, an important customer service document, a rolodex, notepad and pen), a window, office chair and a filing cabinet here.
+
+>go through door
+(magic door)
+garden
+you look around and see a driveway with the car on it, the garage where the car came out of, and the highway to the north.
+
+You can see Front door (south), garage (closed) and a car (closed) here.
+
+>odghdogdfjh
+That's not a verb I recognise.
+
+>look
+garden
+you look around and see a driveway with the car on it, the garage where the car came out of, and the highway to the north.
+
+You can see Front door (south), garage (closed) and a car (closed) here.
+
+>open sesame
+Now all doors, vehicles, and containers are unlocked and open.
+>move mr mason to me
+You move Mr. Mason to yourself.
+
+>move mobilel to box
+You move mobilel to dusty box.
+
+>i
+You are carrying:
+  magic door
+  Mr. Mason
+  a watch (being worn)
+  Pyjamas (being worn)
+
+You are carrying magic door and Mr. Mason. You are wearing a watch and Pyjamas.
+
+>change to mr mason
+You are now Mr. Mason.
+
+>look at watch
+The time is 7:44 am.
+
+>Start of a transcript of
+
+Harry Potter and the Philosopher's stone
+Based on "Harry Potter and the Philosopher's stone" by J.K. Rowling. by Orion Zymaris
+Release 1 / Serial number 130324 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) 
+
+
+Welcome to An Interactive Fiction version of Harry Potter.
+                (If you ever need help, type help.)
+
+Mr and Mrs Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much.
+They were the last people you'd expect to be involved in anything strange or mysterious,  because they, or rather you, just didn't hold with such nonsense.
+However, they had a secret, and their greatest fear was that somebody would discover it.They didn't think they could bear it if anyone found out about the Potters.
+
+Mrs Potter, Petunia's sister, and her husband and son, where as unDursleyish as it was possible to be.

@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1023(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include Computers by Emily Short.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1023()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>Computers<font color="#404040"> by </font>Emily Short</b><p><small></small><p><p><hr><p><b><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Chapter 1: Hardware</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 1.1: The computer kind; screens and keyboards</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 1.2: Laptops and desktops; mice and trackpads</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 1.3: Extension ports</font></a><br>
+<br><b><a STYLE="text-decoration: none" href=#docsec5><font color="#000000">Chapter 2: Software</font></a></b><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec6><font color="#000000">Section 2.1: Software in general</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec7><font color="#000000">Section 2.2: Default software kinds</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec8><font color="#000000">Section 2.3: Password lock programs</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec9><font color="#000000">Section 2.4: Multiple-Choice Programs</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec10><font color="#000000">Section 2.5: Search engines</font></a><br>
+&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href=#docsec11><font color="#000000">Section 2.6: Email</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Computers-eg1.html#eg1"><font color="#000000">A: Reading Email</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Computers-eg2.html#eg2"><font color="#000000">B: Powered Email Machine</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Computers-eg3.html#eg3"><font color="#000000">C: USB Drive</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Computers-eg4.html#eg4"><font color="#000000">D: Operations</font></a><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="Computers-eg5.html#eg5"><font color="#000000">E: Balance Checking</font></a><br><p><hr><p><p><hr><p>
+<p>
+ &quot;Computers&quot; implements a basic computer set-up. Implemented computers have peripherals: such as a screen and keyboard by default, and others optionally. They may run software; several types of default software are provided. They may also have data ports of various sorts, though the behavior of these ports is minimally elaborated here.
+<p>
+ By itself, &quot;Computers&quot; does not implement cords or batteries and does not worry about computer power supplies. However, if we include Power Supplies by Emily Short (which also requires Plugs and Sockets by Sean Turner), we will get power cords for our desktop computers and a combination of cords and batteries for laptops.
+<p>
+<p><a name=docsec1><b><font color="#800000">Chapter 1: Hardware</b></font>
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 1.1: The computer kind; screens and keyboards</b></font>
+<p>
+ A computer is implemented as a device that may be switched on and off. &quot;Computers&quot; supplies every computer with a screen (which can also be called &quot;monitor&quot; by the player) and a keyboard. The keyboard is required for the computer to understand typing; if one is absent, the player will not be able to enter typed commands.
+<p>
+ When switched on, a computer plays a startup noise and displays the contents of its screen. We may change the startup noise so:
+<p>
+<blockquote><font color="#000080"> The startup noise of the PC is &quot;[The item described] chimes cheerfully.&quot;</font></blockquote>
+<p>
+ The contents of the computer's screen will depend on what software the computer is currently running. (See below.)
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 1.2: Laptops and desktops; mice and trackpads</b></font>
+<p>
+ &quot;Computer&quot; has two subordinate kinds, &quot;laptop&quot; and &quot;desktop computer&quot;. A laptop may be opened or closed (synonymous with switching it on and off, for simplicity) and has a trackpad. A desktop computer is by default fixed in place and has a mouse.
+<p>
+ For non-standard configurations of computer, such as an ATM with a modified keyboard and no mouse/trackpad, we would fall back on the base &quot;computer&quot; kind and add the desired components by hand.
+<p>
+ Trackpads and mice are both of the kind &quot;selection device&quot;. If a computer does not incorporate any selection device, the player will not be able to click on things to select them on that computer. If we wished to implement a different type of console, we might alternatively make joysticks, touchpads, or trackballs as selection devices.
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 1.3: Extension ports</b></font>
+<p>
+ &quot;Computers&quot; also has the concept of an &quot;extension port&quot;, which is a generic kind suitable for implementing DVD or CD drive slots, USB ports, and any other realistic or futuristic reader for a data storage device; and the kind &quot;data storage device&quot;, which is the only sort of item that may be placed into an extension port. An extension port may contain exactly one thing at a time.
+<p>
+ So for instance we might write
+<p>
+<blockquote><font color="#000080"> The CD slot is an extension port. It is part of the old PC.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The CD-ROM is a data storage device.</font></blockquote>
+<p>
+... whereupon the CD-ROM may be placed in the CD slot, but nothing else will be permitted.
+<p>
+ The extension assumes that the player who types
+<p>
+<blockquote><font color="#000080"> INSERT STORAGE DEVICE INTO COMPUTER</font></blockquote>
+<p>
+ really means to insert the storage device into the extension port that is part of the computer. Input will be redirected automatically if a given computer has only one extension port and the situation is unambiguous.
+<p>
+ If we have a game in which multiple types of data storage devices exist and are to be placed in multiple types of extension ports, we may need to add subkinds of these two kinds, and restrict more thoroughly which storage devices may be put into which ports.
+<p>
+ Furthermore, there is no default treatment of data storage devices or their effect on computers or computer software, as the possibilities are too diverse. We should decide on a per-game basis what happens when a given storage device is hooked up.
+<p>
+ The examples show a very simple way to a storage device to extend the range of a search engine program.
+<p>
+<p><hr><p><a name=docsec5><b><font color="#800000">Chapter 2: Software</b></font>
+<p>
+<p><a name=docsec6><b><font color="#000000">Section 2.1: Software in general</b></font>
+<p>
+ A given computer may be running one or more pieces of software; whichever software is currently dominant receives the input sent by the keyboard, and is also visible when the player looks at the screen or the computer as a whole.
+<p>
+ The appearance of the software on the screen is given by the software's description. Thus we might have
+<p>
+<blockquote><font color="#000080"> The PC runs a password lock program called rudimentary passcode. The description of rudimentary passcode is &quot;A box on the screen invites you to type a password to proceed.&quot;</font></blockquote>
+<p>
+ A computer can run several programs at once, in which case the program with the lowest &quot;software priority&quot; is the one that is considered to be working and receiving input at the moment. By default, most software has a software priority of five, while password lock programs have software priority 1 (meaning they must be dealt with before other software becomes available). If it is intended that the user can change programs manually, we might handle this by changing software priorities during play to make the one in use uppermost; as in
+<p>
+<blockquote><font color="#000080"> now the software priority of the email program is 1.</font></blockquote>
+<p>
+ When the player uses a TYPE or CLICK ON command, the topic understood is passed on to the input handling rules. The input handling rules are an object-based rulebook and are keyed to the specific program currently dominant on the computer. One of the several input handling rules looks like this:
+<p>
+<blockquote><font color="#000080"> An input handling rule for a multiple-choice program (called chosen software) (this is the pick a choice rule):<br>&nbsp;&nbsp;&nbsp;&nbsp; if the topic understood is a topic listed in the options table of the chosen software:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; follow the effect entry;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rule succeeds;<br>&nbsp;&nbsp;&nbsp;&nbsp; otherwise:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;[out of bounds response of the chosen software][paragraph 	break]&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rule fails.</font></blockquote>
+<p>
+... and consequently we can make new input handling rules for any new software we write, or to customize the behavior of the default software kinds.
+<p>
+<p><a name=docsec7><b><font color="#000000">Section 2.2: Default software kinds</b></font>
+<p>
+ Five types of software are provided by default:
+<p>
+ (1) a password lock program that renders the computer inoperable until the password is typed
+<p>
+ (2) a search program that returns results on typed searches, as well as to standard syntax such as LOOK UP &quot;whatever&quot; IN SEARCH PROGRAM
+<p>
+ (3) a multiple-choice program that allows the user to select options, and runs rules accordingly
+<p>
+ (4) an enumerated multiple-choice program (the same kind of thing, but assigning a number to each choice instead of matching them with topic keywords)
+<p>
+ (5) an email program capable of organizing incoming and outgoing messages, marking which messages are read, and reporting new arrivals.
+<p>
+<p><a name=docsec8><b><font color="#000000">Section 2.3: Password lock programs</b></font>
+<p>
+ To define a password lock program, we may write something like:
+<p>
+<blockquote><font color="#000080"> The PC runs a password lock program called rudimentary passcode. The password of rudimentary passcode is &quot;xyzzy&quot;.</font></blockquote>
+<p>
+ Note that because of the way the z-machine handles typed input, the player's input will always be flattened to lower case before it is interpreted. Therefore passwords should always be in lower case.
+<p>
+ We may also optionally define two other aspects of a password lock program, namely the text displayed when the player's attempt fails, and that displayed when it succeeds. Thus:
+<p>
+<blockquote><font color="#000080"> The rejection of rudimentary passcode is &quot;'Password incorrect.'&quot;<br> The success of rudimentary passcode is &quot;The password field vanishes.&quot;</font></blockquote>
+<p>
+<p><a name=docsec9><b><font color="#000000">Section 2.4: Multiple-Choice Programs</b></font>
+<p>
+ A multiple-choice program is one that presents the player with a series of choices to type or click on, and executes a rule whenever one is selected. This is suitable for setting up operating systems, dedicated special-purpose computers such as ATMs, or other interfaces that involve negotiating a series of menus. Items from a multiple-choice list may be selected by typing or by mouse or trackpad if one of these is available.
+<p>
+ To set up a multiple-choice program, we must establish an options table like so:
+<p>
+<blockquote><font color="#000080"> The operating system is a multiple-choice program. The options table of the operating system is the Table of GUI Options.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of GUI Options</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> topic</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> title</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> effect</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;microsoft/word&quot; or &quot;microsoft word&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Microsoft Word&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> open-Word rule</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;adobe illustrator&quot; or &quot;adobe/illustrator&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Adobe Illustrator&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> open-Illustrator rule</font></font></td></tr></table></blockquote>
+<p>
+ If we wish a multiple-choice program to function as an operating system allowing access to various other programs on the computer, we might use these effect rules to change the software priority of other programs.
+<p>
+ A subkind of multiple-choice program is the enumerated multiple-choice program, for when we wish the player to make a selection by number. Here instead of providing a topic list, we provide an index column, which will contain numbers (but, as these will be chosen at runtime, we do not need to specify them ourselves). We may add lines to the table or remove them again if we wish to change the player's available options.
+<p>
+<blockquote><font color="#000080"> The ATM operation program is an enumerated multiple-choice program. The options table of the ATM operation program is the Table of Transactions.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Transactions</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> index</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> title</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> effect</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Check balance&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> balance-check rule</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Quick cash&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> quick-cash rule</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Buy stamps&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> stamp-purchase rule</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Cancel&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> cancellation rule</font></font></td></tr></table></blockquote>
+<p>
+ Both enumerated and regular multiple-choice programs have a response to print if the player attempts to type or select something that is not understood as an option. We may change this by altering the out of bounds response, like so:
+<p>
+<blockquote><font color="#000080"> The out of bounds response of the ATM operation program is &quot;Your selection, '[topic understood]', is not one of the available choices.&quot;</font></blockquote>
+<p>
+<p><a name=docsec10><b><font color="#000000">Section 2.5: Search engines</b></font>
+<p>
+ To define a search engine, we must provide a table of data, such as
+<p>
+<blockquote><font color="#000080"> The PC runs a search engine called Goggle. The data table of Goggle is the Table of Goggle Data.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Goggle Data</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> topic</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> title</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> data</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;food/cake/yellow&quot; or &quot;yellow cake&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;OnlineRecipes.org&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;A delicious recipe for yellow cake.&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;yellow balloon&quot; or &quot;yellow/balloon&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;PartyPlanning.com&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;How to order yellow balloons online.&quot;</font></font></td></tr></table></blockquote>
+<p>
+ In keeping with the behavior of real search engines, this search engine will go through and match every possible topic on the list, reporting all hits, rather than matching only the first instance. This means that output can be very long if the individual descriptions are themselves long, so use with discretion.
+<p>
+ Search engines have two pieces of text, the &quot;no-records response&quot; and &quot;results-found response&quot;, as defined here:
+<p>
+<blockquote><font color="#000080"> The no-records response of a search engine is usually &quot;No records found.&quot;.<br> The results-found response of a search engine is usually &quot;Your search turns up the following results:&quot;.</font></blockquote>
+<p>
+... and as usual we may modify these to change the way search results are described.
+<p>
+<p><a name=docsec11><b><font color="#000000">Section 2.6: Email</b></font>
+<p>
+ Email is a program that allows the player to receive and read email from a list. To establish the email in an email program, we would write
+<p>
+<blockquote><font color="#000080"> The message table of laptop email is Table of Laptop Messages.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Laptop Messages</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> topic</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> message</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> arrival time</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> read</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> answered</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> description</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;memo&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Memo&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 9:00 AM</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> false</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> false</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Your boss would like to see you in his office right away.&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;SPAM&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;SPAM&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> false</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> false</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Money for you from Nigeria!&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> with 10 blank rows.</font></font></td></tr></table></blockquote>
+<p>
+ Note that an arrival time is provided for &quot;memo&quot; but not for &quot;SPAM&quot;. That is because memo is understood to have been delivered already, while SPAM has not. To deliver new email, we would write
+<p>
+<blockquote><font color="#000080"> deliver &quot;SPAM&quot; to laptop email.</font></blockquote>
+<p>
+ This would mark the spam message, which already exists in the Table of Laptop Messages, as available for the player to read. It would also set the arrival time.
+<p>
+ If the player is in view of a switched on computer that is running this program, the arrival of the message will be reported at the moment when it happens. The text of this report is handled by the &quot;new mail message&quot; of the email program, like so:
+<p>
+<blockquote><font color="#000080"> The new mail message of an email program is usually &quot;You have new mail on [the random computer which is running the item described].&quot;.</font></blockquote>
+<p>
+ To change this output, we would create a different new mail message for the email program in question.
+<p>
+ Typing or clicking on one of the topic words will bring up what ever text we have put in the description field, which might be a brief summary or might be the full text of the email in question. READ email will also work.
+<p>
+ REPLY TO email is implemented, but generally blocked by the &quot;block replying to email&quot; rule. This is because the behavior of replying to email is likely to vary quite a bit from game to game, depending on whether we want to allow the player some control over the email he composes and what other game-state changes result from sending that email.
+<p>
+ If we wish to allow replies to email, we should first unlist the block replying to email rule, like so:
+<p>
+<blockquote><font color="#000080"> The block replying to email rule is not listed in any rulebook.</font></blockquote>
+<p>
+ At that point, default behavior of the action is to mark the email replied and to report simply &quot;You reply.&quot; It is up to us to elaborate on this in some more interesting way.
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Computers-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Computers-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Reading Email</font></b></a><br>A laptop set up with a password lock program that gives way to email we can read, and a new message that is delivered while we wait.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg2><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Computers-eg2.html#eg2" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>B</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Computers-eg2.html#eg2" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Powered Email Machine</font></b></a><br>The same as above, except that we add Power Sources to create a laptop with a battery that can be drained of power and shut down.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg3><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Computers-eg3.html#eg3" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>C</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Computers-eg3.html#eg3" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">USB Drive</font></b></a><br>A very simple implementation of a laptop that can search for and find new data when a USB stick is inserted into its extension port.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<hr><p><a name=eg4><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Computers.html#eg4" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>D</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Computers.html#eg4" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Operations</font></b></a><br>A desktop computer running an operating system that in turn allows the player to select and run either the browser or the email program.<p></td></tr></table><p><table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" width=100%><tr><td align="left" valign="top"><font size=2><p>
+<p>
+ We're going to use a multiple-choice program to implement our operating system, and also implement &quot;type quit&quot; and &quot;select quit&quot; to let the player quit out of other programs when he wishes to return to the OS. (By default, the player is not allowed to quit running programs; this makes it easier to implement single-use computers that are good for only one function, which is quite a common arrangement in IF if not in life.)
+<p>
+ We also want the computer to revert back to the operating system if switched off while running some other program.
+<p>
+<blockquote><font color="#000080"><script language="JavaScript">
+function pasteCode1024(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('[=0x0022=]Operations[=0x0022=][=0x000A=][=0x000A=]Include Computers by Emily Short.[=0x000A=][=0x000A=]Conference room is a room.[=0x000A=][=0x000A=]The conference table is a thing in the Conference Room. The old PC is a desktop computer on the conference table.[=0x000A=][=0x000A=]The old PC runs a multiple-choice program called PCOS. PCOS is privately-named. The options table of PCOS is the Table of GUI Options.[=0x000A=][=0x0009=]The software priority of PCOS is 1.[=0x000A=][=0x000A=]Table of GUI Options[=0x000A=]topic[=0x0009=]title[=0x0009=]effect[=0x000A=][=0x0022=]mail/email[=0x0022=][=0x0009=][=0x0022=]Mail[=0x0022=][=0x0009=]open-Mail rule[=0x000A=][=0x0022=]browser/internet[=0x0022=][=0x0009=][=0x0022=]Browser[=0x0022=][=0x0009=]open-browser rule[=0x000A=][=0x000A=]This is the open-Mail rule:[=0x000A=][=0x0009=]repeat with item running through software run by the old PC:[=0x000A=][=0x0009=][=0x0009=]now the software priority of item is 5;[=0x000A=][=0x0009=]now the software priority of PC email is 1;[=0x000A=][=0x0009=]say [=0x0022=]You select the mail.[=0x0022=];[=0x000A=][=0x0009=]try examining PC email.[=0x000A=][=0x000A=]This is the open-Browser rule:[=0x000A=][=0x0009=]repeat with item running through software run by the old PC:[=0x000A=][=0x0009=][=0x0009=]now the software priority of item is 5;[=0x000A=][=0x0009=]now the software priority of Goggle is 1;[=0x000A=][=0x0009=]say [=0x0022=]You select the browser.[=0x0022=];[=0x000A=][=0x0009=]try examining Goggle.[=0x000A=][=0x000A=]The old PC runs an email program called PC email. PC email is privately-named.[=0x000A=][=0x000A=]The message table of PC email is Table of PC Messages.[=0x000A=][=0x000A=]Table of PC Messages[=0x000A=]topic[=0x0009=]message[=0x0009=]arrival time[=0x0009=]read[=0x0009=]answered[=0x0009=]description[=0x000A=][=0x0022=]memo[=0x0022=][=0x0009=][=0x0022=]Memo[=0x0022=][=0x0009=]9:00 AM[=0x0009=]false[=0x0009=]false[=0x0009=][=0x0022=]Your boss would like to see you in his office right away.[=0x0022=][=0x000A=][=0x0022=]SPAM[=0x0022=][=0x0009=][=0x0022=]SPAM[=0x0022=][=0x0009=]--[=0x0009=]false[=0x0009=]false[=0x0009=][=0x0022=]Money for you from Nigeria![=0x0022=][=0x000A=]with 10 blank rows.[=0x000A=][=0x000A=]At 9:10 AM:[=0x000A=][=0x0009=]deliver [=0x0022=]SPAM[=0x0022=] to PC email.[=0x000A=][=0x000A=]The PC runs a search engine called Goggle. The data table of Goggle is the Table of Goggle Data.[=0x000A=][=0x000A=]Table of Goggle Data[=0x000A=]topic[=0x0009=]title[=0x0009=]data[=0x000A=][=0x0022=]food/cake/yellow[=0x0022=] or [=0x0022=]yellow cake[=0x0022=][=0x0009=][=0x0022=]OnlineRecipes.org[=0x0022=][=0x0009=][=0x0022=]A delicious recipe for yellow cake.[=0x0022=][=0x000A=][=0x0022=]yellow balloon[=0x0022=] or [=0x0022=]yellow/balloon[=0x0022=][=0x0009=][=0x0022=]PartyPlanning.com[=0x0022=][=0x0009=][=0x0022=]How to order yellow balloons online.[=0x0022=][=0x000A=][=0x000A=]Software can be quittable. A software is usually not quittable. PC email and Goggle are quittable.[=0x000A=][=0x000A=]A first input handling rule for quittable software (called chosen software):[=0x000A=][=0x0009=]let N be indexed text;[=0x000A=][=0x0009=]let N be the topic understood;[=0x000A=][=0x0009=]if N is [=0x0022=]quit[=0x0022=]:[=0x000A=][=0x0009=][=0x0009=]reset to operating system;[=0x000A=][=0x0009=][=0x0009=]say [=0x0022=]You return to the operating system.[=0x0022=];[=0x000A=][=0x0009=][=0x0009=]try examining PCOS;[=0x000A=][=0x0009=][=0x0009=]rule succeeds.[=0x000A=][=0x000A=]Carry out switching off the old PC:[=0x000A=][=0x0009=]reset to operating system.[=0x000A=][=0x000A=]To reset to operating system:[=0x000A=][=0x0009=]repeat with item running through software run by the old PC:[=0x000A=][=0x0009=][=0x0009=]now the software priority of item is 5;[=0x000A=][=0x0009=]now the software priority of PCOS is 1;[=0x000A=][=0x000A=]After examining a quittable software (called chosen software):[=0x000A=][=0x0009=]say [=0x0022=]You can also select QUIT to return to the operating system.[=0x0022=][=0x000A=][=0x000A=]Test me with [=0x0022=]turn on PC / click browser / look up food on computer / type cake / type quit / type mail on keyboard / select memo / reply to memo / type quit / click browser / turn off PC / turn on PC / click browser / reboot[=0x0022=].[=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1024()"><img border=0 src=inform:/doc_images/paste.png></a> &quot;Operations&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Include Computers by Emily Short.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Conference room is a room.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The conference table is a thing in the Conference Room. The old PC is a desktop computer on the conference table.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The old PC runs a multiple-choice program called PCOS. PCOS is privately-named. The options table of PCOS is the Table of GUI Options.<br>&nbsp;&nbsp;&nbsp;&nbsp; The software priority of PCOS is 1.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of GUI Options</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> topic</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> title</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> effect</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;mail/email&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Mail&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> open-Mail rule</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;browser/internet&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Browser&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> open-browser rule</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> This is the open-Mail rule:<br>&nbsp;&nbsp;&nbsp;&nbsp; repeat with item running through software run by the old PC:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now the software priority of item is 5;<br>&nbsp;&nbsp;&nbsp;&nbsp; now the software priority of PC email is 1;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You select the mail.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; try examining PC email.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> This is the open-Browser rule:<br>&nbsp;&nbsp;&nbsp;&nbsp; repeat with item running through software run by the old PC:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now the software priority of item is 5;<br>&nbsp;&nbsp;&nbsp;&nbsp; now the software priority of Goggle is 1;<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You select the browser.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp; try examining Goggle.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The old PC runs an email program called PC email. PC email is privately-named.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The message table of PC email is Table of PC Messages.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of PC Messages</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> topic</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> message</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> arrival time</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> read</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> answered</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> description</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;memo&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Memo&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> 9:00 AM</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> false</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> false</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Your boss would like to see you in his office right away.&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;SPAM&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;SPAM&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> --</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> false</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> false</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;Money for you from Nigeria!&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> with 10 blank rows.</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> At 9:10 AM:<br>&nbsp;&nbsp;&nbsp;&nbsp; deliver &quot;SPAM&quot; to PC email.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> The PC runs a search engine called Goggle. The data table of Goggle is the Table of Goggle Data.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Table of Goggle Data</font><br><table border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><font size=2><font color="#000080"> topic</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> title</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> data</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;food/cake/yellow&quot; or &quot;yellow cake&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;OnlineRecipes.org&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;A delicious recipe for yellow cake.&quot;</font></td></tr><tr><td align="left" valign="top"><font size=2><font color="#000080"> &quot;yellow balloon&quot; or &quot;yellow/balloon&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;PartyPlanning.com&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td align="left" valign="top"><font size=2><font color="#000080"> &quot;How to order yellow balloons online.&quot;</font></font></td></tr></table></blockquote>
+<p>
+<blockquote><font color="#000080"> Software can be quittable. A software is usually not quittable. PC email and Goggle are quittable.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> A first input handling rule for quittable software (called chosen software):<br>&nbsp;&nbsp;&nbsp;&nbsp; let N be indexed text;<br>&nbsp;&nbsp;&nbsp;&nbsp; let N be the topic understood;<br>&nbsp;&nbsp;&nbsp;&nbsp; if N is &quot;quit&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; reset to operating system;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You return to the operating system.&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try examining PCOS;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rule succeeds.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Carry out switching off the old PC:<br>&nbsp;&nbsp;&nbsp;&nbsp; reset to operating system.</font></blockquote>
+<p>
+<blockquote><font color="#000080"> To reset to operating system:<br>&nbsp;&nbsp;&nbsp;&nbsp; repeat with item running through software run by the old PC:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now the software priority of item is 5;<br>&nbsp;&nbsp;&nbsp;&nbsp; now the software priority of PCOS is 1;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> After examining a quittable software (called chosen software):<br>&nbsp;&nbsp;&nbsp;&nbsp; say &quot;You can also select QUIT to return to the operating system.&quot;</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Test me with &quot;turn on PC / click browser / look up food on computer / type cake / type quit / type mail on keyboard / select memo / reply to memo / type quit / click browser / turn off PC / turn on PC / click browser / reboot&quot;.</font></blockquote>
+<p>
+</font></td></tr></table><p><hr><p><a name=eg5><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="Computers-eg5.html#eg5" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>E</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="Computers-eg5.html#eg5" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Balance Checking</font></b></a><br>An ATM, or automatic teller machine, that requires a debit card and pin before allowing the player access to the main menu screen. Demonstrates the use of extension ports, enumerated multiple-choice programs, and a new software kind from scratch for the welcome screen.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extension</title></head><STYLE TYPE="text/css"><!--.oval, .oval TD{background-image:url('inform:/doc_images/ovoid.png');color:white;}--></STYLE><body><script language="JavaScript">function pasteCode(code) {    var myProject = external.Project;    myProject.selectView('source');    myProject.pasteCode(code);}</script><font size=2><table CELLPADDING=0 CELLSPACING=0 width="100%" bgcolor="#000000"><tr><TD width=38px height=26px align="center" valign="center"><a href="inform://Extensions/Extensions.html" border=0><img border=0 src="inform:/doc_images/Hookindex.png" border=0></a></td><TD width=38px height=26px align="center" valign="center"></td><td halign="left" valign="center" CELLPADDING=0 CELLSPACING=0><font color="#FFFFFF" size=2>Extensions</font></a></td><TD width=56px height=26px align="right" valign="center"><a href="inform:/index.html" border=0><img border=0 src="inform:/doc_images/Hookup.png" border=0></a></td></tr></table><p><script language="JavaScript">
+function pasteCode1051(code) {
+    var myProject = external.Project;
+
+    myProject.selectView('source');
+    myProject.pasteCode('Include French by Eric Forgeot.[=0x000A=][=0x000A=][=0x000A=]');
+}
+</script>
+<a href="javascript:pasteCode1051()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<b>French<font color="#404040"> by </font>Eric Forgeot</b><p><small></small><p><p><hr><p><a STYLE="text-decoration: none" href=#docsec1><font color="#000000">Section 1: Utilisation</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec2><font color="#000000">Section 2: Bugs connus</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec3><font color="#000000">Section 3: Notes</font></a><br>
+<a STYLE="text-decoration: none" href=#docsec4><font color="#000000">Section 4: Remerciements</font></a><br>
+<br><b>Examples</b><br>&nbsp;&nbsp;&nbsp;<a STYLE="text-decoration: none" href="French-eg1.html#eg1"><font color="#000000">A: Le Roi de Fihnargaia</font></a><br><p><hr><p><p><hr><p>
+<p>
+ Inform 7 permet de changer facilement de système de langue comme c'était le cas auparavant avec Inform 6.
+<p>
+<p><a name=docsec1><b><font color="#000000">Section 1: Utilisation</b></font>
+<p>
+ Pour utiliser les bibliothèques françaises, il suffit d'inclure dans la source du jeu:
+<p>
+<blockquote><font color="#000080"> Include French by Eric Forgeot.<br>&nbsp;&nbsp;&nbsp;&nbsp; Use French Language.<br>&nbsp;&nbsp;&nbsp;&nbsp; (c'est à dire: Seconde personne du pluriel (politesse) au présent.)</font></blockquote>
+<p>
+<blockquote><font color="#000080"> ou à la place de &quot;Use French Language.&quot;:</font></blockquote>
+<p>
+<blockquote><font color="#000080"> Use French 3PSPa Language.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (troisième personne du singulier au passé.)<br>&nbsp;&nbsp;&nbsp;&nbsp; Use French 3PSPr Language.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (troisième personne du singulier au présent.)<br>&nbsp;&nbsp;&nbsp;&nbsp; Use French 1PSPa Language.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1ère personne du singulier au passé.)<br>&nbsp;&nbsp;&nbsp;&nbsp; Use French 1PSPr Language.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1ère personne du singulier au présent.)</font></blockquote>
+<p>
+ En ayant bien auparavant installé cette extension &quot;French&quot; via la commande &gt;Files&gt;Install extensions d'Inform 7.
+<p>
+<p><a name=docsec2><b><font color="#000000">Section 2: Bugs connus</b></font>
+<p>
+ -
+<p>
+ - Tous les verbes français n'ont pas encore été adapté en Inform 7, ce qui veut dire que si vous voulez en remplacer la définition dans votre jeu, cela produira un bug. Cette adaptation est en cours, pour le moment vous pouvez quand même redéfinir dans votre jeu des verbes comme &quot;descendre&quot;, &quot;attaquer&quot;, &quot;boire&quot;, &quot;manger&quot;, &quot;fouiller&quot;. Vous pouvez bien entendu utiliser tous les autres verbes non adaptés, mais il ne sera pas possible de modifier leur définition de base pour le moment. (c'est à dire le contexte dans lequel ils seront appelés par le joueur)
+<p>
+ - traitement des heures incomplet (presque fini)
+<p>
+ - plus de * pour les commentaires en transcript
+<p>
+ - obligation de préciser: use french language (ou autre)
+<p>
+<p><a name=docsec3><b><font color="#000000">Section 3: Notes</b></font>
+<p>
+ (may be deprecated) Pour utiliser Inform 7 uniquement en ligne de commande, on peut invoquer le compilateur ni avec: ./ni -rules ./Inform7/Extensions -package ./Projects/project.inform -extension=z8 et le compilateur inform avec: ./inform-6.31-biplatform -v8 +language_name=French -wSD +include_path=Projects/project.inform/Build/auto.inf project.z8
+<p>
+<p><a name=docsec4><b><font color="#000000">Section 4: Remerciements</b></font>
+<p>
+ Merci à Sarganar et à l'équipe de Rakontointeraktiva pour l'effort commun de nos traductions en différentes langues. All hails to Sarganar and the Spanish translation team! (http://www.caad.es/informate/infsp/).
+<p>
+ Eric Forgeot - http://ifiction.free.fr - http://informfr.tuxfamily.org/
+<p>
+<hr><p><a name=eg1><table border="0" cellspacing="0" cellpadding="0"><tr><td halign="left" valign="top" cellpadding=0 cellspacing=0 width=38px><table border="0" cellspacing="0" cellpadding="0"><tr class="oval"><td width=38px height=30px align="left" valign="center"><a href="French-eg1.html#eg1" STYLE="text-decoration: none"><div class="paragraph Body" style="line-height: 1px; margin-bottom: 0px; margin-top: 4px; padding-bottom: 0pt; padding-top: 4px; text-align: center; color: #202020; font-size: 14px; line-height: 1px;"><b>A</b></div></a></td></tr></table></td><td cellpadding=0 cellspacing=0 halign="left" valign="top"><font size=2><a href="French-eg1.html#eg1" STYLE="text-decoration: none"><img border="0" src='inform:/doc_images/asterisk.png'><b><font color="#505050">&nbsp;Example&nbsp;</font> <font color="#000000">Le Roi de Fihnargaia</font></b></a><br>Un petit exemple de jeu en français.<p></td></tr></table><p>
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+
+<p>
+<p></body></html>
