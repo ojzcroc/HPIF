@@ -1,26 +1,26 @@
 ! Blurb file created by Inform build 6G60
 
-status "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\CblorbModel.html" "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1.inform\Build\StatusCblorb.html"
+status "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\CblorbModel.html" "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1.inform\Build\StatusCblorb.html"
 
 
 ! Identification
 
-project folder "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1.inform"
-release to "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Release"
+project folder "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1.inform"
+release to "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Release"
 
 ! Blorb instructions
 
 storyfile leafname "Harry Potter and the Philosophe.gblorb"
-storyfile "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1.inform\Build\output.ulx" include
-ifiction "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1.inform\Metadata.iFiction" include
+storyfile "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1.inform\Build\output.ulx" include
+ifiction "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1.inform\Metadata.iFiction" include
 cover "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
 picture 1 "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
 release file "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Cover.jpg"
 release file "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Small Cover.jpg"
-sound 3 "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Sounds\Harry Potter and the Philosopher's stone intro.ogg"
-sound 4 "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Sounds\Harry Potter with first paragraph cut.ogg"
-sound 5 "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Sounds\Harry Potter with first two paragraphs cut.ogg"
-sound 6 "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Sounds\Harry Potter with first three paragraphs cut.ogg"
+sound 3 "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Sounds\Harry Potter and the Philosopher's stone intro.ogg"
+sound 4 "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Sounds\Harry Potter with first paragraph cut.ogg"
+sound 5 "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Sounds\Harry Potter with first two paragraphs cut.ogg"
+sound 6 "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Sounds\Harry Potter with first three paragraphs cut.ogg"
 
 ! Placeholder variables
 
@@ -37,15 +37,15 @@ placeholder [BLURB] = "A work of interactive fiction."
 ! Website instructions
 
 placeholder [ENCODEDSTORYFILE] = "Harry Potter and the Philosophe.gblorb.js"
-template path "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Templates"
+template path "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Templates"
 template path "D:\zym0001\Documents\Inform\Templates"
 template path "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Templates"
 interpreter "Quixe" "g"
-base64 "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1.inform\Build\output.ulx" to "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Release\interpreter\Harry Potter and the Philosophe.gblorb.js"
+base64 "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1.inform\Build\output.ulx" to "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Release\interpreter\Harry Potter and the Philosophe.gblorb.js"
 
 ! Website instructions
 
-template path "D:\zym0001\Documents\Inform\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Templates"
+template path "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1 Materials\Templates"
 template path "D:\zym0001\Documents\Inform\Templates"
 template path "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Templates"
 css

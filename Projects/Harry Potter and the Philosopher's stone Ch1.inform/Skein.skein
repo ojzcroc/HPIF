@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x02509E50" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x050ED680" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x02509E50"/>
-  <item nodeId="node-0x02509E50">
+  <activeNode nodeId="node-0x050ED680"/>
+  <item nodeId="node-0x050ED680">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Mr and Mrs Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much.&#x000A;They were the last people you'd expect to be involved in anything strange or mysterious,  because they just didn't hold with such nonsense.</result>
     <commentary xml:space="preserve">Harry Potter and the Philosopher's stone&#x000A;Based on "Harry Potter and the Philosopher's stone" by J.K. Rowling. by Orion Zymaris&#x000A;Release 1 / Serial number 130318 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Mr and Mrs Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much. They were the last people you'd expect to be involved in anything strange or mysterious,  because they, or rather you, just didn't hold with such nonsense.&#x000A;&#x000A;As you wake up, on a dull, grey Tuesday, you can hardly imagine that soon strange things would be happening all over the country.&#x000A;You are Mr  Vernon Dursley, and are in your bedroom.&#x000A;&#x000A;Dursley's bedroom (in bed)&#x000A;You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the east.&#x000A;&#x000A;You can see bedroom door (east), bedroom window (providing light), a clock, Wardrobe (closed) and bedside table here.&#x000A;&#x000A;Name:</commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x02509EC0"/>
-      <child nodeId="node-0x02589780"/>
+      <child nodeId="node-0x050ED530"/>
+      <child nodeId="node-0x051A9930"/>
     </children>
   </item>
-  <item nodeId="node-0x02509EC0">
+  <item nodeId="node-0x050ED530">
     <command xml:space="preserve">go through do</command>
     <result xml:space="preserve">Your name for this pre-release test is "go through do".&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -22,10 +22,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02509F30"/>
+      <child nodeId="node-0x050ED760"/>
     </children>
   </item>
-  <item nodeId="node-0x02509F30">
+  <item nodeId="node-0x050ED760">
     <command xml:space="preserve">go through door</command>
     <result xml:space="preserve">You'll have to get out of bed first.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -33,10 +33,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x024FB4E8"/>
+      <child nodeId="node-0x050ED7D0"/>
     </children>
   </item>
-  <item nodeId="node-0x024FB4E8">
+  <item nodeId="node-0x050ED7D0">
     <command xml:space="preserve">get up</command>
     <result xml:space="preserve">You get out of bed.&#x000A;&#x000A;Dursley's bedroom&#x000A;You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the east.&#x000A;&#x000A;You can see bedroom door (east), bedroom window (providing light), bed (empty), a clock, Wardrobe (closed) and bedside table here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -44,10 +44,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x024FB558"/>
+      <child nodeId="node-0x051A9700"/>
     </children>
   </item>
-  <item nodeId="node-0x024FB558">
+  <item nodeId="node-0x051A9700">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -55,10 +55,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588CB8"/>
+      <child nodeId="node-0x051A9770"/>
     </children>
   </item>
-  <item nodeId="node-0x02588CB8">
+  <item nodeId="node-0x051A9770">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">(first opening bedroom door)&#x000A;&#x000A;hall&#x000A;As you enter the hall, you see a white door to the north,a latched panel in the roof,a cupboard to the east and the bedroom door to the west.&#x000A;&#x000A;You can see white door (north), a latched panel (up) and bedroom door (west) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -66,10 +66,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588DA0"/>
+      <child nodeId="node-0x051A97E0"/>
     </children>
   </item>
-  <item nodeId="node-0x02588DA0">
+  <item nodeId="node-0x051A97E0">
     <command xml:space="preserve">quit</command>
     <result xml:space="preserve">Save failed.&#x000A;&#x000A;Are you sure you want to quit?</result>
     <commentary xml:space="preserve"></commentary>
@@ -77,10 +77,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588E10"/>
+      <child nodeId="node-0x051A9850"/>
     </children>
   </item>
-  <item nodeId="node-0x02588E10">
+  <item nodeId="node-0x051A9850">
     <command xml:space="preserve">t</command>
     <result xml:space="preserve">Please answer yes or no.&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -88,10 +88,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588E80"/>
+      <child nodeId="node-0x051A98C0"/>
     </children>
   </item>
-  <item nodeId="node-0x02588E80">
+  <item nodeId="node-0x051A98C0">
     <command xml:space="preserve">y</command>
     <result xml:space="preserve"></result>
     <commentary xml:space="preserve"></commentary>
@@ -99,7 +99,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02589780">
+  <item nodeId="node-0x051A9930">
     <command xml:space="preserve">Orion</command>
     <result xml:space="preserve">Your name for this pre-release test is "Orion".&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -107,10 +107,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02589A28"/>
+      <child nodeId="node-0x051A99A0"/>
     </children>
   </item>
-  <item nodeId="node-0x02589A28">
+  <item nodeId="node-0x051A99A0">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Dursley's bedroom (in bed)&#x000A;You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the north-west.&#x000A;&#x000A;You can see the bedroom door (northwest), bedroom window (providing light), a clock, Wardrobe (closed) and bedside table here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -118,16 +118,16 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02589A98"/>
-      <child nodeId="node-0x02589B08"/>
-      <child nodeId="node-0x02588698"/>
-      <child nodeId="node-0x0258F848"/>
-      <child nodeId="node-0x0258FB58"/>
-      <child nodeId="node-0x0258FCA8"/>
-      <child nodeId="node-0x02533180"/>
+      <child nodeId="node-0x051A9A10"/>
+      <child nodeId="node-0x051A9A80"/>
+      <child nodeId="node-0x023A0880"/>
+      <child nodeId="node-0x0514EB18"/>
+      <child nodeId="node-0x0514EE28"/>
+      <child nodeId="node-0x0514EF78"/>
+      <child nodeId="node-0x05153CF0"/>
     </children>
   </item>
-  <item nodeId="node-0x02589A98">
+  <item nodeId="node-0x051A9A10">
     <command xml:space="preserve">all player reports</command>
     <result xml:space="preserve">Game tester: alex&#x000A;Command: clear error reports&#x000A;Action: clearing error report: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: purloin attic&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: purloin kitchen&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: purloin carpark&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: purloin all&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: drop attic&#x000A;Action: dropping attic: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: go in attic&#x000A;Action: entering attic: Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: go up attic stairs&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: drop panel&#x000A;Action: dropping a latched panel (up): Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: go up attic stairs&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: go up latched panel&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: restart&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: gonear corridor&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: gonear hall&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open panel&#x000A;Action: opening a latched panel: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take stairs&#x000A;Action: taking a latched panel (up): Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go up&#x000A;Action: going up: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go down&#x000A;Action: going down: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: move stairs to me&#x000A;Action: moving to Attic stairs (up): Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: remove stairs from play&#x000A;Action: removing Attic stairs (up): Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: move stairs to me&#x000A;Action: moving to Attic stairs (up): Action: dropping Attic stairs (up): Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: move officestairs to me&#x000A;Action: moving to stairs (up): Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop officestairs&#x000A;Action: dropping stairs (up): Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through stairs&#x000A;Action: entering Attic stairs (up): Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through officestairs&#x000A;Action: entering stairs (up): Action: going stairs: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scenes&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scenes off&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scope&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: ope stairs&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: openstairs&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open stairs&#x000A;Action: opening stairs: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: score&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: script&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showheap&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showme&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb jump&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb inputting&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb input&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb ducking&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb eating&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb eat&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb input&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb duck&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb ask&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: trace&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through office&#x000A;Action: entering the office door (north): Action: going the office door: Action: opening the office door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Action: taking the important customer service document: Action: taking notepad: Action: taking pen: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: trace off&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: tree&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: version&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: verify&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: tree&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: Mobilel&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: purloin all&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through bedroom door&#x000A;Action: entering bedroom door (east): Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop bedroom door&#x000A;Action: dropping bedroom door (east): Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through bedroom door&#x000A;Action: entering bedroom door (east): Action: going bedroom door: Action: opening bedroom door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop hall&#x000A;Action: dropping the hall: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through bedroom door&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop all&#x000A;Action: dropping magic door: Action: dropping a fridge: Action: dropping a coffee cup: Action: dropping the piece of toast: Action: dropping the piece of toast: Action: dropping the kitchen table: Action: dropping Dudley: Action: dropping highchair: Action: dropping Petunia: Action: dropping kitchen: Action: dropping letter: Action: dropping broom: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the sock: Action: dropping the sock: Action: dropping the sock: Action: dropping the sock: Action: dropping the Bag: Action: dropping the Bag: Action: dropping the Bag: Action: dropping the few bits of rubbish: Action: dropping cupboard: Action: dropping the hall: Action: dropping the scrap of paper: Action: dropping bedside table: Action: dropping the tutu: Action: dropping the mumu: Action: dropping the suit: Action: dropping wizards robes: Action: dropping the mirror: Action: dropping Wardrobe: Action: dropping the clock: Action: dropping bed: Action: dropping bedroom window: Action: dropping Dursley's bedroom: Action: dropping Petunia's diary: Action: dropping the smeltings schoolbook: Action: dropping the High calorie cookbook: Action: dropping 101 pompous complaints: Action: dropping drills- an unabridged history: Action: dropping how to spoil your children handbook: Action: dropping the toy: Action: dropping the toy: Action: dropping the toy: Action: dropping dusty box: Action: dropping attic: Action: dropping the small roll: Action: dropping the small roll: Action: dropping a breadstick: Action: dropping a bun: Action: dropping a donut: Action: dropping outside: Action: dropping inside: Action: dropping down: Action: dropping up: Action: dropping west: Action: dropping east: Action: dropping southwest: Action: dropping southeast: Action: dropping south: Action: dropping northwest: Action: dropping northeast: Action: dropping north: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take off all&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: remove all&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop all&#x000A;Action: dropping magic door: Action: dropping kitchen: Action: dropping cupboard: Action: dropping the hall: Action: dropping Dursley's bedroom: Action: dropping attic: Action: dropping outside: Action: dropping inside: Action: dropping down: Action: dropping up: Action: dropping west: Action: dropping east: Action: dropping southwest: Action: dropping southeast: Action: dropping south: Action: dropping northwest: Action: dropping northeast: Action: dropping north: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: restart&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: check watch&#x000A;Action: examining the watch: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: check clock&#x000A;Action: examining the clock: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: check me&#x000A;Action: examining yourself: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop watch&#x000A;Action: dropping the watch: Action: taking off the watch: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: check me&#x000A;Action: examining yourself: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take watch&#x000A;Action: taking the watch: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: check me&#x000A;Action: examining yourself: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: gonear attic&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open box&#x000A;Action: opening dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look in box&#x000A;Action: searching dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Action: taking Petunia's diary: Action: taking the toy: Action: taking the toy: Action: taking the toy: Action: taking how to spoil your children handbook: Action: taking drills- an unabridged history: Action: taking 101 pompous complaints: Action: taking the High calorie cookbook: Action: taking the smeltings schoolbook: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read diary&#x000A;Action: examining Petunia's diary: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read diary&#x000A;Action: examining Petunia's diary: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: rules&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: rules all&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: rules off&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb how's it going&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb yes&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb hello&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb saying hello to&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb me&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb showverb&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb scope&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scope&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scenes&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scenes off&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop all&#x000A;Action: dropping magic door: Action: dropping the smeltings schoolbook: Action: dropping the High calorie cookbook: Action: dropping 101 pompous complaints: Action: dropping drills- an unabridged history: Action: dropping how to spoil your children handbook: Action: dropping Petunia's diary: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: put all in box&#x000A;Action: inserting magic door into dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Action: taking Petunia's diary: Action: taking how to spoil your children handbook: Action: taking drills- an unabridged history: Action: taking 101 pompous complaints: Action: taking the High calorie cookbook: Action: taking the smeltings schoolbook: Action: taking letter: Action: taking the toy: Action: taking the toy: Action: taking the toy: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: put all in box&#x000A;Action: inserting magic door into dusty box: Action: inserting letter into dusty box: Action: inserting the smeltings schoolbook into dusty box: Action: inserting the High calorie cookbook into dusty box: Action: inserting 101 pompous complaints into dusty box: Action: inserting drills- an unabridged history into dusty box: Action: inserting how to spoil your children handbook into dusty box: Action: inserting Petunia's diary into dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: close box&#x000A;Action: closing dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrob&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Action: taking wizards robes: Action: taking the suit: Action: taking the mumu: Action: taking the tutu: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Action: taking wizards robes: Action: taking the suit: Action: taking the mumu: Action: taking the tutu: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Action: looking: Success&#x000A;&#x000A;Game tester: Showall&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Showall&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: test me&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open drawer&#x000A;Action: opening bedside drawer: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read paper&#x000A;Action: examining the scrap of paper: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take paper&#x000A;Action: taking the scrap of paper: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look in mirror&#x000A;Action: examining the mirror: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wear mumu&#x000A;Action: wearing the mumu: Action: taking the mumu: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look in mirror&#x000A;Action: examining the mirror: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: e&#x000A;Action: going east: Action: opening bedroom door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go up stairs&#x000A;Action: going a latched panel: Action: opening a latched panel: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read diary&#x000A;Action: examining Petunia's diary: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read letter&#x000A;Action: examining letter: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open box&#x000A;Action: opening dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take cookbook&#x000A;Action: taking the High calorie cookbook: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read history&#x000A;Action: examining drills- an unabridged history: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go down stairs&#x000A;Action: going Attic stairs: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: e&#x000A;Action: going east: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take broom&#x000A;Action: taking broom: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look at broom&#x000A;Action: examining broom: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: ride broom&#x000A;Action: dropping broom: Action: mounting broom: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: fly w&#x000A;Action: going west: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through white door&#x000A;Action: entering white door (north): Action: going white door: Action: opening white door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: say hello to petunia&#x000A;Action: saying hello to Petunia: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: eat dudley&#x000A;Action: eating Dudley: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: eat toast&#x000A;Action: eating the piece of toast: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drink coffee&#x000A;Action: drinking coffee: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open fridge&#x000A;Action: opening fridge: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: n&#x000A;Action: going north: Action: opening Front door: Action: saying goodbye to Petunia: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: n&#x000A;Action: going north: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: w&#x000A;Action: going west: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get off&#x000A;Action: exiting: Action: dismounting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get in elevator&#x000A;Action: entering elevator: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: press button&#x000A;Action: switching on elevator button: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get out&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: n&#x000A;Action: going north: Action: opening the office door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 893&#x000A;Action: dialling 893 on the office phone: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hello&#x000A;Action: hailing: Action: saying hello to the Customer: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: good&#x000A;Action: saying hello to the Customer: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: sure&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 8953&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try asking for a hal 6502&#x000A;Action: responding to customer "asking for a hal 6502": Action: hanging up: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 12856&#x000A;Action: dialling 12856 on the office phone: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hello&#x000A;Action: hailing: Action: saying hello to Mr. Mason: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wait&#x000A;Action: waiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: sure&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try the hal 6502&#x000A;Action: responding to customer "the hal 6502": Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wait&#x000A;Action: waiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hmmm&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read dex&#x000A;Action: examining a rolodex: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: flip dex&#x000A;Action: flipping a rolodex: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read dex&#x000A;Action: examining a rolodex: Action: saying goodbye to Mr. Mason: Action: hanging up: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 5552368&#x000A;Action: dialling 5552368 on the office phone: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take pen&#x000A;Action: taking pen: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: write on notepad&#x000A;Action: writing intro notepad: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: s&#x000A;Action: going south: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: press button&#x000A;Action: switching on elevator button: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wait&#x000A;Action: waiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get in elevator&#x000A;Action: entering elevator: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: press button&#x000A;Action: switching on elevator button: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get out&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: carjack red car&#x000A;Action: carjacking red car: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get in red car&#x000A;Action: entering red car: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: e&#x000A;Action: going east: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: teleport to street&#x000A;Action: teleporting to street: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through shop door&#x000A;Action: entering a shop door (east): Action: going the door: Action: taking position standing: Action: opening the door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look at server&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look shop attendant&#x000A;Action: examining Shop attendant: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: test two&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: gonear work&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 893&#x000A;Action: dialling 893 on the office phone: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hello&#x000A;Action: hailing: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: good&#x000A;Action: saying hello to yourself: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 8953&#x000A;Action: dialling 8953 on the office phone: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: ask for a t1000&#x000A;Action: implicit-imploring "a t1000": Action: imploring yourself for "a t1000": Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read rolodex&#x000A;Action: examining a rolodex: Action: dialling 12856 on the office phone: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hello&#x000A;Action: hailing: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wait&#x000A;Action: waiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: sure&#x000A;Action: saying yes: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try the t1000&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try the hal 6502&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try the qz 77&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try the bk 44 model t&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hmmm&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wait&#x000A;Action: waiting: Action: saying goodbye to Mr. Mason: Action: hanging up: Action: looking: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error "egushiufhiduhfirueghriufhfiruf"&#x000A;Action: error reporting "" egushiufhiduhfirueghriufhfiruf "": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open door&#x000A;Action: opening bedroom door: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: close door&#x000A;Action: closing bedroom door (east): Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: lock door&#x000A;Action: locking bedroom door (east) with the watch: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: e&#x000A;Action: going east: Action: opening bedroom door: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: s&#x000A;Action: going south: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: w&#x000A;Action: going west: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: climb stairs&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take all&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: help&#x000A;Action: asking for help: Action: looking: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take mumu&#x000A;Action: taking the mumu: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: put on mumu&#x000A;Action: wearing the mumu: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: error report "mumu might be spelt muumuu"&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error "mumu might be spelt muumuu"&#x000A;Action: error reporting "" mumu might be spelt muumuu "": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open window&#x000A;Action: opening bedroom window: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: why not&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: why&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error "you type 'why', and it says 'I didn't understand that sentence'. what is not a&#x000A;Action: error reporting "" you type 'why' , and it says 'i didn't understand that sentence' . what is not a": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: sleep in bed&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: sleep&#x000A;Action: sleeping: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: yes i am&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: yes&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report orror "yes i am&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take clock&#x000A;Action: taking the clock: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: e&#x000A;Action: going east: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: go up&#x000A;Action: going up: Action: opening a latched panel: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read diary&#x000A;Action: examining Petunia's diary: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take letter&#x000A;Action: taking letter: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read letter&#x000A;Action: examining letter: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open dusty box&#x000A;Action: opening dusty box: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read children&#x000A;Action: examining how to spoil your children handbook: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read&#x000A;Action: going down: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Action: opening white door: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: kill peunia&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: kill petunia&#x000A;Action: attacking Petunia: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: yes it is&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take toast&#x000A;Action: taking the piece of toast: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat toast&#x000A;Action: eating the piece of toast: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat toast&#x000A;Action: eating the piece of toast: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat all toast&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: knock off  dudly&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take coffee&#x000A;Action: taking the coffee cup: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: drink coffee&#x000A;Action: drinking coffee: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat coffee&#x000A;Action: eating a coffee cup: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open fridge&#x000A;Action: opening fridge: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat steak&#x000A;Action: eating steak: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open suitcase&#x000A;Action: opening suitcase: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: unlock suitcase&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: coffee&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: s&#x000A;Action: going south: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: w&#x000A;Action: going west: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look in wardrobe&#x000A;Action: searching Wardrobe: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look on bedside table&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look in bedside table&#x000A;Action: searching bedside table: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look at bedside table&#x000A;Action: examining bedside table: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open drawer&#x000A;Action: opening bedside drawer: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read scrap&#x000A;Action: examining the scrap of paper: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: e&#x000A;Action: going east: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: 930&#x000A;Action: inputting 930: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look in suitcase&#x000A;Action: searching suitcase: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open suitcase&#x000A;Action: opening suitcase: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read paper&#x000A;Action: examining three papers: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take keys&#x000A;Action: taking keys: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat keys&#x000A;Action: eating keys: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: kill&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: kill harry&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Action: opening Front door: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open garage&#x000A;Action: opening garage: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: turn on light&#x000A;Action: switching on light switch: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look araound&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look around&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: enter garage&#x000A;Action: entering garage: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: close garage&#x000A;Action: closing garage: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open garage&#x000A;Action: opening garage: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: get in ferrari&#x000A;Action: entering Ferrari Enzo: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: press start&#x000A;Action: switching on start button: Action: looking: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: s&#x000A;Action: going south: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: start&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: press start&#x000A;Action: switching on start button: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: w&#x000A;Action: going west: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error in which is elevator button for grunnings carpark&#x000A;Action: error reporting "in which is elevator button for grunnings carpark": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: up&#x000A;Action: error reporting "                           ": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error what do you want to up&#x000A;Action: error reporting "what do you want to up": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: go up&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: go up stairs&#x000A;Action: going stairs: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: get out ferrari&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: get out&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: up&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: go up stairs&#x000A;Action: going stairs: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Action: opening the office door: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error corridor no capital c&#x000A;Action: error reporting "corridor no capital c": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error as you walk in the boss comes up to you late again dursley&#x000A;Action: error reporting "as you walk in the boss comes up to you late again dursley": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error up stairs go up what fix climbing stairs action&#x000A;Action: error reporting "up stairs go up what fix climbing stairs action": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error you can see an office door south desk on which are an office phone an important&#x000A;Action: error reporting "you can see an office door south desk on which are an office phone an important": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error it's rolex orion&#x000A;Action: error reporting "it's rolex orion": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: put on rolodex&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error while wearing a rolodex you inadvertantly flip the rollerdex to a random page rolodex and&#x000A;Action: error reporting "while wearing a rolodex you inadvertantly flip the rollerdex to a random page rolodex and": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error sorry orion i thought it might be rolex as in watch but since it isn't&#x000A;Action: error reporting "sorry orion i thought it might be rolex as in watch but since it isn't": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read rolodex&#x000A;Action: examining a rolodex: Action: dialling 12856 on the office phone: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: hello&#x000A;Action: hailing: Action: saying hello to Mr. Mason: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: no&#x000A;Action: saying no: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: why&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: yes&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: good drill&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: i recommend the qz 77&#x000A;Action: responding to customer "recommend the qz 77": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: oh&#x000A;Action: hanging up: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read rolodex&#x000A;Action: examining a rolodex: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: call 5550193&#x000A;Action: dialling 5550193 on the office phone: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: flip dex&#x000A;Action: flipping a rolodex: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: flip dex&#x000A;Action: flipping a rolodex: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read dex&#x000A;Action: examining a rolodex: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read document&#x000A;Action: examining an important customer service document: Action: dialling 893 on the office phone: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: error report&#x000A;Action: error report retrieving: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: player report&#x000A;Action: reading current player command report: Action: looking: Success&#x000A;&#x000A;Game tester: open wardrobe&#x000A;Command: wear clothing&#x000A;Failed&#x000A;&#x000A;Game tester: open wardrobe&#x000A;Command: Open wardrobe&#x000A;Failed&#x000A;&#x000A;Game tester: open wardrobe&#x000A;Command: get up&#x000A;Action: exiting: Action: looking: Success&#x000A;&#x000A;Game tester: go through do&#x000A;Command: go through door&#x000A;Action: entering bedroom door (east): Action: going bedroom door: Failed&#x000A;&#x000A;Game tester: go through do&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: go through do&#x000A;Command: e&#x000A;Action: going east: Action: opening bedroom door: Success&#x000A;&#x000A;Game tester: go through do&#x000A;Command: quit&#x000A;Action: looking: Procedural rulebookGame tester: Orion&#x000A;Command: look&#x000A;Action: looking: Procedural rulebookGame tester: Orion&#x000A;Command: all player reports&#x000A;Action: reading player command report: Procedural rulebook&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -135,7 +135,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02589B08">
+  <item nodeId="node-0x051A9A80">
     <command xml:space="preserve">error report</command>
     <result xml:space="preserve">This game's error reports:&#x000A;&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -143,10 +143,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02589B78"/>
+      <child nodeId="node-0x051A9AF0"/>
     </children>
   </item>
-  <item nodeId="node-0x02589B78">
+  <item nodeId="node-0x051A9AF0">
     <command xml:space="preserve">all player reports</command>
     <result xml:space="preserve">Game tester: alex&#x000A;Command: clear error reports&#x000A;Action: clearing error report: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: purloin attic&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: purloin kitchen&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: purloin carpark&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: purloin all&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: drop attic&#x000A;Action: dropping attic: Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: go in attic&#x000A;Action: entering attic: Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: go up attic stairs&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: drop panel&#x000A;Action: dropping a latched panel (up): Success&#x000A;&#x000A;Game tester: alex&#x000A;Command: go up attic stairs&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: go up latched panel&#x000A;Failed&#x000A;&#x000A;Game tester: alex&#x000A;Command: restart&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: gonear corridor&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: gonear hall&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open panel&#x000A;Action: opening a latched panel: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take stairs&#x000A;Action: taking a latched panel (up): Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go up&#x000A;Action: going up: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go down&#x000A;Action: going down: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: move stairs to me&#x000A;Action: moving to Attic stairs (up): Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: remove stairs from play&#x000A;Action: removing Attic stairs (up): Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: move stairs to me&#x000A;Action: moving to Attic stairs (up): Action: dropping Attic stairs (up): Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: move officestairs to me&#x000A;Action: moving to stairs (up): Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop officestairs&#x000A;Action: dropping stairs (up): Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through stairs&#x000A;Action: entering Attic stairs (up): Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through officestairs&#x000A;Action: entering stairs (up): Action: going stairs: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scenes&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scenes off&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scope&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: ope stairs&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: openstairs&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open stairs&#x000A;Action: opening stairs: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: score&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: script&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showheap&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showme&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb jump&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb inputting&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb input&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb ducking&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb eating&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb eat&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb input&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb duck&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb ask&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: trace&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through office&#x000A;Action: entering the office door (north): Action: going the office door: Action: opening the office door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Action: taking the important customer service document: Action: taking notepad: Action: taking pen: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: trace off&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: tree&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: version&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: verify&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: tree&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: Mobilel&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: purloin all&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through bedroom door&#x000A;Action: entering bedroom door (east): Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop bedroom door&#x000A;Action: dropping bedroom door (east): Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through bedroom door&#x000A;Action: entering bedroom door (east): Action: going bedroom door: Action: opening bedroom door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop hall&#x000A;Action: dropping the hall: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through bedroom door&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop all&#x000A;Action: dropping magic door: Action: dropping a fridge: Action: dropping a coffee cup: Action: dropping the piece of toast: Action: dropping the piece of toast: Action: dropping the kitchen table: Action: dropping Dudley: Action: dropping highchair: Action: dropping Petunia: Action: dropping kitchen: Action: dropping letter: Action: dropping broom: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the pencil: Action: dropping the sock: Action: dropping the sock: Action: dropping the sock: Action: dropping the sock: Action: dropping the Bag: Action: dropping the Bag: Action: dropping the Bag: Action: dropping the few bits of rubbish: Action: dropping cupboard: Action: dropping the hall: Action: dropping the scrap of paper: Action: dropping bedside table: Action: dropping the tutu: Action: dropping the mumu: Action: dropping the suit: Action: dropping wizards robes: Action: dropping the mirror: Action: dropping Wardrobe: Action: dropping the clock: Action: dropping bed: Action: dropping bedroom window: Action: dropping Dursley's bedroom: Action: dropping Petunia's diary: Action: dropping the smeltings schoolbook: Action: dropping the High calorie cookbook: Action: dropping 101 pompous complaints: Action: dropping drills- an unabridged history: Action: dropping how to spoil your children handbook: Action: dropping the toy: Action: dropping the toy: Action: dropping the toy: Action: dropping dusty box: Action: dropping attic: Action: dropping the small roll: Action: dropping the small roll: Action: dropping a breadstick: Action: dropping a bun: Action: dropping a donut: Action: dropping outside: Action: dropping inside: Action: dropping down: Action: dropping up: Action: dropping west: Action: dropping east: Action: dropping southwest: Action: dropping southeast: Action: dropping south: Action: dropping northwest: Action: dropping northeast: Action: dropping north: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take off all&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: remove all&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop all&#x000A;Action: dropping magic door: Action: dropping kitchen: Action: dropping cupboard: Action: dropping the hall: Action: dropping Dursley's bedroom: Action: dropping attic: Action: dropping outside: Action: dropping inside: Action: dropping down: Action: dropping up: Action: dropping west: Action: dropping east: Action: dropping southwest: Action: dropping southeast: Action: dropping south: Action: dropping northwest: Action: dropping northeast: Action: dropping north: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: restart&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: check watch&#x000A;Action: examining the watch: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: check clock&#x000A;Action: examining the clock: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: check me&#x000A;Action: examining yourself: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop watch&#x000A;Action: dropping the watch: Action: taking off the watch: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: check me&#x000A;Action: examining yourself: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take watch&#x000A;Action: taking the watch: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: check me&#x000A;Action: examining yourself: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: gonear attic&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open box&#x000A;Action: opening dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look in box&#x000A;Action: searching dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Action: taking Petunia's diary: Action: taking the toy: Action: taking the toy: Action: taking the toy: Action: taking how to spoil your children handbook: Action: taking drills- an unabridged history: Action: taking 101 pompous complaints: Action: taking the High calorie cookbook: Action: taking the smeltings schoolbook: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read diary&#x000A;Action: examining Petunia's diary: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read diary&#x000A;Action: examining Petunia's diary: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: rules&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: rules all&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: rules off&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb how's it going&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb yes&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb hello&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb saying hello to&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb me&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb showverb&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showverb scope&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scope&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scenes&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: scenes off&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drop all&#x000A;Action: dropping magic door: Action: dropping the smeltings schoolbook: Action: dropping the High calorie cookbook: Action: dropping 101 pompous complaints: Action: dropping drills- an unabridged history: Action: dropping how to spoil your children handbook: Action: dropping Petunia's diary: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: put all in box&#x000A;Action: inserting magic door into dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Action: taking Petunia's diary: Action: taking how to spoil your children handbook: Action: taking drills- an unabridged history: Action: taking 101 pompous complaints: Action: taking the High calorie cookbook: Action: taking the smeltings schoolbook: Action: taking letter: Action: taking the toy: Action: taking the toy: Action: taking the toy: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: put all in box&#x000A;Action: inserting magic door into dusty box: Action: inserting letter into dusty box: Action: inserting the smeltings schoolbook into dusty box: Action: inserting the High calorie cookbook into dusty box: Action: inserting 101 pompous complaints into dusty box: Action: inserting drills- an unabridged history into dusty box: Action: inserting how to spoil your children handbook into dusty box: Action: inserting Petunia's diary into dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: close box&#x000A;Action: closing dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrob&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Action: taking wizards robes: Action: taking the suit: Action: taking the mumu: Action: taking the tutu: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take all&#x000A;Action: taking wizards robes: Action: taking the suit: Action: taking the mumu: Action: taking the tutu: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: i&#x000A;Action: taking inventory: Action: looking: Success&#x000A;&#x000A;Game tester: Showall&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Showall&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: showall&#x000A;Action: showing me: Action: looking: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: test me&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open drawer&#x000A;Action: opening bedside drawer: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read paper&#x000A;Action: examining the scrap of paper: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take paper&#x000A;Action: taking the scrap of paper: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look in mirror&#x000A;Action: examining the mirror: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wear mumu&#x000A;Action: wearing the mumu: Action: taking the mumu: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look in mirror&#x000A;Action: examining the mirror: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: e&#x000A;Action: going east: Action: opening bedroom door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go up stairs&#x000A;Action: going a latched panel: Action: opening a latched panel: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read diary&#x000A;Action: examining Petunia's diary: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read letter&#x000A;Action: examining letter: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open box&#x000A;Action: opening dusty box: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take cookbook&#x000A;Action: taking the High calorie cookbook: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read history&#x000A;Action: examining drills- an unabridged history: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go down stairs&#x000A;Action: going Attic stairs: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: e&#x000A;Action: going east: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take broom&#x000A;Action: taking broom: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look at broom&#x000A;Action: examining broom: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: ride broom&#x000A;Action: dropping broom: Action: mounting broom: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: fly w&#x000A;Action: going west: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through white door&#x000A;Action: entering white door (north): Action: going white door: Action: opening white door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: say hello to petunia&#x000A;Action: saying hello to Petunia: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: eat dudley&#x000A;Action: eating Dudley: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: eat toast&#x000A;Action: eating the piece of toast: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: drink coffee&#x000A;Action: drinking coffee: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: open fridge&#x000A;Action: opening fridge: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: n&#x000A;Action: going north: Action: opening Front door: Action: saying goodbye to Petunia: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: n&#x000A;Action: going north: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: w&#x000A;Action: going west: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get off&#x000A;Action: exiting: Action: dismounting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get in elevator&#x000A;Action: entering elevator: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: press button&#x000A;Action: switching on elevator button: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get out&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: n&#x000A;Action: going north: Action: opening the office door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 893&#x000A;Action: dialling 893 on the office phone: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hello&#x000A;Action: hailing: Action: saying hello to the Customer: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: good&#x000A;Action: saying hello to the Customer: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: sure&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 8953&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try asking for a hal 6502&#x000A;Action: responding to customer "asking for a hal 6502": Action: hanging up: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 12856&#x000A;Action: dialling 12856 on the office phone: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hello&#x000A;Action: hailing: Action: saying hello to Mr. Mason: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wait&#x000A;Action: waiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: sure&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try the hal 6502&#x000A;Action: responding to customer "the hal 6502": Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wait&#x000A;Action: waiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hmmm&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read dex&#x000A;Action: examining a rolodex: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: flip dex&#x000A;Action: flipping a rolodex: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read dex&#x000A;Action: examining a rolodex: Action: saying goodbye to Mr. Mason: Action: hanging up: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 5552368&#x000A;Action: dialling 5552368 on the office phone: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: take pen&#x000A;Action: taking pen: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: write on notepad&#x000A;Action: writing intro notepad: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: s&#x000A;Action: going south: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: press button&#x000A;Action: switching on elevator button: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wait&#x000A;Action: waiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get in elevator&#x000A;Action: entering elevator: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: press button&#x000A;Action: switching on elevator button: Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get out&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: carjack red car&#x000A;Action: carjacking red car: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: get in red car&#x000A;Action: entering red car: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: e&#x000A;Action: going east: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: cheats on&#x000A;Action: switching cheats on: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: teleport to street&#x000A;Action: teleporting to street: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: go through shop door&#x000A;Action: entering a shop door (east): Action: going the door: Action: taking position standing: Action: opening the door: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: stats&#x000A;Action: statisticing: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look at server&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look shop attendant&#x000A;Action: examining Shop attendant: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: test two&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: gonear work&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 893&#x000A;Action: dialling 893 on the office phone: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hello&#x000A;Action: hailing: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: good&#x000A;Action: saying hello to yourself: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: call 8953&#x000A;Action: dialling 8953 on the office phone: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: ask for a t1000&#x000A;Action: implicit-imploring "a t1000": Action: imploring yourself for "a t1000": Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: read rolodex&#x000A;Action: examining a rolodex: Action: dialling 12856 on the office phone: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hello&#x000A;Action: hailing: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wait&#x000A;Action: waiting: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: sure&#x000A;Action: saying yes: Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try the t1000&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try the hal 6502&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try the qz 77&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: try the bk 44 model t&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: hmmm&#x000A;Failed&#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Orion&#x000A;Command: wait&#x000A;Action: waiting: Action: saying goodbye to Mr. Mason: Action: hanging up: Action: looking: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error "egushiufhiduhfirueghriufhfiruf"&#x000A;Action: error reporting "" egushiufhiduhfirueghriufhfiruf "": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look&#x000A;Action: looking: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open door&#x000A;Action: opening bedroom door: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: close door&#x000A;Action: closing bedroom door (east): Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: lock door&#x000A;Action: locking bedroom door (east) with the watch: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: e&#x000A;Action: going east: Action: opening bedroom door: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: s&#x000A;Action: going south: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: w&#x000A;Action: going west: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: climb stairs&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take all&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: help&#x000A;Action: asking for help: Action: looking: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take mumu&#x000A;Action: taking the mumu: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: put on mumu&#x000A;Action: wearing the mumu: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: error report "mumu might be spelt muumuu"&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error "mumu might be spelt muumuu"&#x000A;Action: error reporting "" mumu might be spelt muumuu "": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open window&#x000A;Action: opening bedroom window: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: why not&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: why&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error "you type 'why', and it says 'I didn't understand that sentence'. what is not a&#x000A;Action: error reporting "" you type 'why' , and it says 'i didn't understand that sentence' . what is not a": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: sleep in bed&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: sleep&#x000A;Action: sleeping: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: yes i am&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: yes&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report orror "yes i am&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take clock&#x000A;Action: taking the clock: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: e&#x000A;Action: going east: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: go up&#x000A;Action: going up: Action: opening a latched panel: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read diary&#x000A;Action: examining Petunia's diary: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take letter&#x000A;Action: taking letter: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read letter&#x000A;Action: examining letter: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open dusty box&#x000A;Action: opening dusty box: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read children&#x000A;Action: examining how to spoil your children handbook: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read&#x000A;Action: going down: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Action: opening white door: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: kill peunia&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: kill petunia&#x000A;Action: attacking Petunia: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: yes it is&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take toast&#x000A;Action: taking the piece of toast: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat toast&#x000A;Action: eating the piece of toast: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat toast&#x000A;Action: eating the piece of toast: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat all toast&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: knock off  dudly&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take coffee&#x000A;Action: taking the coffee cup: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: drink coffee&#x000A;Action: drinking coffee: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat coffee&#x000A;Action: eating a coffee cup: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open fridge&#x000A;Action: opening fridge: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat steak&#x000A;Action: eating steak: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open suitcase&#x000A;Action: opening suitcase: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: unlock suitcase&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: coffee&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: s&#x000A;Action: going south: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: w&#x000A;Action: going west: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open wardrobe&#x000A;Action: opening Wardrobe: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look in wardrobe&#x000A;Action: searching Wardrobe: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look on bedside table&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look in bedside table&#x000A;Action: searching bedside table: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look at bedside table&#x000A;Action: examining bedside table: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open drawer&#x000A;Action: opening bedside drawer: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read scrap&#x000A;Action: examining the scrap of paper: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: e&#x000A;Action: going east: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: 930&#x000A;Action: inputting 930: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look in suitcase&#x000A;Action: searching suitcase: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open suitcase&#x000A;Action: opening suitcase: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read paper&#x000A;Action: examining three papers: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: take keys&#x000A;Action: taking keys: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: eat keys&#x000A;Action: eating keys: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: kill&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: kill harry&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Action: opening Front door: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open garage&#x000A;Action: opening garage: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: turn on light&#x000A;Action: switching on light switch: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look araound&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: look around&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: enter garage&#x000A;Action: entering garage: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: close garage&#x000A;Action: closing garage: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: open garage&#x000A;Action: opening garage: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: get in ferrari&#x000A;Action: entering Ferrari Enzo: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: press start&#x000A;Action: switching on start button: Action: looking: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: s&#x000A;Action: going south: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: start&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: press start&#x000A;Action: switching on start button: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: w&#x000A;Action: going west: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error in which is elevator button for grunnings carpark&#x000A;Action: error reporting "in which is elevator button for grunnings carpark": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: up&#x000A;Action: error reporting "                           ": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error what do you want to up&#x000A;Action: error reporting "what do you want to up": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: go up&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: go up stairs&#x000A;Action: going stairs: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: get out ferrari&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: get out&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: up&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: go up stairs&#x000A;Action: going stairs: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: n&#x000A;Action: going north: Action: opening the office door: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error corridor no capital c&#x000A;Action: error reporting "corridor no capital c": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error as you walk in the boss comes up to you late again dursley&#x000A;Action: error reporting "as you walk in the boss comes up to you late again dursley": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error up stairs go up what fix climbing stairs action&#x000A;Action: error reporting "up stairs go up what fix climbing stairs action": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error you can see an office door south desk on which are an office phone an important&#x000A;Action: error reporting "you can see an office door south desk on which are an office phone an important": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error it's rolex orion&#x000A;Action: error reporting "it's rolex orion": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: put on rolodex&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error while wearing a rolodex you inadvertantly flip the rollerdex to a random page rolodex and&#x000A;Action: error reporting "while wearing a rolodex you inadvertantly flip the rollerdex to a random page rolodex and": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: report error sorry orion i thought it might be rolex as in watch but since it isn't&#x000A;Action: error reporting "sorry orion i thought it might be rolex as in watch but since it isn't": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read rolodex&#x000A;Action: examining a rolodex: Action: dialling 12856 on the office phone: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: hello&#x000A;Action: hailing: Action: saying hello to Mr. Mason: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: no&#x000A;Action: saying no: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: why&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: yes&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: good drill&#x000A;Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: i recommend the qz 77&#x000A;Action: responding to customer "recommend the qz 77": Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: oh&#x000A;Action: hanging up: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read rolodex&#x000A;Action: examining a rolodex: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: call 5550193&#x000A;Action: dialling 5550193 on the office phone: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: flip dex&#x000A;Action: flipping a rolodex: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: flip dex&#x000A;Action: flipping a rolodex: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read dex&#x000A;Action: examining a rolodex: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: read document&#x000A;Action: examining an important customer service document: Action: dialling 893 on the office phone: Failed&#x000A;&#x000A;Game tester: Alex&#x000A;Command: error report&#x000A;Action: error report retrieving: Success&#x000A;&#x000A;Game tester: Alex&#x000A;Command: player report&#x000A;Action: reading current player command report: Action: looking: Success&#x000A;&#x000A;Game tester: open wardrobe&#x000A;Command: wear clothing&#x000A;Failed&#x000A;&#x000A;Game tester: open wardrobe&#x000A;Command: Open wardrobe&#x000A;Failed&#x000A;&#x000A;Game tester: open wardrobe&#x000A;Command: get up&#x000A;Action: exiting: Action: looking: Success&#x000A;&#x000A;Game tester: go through do&#x000A;Command: go through door&#x000A;Action: entering bedroom door (east): Action: going bedroom door: Failed&#x000A;&#x000A;Game tester: go through do&#x000A;Command: get up&#x000A;Action: exiting: Success&#x000A;&#x000A;Game tester: go through do&#x000A;Command: e&#x000A;Action: going east: Action: opening bedroom door: Success&#x000A;&#x000A;Game tester: go through do&#x000A;Command: quit&#x000A;Action: looking: Procedural rulebookGame tester: Orion&#x000A;Command: look&#x000A;Action: looking: Procedural rulebookGame tester: Orion&#x000A;Command: all player reports&#x000A;Action: reading player command report: Procedural rulebookAction: looking &#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking &#x000A;&#x000A;Game tester: Orion&#x000A;Command: error report&#x000A;Action: error report retrieving &#x000A;&#x000A;Game tester: Orion&#x000A;Command: all player reports&#x000A;Action: reading player command report &#x000A;&#x000A;&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -154,10 +154,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025882A8"/>
+      <child nodeId="node-0x051A9B60"/>
     </children>
   </item>
-  <item nodeId="node-0x025882A8">
+  <item nodeId="node-0x051A9B60">
     <command xml:space="preserve">player reports</command>
     <result xml:space="preserve">I didn't understand that sentence.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -165,10 +165,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588318"/>
+      <child nodeId="node-0x051A9BD0"/>
     </children>
   </item>
-  <item nodeId="node-0x02588318">
+  <item nodeId="node-0x051A9BD0">
     <command xml:space="preserve">player report</command>
     <result xml:space="preserve">Action: looking &#x000A;&#x000A;Game tester: Orion&#x000A;Command: look&#x000A;Action: looking &#x000A;&#x000A;Game tester: Orion&#x000A;Command: error report&#x000A;Action: error report retrieving &#x000A;&#x000A;Game tester: Orion&#x000A;Command: all player reports&#x000A;Action: reading player command report &#x000A;&#x000A;Game tester: Orion&#x000A;Command: player reports&#x000A;Game tester: Orion&#x000A;Command: player report&#x000A;Action: reading current player command report &#x000A;&#x000A;&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -176,10 +176,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588388"/>
+      <child nodeId="node-0x051A9C40"/>
     </children>
   </item>
-  <item nodeId="node-0x02588388">
+  <item nodeId="node-0x051A9C40">
     <command xml:space="preserve">report error</command>
     <result xml:space="preserve">Error noted.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -187,10 +187,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025883F8"/>
+      <child nodeId="node-0x051A9CB0"/>
     </children>
   </item>
-  <item nodeId="node-0x025883F8">
+  <item nodeId="node-0x051A9CB0">
     <command xml:space="preserve">error report</command>
     <result xml:space="preserve">This game's error reports:&#x000A;Error 2: &#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -198,10 +198,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588468"/>
+      <child nodeId="node-0x051A9D20"/>
     </children>
   </item>
-  <item nodeId="node-0x02588468">
+  <item nodeId="node-0x051A9D20">
     <command xml:space="preserve">report error "Hello"</command>
     <result xml:space="preserve">Error noted.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -209,10 +209,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025884D8"/>
+      <child nodeId="node-0x051A9D90"/>
     </children>
   </item>
-  <item nodeId="node-0x025884D8">
+  <item nodeId="node-0x051A9D90">
     <command xml:space="preserve">error report</command>
     <result xml:space="preserve">This game's error reports:&#x000A;Error 2: Error 2: "hello"&#x000A;&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -220,10 +220,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588548"/>
+      <child nodeId="node-0x051A9E00"/>
     </children>
   </item>
-  <item nodeId="node-0x02588548">
+  <item nodeId="node-0x051A9E00">
     <command xml:space="preserve">error report</command>
     <result xml:space="preserve">This game's error reports:&#x000A;Error 2: Error 2: "hello"&#x000A;&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -231,10 +231,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025885B8"/>
+      <child nodeId="node-0x051A9E70"/>
     </children>
   </item>
-  <item nodeId="node-0x025885B8">
+  <item nodeId="node-0x051A9E70">
     <command xml:space="preserve">report error "Hello"</command>
     <result xml:space="preserve">Error noted.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -242,10 +242,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588628"/>
+      <child nodeId="node-0x023A0810"/>
     </children>
   </item>
-  <item nodeId="node-0x02588628">
+  <item nodeId="node-0x023A0810">
     <command xml:space="preserve">error report</command>
     <result xml:space="preserve">This game's error reports:&#x000A;Error 2: Error 2: "hello"&#x000A;Error 3: "hello"&#x000A;&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -253,7 +253,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02588698">
+  <item nodeId="node-0x023A0880">
     <command xml:space="preserve">gonear shop</command>
     <result xml:space="preserve">The Baker's&#x000A;You can see a shop door (west), a Shop attendant and a foods display case (closed) (in which are a doughnut, a bun, a breadstick and two small rolls) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -261,11 +261,11 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588708"/>
-      <child nodeId="node-0x02588938"/>
+      <child nodeId="node-0x023A08F0"/>
+      <child nodeId="node-0x023A0B20"/>
     </children>
   </item>
-  <item nodeId="node-0x02588708">
+  <item nodeId="node-0x023A08F0">
     <command xml:space="preserve">open case</command>
     <result xml:space="preserve">That's not something you can open.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -273,10 +273,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588778"/>
+      <child nodeId="node-0x023A0960"/>
     </children>
   </item>
-  <item nodeId="node-0x02588778">
+  <item nodeId="node-0x023A0960">
     <command xml:space="preserve">close case</command>
     <result xml:space="preserve">That's not something you can close.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -284,10 +284,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025887E8"/>
+      <child nodeId="node-0x023A09D0"/>
     </children>
   </item>
-  <item nodeId="node-0x025887E8">
+  <item nodeId="node-0x023A09D0">
     <command xml:space="preserve">eat all</command>
     <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -295,10 +295,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588858"/>
+      <child nodeId="node-0x023A0A40"/>
     </children>
   </item>
-  <item nodeId="node-0x02588858">
+  <item nodeId="node-0x023A0A40">
     <command xml:space="preserve">eat case</command>
     <result xml:space="preserve">That's plainly inedible.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -306,10 +306,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025888C8"/>
+      <child nodeId="node-0x023A0AB0"/>
     </children>
   </item>
-  <item nodeId="node-0x025888C8">
+  <item nodeId="node-0x023A0AB0">
     <command xml:space="preserve">eat me</command>
     <result xml:space="preserve">You're plainly inedible.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -317,7 +317,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02588938">
+  <item nodeId="node-0x023A0B20">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">doughnut: The foods display case isn't open.&#x000A;bun: The foods display case isn't open.&#x000A;breadstick: The foods display case isn't open.&#x000A;small roll: The foods display case isn't open.&#x000A;small roll: The foods display case isn't open.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -325,10 +325,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025889A8"/>
+      <child nodeId="node-0x051AA700"/>
     </children>
   </item>
-  <item nodeId="node-0x025889A8">
+  <item nodeId="node-0x051AA700">
     <command xml:space="preserve">hello</command>
     <result xml:space="preserve">(addressing the Shop attendant)&#x000A;You say hello to the Shop attendant.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -336,10 +336,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02588A18"/>
+      <child nodeId="node-0x051AA770"/>
     </children>
   </item>
-  <item nodeId="node-0x02588A18">
+  <item nodeId="node-0x051AA770">
     <command xml:space="preserve">talk</command>
     <result xml:space="preserve">What do you want to talk to?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -347,10 +347,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258EF18"/>
+      <child nodeId="node-0x051AA7E0"/>
     </children>
   </item>
-  <item nodeId="node-0x0258EF18">
+  <item nodeId="node-0x051AA7E0">
     <command xml:space="preserve">talk to shop attendant</command>
     <result xml:space="preserve">You are already talking to the Shop attendant.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -358,10 +358,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258EF88"/>
+      <child nodeId="node-0x051AA850"/>
     </children>
   </item>
-  <item nodeId="node-0x0258EF88">
+  <item nodeId="node-0x051AA850">
     <command xml:space="preserve">eat shop</command>
     <result xml:space="preserve">He's plainly inedible.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -369,10 +369,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258EFF8"/>
+      <child nodeId="node-0x051AA8C0"/>
     </children>
   </item>
-  <item nodeId="node-0x0258EFF8">
+  <item nodeId="node-0x051AA8C0">
     <command xml:space="preserve">eat roll</command>
     <result xml:space="preserve">The foods display case isn't open.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -380,10 +380,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F068"/>
+      <child nodeId="node-0x051AA930"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F068">
+  <item nodeId="node-0x051AA930">
     <command xml:space="preserve">take roll</command>
     <result xml:space="preserve">The foods display case isn't open.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -391,10 +391,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F0D8"/>
+      <child nodeId="node-0x051AA9A0"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F0D8">
+  <item nodeId="node-0x051AA9A0">
     <command xml:space="preserve">give me a roll</command>
     <result xml:space="preserve">"You need to pay for that. That'll be a pound."&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -402,10 +402,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F148"/>
+      <child nodeId="node-0x051AAA10"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F148">
+  <item nodeId="node-0x051AAA10">
     <command xml:space="preserve">ok</command>
     <result xml:space="preserve">That was a rhetorical question.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -413,10 +413,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F1B8"/>
+      <child nodeId="node-0x051AAA80"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F1B8">
+  <item nodeId="node-0x051AAA80">
     <command xml:space="preserve">i</command>
     <result xml:space="preserve">You are carrying two pound coins. You are wearing a watch and Pyjamas.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -424,10 +424,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F228"/>
+      <child nodeId="node-0x051AAAF0"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F228">
+  <item nodeId="node-0x051AAAF0">
     <command xml:space="preserve">give one cooin</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -435,10 +435,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F298"/>
+      <child nodeId="node-0x051AAB60"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F298">
+  <item nodeId="node-0x051AAB60">
     <command xml:space="preserve">give one coin</command>
     <result xml:space="preserve">(to the Shop attendant)&#x000A;You give the pound coin to the Shop attendant.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -446,10 +446,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F308"/>
+      <child nodeId="node-0x051AABD0"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F308">
+  <item nodeId="node-0x051AABD0">
     <command xml:space="preserve">give me a roll</command>
     <result xml:space="preserve">"You need to pay for that. That'll be a pound."&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -457,10 +457,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F378"/>
+      <child nodeId="node-0x051AAC40"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F378">
+  <item nodeId="node-0x051AAC40">
     <command xml:space="preserve">stats</command>
     <result xml:space="preserve">dialyes/no is 0&#x000A;lexicon current table is Table 1 - customer responses&#x000A;the venture of customercall is incomplete&#x000A;office phone is not Inuse&#x000A;The venture of mrmason call is incomplete&#x000A;mobilel is not inuse&#x000A;last turn's action was giving the pound coin to the Shop attendant&#x000A;Bored is 12&#x000A;The three digit number lock is 389&#x000A;The tumblers are 000&#x000A;the venture of work is incomplete&#x000A;added score is 0&#x000A;player's command: stats&#x000A;Play success is 0&#x000A;The location is The Baker's&#x000A;Current region is nothing&#x000A;Credit is 0&#x000A;venture of work is incomplete&#x000A;Remembered product is small roll&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -468,10 +468,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F3E8"/>
+      <child nodeId="node-0x051AACB0"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F3E8">
+  <item nodeId="node-0x051AACB0">
     <command xml:space="preserve">pay pound</command>
     <result xml:space="preserve">(to the Shop attendant)&#x000A;You give the pound coin to the Shop attendant.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -479,10 +479,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F458"/>
+      <child nodeId="node-0x051AAD20"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F458">
+  <item nodeId="node-0x051AAD20">
     <command xml:space="preserve">stats</command>
     <result xml:space="preserve">dialyes/no is 0&#x000A;lexicon current table is Table 1 - customer responses&#x000A;the venture of customercall is incomplete&#x000A;office phone is not Inuse&#x000A;The venture of mrmason call is incomplete&#x000A;mobilel is not inuse&#x000A;last turn's action was giving the pound coin to the Shop attendant&#x000A;Bored is 14&#x000A;The three digit number lock is 389&#x000A;The tumblers are 000&#x000A;the venture of work is incomplete&#x000A;added score is 0&#x000A;player's command: stats&#x000A;Play success is 0&#x000A;The location is The Baker's&#x000A;Current region is nothing&#x000A;Credit is 0&#x000A;venture of work is incomplete&#x000A;Remembered product is small roll&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -490,10 +490,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F4C8"/>
+      <child nodeId="node-0x051AAD90"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F4C8">
+  <item nodeId="node-0x051AAD90">
     <command xml:space="preserve">restart</command>
     <result xml:space="preserve">Save failed.&#x000A;&#x000A;Are you sure you want to restart?</result>
     <commentary xml:space="preserve"></commentary>
@@ -501,10 +501,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F538"/>
+      <child nodeId="node-0x051AAE00"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F538">
+  <item nodeId="node-0x051AAE00">
     <command xml:space="preserve">y</command>
     <result xml:space="preserve">*** Run-time problem P31: Attempt to use a property of the 'nothing' non-object: property map region&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Harry Potter and the Philosopher's stone&#x000A;Based on "Harry Potter and the Philosopher's stone" by J.K. Rowling. by Orion Zymaris&#x000A;Release 1 / Serial number 130321 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Mr and Mrs Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much. They were the last people you'd expect to be involved in anything strange or mysterious,  because they, or rather you, just didn't hold with such nonsense.&#x000A;&#x000A;As you wake up, on a dull, grey Tuesday, you can hardly imagine that soon strange things would be happening all over the country.&#x000A;You are Mr  Vernon Dursley, and are in your bedroom.&#x000A;&#x000A;Dursley's bedroom (in bed)&#x000A;You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the east.&#x000A;&#x000A;You can see bedroom door (east), bedroom window (providing light), a clock, Wardrobe (closed) and bedside table here.&#x000A;&#x000A;Name:</result>
     <commentary xml:space="preserve"></commentary>
@@ -512,10 +512,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F5A8"/>
+      <child nodeId="node-0x051AAE70"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F5A8">
+  <item nodeId="node-0x051AAE70">
     <command xml:space="preserve">Orion</command>
     <result xml:space="preserve">Your name for this pre-release test is "Orion".&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -523,10 +523,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F618"/>
+      <child nodeId="node-0x0514E8E8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F618">
+  <item nodeId="node-0x0514E8E8">
     <command xml:space="preserve">gonear street</command>
     <result xml:space="preserve">street&#x000A;You can see a shop door (east) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -534,10 +534,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F688"/>
+      <child nodeId="node-0x0514E958"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F688">
+  <item nodeId="node-0x0514E958">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve">(first opening the door)&#x000A;"Good morning! How may i help you, sir?" asks the shop attendant.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -545,10 +545,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F6F8"/>
+      <child nodeId="node-0x0514E9C8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F6F8">
+  <item nodeId="node-0x0514E9C8">
     <command xml:space="preserve">rules</command>
     <result xml:space="preserve">Rules tracing now switched on. Type "rules off" to switch it off again, or "rules all" to include even rules which do not apply.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -556,10 +556,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F768"/>
+      <child nodeId="node-0x0514EA38"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F768">
+  <item nodeId="node-0x0514EA38">
     <command xml:space="preserve">buy roll</command>
     <result xml:space="preserve">[Rule "before buying anything when in bakers" applies.]&#x000A;[Rule "before giving something in foods display case to the player when in bakers" applies.]&#x000A;"You need to pay for that. That'll be a pound."&#x000A;&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -567,10 +567,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F7D8"/>
+      <child nodeId="node-0x0514EAA8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F7D8">
+  <item nodeId="node-0x0514EAA8">
     <command xml:space="preserve">pay coin</command>
     <result xml:space="preserve">(to the Shop attendant)&#x000A;[Rule "before doing anything" applies.]&#x000A;[Rule "before doing anything" applies.]&#x000A;[Rule "before doing anything" applies.]&#x000A;[Rule "before doing anything" applies.]&#x000A;[Rule "can't give what you haven't got rule" applies.]&#x000A;[Rule "can't give to yourself rule" applies.]&#x000A;[Rule "can't give to a non-person rule" applies.]&#x000A;[Rule "can't give clothes being worn rule" applies.]&#x000A;[Rule "standard giving rule" applies.]&#x000A;[Rule "after doing anything except clearing player command report" applies.]&#x000A;[Rule "standard report giving rule" applies.]&#x000A;You give the pound coin to the Shop attendant.&#x000A;&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;[Rule "every turn during uncle vernon's scene" applies.]&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -578,7 +578,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x0258F848">
+  <item nodeId="node-0x0514EB18">
     <command xml:space="preserve">eat me</command>
     <result xml:space="preserve">You're plainly inedible.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -586,10 +586,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F8B8"/>
+      <child nodeId="node-0x0514EB88"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F8B8">
+  <item nodeId="node-0x0514EB88">
     <command xml:space="preserve">remove window from play</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -597,10 +597,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F928"/>
+      <child nodeId="node-0x0514EBF8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F928">
+  <item nodeId="node-0x0514EBF8">
     <command xml:space="preserve">cheats on</command>
     <result xml:space="preserve">Now cheats are on.&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -608,10 +608,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258F998"/>
+      <child nodeId="node-0x0514EC68"/>
     </children>
   </item>
-  <item nodeId="node-0x0258F998">
+  <item nodeId="node-0x0514EC68">
     <command xml:space="preserve">remove window from play</command>
     <result xml:space="preserve">you remove bedroom window from play.&#x000A;&#x000A;It is now pitch dark in here!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -619,10 +619,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258FA08"/>
+      <child nodeId="node-0x0514ECD8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258FA08">
+  <item nodeId="node-0x0514ECD8">
     <command xml:space="preserve">put bedroom window back in dursley's bedroom</command>
     <result xml:space="preserve">You move the bedroom window back to the Dursley's bedroom.&#x000A;&#x000A;Dursley's bedroom (in bed)&#x000A;You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the east.&#x000A;&#x000A;You can see bedroom window (providing light), bedroom door (east), a clock, Wardrobe (closed) and bedside table here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -630,10 +630,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258FA78"/>
+      <child nodeId="node-0x0514ED48"/>
     </children>
   </item>
-  <item nodeId="node-0x0258FA78">
+  <item nodeId="node-0x0514ED48">
     <command xml:space="preserve">move bed to me</command>
     <result xml:space="preserve">Dursley's bedroom&#x000A;You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the east.&#x000A;&#x000A;You can see bedroom window (providing light), bedroom door (east), bed (empty), a clock, Wardrobe (closed) and bedside table here.&#x000A;&#x000A;You move bed to yourself.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -641,10 +641,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258FAE8"/>
+      <child nodeId="node-0x0514EDB8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258FAE8">
+  <item nodeId="node-0x0514EDB8">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Dursley's bedroom&#x000A;You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the east.&#x000A;&#x000A;You can see bedroom window (providing light), bedroom door (east), a clock, Wardrobe (closed) and bedside table here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -652,7 +652,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x0258FB58">
+  <item nodeId="node-0x0514EE28">
     <command xml:space="preserve">test me</command>
     <result xml:space="preserve">"Can I order another 50 drills? the last ones where excellent."&#x000A;&#x000A;&gt;[53] wait&#x000A;Time passes.&#x000A;&#x000A;&gt;[54] sure&#x000A;"That's great. Now, what drills would you reccomend for it's low price?"&#x000A;&#x000A;&gt;[55] try the hal 6502&#x000A;"That doesn't sound right... I think that range is suited for something else."&#x000A;&#x000A;&gt;[56] wait&#x000A;Time passes.&#x000A;&#x000A;&gt;[57] hmmm...&#x000A;That's not a verb I recognise.&#x000A;&#x000A;&gt;[58] read dex&#x000A;Tuesday&#x000A;Work for today:&#x000A;&#x000A;Answer one customer phone call: achieved&#x000A;Get huge order from Mr. Mason.&#x000A;&#x000A;&gt;[59] flip dex&#x000A;you flip the rollerdex to a random page.&#x000A;&#x000A;&gt;[60] read dex&#x000A;Saturday October 11th 1997&#x000A;&#x000A;Call Xander at 5550168&#x000A;&#x000A;Mr. Mason gets bored and hangs up. "If you remember, call me at 12856."&#x000A;&#x000A;You say goodbye to Mr. Mason.&#x000A;&#x000A;&gt;[61] call 5552368&#x000A;(on the office phone)&#x000A;&#x000A;Who you gonna call? obviously not the ghost busters. They must be out of business.&#x000A;&gt;[62] take pen&#x000A;You take pen from desk.&#x000A;&#x000A;&gt;[63] write on notepad&#x000A;&#x000A;What do you want to write: [64] write major irrelivancies&#x000A;You write "major irrelivancies"&#x000A;&gt;[65] s&#x000A;&#x000A;corridor&#x000A;You can see an office door (north), stairs (down) and elevator (in which is elevator button) here.&#x000A;&#x000A;&gt;[66] press button&#x000A;Since you pressed the button without getting in, you have to wait for the elevator to come back to the corridor.&#x000A;&#x000A;The elevator comes back to the corridor with a soft pinging noise.&#x000A;&#x000A;&gt;[67] wait&#x000A;Time passes.&#x000A;&#x000A;&gt;[68] get in elevator&#x000A;You get into elevator.&#x000A;&#x000A;In elevator you can see elevator button.&#x000A;&#x000A;&gt;[69] press button&#x000A;You go down the elevator, back to the carpark.&#x000A;&#x000A;Grunnings Carpark (in elevator)&#x000A;You can see stairs (up), red car (closed), blue car (closed), rainbow car (closed) and green car (closed) here.&#x000A;&#x000A;In elevator you can see elevator button.&#x000A;&#x000A;&gt;[70] get out&#x000A;You get out of elevator.&#x000A;&#x000A;Grunnings Carpark&#x000A;You can see stairs (up), elevator (in which is elevator button), red car (closed), blue car (closed), rainbow car (closed) and green car (closed) here.&#x000A;&#x000A;&gt;[71] carjack red car&#x000A;You smash open the windows with a satisfying, and very loud, noise of breaking glass.&#x000A;&#x000A;&gt;[72] get in red car&#x000A;You can't get into the closed red car.&#x000A;&#x000A;&gt;[73] e&#x000A;it's a bit too long of a journey to walk all the way to work.&#x000A;&#x000A;&gt;[74] cheats on&#x000A;Now cheats are on.&#x000A;&gt;[75] teleport to street&#x000A;You appear in street.&#x000A;&#x000A;&gt;[76] go through shop door&#x000A;(first opening the door)&#x000A;&#x000A;The Baker's&#x000A;You can see a shop door (west), magic door, Shop attendant and Foods display case (closed) (in which are a donut, a bun, a breadstick and two small rolls) here.&#x000A;&#x000A;&gt;[77] stats&#x000A;dialyes/no is 0&#x000A;lexicon current table is Table 1 - customer responses&#x000A;the venture of customercall is success&#x000A;office phone is not Inuse&#x000A;The venture of mrmason call is incomplete&#x000A;mobilel is not inuse&#x000A;last turn's action was opening a shop door (west)&#x000A;Bored is 16&#x000A;The three digit number lock is 964&#x000A;The tumblers are 000&#x000A;the venture of work is incomplete&#x000A;added score is 0&#x000A;player's command: stats&#x000A;Play success is 0&#x000A;&gt;[78] look at shop attendant&#x000A;The nametag reads "Hello! My Name is irrelevant".&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -660,10 +660,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258FBC8"/>
+      <child nodeId="node-0x0514EE98"/>
     </children>
   </item>
-  <item nodeId="node-0x0258FBC8">
+  <item nodeId="node-0x0514EE98">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">The Baker's&#x000A;You can see a shop door (west), Shop attendant and Foods display case (closed) (in which are a donut, a bun, a breadstick and two small rolls) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -671,10 +671,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258FC38"/>
+      <child nodeId="node-0x0514EF08"/>
     </children>
   </item>
-  <item nodeId="node-0x0258FC38">
+  <item nodeId="node-0x0514EF08">
     <command xml:space="preserve">hello</command>
     <result xml:space="preserve">(addressing Shop attendant)&#x000A;You say hello to Shop attendant.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -682,7 +682,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x0258FCA8">
+  <item nodeId="node-0x0514EF78">
     <command xml:space="preserve">all error reports</command>
     <result xml:space="preserve">All error reports:&#x000A;Game tester: Con. Error 3: says out of a product before it has been sold&#x000A;Game tester: Orion. Error 1: "year for rolodex is wrong, says 1997."&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -690,10 +690,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258FD18"/>
+      <child nodeId="node-0x0514EFE8"/>
     </children>
   </item>
-  <item nodeId="node-0x0258FD18">
+  <item nodeId="node-0x0514EFE8">
     <command xml:space="preserve">cheats on</command>
     <result xml:space="preserve">Now cheats are on.&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -701,10 +701,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258FD88"/>
+      <child nodeId="node-0x0514F058"/>
     </children>
   </item>
-  <item nodeId="node-0x0258FD88">
+  <item nodeId="node-0x0514F058">
     <command xml:space="preserve">eat me</command>
     <result xml:space="preserve">You manage to eat yourself. You are in darkness.&#x000A;&#x000A;Darkness&#x000A;It is pitch dark, and you can't see a thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -712,10 +712,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0258FE68"/>
+      <child nodeId="node-0x05152410"/>
     </children>
   </item>
-  <item nodeId="node-0x0258FE68">
+  <item nodeId="node-0x05152410">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">You can't do anything here except undo.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -723,10 +723,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596950"/>
+      <child nodeId="node-0x051524F0"/>
     </children>
   </item>
-  <item nodeId="node-0x02596950">
+  <item nodeId="node-0x051524F0">
     <command xml:space="preserve">hhdf</command>
     <result xml:space="preserve">You can't do anything here except undo.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -734,10 +734,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596A30"/>
+      <child nodeId="node-0x051525D0"/>
     </children>
   </item>
-  <item nodeId="node-0x02596A30">
+  <item nodeId="node-0x051525D0">
     <command xml:space="preserve">sdfgh</command>
     <result xml:space="preserve">You can't do anything here except undo.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -745,10 +745,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596B10"/>
+      <child nodeId="node-0x051526B0"/>
     </children>
   </item>
-  <item nodeId="node-0x02596B10">
+  <item nodeId="node-0x051526B0">
     <command xml:space="preserve">sdfggfdfg</command>
     <result xml:space="preserve">You can't do anything here except undo.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -756,10 +756,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596BF0"/>
+      <child nodeId="node-0x05152790"/>
     </children>
   </item>
-  <item nodeId="node-0x02596BF0">
+  <item nodeId="node-0x05152790">
     <command xml:space="preserve">get up</command>
     <result xml:space="preserve">You can't do anything here except undo.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -767,10 +767,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596CD0"/>
+      <child nodeId="node-0x05152870"/>
     </children>
   </item>
-  <item nodeId="node-0x02596CD0">
+  <item nodeId="node-0x05152870">
     <command xml:space="preserve">gonear work</command>
     <result xml:space="preserve">You can't do anything here except undo.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -778,10 +778,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596DB0"/>
+      <child nodeId="node-0x05152950"/>
     </children>
   </item>
-  <item nodeId="node-0x02596DB0">
+  <item nodeId="node-0x05152950">
     <command xml:space="preserve">gonear work</command>
     <result xml:space="preserve">You can't do anything here except undo.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -789,10 +789,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596E20"/>
+      <child nodeId="node-0x051529C0"/>
     </children>
   </item>
-  <item nodeId="node-0x02596E20">
+  <item nodeId="node-0x051529C0">
     <command xml:space="preserve">undo</command>
     <result xml:space="preserve">Darkness&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -800,10 +800,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596E90"/>
+      <child nodeId="node-0x05152A30"/>
     </children>
   </item>
-  <item nodeId="node-0x02596E90">
+  <item nodeId="node-0x05152A30">
     <command xml:space="preserve">undo</command>
     <result xml:space="preserve">Darkness&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -811,10 +811,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596F00"/>
+      <child nodeId="node-0x05152AA0"/>
     </children>
   </item>
-  <item nodeId="node-0x02596F00">
+  <item nodeId="node-0x05152AA0">
     <command xml:space="preserve">undo</command>
     <result xml:space="preserve">Darkness&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -822,10 +822,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596F70"/>
+      <child nodeId="node-0x05152B10"/>
     </children>
   </item>
-  <item nodeId="node-0x02596F70">
+  <item nodeId="node-0x05152B10">
     <command xml:space="preserve">undo</command>
     <result xml:space="preserve">Darkness&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -833,10 +833,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02596FE0"/>
+      <child nodeId="node-0x05152BA0"/>
     </children>
   </item>
-  <item nodeId="node-0x02596FE0">
+  <item nodeId="node-0x05152BA0">
     <command xml:space="preserve">undo</command>
     <result xml:space="preserve">Darkness&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -844,10 +844,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597050"/>
+      <child nodeId="node-0x05152C10"/>
     </children>
   </item>
-  <item nodeId="node-0x02597050">
+  <item nodeId="node-0x05152C10">
     <command xml:space="preserve">undo</command>
     <result xml:space="preserve">Darkness&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -855,10 +855,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025970C0"/>
+      <child nodeId="node-0x05152C80"/>
     </children>
   </item>
-  <item nodeId="node-0x025970C0">
+  <item nodeId="node-0x05152C80">
     <command xml:space="preserve">undo</command>
     <result xml:space="preserve">Darkness&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -866,10 +866,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597130"/>
+      <child nodeId="node-0x05152CF0"/>
     </children>
   </item>
-  <item nodeId="node-0x02597130">
+  <item nodeId="node-0x05152CF0">
     <command xml:space="preserve">undo</command>
     <result xml:space="preserve">Dursley's bedroom&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -877,10 +877,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025971A0"/>
+      <child nodeId="node-0x05152D60"/>
     </children>
   </item>
-  <item nodeId="node-0x025971A0">
+  <item nodeId="node-0x05152D60">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Dursley's bedroom (in bed)&#x000A;You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the east.&#x000A;&#x000A;You can see bedroom door (east), bedroom window (providing light), a clock, Wardrobe (closed) and bedside table here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -888,10 +888,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597210"/>
+      <child nodeId="node-0x05152DD0"/>
     </children>
   </item>
-  <item nodeId="node-0x02597210">
+  <item nodeId="node-0x05152DD0">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">There are none at all available!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -899,10 +899,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597280"/>
+      <child nodeId="node-0x05152E40"/>
     </children>
   </item>
-  <item nodeId="node-0x02597280">
+  <item nodeId="node-0x05152E40">
     <command xml:space="preserve">take clock</command>
     <result xml:space="preserve">You take the clock from Dursley's bedroom.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -910,10 +910,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025972F0"/>
+      <child nodeId="node-0x05152EB0"/>
     </children>
   </item>
-  <item nodeId="node-0x025972F0">
+  <item nodeId="node-0x05152EB0">
     <command xml:space="preserve">read clock</command>
     <result xml:space="preserve">Hmm... The time is twenty-five to eight... I have work at 8:30.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -921,10 +921,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597360"/>
+      <child nodeId="node-0x05152F20"/>
     </children>
   </item>
-  <item nodeId="node-0x02597360">
+  <item nodeId="node-0x05152F20">
     <command xml:space="preserve">apparate to work</command>
     <result xml:space="preserve">You appear in Work office.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -932,10 +932,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025973D0"/>
+      <child nodeId="node-0x05152F90"/>
     </children>
   </item>
-  <item nodeId="node-0x025973D0">
+  <item nodeId="node-0x05152F90">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Work office&#x000A;as you enter your office, you see your desk, with a phone on it.&#x000A;&#x000A;You can see an office door (south), desk (on which are an office phone, an important customer service document, a rolodex, notepad, pen and two pound coins), a window, office chair and a filing cabinet here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -943,10 +943,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597440"/>
+      <child nodeId="node-0x05153000"/>
     </children>
   </item>
-  <item nodeId="node-0x02597440">
+  <item nodeId="node-0x05153000">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">the important customer service document: You take the important customer service document from desk.&#x000A;a rolodex: while taking a rolodex, you inadvertantly flip the rollerdex to a random page.&#x000A;notepad: You take notepad from desk.&#x000A;pen: You take pen from desk.&#x000A;pound coin: You take the pound coin from desk.&#x000A;pound coin: You take the pound coin from desk.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -954,10 +954,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025974B0"/>
+      <child nodeId="node-0x05153070"/>
     </children>
   </item>
-  <item nodeId="node-0x025974B0">
+  <item nodeId="node-0x05153070">
     <command xml:space="preserve">apparate to shop</command>
     <result xml:space="preserve">That noun did not make sense in this context.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -965,10 +965,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597520"/>
+      <child nodeId="node-0x051530E0"/>
     </children>
   </item>
-  <item nodeId="node-0x02597520">
+  <item nodeId="node-0x051530E0">
     <command xml:space="preserve">apparate to bakers</command>
     <result xml:space="preserve">You appear in The Baker's.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -976,10 +976,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597590"/>
+      <child nodeId="node-0x05153150"/>
     </children>
   </item>
-  <item nodeId="node-0x02597590">
+  <item nodeId="node-0x05153150">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">The Baker's&#x000A;You can see a shop door (west), a Shop attendant and a foods display case (closed) (in which are a doughnut, a bun, a breadstick and two small rolls) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -987,10 +987,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597600"/>
+      <child nodeId="node-0x051531C0"/>
     </children>
   </item>
-  <item nodeId="node-0x02597600">
+  <item nodeId="node-0x051531C0">
     <command xml:space="preserve">buy roll</command>
     <result xml:space="preserve">"You need to pay for that. That'll be a pound."&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -998,10 +998,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597670"/>
+      <child nodeId="node-0x05153230"/>
     </children>
   </item>
-  <item nodeId="node-0x02597670">
+  <item nodeId="node-0x05153230">
     <command xml:space="preserve">take roll</command>
     <result xml:space="preserve">You take the small roll from the foods display case.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1009,10 +1009,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025976E0"/>
+      <child nodeId="node-0x051532A0"/>
     </children>
   </item>
-  <item nodeId="node-0x025976E0">
+  <item nodeId="node-0x051532A0">
     <command xml:space="preserve">i</command>
     <result xml:space="preserve">You are carrying:&#x000A;  magic door&#x000A;  a small roll&#x000A;  two pound coins&#x000A;  pen&#x000A;  notepad&#x000A;  an important customer service document&#x000A;  a clock&#x000A;  a watch (being worn)&#x000A;  Pyjamas (being worn)&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1020,10 +1020,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597750"/>
+      <child nodeId="node-0x05153310"/>
     </children>
   </item>
-  <item nodeId="node-0x02597750">
+  <item nodeId="node-0x05153310">
     <command xml:space="preserve">pay one pound</command>
     <result xml:space="preserve">(to the Shop attendant)&#x000A;You give the pound coin to the Shop attendant.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1031,10 +1031,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025977C0"/>
+      <child nodeId="node-0x05153BA0"/>
     </children>
   </item>
-  <item nodeId="node-0x025977C0">
+  <item nodeId="node-0x05153BA0">
     <command xml:space="preserve">take all</command>
     <result xml:space="preserve">pound coin: You take the pound coin from the Shop attendant.&#x000A;doughnut: You take doughnut from the foods display case.&#x000A;bun: You take bun from the foods display case.&#x000A;breadstick: You take breadstick from the foods display case.&#x000A;small roll: You take the small roll from the foods display case.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1042,10 +1042,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02597830"/>
+      <child nodeId="node-0x05153C10"/>
     </children>
   </item>
-  <item nodeId="node-0x02597830">
+  <item nodeId="node-0x05153C10">
     <command xml:space="preserve">i</command>
     <result xml:space="preserve">You are carrying:&#x000A;  magic door&#x000A;  two small rolls&#x000A;  breadstick&#x000A;  bun&#x000A;  doughnut&#x000A;  two pound coins&#x000A;  pen&#x000A;  notepad&#x000A;  an important customer service document&#x000A;  a clock&#x000A;  a watch (being worn)&#x000A;  Pyjamas (being worn)&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1053,10 +1053,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02533110"/>
+      <child nodeId="node-0x05153C80"/>
     </children>
   </item>
-  <item nodeId="node-0x02533110">
+  <item nodeId="node-0x05153C80">
     <command xml:space="preserve">move all to me</command>
     <result xml:space="preserve">magic door: You move magic door to yourself.&#x000A;&#x000A;small roll: You move the small roll to yourself.&#x000A;&#x000A;breadstick: You move breadstick to yourself.&#x000A;&#x000A;bun: You move bun to yourself.&#x000A;&#x000A;doughnut: You move doughnut to yourself.&#x000A;&#x000A;pound coin: You move the pound coin to yourself.&#x000A;&#x000A;small roll: You move the small roll to yourself.&#x000A;&#x000A;pound coin: You move the pound coin to yourself.&#x000A;&#x000A;pen: You move pen to yourself.&#x000A;&#x000A;notepad: You move notepad to yourself.&#x000A;&#x000A;an important customer service document: You move an important customer service document to yourself.&#x000A;&#x000A;clock: You move the clock to yourself.&#x000A;&#x000A;a shop door (west): You move a shop door (west) to yourself.&#x000A;&#x000A;Shop attendant: You move the Shop attendant to yourself.&#x000A;&#x000A;foods display case: You move the foods display case to yourself.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1064,7 +1064,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02533180">
+  <item nodeId="node-0x05153CF0">
     <command xml:space="preserve">cheats on</command>
     <result xml:space="preserve">Now cheats are on.&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1072,10 +1072,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x025331F0"/>
+      <child nodeId="node-0x05153D60"/>
     </children>
   </item>
-  <item nodeId="node-0x025331F0">
+  <item nodeId="node-0x05153D60">
     <command xml:space="preserve">help</command>
     <result xml:space="preserve">&gt; General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Cheats</result>
     <commentary xml:space="preserve"></commentary>
@@ -1083,10 +1083,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02533260"/>
+      <child nodeId="node-0x05153DD0"/>
     </children>
   </item>
-  <item nodeId="node-0x02533260">
+  <item nodeId="node-0x05153DD0">
     <command xml:space="preserve">[down]</command>
     <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A; &gt; What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Cheats&#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A; &gt; What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Cheats</result>
     <commentary xml:space="preserve"></commentary>

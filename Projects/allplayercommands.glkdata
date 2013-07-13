@@ -27,3 +27,25 @@ Game tester: Orion
 Command: look photo
 Action: examining the photo 
 
+Action: looking 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Game tester: Orion
+Command: open drawer
+Action: opening bedside drawer 
+
+Game tester: Orion
+Command: suicide
+Game tester: Orion
+Command: commit
+Game tester: Orion
+Command: commit suidice
+Game tester: Orion
+Command: git commit
+Game tester: Orion
+Command: git commit
+Action: looking 
+

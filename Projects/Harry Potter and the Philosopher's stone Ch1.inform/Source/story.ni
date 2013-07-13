@@ -2102,3 +2102,4 @@ carry out timing:
 	say "the time is [time of day].".
 understand "time of day" as timing.
 understand "loook" as looking.
+understand "load" as restoring the game.
