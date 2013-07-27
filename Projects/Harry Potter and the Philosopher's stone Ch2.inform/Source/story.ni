@@ -24,7 +24,53 @@ carry out requesting item location:
 		say "[noun] is [if noun is engaged]engaged[otherwise]not engaged[end if].";
 	otherwise:
 		say "[noun] is off-stage.".
-
+the file of part 2 Error reports is called "parttwoerrors".
+error reporting is an action applying to one topic.
+understand "report error [text]" as error reporting.
+error report retrieving is an action applying to nothing.
+understand "error report" as error report retrieving.
+understand "error reports" as error report retrieving.
+understand "all error report" as error report retrieving.
+understand "all error reports" as error report retrieving.
+carry out error report retrieving:
+	if the player's command includes "all":
+		say "All error reports:[line break][text of the file of part 2 error reports]";
+	otherwise:
+		say "This game's error reports:[line break][text of the file of part 2 current error reports][line break]".
+error number is a list of indexed text that varies. 
+file of part 2 current error reports is called "parttwocurrenterrors".
+rule for printing a parser error when the player's command includes "report error":
+	cut the matched text;
+	say "Error noted.";
+	append "Game tester: [gametester]. Error [number of entries in error number plus 1][no line break]: [the player's command][line break]" to the file of part 2 error reports;
+	add "," to error number;
+	append "Error [number of entries in error number plus 1][no line break]: [the player's command]" to file of part 2 current error reports instead.	
+carry out error reporting:
+	if the player's command includes "report error":
+		cut the matched text;
+		say "Error noted.";
+		append "Error [number of entries in error number plus 1][no line break]: [the player's command][line break]" to file of part 2 current error reports;
+		add "," to error number;
+		append "Game tester: [gametester]. Error [number of entries in error number][no line break]: [the player's command][line break]" to the file of part 2 error reports.
+gametester is indexed text that varies.
+when play begins:
+	now the command prompt is "Name: ".
+after reading a command when the command prompt is "Name: ":
+	unless the player's command includes "test":
+		now gametester is the player's command;
+		say "Your name for this pre-release test is '[gametester]'.[line break]";
+		now the command prompt is ">" instead;
+	otherwise:
+		continue the action.
+when play begins:
+	write "" to the file of part 2 current error reports.
+clearing all error reports is an action out of world.
+understand "clear error reports" as clearing all error reports.
+understand "clear all error reports" as clearing all error reports.
+carry out clearing all error reports:
+	say "You clear the error report section.";
+	write "" to file of part 2 error reports.
+	
 chapter 2 - The Vanishing Glass
 
 current chapter is a number that varies. current chapter is 2.
@@ -33,7 +79,7 @@ Dudley's birthday breakfast is a scene.
 Dudley's birthday breakfast begins when play begins.
 Dudley's birthday breakfast ends when the venture of Dudley's birthday breakfast is success.
 Dursley's house is a region.
-Harry Potter is a person. the player is Harry Potter. Harry Potter is wearing a shirt. harry Potter is wearing pants.
+Harry Potter is a person. the player is Harry Potter.
 Cupboard under the stairs is a room. it is in Dursley's house.
 Include Rideable Vehicles by Graham Nelson.
 Include Menus by Emily Short.
@@ -82,8 +128,13 @@ after doing anything when the location is Cupboard under the stairs:
 		continue the action;
 	else:
 		continue the action.
-Aunt Petunia is a person.  the description is "Aunt Petunia's even bossier than Uncle Vernon. She hates things being dirty.".
-Uncle Vernon is a person. the description is "Large and porky, with very little neck, Uncle Vernon loves bossing you around. Only exercise he gets.".
+clothing is a kind of thing. clothing is wearable.
+shirt is a kind of clothing. 
+pants is a kind of clothing.
+all people wear a shirt.
+all people wear pants.
+Aunt Petunia is a woman.  the description is "Aunt Petunia's even bossier than Uncle Vernon. She hates things being dirty.".
+Uncle Vernon is a person. the description is "Large and porky, with very little neck, Uncle Vernon loves bossing you around. it's the only exercise he gets.".
 newspaper is a thing. it is in kitchen. newspaper is undescribed.
 understand "paper" as newspaper.
 before taking newspaper:
@@ -108,10 +159,9 @@ rule for printing the name of uncle vernon when looking:
 		say "Uncle Vernon".
 Dudley is a person. The description is "Larger than Uncle Vernon, who is not an inconsiderable size, Dudley would look like a pig in a wig if the average pig was a lot larger.".
 Bed is a container in Cupboard under the stairs. it is open and not openable. it is unlocked and not lockable. Harry Potter is in bed.
-The description of Cupboard under the stairs is "You can[if glasses are not worn] barely[end if] see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...[if glasses are not worn][paragraph break]I need my glasses.[end if]".
+The description of Cupboard under the stairs is "You can[if glasses are not worn] barely[end if] see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...[if glasses are not worn][paragraph break]You need yout glasses.[end if]".
 Hall is a room. It is in Dursley's house.
 Cupboard door is a door. it is south of Cupboard under the stairs and north of Hall. it is closed and openable. it is unlocked and lockable.
-Clothing is a kind of thing. clothing is wearable.
 a pair of socks is clothing in Cupboard under the stairs.
 report wearing pair of socks:
 	say "You flick a spider off the socks and hurriedly put them on." instead.
@@ -142,10 +192,10 @@ report playing:
 	say "how can you play that?".
 report playing chess set:
 	say "You get the chess set out and fiddle with it for a while.".
-a roll of sellotape is a thing in Cupboard under the stairs. The description is "You thought you'd keep this after Dudley kept breaking my glasses.".
+a roll of sellotape is a thing in Cupboard under the stairs. The description is "You thought you'd keep this after Dudley kept breaking your glasses.".
 glasses is a thing in Cupboard under the stairs. it is wearable. The description is "At least they had the common decency to get you glasses. Then again, if they didn't, you'd be useless to them, wouldn't you? ".
 after going through cupboard door for the first time:
-	say "'Get a move on, I want you to look after the bacon. And don't you dare let it burn, I want everything perfect on Duddy's birthday.'. You see the kitchen door slam as Petunia walks through and closes it. The sound of the frying pan being put on the cooker emenates from the kitchen. You'd better cook the breakfast.";
+	say "'Get a move on, I want you to look after the bacon. And don't you dare let it burn, I want everything perfect on Duddy's birthday.' [line break]You see the kitchen door slam as Petunia walks through and closes it. The sound of the frying pan being put on the cooker emenates from the kitchen. You'd better cook the breakfast.";
 	continue the action.
 groaning is an action applying to nothing.
 understand "groan" as groaning.
@@ -154,12 +204,15 @@ report groaning when the location is hall:
 		say "'What did you say?' snaps Aunt Petunia.";
 	else:
 		say "You groan.".
-every turn when the map region of the location is dursley's house:
-	if the location is not kitchen:
-		if the time of day is 7:50 am:
-			say "Aunt Petunia comes into the room and grabs you by the scruff of the neck, and drags you to the kitchen to cook Dudley's bacon.";
-			move Harry Potter to the kitchen;
-			now cooker is engaged;
+every turn during dudley's birthday breakfast:
+	if the map region of the location is dursley's house:
+		if the location is not kitchen:
+			if the time of day is 7:50 am:
+				say "Aunt Petunia comes into the room and grabs you by the scruff of the neck, and drags you to the kitchen to cook Dudley's bacon.";
+				move Harry Potter to the kitchen;
+				now cooker is engaged;
+			otherwise:
+				continue the action;
 		otherwise:
 			continue the action;
 	otherwise:
@@ -362,10 +415,8 @@ Petunia is in kitchen.
 food is a kind of thing. it is edible.
 kitchen table is a thing in kitchen. 
 the description of kitchen table is "Oh, there's the table! You couldn't see it under all of Dudley's presents.".
-toast is a kind of food.  There are two pieces of toast on kitchen table. 
-carry out examining toast:
-	say "this looks like it's been here for 10 years..." instead;
-	rule succeeds.
+there are two pieces of toast on the table.
+the description of toast is "this looks like it's been here for 10 years..." .
 present is a kind of thing. there are 37 presents in kitchen.
 the description of presents is "It looks as though Dudley got that new computer he wanted, not to mention his second television and the racing bike. Why would he want a bike though? The only exercise he enjoys is beating you up. Not that he can catch you very easily.".
 after reading a command when the location is kitchen:
@@ -425,26 +476,19 @@ report dropping eggs:
 	remove noun from play;
 	say "you drop the egg[s] and can now see a small puddle of egg goo at your feet." ;
 	if the map region of the location is Dursley's house:
-		say "'Clean that mess up!' screeches Aunt Petunia." instead.
+		if petunia is in kitchen:
+			say "'Clean that mess up!' screeches Aunt Petunia." instead.
 test me with "get up/wear glasses/s/w".
 before going during Dudley's birthday breakfast:
 	if the location is kitchen:
-		say "Dudley hasn't started his breakfast yet. You shouldn't go yet, if you care for my health." instead.
+		say "Dudley hasn't started his breakfast yet. You shouldn't go yet, if you care for your health." instead.
 Dudley is in kitchen.
-ph_rang is a number that varies. ph_rang is 0.
-after doing anything when the location is kitchen:
-	if Harry Potter is in kitchen for 3 turns:	
-		if ph_rang is 0:
-			say "The telephone rings in the living room. Aunt Petunia goes to get it.";
-			now Aunt Petunia is in hall;
-			now ph_rang is 1;
-		otherwise:
-			continue the action;
-	otherwise:
-		continue the action.
 Piers polkiss is a person.
-after doing anything when the location is kitchen during Dudley's birthday breakfast:
-	if Harry Potter is in kitchen for 6 turns:
+after doing anything when the location is kitchen during dudley's birthday breakfast:
+	if Harry Potter is in kitchen for 3 turns:	
+		say "The telephone rings in the living room. Aunt Petunia goes to get it.";
+		now Aunt Petunia is in hall;
+	otherwise if Harry Potter is in kitchen for 6 turns:
 		now Aunt Petunia is in kitchen;
 		say "Aunt Petunia enters the kitchen looking angry and worried. 'Bad news, Vernon. Mrs Figg's broken her leg. She can't take him' she says, jerking her head towards you. Dudley looks horrified. 'He's not coming on my birthday!'[run paragraph on]";
 		if glulx timekeeping is supported:
@@ -481,7 +525,8 @@ report listening during Dudley's birthday breakfast:
 	if Dudley is in kitchen:
 		say "You hear the sound of Dudley loudly ripping open his presents." instead.
 understand "load" as restoring the game.
-Garden is a room. it is in Dursley's house.
+a multiroad is a kind of room.
+Garden is a multiroad. it is in Dursley's house.
 front door is a door. it is east of hall. it is west of garden.
 car is a vehicle. it is in garden. it is unlocked and lockable. it is closed and openable. it is transparent.
 understand "car door" as car.
@@ -489,9 +534,9 @@ The zoo is a scene.
 the zoo begins when the venture of Dudley's birthday breakfast is success.
 the zoo ends when the venture of the zoo is success.
 after doing anything during the zoo:
-	if the map region of the location is Dursley's house:
+	if the map region of the location is Dursley's house :
 		if Harry Potter is not in car:
-			if Petunia is in car for 5 turns:
+			if Petunia is in car for 4 turns:
 				say "'Hurry up!' Shrieks Petunia.";
 			otherwise:
 				continue the action;
@@ -503,3 +548,20 @@ Living-room is a room. it is in Dursley's house.
 living-room door is a door. it is south of hall and north of living-room.
 understand "wear [things]" as wearing.
 understand "loook" as looking.
+understand "eggs" as egg. 
+after entering car during the zoo:
+	say "'Everyone here?' says Uncle Vernon, craning his neck to check if everyone managed the short walk from the kitchen to the massively oversized and expensive company car.[run paragraph on][wait 2000 ms][line break]'Yes, let's go, let's go!' chorus Dudley and Piers.".
+the car allows seated and standing.
+a multiroad is a kind of room.
+A road is a kind of room.
+Definition: a room is offroad if it is not a road.
+ Instead of going by a vehicle (called the auto) to somewhere offroad:
+	unless going by a vehicle to a multiroad:
+	 	say "You can't drive the [the auto] off-road.";
+	 otherwise:
+		continue the action.
+instead of exiting from a vehicle when the vehicle is in a road:
+	say "That seems rather suicidal.".
+instead of exiting from a rideable vehicle when the rideable vehicle is in a road:
+	say "That seems rather suicidal.".
+highway is a road. it is north of garden.

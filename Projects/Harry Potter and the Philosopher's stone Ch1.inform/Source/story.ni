@@ -53,14 +53,14 @@ before printing the banner text when bannerprinted is 0:
 Uncle Vernon's Scene is a scene.
 npcm is a kind of person. 
 npcf is a kind of woman.
-top is a kind of thing. it is wearable.
+shirt is a kind of thing. it is wearable.
 pants is a kind of thing. it is wearable.
 all npcms wear pants.
 all npcfs wear pants.
-all npcms wear a top.
-all npcfs wear a top.
+all npcms wear a shirt.
+all npcfs wear a shirt.
 the player is dursley.
-  a multiroad is a kind of room.
+a multiroad is a kind of room.
 Underlying relates various things to one thing.
 the verb to underlie (he underlies, they underlie, he underlay, it is underlying, he is underlying) implies the underlying relation.
 the verb to overlay (he is overlaying, they  overlay, he overlay, it is overlaying, he is overlaying) implies the reversed underlying relation.
@@ -646,7 +646,7 @@ after not opening car, say "Hmm... I think the car keys are in my suitcase.".
 after not unlocking car with something, say "Hmm... I think the car keys are in my suitcase.".
 outdoors is a kind of room.
 understand "garage door" as garage.
- Definition: a room is offroad if it is not a road.
+Definition: a room is offroad if it is not a road.
 instead of going to a road when the player is not in a vehicle:
 	unless road is highway:
 		unless lily'sbroom is occupied:
@@ -665,12 +665,10 @@ instead of going to a road when the player is not in a vehicle:
 		say "You need a vehicle to do that.".
 		
  Instead of going by a vehicle (called the auto) to somewhere offroad:
-	if going to Garden:
-		continue the action;
-	if going to grunnings carpark:
-		continue the action;
-	otherwise:
-	 	say "You can't drive the [the auto] off-road.".
+	unless going by a vehicle to a multiroad:
+	 	say "You can't drive the [the auto] off-road.";
+	 otherwise:
+		continue the action.
 [fix description so it tells if people are there at the right times]
 the description of the kitchen is "You look around the kitchen [if player is dudley]from your highchair [otherwise if player is petunia]from your chair [otherwise][end if]and see [if petunia is in kitchen][petunia][end if][if dudley is in kitchen][dudley][otherwise if dudley is on highchair][dudley][end if][if dursley is in kitchen][dursley][end if][if cereal is on-stage]cereal all over the walls, [end if]and a fridge.".
 
@@ -1609,6 +1607,12 @@ understand "clear all player reports" as clearing player command report.
 carry out clearing player command report:
 	say "You clear the player report section.";
 	write "" to file of player commands.
+clearing all error reports is an action out of world.
+understand "clear error reports" as clearing all error reports.
+understand "clear all error reports" as clearing all error reports.
+carry out clearing all error reports:
+	say "You clear the error report section.";
+	write "" to file of error reports.
 file of current player commands is called "currentplayereports".
 taking another person's inventory is an action applying to one visible thing.
 understand "inv [any person]" as taking another person's inventory.

@@ -49,3 +49,175 @@ Game tester: Orion
 Command: git commit
 Action: looking 
 
+Action: looking 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Game tester: Orion
+Command: nw
+Action: going northwest 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: open garage
+Action: opening garage 
+
+Game tester: Orion
+Command: get in garage
+Action: entering garage 
+
+Game tester: Orion
+Command: turn on light
+Action: switching on light switch 
+
+Game tester: Orion
+Command: close garage
+Action: closing garage 
+
+Game tester: Orion
+Command: get in ferrari
+Action: entering Ferrari Enzo 
+
+Game tester: Orion
+Command: open garage
+Action: opening garage 
+
+Game tester: Orion
+Command: press button
+Action: switching on start button 
+
+Action: looking 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Action: looking 
+
+Game tester: orion
+Command: clear all error reports
+Game tester: orion
+Command: clear error reports
+Action: looking 
+
+Game tester: orion
+Command: clear all error reports
+Game tester: orion
+Command: clear error reports
+Action: looking 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Game tester: Orion
+Command: gonear car
+Game tester: Orion
+Command: get in car
+Action: entering the car 
+
+Game tester: Orion
+Command: open car
+Action: opening the car 
+
+Game tester: Orion
+Command: open sesame
+Action: universal opening 
+
+Game tester: Orion
+Command: get in car
+Action: entering the car 
+
+Game tester: Orion
+Command: apparate to kitchen
+Action: teleporting to the kitchen 
+
+Game tester: Orion
+Command: change to dudley
+Action: changing player Dudley 
+
+Game tester: Orion
+Command: move petunia to harry
+Game tester: Orion
+Command: move petunia to toast
+Action: moving to Petunia 
+
+Game tester: Orion
+Command: look toast
+Action: examining the piece of toast 
+
+Game tester: Orion
+Command: look petunia
+Game tester: Orion
+Command: change to petunia
+Action: changing player Petunia 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: get out
+Action: exiting 
+
+Game tester: Orion
+Command: get off
+Action: exiting 
+
+Action: getting off the kitchen table 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: gonear car
+Game tester: Orion
+Command: open car
+Action: opening the car 
+
+Game tester: Orion
+Command: get in car
+Action: entering the car 
+
+Game tester: Orion
+Command: close door
+Action: closing the car 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: get out
+Action: exiting 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
