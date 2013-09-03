@@ -10,7 +10,7 @@ release to "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philo
 
 ! Blorb instructions
 
-storyfile leafname "Harry Potter and the philosophe.gblorb"
+storyfile leafname "Harry Potter and the Philosophe.gblorb"
 storyfile "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2.inform\Build\output.ulx" include
 ifiction "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2.inform\Metadata.iFiction" include
 cover "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
@@ -21,7 +21,7 @@ picture 1 "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jp
 placeholder [IFID] = "294718A6-A2A8-46FC-9C43-0D99FCEA4FFE"
 placeholder [RELEASE] = "1"
 placeholder [YEAR] = "2013"
-placeholder [TITLE] = "Harry Potter and the philosopher's stone"
+placeholder [TITLE] = "Harry Potter and the Philosopher's Stone"
 placeholder [AUTHOR] = "Orion Zymaris"
 placeholder [BLURB] = "A work of interactive fiction."
 

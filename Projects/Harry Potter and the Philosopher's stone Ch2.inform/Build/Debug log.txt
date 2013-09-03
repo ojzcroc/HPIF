@@ -6,7 +6,7 @@ Inform called as: C:\Program Files\Inform 7\Compilers\ni -rules C:\Program Files
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-I've now read your source text, which is 4551 words long.
+I've now read your source text, which is 7424 words long.
 
 
 -----------------------------------------------------
@@ -24,11 +24,12 @@ I've also read Real-Time Delays by Erik Temple, which is 862 words long.
 I've also read Telephones by George Tryfonas, which is 1803 words long.
 I've also read Postures by Emily Short, which is 2184 words long.
 I've also read Basic Screen Effects by Emily Short, which is 2155 words long.
+I've also read hpmenu for chapter 2 by Orion Zymaris, which is 19 words long.
 I've also read After Not Doing Something by Ron Newcomb, which is 276 words long.
 I've also read Plurality by Emily Short, which is 3141 words long.
 I've also read HPMenu by Orion Zymaris, which is 650 words long.
 I've also read Door Directions by Orion Zymaris, which is 408 words long.
-I've also read Cheats by Orion Zymaris, which is 1330 words long.
+I've also read Cheats by Orion Zymaris, which is 1392 words long.
 I've also read Wizard Money by Orion Zymaris, which is 218 words long.
 I've also read Glulx Entry Points by Emily Short, which is 1341 words long.
 
@@ -170,7 +171,7 @@ Providing for a total heap of 8192, given requirement of 8192
 Phase XIII ... Compilation now complete
 -----------------------------------------------------
 
-Total of 206 files written as streams.
+Total of 210 files written as streams.
 
 That concludes the debugging log from this run of Inform.
 Its contents were as follows, and can be changed by placing

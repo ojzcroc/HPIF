@@ -5,7 +5,7 @@
     <key>0</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2.inform\Source\story.ni</string>
         <key>Line</key><integer>1</integer>
-        <key>Title</key><string>"Harry Potter and the philosopher's stone" by Orion Zymaris</string>
+        <key>Title</key><string>"Harry Potter and the Philosopher's Stone" by Orion Zymaris</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
@@ -1207,146 +1207,153 @@
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>172</key><dict>
+        <key>Filename</key><string>D:\zym0001\Documents\Inform\Extensions\orion zymaris\hpmenu for chapter 2.i7x</string>
+        <key>Line</key><integer>1</integer>
+        <key>Title</key><string>hpmenu for chapter 2 by Orion Zymaris begins here</string>
+        <key>Level</key><integer>0</integer>
+        <key>Indentation</key><integer>0</integer>
+    </dict>
+    <key>173</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\Inform\Extensions\ron newcomb\after not doing something.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>After Not Doing Something by Ron Newcomb begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>173</key><dict>
+    <key>174</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\plurality.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Version 9 of Plurality by Emily Short begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>174</key><dict>
+    <key>175</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\plurality.i7x</string>
         <key>Line</key><integer>7</integer>
         <key>Title</key><string>Section 1 - Tracking Last Item</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>175</key><dict>
+    <key>176</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\plurality.i7x</string>
         <key>Line</key><integer>32</integer>
         <key>Title</key><string>Section 2 - Verbs</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>176</key><dict>
+    <key>177</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\plurality.i7x</string>
         <key>Line</key><integer>120</integer>
         <key>Title</key><string>Section 3 - Pronouns</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>177</key><dict>
+    <key>178</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\plurality.i7x</string>
         <key>Line</key><integer>502</integer>
         <key>Title</key><string>Section 4 - Enumeration</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>178</key><dict>
+    <key>179</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\Inform\Extensions\orion zymaris\hpmenu.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>HPMenu by Orion Zymaris begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>179</key><dict>
+    <key>180</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\Inform\Extensions\orion zymaris\door directions.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Door Directions by Orion Zymaris begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>180</key><dict>
+    <key>181</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\Inform\Extensions\orion zymaris\cheats.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Cheats by Orion Zymaris begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>181</key><dict>
+    <key>182</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\Inform\Extensions\orion zymaris\wizard money.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Wizard Money by Orion Zymaris begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>182</key><dict>
+    <key>183</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\glulx entry points.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Version 9 of Glulx Entry Points (for Glulx only) by Emily Short begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>183</key><dict>
+    <key>184</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\glulx entry points.i7x</string>
         <key>Line</key><integer>8</integer>
         <key>Title</key><string>Section - New rulebooks</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>184</key><dict>
+    <key>185</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\glulx entry points.i7x</string>
         <key>Line</key><integer>26</integer>
         <key>Title</key><string>Section - Global variables</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>185</key><dict>
+    <key>186</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\glulx entry points.i7x</string>
         <key>Line</key><integer>34</integer>
         <key>Title</key><string>Section - Gestalts</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>186</key><dict>
+    <key>187</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\glulx entry points.i7x</string>
         <key>Line</key><integer>80</integer>
         <key>Title</key><string>Section - IdentifyGlkObject routine</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>187</key><dict>
+    <key>188</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\glulx entry points.i7x</string>
         <key>Line</key><integer>113</integer>
         <key>Title</key><string>Section - HandleGlkEvent routine</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>188</key><dict>
+    <key>189</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\glulx entry points.i7x</string>
         <key>Line</key><integer>163</integer>
         <key>Title</key><string>Section - Command-counting rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>189</key><dict>
+    <key>190</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\glulx entry points.i7x</string>
         <key>Line</key><integer>172</integer>
         <key>Title</key><string>Section - Input-cancelling rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>190</key><dict>
+    <key>191</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\glulx entry points.i7x</string>
         <key>Line</key><integer>187</integer>
         <key>Title</key><string>Section - Command showing rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>191</key><dict>
+    <key>192</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\emily short\glulx entry points.i7x</string>
         <key>Line</key><integer>200</integer>
         <key>Title</key><string>Section - Command pasting rules</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>192</key><dict>
+    <key>193</key><dict>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>scene understood is a scene which varies</string>
         <key>Level</key><integer>0</integer>
