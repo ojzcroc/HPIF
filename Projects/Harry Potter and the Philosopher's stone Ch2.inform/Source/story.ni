@@ -1,5 +1,7 @@
 "Harry Potter and the Philosopher's Stone" by Orion Zymaris
 
+The story headline is "Influenced by 'Harry Potter and the Philosopher's stone' by J.K. Rowling.".
+
 part 0 - Test facilities - not for release
 
 when play begins:
@@ -168,7 +170,7 @@ rule for printing the name of uncle vernon when looking:
 	otherwise:
 		say "Uncle Vernon".
 Dudley is a person. The description is "Larger than Uncle Vernon, who is not an inconsiderable size, Dudley would look like a pig in a wig if the average pig was a lot larger.".
-Bed is a container in Cupboard under the stairs. it is open and not openable. it is unlocked and not lockable. Harry Potter is in bed.
+Bed is a container in Cupboard under the stairs. it is open and not openable. it is unlocked and not lockable. it is enterable. Harry Potter is in bed.
 The description of Cupboard under the stairs is "You can[if glasses are not worn] barely[end if] see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...[if glasses are not worn][paragraph break]You need your glasses.[end if]".
 every turn during dudley's birthday breakfast:
 	if the player is not harry potter:
@@ -204,8 +206,6 @@ the description of Harry Potter is "You're rather small and skinny for your age.
 a chess set is a thing in Cupboard under the stairs. The description is "A battered old chess set you found in the corner of the cupbard. However boring it might be, it's less boring than being lectured by Uncle Vernon.".
 playing is an action applying to one thing.
 understand "play [something]" as playing.
-report playing:
-	say "how can you play that?".
 report playing chess set:
 	say "You get the chess set out and fiddle with it for a while.".
 a roll of sellotape is a thing in Cupboard under the stairs. The description is "You thought you'd keep this after Dudley kept breaking your glasses.".
@@ -613,8 +613,9 @@ instead of exiting from a vehicle when the vehicle is in a road:
 	say "That seems rather suicidal.".
 instead of exiting from a rideable vehicle when the rideable vehicle is in a road:
 	say "That seems rather suicidal.".
-highway is a road. it is north of garden. the description is "The highway is filled with large company cars like your uncle's, and people roaring around on motorbikes.".
-test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/wait/wait/wait/n/w/eat knickerbocker/e/s/e/look at snake/w/s/get in car/get out/w".
+Privet'sstreets is a region.
+highway is a road in Privet'sstreets. it is north of garden. the description is "The highway is filled with large company cars like your uncle's, and people roaring around on motorbikes.".
+test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/wait/wait/wait/n/w/eat knickerbocker/e/s/e/look at snake/w/s/get in car/get out/w/n/get in bed".
 understand "bike" or "motorbike" or "motorcycle" or "dream" or "dreams" or "nightmare" or "flying bike" or "flying motorbike" or "flying motorcycle" as "[dream]".
 after entering car:
 	set pronouns from uncle vernon;
@@ -793,4 +794,145 @@ after entering car:
 		increase time of day by 30 minutes.
 after going west when the location is hall:
 	say "'Bye Dudley', says Piers. The front door slams as he leaves. Uncle Vernon rounds on you, and says 'Go - cupboard - stay - no meals,' before collapsing into a chair. Aunt Petunia runs to fetch him some brandy.".
-
+Dining room is a room in dursley's house.
+Toilets is a room in dursley's house. it is northeast of hall.
+the hall door is a door. the printed name is "Dining room door". the hall door is northeast of dining room. the hall door is southwest of hall.
+the living room door is a door. the living room door is east of dining room. the living room door is west of living-room.
+Landing is a room in dursley's house.
+Staircase is a door. it is open and not openable.  staircase is above hall and below landing.
+Bathroom is a room in dursley's house. it is west of landing.
+Dursley's bedroom is a room in dursley's house.
+Dudley's bedroom is a room in dursley's house.
+Dudley's second room is a room in dursley's house.
+Dursley's bedroom door is a door. it is southeast of landing and northwest of dursley's bedroom.
+Dudley's bedroom door is a door. it is northwest of landing and southeast of dudley's bedroom.
+Dudley's second room door is a door. it is northeast of landing and southwest of dudley's second room.
+attic is a room in dursley's house.
+attic stairs is a door. it is open and openable. it is above landing and below attic.
+the mantlepiece is a supporter in living-room. it is not portable.
+photo is a kind of thing. 
+there are five photos on the mantlepiece.
+The description of photos is "You see photos of a large, blond boy riding his first bicycle, on a roundabout at the fair, playing a computer game with his father, being hugged and kissed by his mother.".
+Instead of taking a photo, say "You should leave these. They're family possessions. And Uncle Vernon would kill you if you took one.".
+living-room door is a door. it is south of hall and north of living-room. the printed name is "the living-room door".
+Piano is a supporter in living-room.
+sheet music is a thing on piano.
+understand "play [something]" as playing.
+understand "play with [something]" as playing.
+report playing:
+	say "You attempt to play [noun], but to no avail.".
+report playing piano:
+	say "You sit down, and bash out something reminiscent of an old Beatles song." instead.
+Stool is a chair in living-room.
+Armchair is a chair in living-room.
+understand "chair" as Armchair.
+Couch is a chair in living-room.
+Television is a device in living-room.
+understand "TV" as television.
+There are 5 chairs in dining room. 
+dining room table is a thing in dining room. table is fixed in place.
+a set of drawers is a thing in Dudley's bedroom. it is not portable. the description of set of drawers is "Another hoard of Dudley's favourite toys..". 
+Dudley's drawers is a container. it is closed and openable.
+instead of opening set of drawers, try opening Dudley's drawers.
+there are seven small toys in dudley's drawers.
+instead of searching the set of drawers, try searching Dudley's drawers.
+understand "drawer" as Dudley's drawers.
+Dudley's wardrobe is a container in dudley's second room. it is not portable. it is closed and openable.
+the description of dudley's second room is "A place for Dudley to keep his old toys. Nearly everything in here is broken.".
+broken toys is a thing in dudley's second room. it is fixed in place. the description of broken toys is "You can see bits and pieces of broken toys all over the place.".
+Bath is a container in bathroom. it is open and not openable. it is not portable. it is enterable.
+Toilet2 is a thing in bathroom. the description is "As clean as the rest of the room.". the printed name is "Toilet".
+understand "toilet" as toilet2.
+report using toilet2:
+	say "That isn't vital right now." instead.
+Sink2 is a thing in bathroom. the description is "One of the few things to escape Petunia's scrubbing, the sink is a little smudged and dirty.". the printed name is "Sink".
+understand "sink" as sink2.
+report using sink2:
+	say "You turn on the tap, rub some soap into your hands, and scrub them thoroughly." instead.
+Tap2 is a device. it is part of sink2. the printed name is "Tap".
+understand "tap" as tap2.
+instead of turning tap2, try using sink2 instead.
+instead of switching on tap2, try using sink2 instead.
+instead of using tap2, try using sink2 instead.
+understand "faucet" as tap2.
+Privet Drive is a room in Privet'sstreets.. it is east of garden. the description of Privet Drive is "your garden is to the west.".
+jumping out of is an action applying to one thing.
+understand "jump out of [bedroomwindow]" as jumping out of.
+understand "jump out [bedroomwindow]" as jumping out of.
+understand "jump [bedroomwindow]" as jumping out of.
+carry out jumping out of bedroomwindow:
+	now the player is in Privet Drive;
+	say "you jump out of the window.".
+Toilet1 is a thing in toilets. the description is "As clean as the rest of the room.".the printed name is "Toilet".
+understand "toilet" as toilet1.
+report using toilet1:
+	say "That isn't vital right now." instead.
+Sink1 is a thing in toilets. the description is "One of the few things to escape Petunia's scrubbing, because it often has water running into it.". the printed name is "Sink".
+understand "sink" as sink1.
+report using sink1:
+	say "You turn on the tap, rub some soap into your hands, and scrub them thoroughly." instead.
+Tap1 is a device. it is part of sink1. the printed name is "Tap".
+understand "tap" as tap1.
+understand "faucet" as tap1.
+instead of turning tap1, try using sink1 instead.
+instead of switching on tap1, try using sink1 instead.
+instead of using tap1, try using sink1 instead.
+bedroomwindow is a  thing. it is in dursley's bedroom. the printed name is "bedroom window".
+understand "window" as bedroomwindow.
+understand "bedroom window" as bedroomwindow.
+bedroomwindow is fixed in place. it is lit. it is described.
+understand "look [bedroomwindow]" as examining.
+understand "look out [bedroomwindow]" as examining.
+the description of bedroomwindow is "you look out the window and see the lovely gray of Surrey suburbia.".
+getting out is an action applying to nothing.
+understand "pj's" as pyjamas.
+the description of Dursley's bedroom is "You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the north-west.".
+The dursley's Bed is a thing in Dursley's bedroom.
+bed is a container. it is open.
+The dursley's Wardrobe is a container in The Dursley's Bedroom. it is closed and openable.  the description of wardrobe is "A large wooden wardrobe, made of the finest materials to please Petunia.".
+wardrobe is fixed in place.
+A Mirror is in the wardrobe. it is not portable.
+understand "cupboard" as wardrobe.
+clothing is a kind of thing. suit is a kind of clothing. muumuu is a kind of clothing. wizards robes is a clothing. tutu is a kind of clothing. tie is a kind of clothing. Pyjamas is a clothing.
+bedside table is a supporter in Dursley's bedroom.
+bedside drawer is a part of bedside table.
+the description of the bedside table is "This is your bedside table. It has a drawer attached.".
+bedside drawer is a container. it is closed and openable.
+using is an action applying to one thing.
+understand "use [something]" as using.
+report using:
+	say "What exactly do you want to use it for?".
+attic is a room in dursley's house. "As you enter the attic, you see pictures of [unless player is dudley]Dudley[otherwise]you[end if] all over the walls.[no line break]". 
+dusty box is a container. it is closed and openable. it is not portable.
+dusty box is in attic.
+a book is a kind of thing. 
+a toy is a kind of thing.
+in dusty box is three toys.
+instead of taking a toy:
+	say "[first time]If you took one of Dudley's toys, he would notice.[line break]after he spent an hour counting them.[only]You can't take that.".
+the description of a toy is "[one of] Dudley's old favourite toy[or]This was Dudley's[or]one of Dudley's favourite toys[purely at random].".
+the description of howto spoil your children handbook is  "A comprehensive guide to help you ensure the over-enrichment of your favourite child." .
+the description of drills- an unabridged history is "A full and unabridged history on the subject of drills, drilling, drillmaking, and more!".
+the description of 101 Pompous Complaints is "A list of the best of Pompous Complaints and snide remarks.".
+the description of the High calorie cookbook is "A book of the meals with the highest possible calorie content.". the description of the smeltings schoolbook is "The smeltings schoolbook [line break] owner: Vernon Dursley".
+Howto spoil your children handbook is a book in dusty box. 
+Drills- an unabridged History is a book in dusty box.
+101 Pompous Complaints is a book in dusty box.
+High calorie cookbook is a book in dusty box.
+Smeltings schoolbook is a book in dusty box.
+the printed name of howto spoil your children handbook is "how to spoil your children handbook".
+before taking howto spoil your children handbook:
+	now the printed name of howto spoil your children handbook is "how to spoil your children handbook".
+rule for printing the name of howto spoil your children handbook when listing contents of dusty box: say "[first time]and books with titles such as [only]the how to spoil your children handbook".
+every turn:
+	unless howto spoil your children handbook is in dusty box:
+		now the printed name of howto spoil your children handbook is "How to Spoil your Children Handbook".
+letter is a thing.
+before moving to:
+	if player's command includes "handbook":
+		now the printed name of howto spoil your children handbook is "How to Spoil your Children Handbook";
+		move Howto to the second noun.
+some random objects is a thing in attic. the description is "some random bits and pieces, left by Dudley.".
+after entering bed when the venture of zoo is success:
+	now the time of day is 9:00 pm;
+	say "Exhausted by the day, you collapse into bed, and fall asleep immediately.".

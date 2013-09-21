@@ -6,7 +6,7 @@ Inform called as: C:\Program Files\Inform 7\Compilers\ni -rules C:\Program Files
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-I've now read your source text, which is 19093 words long.
+I've now read your source text, which is 19065 words long.
 
 
 -----------------------------------------------------
@@ -30,7 +30,7 @@ I've also read Hpmenu for chapter 1 by Orion Zymaris, which is 1441 words long.
 I've also read Plurality by Emily Short, which is 3141 words long.
 I've also read HPMenu by Orion Zymaris, which is 650 words long.
 I've also read Door Directions by Orion Zymaris, which is 408 words long.
-I've also read Cheats by Orion Zymaris, which is 1330 words long.
+I've also read Cheats by Orion Zymaris, which is 1392 words long.
 I've also read Wizard Money by Orion Zymaris, which is 218 words long.
 I've also read Glulx Entry Points by Emily Short, which is 1341 words long.
 

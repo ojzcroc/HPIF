@@ -221,3 +221,979 @@ Game tester: Orion
 Command: s
 Action: going south 
 
+Action: looking 
+
+Action: looking 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Game tester: Orion
+Command: nw
+Action: going northwest 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: take suitcase
+Action: taking suitcase 
+
+Game tester: Orion
+Command: open sesame
+Action: universal opening 
+
+Game tester: Orion
+Command: gonear car
+Game tester: Orion
+Command: get in car
+Action: entering the car 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: get out
+Action: exiting 
+
+Game tester: Orion
+Command: u
+Action: going up 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: read ics
+Action: examining an important customer service document 
+
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: call 8953
+Game tester: Orion
+Command: then ask for a bk 44 model t
+Action: responding to customer "ask for a bk 44 model t" 
+
+Action: hanging up 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look dex
+Action: examining a rolodex 
+
+Action: dialling 12856 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to Mr. Mason 
+
+Game tester: Orion
+Command: yes
+Game tester: Orion
+Command: open suitcase
+Action: opening suitcase 
+
+Game tester: Orion
+Command: look suitcase
+Action: examining suitcase 
+
+Game tester: Orion
+Command: read papers
+Action: examining three papers 
+
+Game tester: Orion
+Command: hal 6502
+Action: responding to customer "6502" 
+
+Game tester: Orion
+Command: dhd
+Action: hanging up 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take coins
+Action: taking the pound coin 
+
+Action: taking the pound coin 
+
+Game tester: Orion
+Command: actions on
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Action: looking 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: buy doughnut
+Game tester: Orion
+Command: pay pound
+Action: giving the pound coin to the Shop attendant 
+
+Game tester: Orion
+Command: eat doughnut
+Action: eating doughnut 
+
+Game tester: Orion
+Command: eat doughnut
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Action: listening to street 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Action: listening to street 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: listening to street 
+
+Action: looking 
+
+Game tester: Orion
+Command: u
+Action: going up 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: enter office
+Action: entering the office door (north) 
+
+Action: going the the door 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: rules
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: stats
+Game tester: Orion
+Command: rules off
+Game tester: Orion
+Command: actions off
+Game tester: Orion
+Command: stats
+Action: looking 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Game tester: Orion
+Command: nw
+Action: going northwest 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: take suitcase
+Action: taking suitcase 
+
+Game tester: Orion
+Command: open sesame
+Action: universal opening 
+
+Game tester: Orion
+Command: gonear car
+Game tester: Orion
+Command: get in car
+Action: entering the car 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: get out
+Action: exiting 
+
+Game tester: Orion
+Command: u
+Action: going up 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: read ics
+Action: examining an important customer service document 
+
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: call 8953
+Game tester: Orion
+Command: then ask for a bk 44 model t
+Action: responding to customer "ask for a bk 44 model t" 
+
+Action: hanging up 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look dex
+Action: examining a rolodex 
+
+Action: dialling 12856 on the office phone 
+
+Game tester: Orion
+Command: yes
+Game tester: Orion
+Command: open suitcase
+Action: opening suitcase 
+
+Game tester: Orion
+Command: look suitcase
+Action: examining suitcase 
+
+Game tester: Orion
+Command: read papers
+Action: examining three papers 
+
+Game tester: Orion
+Command: hal 6502
+Game tester: Orion
+Command: dhd
+Game tester: Orion
+Command: look
+Action: looking 
+
+Action: hanging up 
+
+Game tester: Orion
+Command: take coins
+Action: taking the pound coin 
+
+Action: taking the pound coin 
+
+Game tester: Orion
+Command: actions on
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Action: looking 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: buy doughnut
+Game tester: Orion
+Command: pay pound
+Action: giving the pound coin to the Shop attendant 
+
+Game tester: Orion
+Command: eat doughnut
+Action: eating doughnut 
+
+Game tester: Orion
+Command: eat doughnut
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Action: listening to street 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Action: listening to street 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: listening to street 
+
+Action: looking 
+
+Game tester: Orion
+Command: u
+Action: going up 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: enter office
+Action: entering the office door (north) 
+
+Action: going the the door 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: rules
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: stats
+Game tester: Orion
+Command: rules off
+Game tester: Orion
+Command: actions off
+Game tester: Orion
+Command: stats
+Action: looking 
+
+Action: looking 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Game tester: Orion
+Command: gonear work
+Game tester: Orion
+Command: read ics
+Action: examining an important customer service document 
+
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: call 8953
+Game tester: Orion
+Command: ask for a bk 44 model t
+Action: hanging up 
+
+Game tester: Orion
+Command: lookk
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: read dex
+Action: examining a rolodex 
+
+Action: dialling 12856 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to Mr. Mason 
+
+Game tester: Orion
+Command: sure
+Game tester: Orion
+Command: try the qz 77
+Action: responding to customer "the qz 77" 
+
+Game tester: Orion
+Command: is it
+Action: hanging up 
+
+Game tester: Orion
+Command: gonear shop
+Game tester: Orion
+Command: take bread
+Game tester: Orion
+Command: take doughnut
+Action: taking doughnut 
+
+Game tester: Orion
+Command: eat doughnut
+Action: eating doughnut 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: listen
+Action: listening to street 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: listening to street 
+
+Action: looking 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: looking 
+
+Action: listening to street 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Action: listening to street 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Action: listening to street 
+
+Action: looking 
+
+Game tester: Orion
+Command: gonear work
+Game tester: Orion
+Command: read ics
+Action: examining an important customer service document 
+
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: call 8953
+Game tester: Orion
+Command: then ask for a hal 6502
+Action: responding to customer "ask for a hal 6502" 
+
+Action: hanging up 
+
+Game tester: Orion
+Command: read dex
+Action: examining a rolodex 
+
+Action: dialling 12856 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to Mr. Mason 
+
+Game tester: Orion
+Command: yes
+Game tester: Orion
+Command: try the qz 77
+Action: responding to customer "the qz 77" 
+
+Game tester: Orion
+Command: ok
+Action: hanging up 
+
+Game tester: Orion
+Command: gonear street
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: opening the door 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: take roll
+Action: taking the small roll 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Game tester: Orion
+Command: locate baker's
+Game tester: Orion
+Command: locate bakers
+Game tester: Orion
+Command: room stats
+Action: looking 
+
+Game tester: Orion
+Command: gonear work
+Game tester: Orion
+Command: read ics
+Action: examining an important customer service document 
+
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: call 8953
+Game tester: Orion
+Command: then ask for a hal 6502
+Action: responding to customer "ask for a hal 6502" 
+
+Action: hanging up 
+
+Game tester: Orion
+Command: read dex
+Action: examining a rolodex 
+
+Action: dialling 12856 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to Mr. Mason 
+
+Game tester: Orion
+Command: try the qz 77
+Game tester: Orion
+Command: ok
+Game tester: Orion
+Command: gonear street
+Game tester: Orion
+Command: e
+Action: hanging up 
+
+Action: going east 
+
+Action: opening the door 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: take roll
+Action: taking the small roll 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Game tester: Orion
+Command: locate baker's
+Game tester: Orion
+Command: locate bakers
+Game tester: Orion
+Command: room stats
+Action: listening to street 
+
+Action: looking 
+
+Game tester: Orion
+Command: gonear work
+Game tester: Orion
+Command: read ics
+Action: examining an important customer service document 
+
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: call 8953
+Game tester: Orion
+Command: then ask for a hal 6502
+Action: responding to customer "ask for a hal 6502" 
+
+Action: hanging up 
+
+Game tester: Orion
+Command: read dex
+Action: examining a rolodex 
+
+Action: dialling 12856 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to Mr. Mason 
+
+Game tester: Orion
+Command: try the qz 77
+Game tester: Orion
+Command: ok
+Game tester: Orion
+Command: gonear street
+Game tester: Orion
+Command: e
+Action: hanging up 
+
+Action: going east 
+
+Action: opening the door 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: take roll
+Action: taking the small roll 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to the Shop attendant 
+
+Game tester: Orion
+Command: locate baker's
+Game tester: Orion
+Command: locate bakers
+Game tester: Orion
+Command: room stats
+Action: listening to street 
+
+Game tester: Orion
+Command: gonear corridor
+Game tester: Orion
+Command: n
+Action: going north 
+
+Action: opening the the door 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: rules
+Game tester: Orion
+Command: actions
+Game tester: Orion
+Command: stats
+Game tester: Orion
+Command: call 12856
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: rules off
+Game tester: Orion
+Command: actions off
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: call 12856
+Action: dialling 12856 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to Mr. Mason 
+
+Game tester: Orion
+Command: sure
+Game tester: Orion
+Command: try the qz 77
+Action: responding to customer "the qz 77" 
+
+Game tester: Orion
+Command: ok
+Action: hanging up 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: n
+Action: looking 
+
+Action: going north 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: apparate to home
+Game tester: Orion
+Command: apparate to house
+Game tester: Orion
+Command: apparate to bedroom
+Game tester: Orion
+Command: apparate to dursley's bedroom
+Action: teleporting to Dursley's bedroom 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: go to bed
+Action: entering bed 
+
+Game tester: Orion
+Command: get out
+Action: exiting 
+
+Action: looking 
+
+Action: looking 
+

@@ -208,12 +208,12 @@ It is very simple in operation (the entire carry out stage consists only of
 'now the actor carries the noun') but many checks must be performed before it
 can be allowed to happen.<p><hr><p><b>Typed commands leading to this action</b><p>
 <p class="hangingin2">&quot;take [things]&quot;</p><p class="hangingin2">&quot;get [things]&quot;</p><p class="hangingin2">&quot;pick up [things]&quot;</p><p class="hangingin2">&quot;pick [things] up&quot;</p><p class="hangingin2">&quot;take [visible things]&quot;&nbsp;<a href='inform://Extensions/Extensions/Orion%20Zymaris/Cheats.html' title="Cheats by Orion Zymaris" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
-</p><p class="hangingin2">&quot;steal [something]&quot;&nbsp;<a href="source:story.ni#line2099"><img border=0 src=inform:/Reveal.png></a></p><p><b>Named values belonging to this action</b><p>
+</p><p class="hangingin2">&quot;steal [something]&quot;&nbsp;<a href="source:story.ni#line2094"><img border=0 src=inform:/Reveal.png></a></p><p><b>Named values belonging to this action</b><p>
 previous locale&nbsp;<a href="source:story.ni#line111"><img border=0 src=inform:/Reveal.png></a> - <i>object</i><br>
 <p><b>Rules controlling this action</b><p>
 <p class="hangingin2">set action variables for&nbsp;&nbsp;&nbsp;&nbsp;<i>taking</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line113"><img border=0 src=inform:/Reveal.png></a></p>
-<br><p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything to rollerdex for the first time</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1186"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything to rollerdex for at least the second time</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1192"><img border=0 src=inform:/Reveal.png></a></p>
+<br><p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything to rollerdex for the first time</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1188"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything to rollerdex for at least the second time</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1194"><img border=0 src=inform:/Reveal.png></a></p>
 <p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>taking a noun when the noun is overlaying something (called the under-contents)</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line162"><img border=0 src=inform:/Reveal.png></a></p>
 <p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>asking someone to try doing something when the person asked is not the current interlocutor</i>&nbsp;&nbsp;<font color="#800000">giving orders needs an interlocutor rule</font>&nbsp;&nbsp;<script language="JavaScript">
 function pasteCode1790(code) {
@@ -244,11 +244,11 @@ function pasteCode1791(code) {
 <p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1582"><img border=0 src=inform:/Reveal.png></a></p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><i>NB:</i> the change greeting command to greeting rule is listed before the giving orders needs an interlocutor rule in the before rules&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </small><br>
-<br><p class="hangingin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>taking the office phone when player's command includes "Pick up phone" for the first time</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line902"><img border=0 src=inform:/Reveal.png></a></p>
+<br><p class="hangingin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>taking the office phone when player's command includes "Pick up phone" for the first time</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line904"><img border=0 src=inform:/Reveal.png></a></p>
 <p class="hangingin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>taking a toy</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line436"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>taking a photo</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1823"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>taking a photo</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1818"><img border=0 src=inform:/Reveal.png></a></p>
 <p class="hangingin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>asking the shop attendant to try doing anything</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1724"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>taking when the player's command includes "steal"</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line2100"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>taking when the player's command includes "steal"</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line2095"><img border=0 src=inform:/Reveal.png></a></p>
 <br><p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor taking</i>&nbsp;&nbsp;<font color="#800000">can't take yourself rule</font>&nbsp;&nbsp;<script language="JavaScript">
 function pasteCode1792(code) {
     var myProject = external.Project;
@@ -476,7 +476,7 @@ function pasteCode1817(code) {
 </p>
 <p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>taking a thing</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line86"><img border=0 src=inform:/Reveal.png></a></p>
 <p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything except clearing player command report</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1586"><img border=0 src=inform:/Reveal.png></a></p>
-<br><p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>taking suitcase</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line601"><img border=0 src=inform:/Reveal.png></a></p>
+<br><p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>taking suitcase</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line603"><img border=0 src=inform:/Reveal.png></a></p>
 <p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>taking something</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line215"><img border=0 src=inform:/Reveal.png></a></p>
 <p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>an actor taking</i>&nbsp;&nbsp;<font color="#800000">standard report taking rule</font>&nbsp;&nbsp;<script language="JavaScript">
 function pasteCode1818(code) {

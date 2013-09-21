@@ -1,6 +1,6 @@
 "Harry Potter and the Philosopher's stone" by "Orion Zymaris"
 
-The story headline is "Influenced by 'Harry Potter and the Philosopher's stone' by J.K. Rowling."
+The story headline is "Influenced by 'Harry Potter and the Philosopher's stone' by J.K. Rowling.".
 
 Chapter 1 - The boy who lived
 
@@ -454,7 +454,7 @@ before taking howto spoil your children handbook:
 rule for printing the name of howto spoil your children handbook when listing contents of dusty box: say "[first time]and books with titles such as [only]the how to spoil your children handbook".
 every turn during uncle vernon's scene:
 	unless howto spoil your children handbook is in dusty box:
-		now the printed name of howto spoil your children handbook is "How to Spoil your Hhildren Handbook".
+		now the printed name of howto spoil your children handbook is "How to Spoil your Children Handbook".
 letter is a small thing.
 before moving to:
 	if player's command includes "handbook":
@@ -517,12 +517,14 @@ understand "consume [something]" as eating.
 foodlevel is a kind of value. the foodlevels are uneaten, half-eaten, and eaten. all foods have a foodlevel. the foodlevel of a food is usually uneaten.
 instead of eating a food when the foodlevel of the noun is uneaten: 
 	say "You take a big bite from the [noun].";
-	now the foodlevel of the noun is half-eaten.
+	now the foodlevel of the noun is half-eaten;
+	rule succeeds.
 	
 before eating a food when the foodlevel of the noun is half-eaten:
 	say "You finish the [noun].";
 	now the foodlevel of the noun is eaten;
-	now the noun is off-stage instead.
+	now the noun is off-stage;
+	rule succeeds.
 A procedural rule:
 	ignore standard report eating rule.
 cup is a kind of thing.
@@ -1398,8 +1400,6 @@ report responding to customer when lexicon is table 9:
 before responding to customer a topic listed in the lexicon when the lexicon is table 9:
 	say "[mason entry][paragraph break]";
 	now bored is 0;
-	if glulx timekeeping is supported:
-		wait 1500 ms before continuing;
 	say "Mr. Mason continues. 'You know, we've been having a lot of strange events today. Our building site is continually being swooped by owls, even during the day. And there's also some other strange things happening. Shooting stars and the likes.'";
 	now lexicon is table 10 instead.
 	
@@ -1663,7 +1663,7 @@ after going through bakery door when the location is bakers:
 	say "'Good morning! How may i help you, sir?' asks the shop attendant.[if the player is on a broom]Wait, How are you flying that?";
 	unless shop attendant is the current interlocutor:
 		try silently saying hello to shop attendant.
-Bakers is a room. the printed name is "The Baker's".
+Bakers is a room in privet'sstreets. the printed name is "The Baker's".
 Shop attendant is an npcm in bakers. the description is "The nametag reads 'Hello! My Name is [italic type]Mr. Finnigan[roman type]'.".  He is improper-named.
 understand "Mr Finnigan" as shop attendant when shop attendant is proper-named.
 understand "Finnigan" as shop attendant when shop attendant is proper-named.
@@ -1729,8 +1729,8 @@ instead of looking when location is street:
 		try listening instead;
 	otherwise:
 		continue the action.
-after going to street when bakers is visited:
-	say "[first time]As you stroll out of the shop, you notice another group of robed people standing further down the road. I wonder what they could be talking about?[paragraph break][only][no line break]";
+after going west when bakers is visited:
+	say "As you stroll out of the shop, you notice another group of robed people standing further down the road. I wonder what they could be talking about?";
 	continue the action.
 a procedural rule: if the player is in street, ignore the block listening rule.
 alreadylooked is a number that varies. alreadylooked is 0.
@@ -1741,14 +1741,9 @@ after reading a command during uncle vernon's scene:
 				if the player's command includes "look":
 					now alreadylooked is 1;
 					try listening to instead.
-carry out listening when in street:
-	if bakers is visited:
-		say "You hear snatched whispers from the people in cloaks. 'The Potters, that's right, that's what i heard -'[line break][wait 2000 ms]yes,  their son, Harry...[paragraph break][wait 2000 ms]Potter? Petunia's relatives? I need to get back to the office and call Petunia.";
-		reject the player's command;
-	otherwise:
-		continue the action.
-
-before entering work office:
+carry out listening when the location is street:
+	say "'The Potters, that's right, that's what I heard -'[line break]'-yes, their son, Harry-'[line break]Potter? Petunia's sister's husband? I need to get back to the office and call petunia.".
+before going north when the location is corridor:
 	if bakers is visited:
 		if the venture of work is half-complete:
 			say "You rush over to the phone and pick it up, but part-way through putting in your home phone number, you realise that you're overreacting, and put the phone down.[paragraph break]";
@@ -2082,7 +2077,7 @@ instead of turning tap2, try using sink2 instead.
 instead of switching on tap2, try using sink2 instead.
 instead of using tap2, try using sink2 instead.
 understand "faucet" as tap2.
-Privet Drive is a room. it is east of garden. the description of Privet Drive is "your garden is to the west.".
+Privet Drive is a room in Privet'sstreets.. it is east of garden. the description of Privet Drive is "your garden is to the west.".
 jumping out of is an action applying to one thing.
 understand "jump out of [bedroomwindow]" as jumping out of.
 understand "jump out of [window]" as jumping out of.
