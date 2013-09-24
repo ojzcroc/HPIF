@@ -15,6 +15,8 @@ storyfile "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philos
 ifiction "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2.inform\Metadata.iFiction" include
 cover "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
 picture 1 "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
+release file "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Cover.jpg"
+release file "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Small Cover.jpg"
 
 ! Placeholder variables
 
@@ -27,9 +29,25 @@ placeholder [BLURB] = "A work of interactive fiction."
 
 ! Other material to release
 
+
+! Website instructions
+
+placeholder [ENCODEDSTORYFILE] = "Harry Potter and the Philosophe.gblorb.js"
+template path "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2 Materials\Templates"
+template path "D:\zym0001\Documents\Inform\Templates"
+template path "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Templates"
+interpreter "Quixe" "g"
+base64 "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2.inform\Build\output.ulx" to "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2 Materials\Release\interpreter\Harry Potter and the Philosophe.gblorb.js"
+
+! Website instructions
+
+template path "D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2 Materials\Templates"
+template path "D:\zym0001\Documents\Inform\Templates"
+template path "C:\Program Files\Inform 7\Inform7\Extensions\Reserved\Templates"
+css
+website "Standard"
+status instruction ||&nbsp;<a href="source:story.ni#line939"><img border=0 src=inform:/Reveal.png></a>||
 status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc391.html><img border=0 src=inform:/help.png></a>||
-status alternative ||Using 'Release along with a website'&nbsp;<a href=inform:/doc393.html><img border=0 src=inform:/help.png></a>||
-status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc394.html><img border=0 src=inform:/help.png></a>||
 status alternative ||Using 'Release along with the "Such-and-Such" file called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc389.html><img border=0 src=inform:/help.png></a>||
 status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/help.png></a>||
 status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc398.html><img border=0 src=inform:/help.png></a>||

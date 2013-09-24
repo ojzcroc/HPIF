@@ -2,7 +2,7 @@
 
 The story headline is "Influenced by 'Harry Potter and the Philosopher's stone' by J.K. Rowling.".
 
-part 0 - Test facilities - not for release
+chapter 1 - Test facilities - not for release
 
 when play begins:
 	now Harry Potter is wearing glasses;
@@ -936,3 +936,4 @@ some random objects is a thing in attic. the description is "some random bits an
 after entering bed when the venture of zoo is success:
 	now the time of day is 9:00 pm;
 	say "Exhausted by the day, you collapse into bed, and fall asleep immediately.".
+Release along with "Quixe" interpreter.

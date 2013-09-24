@@ -12,8 +12,8 @@
     <key>1</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2.inform\Source\story.ni</string>
         <key>Line</key><integer>5</integer>
-        <key>Title</key><string>part 0 - Test facilities - not for release</string>
-        <key>Level</key><integer>3</integer>
+        <key>Title</key><string>chapter 1 - Test facilities - not for release</string>
+        <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>2</key><dict>
@@ -21,7 +21,7 @@
         <key>Line</key><integer>76</integer>
         <key>Title</key><string>chapter 2 - The Vanishing Glass</string>
         <key>Level</key><integer>4</integer>
-        <key>Indentation</key><integer>2</integer>
+        <key>Indentation</key><integer>1</integer>
     </dict>
     <key>3</key><dict>
         <key>Filename</key><string>C:\Program Files\Inform 7\Inform7\Extensions\graham nelson\standard rules.i7x</string>
