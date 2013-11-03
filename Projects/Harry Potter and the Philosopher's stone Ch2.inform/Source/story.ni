@@ -7,8 +7,11 @@ chapter 1 - Test facilities - not for release
 when play begins:
 	now Harry Potter is wearing glasses;
 	now bannerprinted is 1;
-	now cheats_bin is 1;
 	try silently exiting.
+regionating is an action applying to nothing.
+understand "current region" or "region" as regionating.
+carry out regionating:
+	say "[map region of the location]".
 taking another person's inventory is an action applying to one visible thing.
 understand "inv [any person]" as taking another person's inventory.
 understand "inv of [any person]" as taking another person's inventory.
@@ -233,8 +236,6 @@ every turn during dudley's birthday breakfast:
 			continue the action;
 	otherwise:
 		continue the action.
-[every turn:
-	say time of day.]
 underlying relates various things to one thing.
 the verb to underlie (he underlies, they underlie, he underlay, it is underlying, he is underlying) implies the underlying relation.
 the verb to overlay (he is overlaying, they  overlay, he overlay, it is overlaying, he is overlaying) implies the reversed underlying relation.
@@ -615,7 +616,7 @@ instead of exiting from a rideable vehicle when the rideable vehicle is in a roa
 	say "That seems rather suicidal.".
 Privet'sstreets is a region.
 highway is a road in Privet'sstreets. it is north of garden. the description is "The highway is filled with large company cars like your uncle's, and people roaring around on motorbikes.".
-test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/wait/wait/wait/n/w/eat knickerbocker/e/s/e/look at snake/w/s/get in car/get out/w/n/get in bed".
+test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/".
 understand "bike" or "motorbike" or "motorcycle" or "dream" or "dreams" or "nightmare" or "flying bike" or "flying motorbike" or "flying motorcycle" as "[dream]".
 after entering car:
 	set pronouns from uncle vernon;
@@ -630,14 +631,14 @@ every turn during zoo:
 	if the location is highway:
 		if the player is in the car:
 			if dudley is in the car:
-				say "You hear Dudley and Piers bickering.[if the location has been highway for 2 turns]You're almost there.".				
+				say "You hear Dudley and Piers bickering.".				
 le zoo is a region. the printed name is "the zoo".
 the local zoo is a multiroad in le zoo. it is north of highway.
 understand "poke [someone]" as attacking.
 every turn during zoo:
 	if the location is highway for 3 turns:
-		try going north;
-		say "You arrive at the zoo.";
+		move car to the local zoo;
+		say "You arrive at the zoo. Uncle Vernon takes some time to park, as his car requires two spaces to do so.";
 		increase the time of day by 30 minutes;
 		try opening car.
 instead of going when in car:
@@ -652,6 +653,7 @@ after exiting from car during the zoo:
 			say "Dudley and Piers immediately push past you to get to the entrance, where they're selling ice-creams. Uncle Vernon chuckles and hops out, buying them both a large, chocolate ice-cream.";
 			now Dudley is in zoo entrance;
 			now Piers Polkiss is in zoo entrance;
+			now Uncle Vernon is in zoo entrance;
 		otherwise:
 			continue the action;
 	otherwise:
@@ -663,34 +665,35 @@ a Gorilla is a kind of person.
 Gorilla Enclosure is a room in le zoo. it is north of local zoo.
 gone_to_zoo is a number that varies. gone_to_zoo is 0.
 before going north when the location is local zoo:
-	if gorilla enclosure is not visited:
-		if gone_to_zoo is 0:
-			say "as you walk past, the lady at the entrance smiles and asks you if you would like something as well. Uncle Vernon and Aunt Petunia look at each other, before getting you a cheap lemon ice lolly. They grab you and drag you away before the lady can bestow any more kindness on you.";
-			now piers polkiss is in gorilla enclosure;
-			now dudley is in gorilla enclosure;
-			now uncle vernon is in gorilla enclosure;
-			now aunt petunia is in gorilla enclosure;
-			now Harry Potter carries the lemon ice lolly;
-			now gone_to_zoo is 1;
-			say "'Well, have a look around everyone!' says Uncle Vernon.";
-			continue the action.
+	if the player is not in car:
+		if gorilla enclosure is not visited:
+			if gone_to_zoo is 0:
+				say "as you walk past, the lady at the entrance smiles and asks you if you would like something as well. Uncle Vernon and Aunt Petunia look at each other, before getting you a cheap lemon ice lolly. They grab you and drag you away before the lady can bestow any more kindness on you.";
+				now piers polkiss is in gorilla enclosure;
+				now dudley is in gorilla enclosure;
+				now uncle vernon is in gorilla enclosure;
+				now aunt petunia is in gorilla enclosure;
+				now Harry Potter carries the lemon ice lolly;
+				now gone_to_zoo is 1;
+				say "[line break]'Well, have a look around everyone!' says Uncle Vernon. 'We've got a bit of time untill we have to go eat lunch. We should meet in the nocturnal animal ex... exh... er, room, when lunchtime comes around.' ";
+				continue the action.
 after entering zoo entrance for the first time:
 	if gone_to_zoo is 0:
 		say "as you walk past, the lady at the entrance smiles and asks you if you would like something as well. Uncle Vernon and Aunt Petunia look at each other, before getting you a cheap lemon ice lolly. They grab you and drag you away before the lady can bestow any more kindness on you.";
 		try silently exiting;
+		now gone_to_zoo is 1;
 		try going north;
 		now piers polkiss is in gorilla enclosure;
 		now dudley is in gorilla enclosure;
 		now uncle vernon is in gorilla enclosure;
 		now aunt petunia is in gorilla enclosure;
-		now gone_to_zoo is 1;
-		say "'Well, have a look around everyone!' says Uncle Vernon. 'We've got a bit of time untill we have to go eat lunch.'";
+		say "[line break]'Well, have a look around everyone!' says Uncle Vernon. 'We've got a bit of time untill we have to go eat lunch. We should meet in the nocturnal animal ex... exh... er, room, when lunchtime comes around.' ";
 		now Harry Potter carries the lemon ice lolly.
 licking is an action applying to one thing.
 understand "lick [food]" as licking.
 carry out licking:
 	say "You lick [noun].".
-cage is a container. it is closed and not openable. it is lockable and locked. it is transparent. cage is in gorilla enclosure.
+the Gorilla's cage is a container. it is closed and not openable. it is lockable and locked. it is transparent.The Gorilla's cage is in gorilla enclosure.
 there are 3 Gorillas in cage.
 the description of gorillas is "These look remarkably like Dudley; they're just missing the blond hair. And the attitude.".
 the description of Gorilla enclosure is "You can see a few people goggling through the bars at the rather bored looking gorillas. To the north is the bird room - to the south, the zoo entrance. to the east, the reptile house. and west, the monkeys exhibit.".
@@ -700,6 +703,11 @@ The bird room is a room in le zoo. it is north of gorilla enclosure.
 The marsupial place is a room in le zoo. it is east of the bird room.
 the turtle room is a room in le zoo. it is west of monkeys exhibit.
 the nocturnal room is a room in le zoo. it is north of the reptile house.
+the nocturnal room walkway is a room. the description is "north of here is the marsupial room walkway.".
+walkway stairs is a door in nocturnal room. it is above nocturnal room and below nocturnal room walkway. walkway stairs is open and not openable.
+the marsupial place walkway is a room. it is north of nocturnal room walkway. the description of marsupial place walkway is "Below, you can see the marsupial room, and the ledge onto which Dudley dropped his camera, when he was up here.".
+before examining down when the location is marsupial place walkway:
+	say "you see the marsupial place, with its strange little animals, and Dudley's camera on a ledge." instead.
 the endangered species room is a room in le zoo. it is north of the bird room.
 the description of reptile house is "to the west is the gorilla enclosure. to the north, the nocturnal room. You can see a few bored looking snakes and lizards behind the glass.".
 snake is a thing in reptile house. it is fixed in place. it is undescribed.  the description of snake is "The sign next to one of the snakes says 'Boa Constrictor, bred in Peru'.".
@@ -716,7 +724,8 @@ the description of bird room is "To the south is the gorilla exhibit. To the nor
 birds is a thing in bird room. it is fixed in place. it is undescribed. the description of birds is "Flying around, and eating seeds. Occasionally, one of them lands on someone's head.".
 understand "bird" as birds.
 the description of marsupial place is "to the west is the bird room. There are small, furry little creatures in cages all around the room.".
- marsupials is a thing in marsupial place. it is fixed in place. it is undescribed. the description of marsupials is "They're pretty cute. that's odd, one of them looks like a pink ball of fluff. Cute, though.".
+ marsupials is a thing. it is fixed in place. it is undescribed. the description of marsupials is "They're pretty cute. That's odd, one of them looks like a pink ball of fluff. Cute, though.".
+The marsupial cage is a transparent container in marsupial place. marsupials is in cage. marsupial cage is fixed in place. marsupial cage is closed and locked.
  understand "marsupial" as marsupials.
 the description of endangered species room is "To the south is the bird exhibit. Many odd, rare creatures are in here, behind glass.".
 endangered animal is a thing in endangered species room. it is fixed in place. it is undescribed. the description of endangered animal is "In here are all manner of odd creatures from exotic places.".
@@ -731,25 +740,76 @@ tortoise is a thing in turtle room. tortoise is fixed in place. it is undescribe
 understand "tortoises" as tortoise.
 turtles is a thing in turtle room. turtles is fixed in place. turtles is undescribed. the description of turtles is "the turtles are slowly wandering around their cages.".
 understand "turtle" as turtles.
-after doing anything when the map region of the location is le zoo for 7 turns:
-	now the time of day is 12 hours;
-	say "After a while of looking around the exhibits, Dudley, who has a remarkably short attention span, starts complaining. 'I want to eat', he says. 'Ok' says Uncle Vernon. 'Let's go get some food.' Dudley, Piers, Uncle Vernon, and Aunt Petunia leave without paying any attention to you. You've got to find your way to the zoo's cafe.";
-	now dudley is in the zoo cafe;
-	now piers polkiss is in the zoo cafe;
-	now vernon is in the zoo cafe;
-	now petunia is in the zoo cafe.
+Camera challenge is a scene.
+Camera challenge begins when the venture of camera challenge is pending.
+Camera challenge ends when the venture of camera challenge is success.
+every turn during the zoo:
+	if the location is nocturnal room for the first time:
+		if the venture of camera challenge is incomplete:
+			now the time of day is 12 hours;
+			say "After a while of looking around the exhibits, Dudley, who has a remarkably short attention span, starts complaining. 'I want to eat', he says. 'Ok' says Uncle Vernon. 'Let's go get some food. And Harry, Dudley lost his camera in one of the exhibits. If you want lunch anytime soon, go and get it for him.' Dudley, Piers, Uncle Vernon, and Aunt Petunia leave without paying any attention to you. You've got to find Dudley's camera, and then your way to the zoo's cafe.";
+			now dudley is in the zoo cafe;
+			now piers polkiss is in the zoo cafe;
+			now vernon is in the zoo cafe;
+			now petunia is in the zoo cafe;
+			now the venture of camera challenge is pending.
+shelf is a supporter in marsupial place. shelf is not portable.
+Dudley's camera is a thing on shelf.
+rule for printing the name of shelf when looking:
+	say "a shelf".
+a long stick is a thing in the monkeys exhibit.
+before taking Dudley's camera when the player does not have a long stick:
+	say "You can't reach the shelf, and have no idea how Dudley managed to get it up there. You something to get it down with.";
+	stop the action.
+instead of putting Dudley's camera on shelf:
+	say "You can't reach.".
+garbage chute is a container in marsupial place. garbage chute is not portable. garbage chute is undescribed.
+before taking Dudley's camera when the player has a long stick:
+	if camera is on shelf:
+		say "You use the stick to gently nudge the camera off the shelf. It falls into an open garbage chute you didn't notice beforehand.";
+		now garbage chute is described;
+		now camera is in waste disposal room;
+		stop the action.
+carry out searching garbage chute:
+	say "you see a long pathway that keeps going down. It must come out into a waste disposal room. There has to be an entrance around somewhere...";
+	stop the action.
+carry out examining garbage chute:
+	say "you see a long pathway that keeps going down. It must come out into a waste disposal room. There has to be an entrance around somewhere...";
+	stop the action.
+waste disposal room is a room. 
+after taking Dudley's camera:
+	if the location is waste disposal room:
+		now the venture of camera challenge is success.
+rubbish is a thing in waste disposal room. the description of rubbish is "a large, stench-laden pile of rubbish, generated by the zoo's visitors.".
+the description of Dudley's camera is "It is amazing that it isn't broken yet.".
+understand "nudge [something]" as pushing.
+instead of pushing dudley's camera, try taking dudley's camera.
+hatch is a door. it is above waste disposal room and below endangered species room. hatch is closed and openable.
+map is a thing. it is fixed in place. map is in marsupial place. The description is "The map shows the rooms around the zoo. There is a little symbol labelled 'hatch' in the endangered species room.".
+before examining up when the player is in marsupial place:
+	say "[first time]That explains how Dudley's camera got there.[only] There is a walkway above." instead.
+Before going west when the player does not have dudley's camera:
+	if the location is bird room:
+		if the venture of Camera challenge is pending:
+			say "You need to get the camera first.";
+			stop the action;
+		otherwise:
+			say "It isn't lunchtime yet.";
+			stop the action.
+
 understand "look [things]" as examining.
 the zoo cafe is a room in le zoo. it is west of bird room. the description of zoo cafe is "To the east is the bird room.".
 definition: something is unnocupied if there is nothing on it.
+cafe table is a supporter in zoo cafe.
+Dudley's knickerbocker glory is food on the cafe table. 
 after going west when the location is zoo cafe:
-	if Dudley's knickerbocker glory is in the zoo cafe:
+	if the venture of camera challenge is success:
 		say "'You took your time!' says uncle vernon. 'Dudley didn[']t want to finish his knickerbocker glory; It's too small for him. You can have the rest of this one.'";
 		move dudley to a random chair in zoo cafe;
 		move petunia to a random unnocupied chair in the zoo cafe;
 		move uncle vernon to a random unnocupied chair in the zoo cafe;
 		move piers polkiss to a random unnocupied chair in the zoo cafe;
 		continue the action.
-cafe table is a supporter in zoo cafe.
 there are 4 chairs in zoo cafe. 
 before sitting on chairs in zoo cafe:
 	say "You can't sit down. The others took all the seats. Dudley took two.";
@@ -765,7 +825,7 @@ understand "kick [someone]" as kicking.
 report kicking:
 	say "You kick [noun], causing them to yelp and jump backwards, looking annoyed.".
 your knickerbocker glory is food on the cafe table. The description of your knickerbocker glory is "Half eaten, and considerably smaller than Dudley's new one.".
-Dudley's knickerbocker glory is food on the cafe table. The description of Dudley's knickerbocker glory is "Bigger than your serving, but disappearing at an incredible rate. Dudley's eating could win him some prizes.".
+The description of Dudley's knickerbocker glory is "Bigger than your serving, but disappearing at an incredible rate. Dudley's eating could win him some prizes.".
 instead of eating Dudley's knickerbocker glory:
 	if cheats_bin is 0:
 		say "You couldn't do that; Dudley would punch it right back out of you.";
@@ -855,7 +915,7 @@ instead of turning tap2, try using sink2 instead.
 instead of switching on tap2, try using sink2 instead.
 instead of using tap2, try using sink2 instead.
 understand "faucet" as tap2.
-Privet Drive is a room in Privet'sstreets.. it is east of garden. the description of Privet Drive is "your garden is to the west.".
+Privet Drive is a room in Privet'sstreets.. it is east of garden. the description of Privet Drive is "The garden is to the west.".
 jumping out of is an action applying to one thing.
 understand "jump out of [bedroomwindow]" as jumping out of.
 understand "jump out [bedroomwindow]" as jumping out of.
@@ -889,14 +949,14 @@ understand "pj's" as pyjamas.
 the description of Dursley's bedroom is "You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the north-west.".
 The dursley's Bed is a thing in Dursley's bedroom.
 bed is a container. it is open.
-The dursley's Wardrobe is a container in The Dursley's Bedroom. it is closed and openable.  the description of wardrobe is "A large wooden wardrobe, made of the finest materials to please Petunia.".
+The dursley's Wardrobe is a container in The Dursley's Bedroom. it is closed and openable.  the description of wardrobe is "A large wooden wardrobe, made of the finest materials to please Your Aunt.".
 wardrobe is fixed in place.
 A Mirror is in the wardrobe. it is not portable.
 understand "cupboard" as wardrobe.
 clothing is a kind of thing. suit is a kind of clothing. muumuu is a kind of clothing. wizards robes is a clothing. tutu is a kind of clothing. tie is a kind of clothing. Pyjamas is a clothing.
 bedside table is a supporter in Dursley's bedroom.
 bedside drawer is a part of bedside table.
-the description of the bedside table is "This is your bedside table. It has a drawer attached.".
+the description of the bedside table is "This is a bedside table. It has a drawer attached.".
 bedside drawer is a container. it is closed and openable.
 using is an action applying to one thing.
 understand "use [something]" as using.

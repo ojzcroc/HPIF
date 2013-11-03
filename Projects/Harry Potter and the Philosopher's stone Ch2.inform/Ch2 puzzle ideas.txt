@@ -1,0 +1,9 @@
+Harry Potter Ch2 game puzzle ideas:
+For the home, just have easter eggs, and maybe a small puzzle.
+For the zoo, make a babel-fish catching trail.
+trail: you have to go between different rooms of the zoo to figure out how to retrieve something Dudley lost.
+Dudley will lose his brand new expensive camera, and Uncle Vernon will tell you to go and get it.
+
+You start by going to find where the camera is. There will be one room (maybe randomized) with a shelf, too high to reach, that will have the
+camera on it (make reference to the impossibility of Dudley having got it up there), and you have to figure out a way to get it down. 
+There will be a stick in one of the other rooms.
