@@ -1,9 +1,12 @@
 "Harry Potter and the Philosopher's Stone" by Orion Zymaris
 
 The story headline is "Influenced by 'Harry Potter and the Philosopher's stone' by J.K. Rowling.".
+testing is a number that varies.  testing is 0.
 
 chapter 1 - Test facilities - not for release
 
+when play begins:
+	now testing is 1.
 when play begins:
 	now Harry Potter is wearing glasses;
 	now bannerprinted is 1;
@@ -151,7 +154,11 @@ understand "paper" as newspaper.
 after dropping newspaper:
 	if uncle vernon is in kitchen:
 		if location is kitchen:
-			say "Uncle Vernon snatches back the newspaper.".
+			say "Uncle Vernon snatches back the newspaper.";
+		otherwise:
+			continue the action;
+	otherwise:
+		continue the action.
 before taking newspaper:
 	if Uncle Vernon is in kitchen:
 		if location is kitchen:
@@ -181,7 +188,7 @@ every turn during dudley's birthday breakfast:
 every turn during zoo:
 	if the player is not harry potter:
 		now the description of cupboard under the stairs is "Harry's room.".
-Hall is a room. It is in Dursley's house.
+Hall is a room. It is in Dursley's house. the description of hall is "".
 Cupboard door is a door. it is south of Cupboard under the stairs and north of Hall. it is closed and openable. it is unlocked and lockable.
 a pair of socks is clothing in Cupboard under the stairs.
 report wearing pair of socks:
@@ -210,7 +217,7 @@ a chess set is a thing in Cupboard under the stairs. The description is "A batte
 playing is an action applying to one thing.
 understand "play [something]" as playing.
 report playing chess set:
-	say "You get the chess set out and fiddle with it for a while.".
+	say "You get the chess set out and fiddle with it for a while." instead.
 a roll of sellotape is a thing in Cupboard under the stairs. The description is "You thought you'd keep this after Dudley kept breaking your glasses.".
 glasses is a thing in Cupboard under the stairs. it is wearable. The description is "At least they had the common decency to get you glasses. Then again, if they didn't, you'd be useless to them, wouldn't you? ".
 after going through cupboard door for the first time:
@@ -432,8 +439,8 @@ food is a kind of thing. it is edible.
 chair is a kind of supporter. there is a chair in kitchen. it allows sitting and standing.
 kitchen table is a thing in kitchen. 
 the description of kitchen table is "Oh, there's the table! You couldn't see it under all of Dudley's presents.".
-there are two pieces of toast on the table.
-the description of toast is "this looks like it's been here for 10 years..." .
+piece of toast is a thing on the table in kitchen.
+the description of piece of toast is "this looks like it's been here for 10 years..." .
 present is a kind of thing. there are 37 presents in kitchen.
 the description of presents is "It looks as though Dudley got that new computer he wanted, not to mention his second television and the racing bike. Why would he want a bike though? The only exercise he enjoys is beating you up. Not that he can catch you very easily.".
 after reading a command when the location is kitchen:
@@ -507,7 +514,7 @@ before going during Dudley's birthday breakfast:
 		if cheats_bin is 0:
 			say "Dudley hasn't started his breakfast yet. You shouldn't go yet, if you care for your health." instead.
 Dudley is in kitchen.
-Piers polkiss is a person.
+Piers Polkiss is a person.
 after doing anything when the location is kitchen during dudley's birthday breakfast:
 	if Harry Potter is in kitchen for 3 turns:	
 		if aunt petunia is in kitchen:
@@ -521,7 +528,7 @@ after doing anything when the location is kitchen during dudley's birthday break
 		say "Aunt Petunia enters the kitchen looking angry and worried. 'Bad news, Vernon. Mrs Figg's broken her leg. She can't take him' she says, jerking her head towards you. Dudley looks horrified. 'He's not coming on my birthday!'[run paragraph on]";
 		if glulx timekeeping is supported:
 			wait 4000 ms before continuing;
-		say "[paragraph break]'Maybe you could just leave me here' you suggest. 'And come back and find the house in ruins?' says Aunt Petunia.[run paragraph on]";
+		say "[paragraph break]'Maybe you could just leave me here' you suggest. [paragraph break]'And come back and find the house in ruins?' says Aunt Petunia.[run paragraph on]";
 		if glulx timekeeping is supported:
 			wait 4000 ms before continuing;
 		say "[paragraph break]'I won't blow up the house,' you say.[run paragraph on]";
@@ -554,7 +561,7 @@ report listening during Dudley's birthday breakfast:
 		say "You hear the sound of Dudley loudly ripping open his presents." instead.
 understand "load" as restoring the game.
 a multiroad is a kind of room.
-Garden is a multiroad. it is in Dursley's house.
+Garden is a multiroad. it is in Dursley's house. the description of garden is "To the east is privet drive. [if the venture of zoo aftermath is pending]Looks like a nice place to spend the evening.".
 front door is a door. it is east of hall. it is west of garden.
 car is a vehicle. it is in garden. it is unlocked and lockable. it is closed and openable. it is transparent. the printed name of car is "the car".
 rule for printing the name of car when doing anything to car:
@@ -583,7 +590,7 @@ understand "loook" as looking.
 understand "eggs" as egg. 
 after going east when the location is hall during zoo:
 	if the location of car is garden:
-		say "Uncle Vernon takes you aside. 'I[']m warning you, I'm warning you now, boy - any funny business, anything at all - and you'll be in that cupboard from now until Christmas.'";
+		say "Uncle Vernon takes you aside. 'I[']m warning you, I'm warning you now, boy - any funny business, anything at all - and you'll be in that cupboard from now until Christmas. ' He proceeds, with some difficulty, to go through the front door.";
 		now uncle vernon is in car.
 after doing anything when in car during zoo:
 	if the location is garden:
@@ -602,7 +609,6 @@ after doing anything when in car during zoo:
 	otherwise:
 		continue the action.
 the car allows seated and standing.
-a multiroad is a kind of room.
 A road is a kind of room.
 Definition: a room is offroad if it is not a road.
  Instead of going by a vehicle (called the auto) to somewhere offroad:
@@ -610,13 +616,24 @@ Definition: a room is offroad if it is not a road.
 	 	say "You can't drive the [the auto] off-road.";
 	 otherwise:
 		continue the action.
+instead of going to a road:
+	unless going to a multiroad:
+		unless going by a vehicle:
+			unless going by rideable vehicle:
+				say "That seems rather suicidal.";
+			otherwise:
+				continue the action;
+		otherwise:
+			continue the action;
+	otherwise: 
+		continue the action.
 instead of exiting from a vehicle when the vehicle is in a road:
 	say "That seems rather suicidal.".
 instead of exiting from a rideable vehicle when the rideable vehicle is in a road:
 	say "That seems rather suicidal.".
 Privet'sstreets is a region.
 highway is a road in Privet'sstreets. it is north of garden. the description is "The highway is filled with large company cars like your uncle's, and people roaring around on motorbikes.".
-test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/".
+test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/purloin camera/drop camera/take camera/gonear bird room/w/eat food/gonear reptile/look snake/get out/w/n/sleep/get up/s/u/nw/se/purloin vice/ne/sw/d/e/e/s/w/look".
 understand "bike" or "motorbike" or "motorcycle" or "dream" or "dreams" or "nightmare" or "flying bike" or "flying motorbike" or "flying motorcycle" as "[dream]".
 after entering car:
 	set pronouns from uncle vernon;
@@ -633,7 +650,7 @@ every turn during zoo:
 			if dudley is in the car:
 				say "You hear Dudley and Piers bickering.".				
 le zoo is a region. the printed name is "the zoo".
-the local zoo is a multiroad in le zoo. it is north of highway.
+the local zoo is a multiroad in le zoo. it is north of highway. the printed name of local zoo is "local zoo carpark". the description of local zoo is "to the north is the zoo's entrance.".
 understand "poke [someone]" as attacking.
 every turn during zoo:
 	if the location is highway for 3 turns:
@@ -669,7 +686,7 @@ before going north when the location is local zoo:
 		if gorilla enclosure is not visited:
 			if gone_to_zoo is 0:
 				say "as you walk past, the lady at the entrance smiles and asks you if you would like something as well. Uncle Vernon and Aunt Petunia look at each other, before getting you a cheap lemon ice lolly. They grab you and drag you away before the lady can bestow any more kindness on you.";
-				now piers polkiss is in gorilla enclosure;
+				now Piers Polkiss is in gorilla enclosure;
 				now dudley is in gorilla enclosure;
 				now uncle vernon is in gorilla enclosure;
 				now aunt petunia is in gorilla enclosure;
@@ -683,7 +700,7 @@ after entering zoo entrance for the first time:
 		try silently exiting;
 		now gone_to_zoo is 1;
 		try going north;
-		now piers polkiss is in gorilla enclosure;
+		now Piers Polkiss is in gorilla enclosure;
 		now dudley is in gorilla enclosure;
 		now uncle vernon is in gorilla enclosure;
 		now aunt petunia is in gorilla enclosure;
@@ -695,6 +712,7 @@ carry out licking:
 	say "You lick [noun].".
 the Gorilla's cage is a container. it is closed and not openable. it is lockable and locked. it is transparent.The Gorilla's cage is in gorilla enclosure.
 there are 3 Gorillas in cage.
+instead of examining gorillas, say "These look remarkably like Dudley; they're just missing the blond hair. And the attitude.".
 the description of gorillas is "These look remarkably like Dudley; they're just missing the blond hair. And the attitude.".
 the description of Gorilla enclosure is "You can see a few people goggling through the bars at the rather bored looking gorillas. To the north is the bird room - to the south, the zoo entrance. to the east, the reptile house. and west, the monkeys exhibit.".
 The reptile house is a room in le zoo. it is east of gorilla enclosure.
@@ -710,6 +728,7 @@ before examining down when the location is marsupial place walkway:
 	say "you see the marsupial place, with its strange little animals, and Dudley's camera on a ledge." instead.
 the endangered species room is a room in le zoo. it is north of the bird room.
 the description of reptile house is "to the west is the gorilla enclosure. to the north, the nocturnal room. You can see a few bored looking snakes and lizards behind the glass.".
+understand "reptile" or "animal" as snake.
 snake is a thing in reptile house. it is fixed in place. it is undescribed.  the description of snake is "The sign next to one of the snakes says 'Boa Constrictor, bred in Peru'.".
 understand "snakes" as snake.
 lizard is a thing in reptile house. it is fixed in place. it is undescribed. the description of lizard is "The lizards are sunbathing in the corner of their cage.".
@@ -743,18 +762,19 @@ understand "turtle" as turtles.
 Camera challenge is a scene.
 Camera challenge begins when the venture of camera challenge is pending.
 Camera challenge ends when the venture of camera challenge is success.
+Dudley's camera is a thing.
 every turn during the zoo:
 	if the location is nocturnal room for the first time:
 		if the venture of camera challenge is incomplete:
 			now the time of day is 12 hours;
 			say "After a while of looking around the exhibits, Dudley, who has a remarkably short attention span, starts complaining. 'I want to eat', he says. 'Ok' says Uncle Vernon. 'Let's go get some food. And Harry, Dudley lost his camera in one of the exhibits. If you want lunch anytime soon, go and get it for him.' Dudley, Piers, Uncle Vernon, and Aunt Petunia leave without paying any attention to you. You've got to find Dudley's camera, and then your way to the zoo's cafe.";
 			now dudley is in the zoo cafe;
-			now piers polkiss is in the zoo cafe;
+			now Piers Polkiss is in the zoo cafe;
 			now vernon is in the zoo cafe;
 			now petunia is in the zoo cafe;
+			now Dudley's camera is on shelf;
 			now the venture of camera challenge is pending.
 shelf is a supporter in marsupial place. shelf is not portable.
-Dudley's camera is a thing on shelf.
 rule for printing the name of shelf when looking:
 	say "a shelf".
 a long stick is a thing in the monkeys exhibit.
@@ -778,7 +798,9 @@ carry out examining garbage chute:
 	stop the action.
 waste disposal room is a room. 
 after taking Dudley's camera:
-	if the location is waste disposal room:
+	now the venture of camera challenge is success.
+every turn during camera challenge:
+	if Dudley's camera is carried by the player:
 		now the venture of camera challenge is success.
 rubbish is a thing in waste disposal room. the description of rubbish is "a large, stench-laden pile of rubbish, generated by the zoo's visitors.".
 the description of Dudley's camera is "It is amazing that it isn't broken yet.".
@@ -804,11 +826,12 @@ cafe table is a supporter in zoo cafe.
 Dudley's knickerbocker glory is food on the cafe table. 
 after going west when the location is zoo cafe:
 	if the venture of camera challenge is success:
-		say "'You took your time!' says uncle vernon. 'Dudley didn[']t want to finish his knickerbocker glory; It's too small for him. You can have the rest of this one.'";
+		say "'You took your time!' says uncle vernon. 'Dudley didn[']t want to finish his knickerbocker glory; It's too small for him. You can have the rest of this one.' Uncle Vernon wrenches the camera from your grasp, and gives it to Dudley.";
+		move camera to Dudley;
 		move dudley to a random chair in zoo cafe;
 		move petunia to a random unnocupied chair in the zoo cafe;
 		move uncle vernon to a random unnocupied chair in the zoo cafe;
-		move piers polkiss to a random unnocupied chair in the zoo cafe;
+		move Piers Polkiss to a random unnocupied chair in the zoo cafe;
 		continue the action.
 there are 4 chairs in zoo cafe. 
 before sitting on chairs in zoo cafe:
@@ -822,6 +845,7 @@ instead of sitting down when the location is zoo cafe:
 		continue the action.
 kicking is an action applying to one thing.
 understand "kick [someone]" as kicking.
+understand "food" as your knickerbocker glory.
 report kicking:
 	say "You kick [noun], causing them to yelp and jump backwards, looking annoyed.".
 your knickerbocker glory is food on the cafe table. The description of your knickerbocker glory is "Half eaten, and considerably smaller than Dudley's new one.".
@@ -843,17 +867,23 @@ after eating your knickerbocker glory:
 	now Piers Polkiss is in reptile house.
 after going east when the location is reptile house:
 	say "Dudley stands with his nose pressed against the glass. 'Make it move', he whines. Uncle Vernon taps on the glass, but the snake won't budge.".
-after examining snake:
-	say "You wouldn't be surprised if it had died of boredom - with no company except stupid people drumming their fingers on the glass trying to disturb it all day long. It was worse than having a cupboard as a bedroom, where the only visitor was Aunt Petunia hammering on the door to wake you up - at least he got to visit the rest of the house.[wait 2000 ms][paragraph break]The snake suddenly opened it's beady eyes. Slowly, very slowly, it raised its head until its eyes were on a level with Harry's.[wait 2000 ms][paragraph break][italic type]It winked.[roman type][paragraph break]The snake jerked its head towards Uncle Vernon and Dudley,  then raised its eyes to the ceiling. It gave Harry a look that said quite plainly: [italic type]'I get that all the time'[roman type][wait 1000 ms]'I know', you murmur through the glass, although you don't know if the snake can hear you. 'It must be really annoying.'[wait 2000 ms][line break]The snake nods vigorously.[wait 2000 ms]'Where do you come from, anyway?' You ask.[wait 2000 ms]The snake jabs its tail at a little sign next to the glass. You peer at it.  [italic type]Boa Constrictor, Brazil.[roman type][wait 2000 ms][line break]Was it nice there?'[wait 1000 ms][line break]The boa constrictor jabbed its tail at the sign again and you read on. [wait 2000 ms][line break][italic type]This specimen was bred in the zoo.[roman type][wait 2000 ms][paragraph break]'Oh, I see - so you've never been to Brazil?'[line break]As the snake shook its head, a deafening shout behind you made both you and the snake jump. 'DUDLEY! MR DURSLEY! COME AND LOOK AT THIS SNAKE! YOU WON'T BELIEVE WHAT IT'S DOING!'[wait 2000 ms][line break]'Out of the way, you', snarls Dudley, punching you in the ribs. You fall. When you look back at the snake's enclosure, you see Piers and Dudley jumping back with howls of horror. The glass has vanished, and the snake is slithering awat across the floor. [wait 2000 ms][paragraph break][italic type]'Brazil, here I come ... Thankssss, amigo.'[roman type]";
-	now the description of reptile house is "to the west is the gorilla enclosure. to the north, the nocturnal room. You can see a few bored looking snakes and lizards behind the glass. You see everyone standing around, looking shocked. 'Well, we should go', says a rather uncomfortable looking Uncle Vernon.";
-	now the venture of zoo is success.
-after entering car:
-	if the venture of zoo is success:
-		say "Dudley and Piers start talking loudly about the snake. Dudley was telling them how it had nearly bitten off his leg, while Piers was swearing it had tried to squeeze him to death. 'Harry was talking to it, weren't you, Harry?' says Piers. Uncle Vernon turns the colour of beetroot.";
-		move car to garden;
-		increase time of day by 30 minutes.
+after examining snake during zoo:
+	say "You wouldn't be surprised if it had died of boredom - with no company except stupid people drumming their fingers on the glass trying to disturb it all day long. It was worse than having a cupboard as a bedroom, where the only visitor was Aunt Petunia hammering on the door to wake you up - at least he got to visit the rest of the house.[wait 10000 ms][paragraph break]The snake suddenly opened it's beady eyes. Slowly, very slowly, it raised its head until its eyes were on a level with yours.[wait 6000 ms][paragraph break][italic type]It winked.[roman type][paragraph break]The snake jerked its head towards Uncle Vernon and Dudley,  then raised its eyes to the ceiling. It gave Harry a look that said quite plainly: [italic type]'I get that all the time'[roman type][wait 4000 ms]'I know', you murmur through the glass, although you don't know if the snake can hear you. 'It must be really annoying.'[wait 4000 ms][line break]The snake nods vigorously.[wait 2000 ms]'Where do you come from, anyway?' You ask.[wait 2000 ms]The snake jabs its tail at a little sign next to the glass. You peer at it.  [italic type]Boa Constrictor, Brazil.[roman type][wait 2000 ms][line break]'Was it nice there?'[wait 1000 ms][line break]The boa constrictor jabbed its tail at the sign again and you read on. [wait 2000 ms][line break][italic type]This specimen was bred in the zoo.[roman type][wait 2000 ms][paragraph break]'Oh, I see - so you've never been to Brazil?'[line break]As the snake shook its head, a deafening shout behind you made both you and the snake jump. 'DUDLEY! MR DURSLEY! COME AND LOOK AT THIS SNAKE! YOU WON'T BELIEVE WHAT IT'S DOING!'[wait 2000 ms][line break]'Out of the way, you', snarls Dudley, punching you in the ribs. You fall. When you look back at the snake's enclosure, you see Piers and Dudley jumping back with howls of horror. The glass has vanished, and the snake is slithering awat across the floor. [wait 2000 ms][paragraph break][italic type]'Brazil, here I come ... Thankssss, amigo.'[roman type][paragraph break][wait 1000 ms] You see everyone standing around, looking shocked. 'Well, we should go', says a rather uncomfortable looking Uncle Vernon. He steers you out to the carpark, and the rest of the group follows suit.";
+	now harry potter is in car;
+	now uncle vernon is in car;
+	now dudley is in car;
+	now piers polkiss is in car;
+	now aunt petunia is in car;
+	now the venture of zoo is success;
+	say "As everyone gets into the car, Dudley and Piers start talking loudly about the snake. Dudley was telling them how it had nearly bitten off his leg, while Piers was swearing it had tried to squeeze him to death. 'Harry was talking to it, weren't you, Harry?' says Piers. Uncle Vernon turns the colour of beetroot. The journey home seems to take an age.";
+	move car to garden;
+	increase time of day by 30 minutes.
 after going west when the location is hall:
-	say "'Bye Dudley', says Piers. The front door slams as he leaves. Uncle Vernon rounds on you, and says 'Go - cupboard - stay - no meals,' before collapsing into a chair. Aunt Petunia runs to fetch him some brandy.".
+	if the venture of zoo is success:
+		if piers is on-stage:
+			say "'Bye Dudley', says Piers. The front door slams as he leaves. Uncle Vernon rounds on you, and says 'Go - cupboard - stay - no meals,' before collapsing into a chair. Aunt Petunia runs to fetch him some brandy.";
+			now the description of cupboard under the stairs is "You can see a small, dark room with lots of spiders and your few measly possessions.";
+			remove piers from play.
 Dining room is a room in dursley's house.
 Toilets is a room in dursley's house. it is northeast of hall.
 the hall door is a door. the printed name is "Dining room door". the hall door is northeast of dining room. the hall door is southwest of hall.
@@ -993,7 +1023,113 @@ before moving to:
 		now the printed name of howto spoil your children handbook is "How to Spoil your Children Handbook";
 		move Howto to the second noun.
 some random objects is a thing in attic. the description is "some random bits and pieces, left by Dudley.".
+all people can be asleep.
+all people can be awake.
+definition: a person is awake if they are not asleep.
 after entering bed when the venture of zoo is success:
 	now the time of day is 9:00 pm;
-	say "Exhausted by the day, you collapse into bed, and fall asleep immediately.".
+	say "Exhausted by the day, you collapse into bed. You wait until night, so you can go and get food from the kitchen without the Dursleys catching you. In the meantime, you sit and think.[wait 4000 ms][paragraph break]You have lived with the Dursleys for almost  ten years, ten miserable years, as long as you can remember, ever since you were a baby and your parents died in a car crash. [wait 4000 ms][paragraph break]You can't remember being there when your parents died. Sometimes, you can recall a strange vision: a blinding flash of green light and a burning pain on your forehead. This, you suppose, was the crash, though you can't imagine where the green light might've come from.[paragraph break][wait 6000 ms] You can't remember your parents, and the Dursleys never talked about them. He wasn't allowed to ask questions, and there were no photos of them in the house.[wait 4000 ms][paragraph break]When you were younger, you had dreamed and dreamed of an unknown relation coming to tak you away, but this never happened; The Dursleys were your only family.[wait 4000 ms][paragraph break]Yet, sometimes, it seemed as though strangers in the street seemed to know you. Very strange strangers they were, too.[wait 4000 ms][paragraph break]A tiny man in a violet top had bowed to you once while out shopping, and a wild-looking old woman dressed in green had waved merrily to him once. A bald man in a very long purple coat had actually shaken his hand in the street the other day and then walked away without a word.[wait 6000 ms][paragraph break]The weirdest thing about all these people was the way they seemed to vanish, the second you tried to take a closer look.[wait 4000 ms][paragraph break]At school, you have no one. Everybody knew that Dudley's gang hated that odd Harry Potter in his baggy old clothes and broken glasses, and nobody liked to disagree with Dudley's gang. [paragraph break]Sometime during your musings, you fall asleep.";
+	now Harry is asleep;
+	remove egg from play;
+	remove bacon from play;
+	now all presents are undescribed.
+instead of sleeping:
+	if the location is cupboard under the stairs:
+		try entering bed.
 Release along with "Quixe" interpreter.
+
+chapter 3 - the letters from no-one
+
+zoo aftermath is a scene.
+zoo aftermath begins when the venture of zoo aftermath is pending.
+zoo aftermath ends when the venture of zoo aftermath is success.
+Gordon is a person. 
+Dennis is a person. 
+Malcolm is a person.
+before doing anything:
+	if the player is asleep:
+		say "You wake up.";
+		now the time of day is 7:30 am;
+		now Harry is not asleep;
+		now cupboard door is closed;
+		now the venture of zoo aftermath is pending;
+		now Dudley is in hall;
+		now Piers is in hall;
+		now Dennis is in hall;
+		now Gordon is in hall;
+		now Malcolm is in hall.
+
+instead of going east when the location is hall:
+	if Dennis is in hall:
+		say "You can't; Dennis takes up the whole doorway, and won't move. You might have to wait until they move.";
+	otherwise:
+		continue the action.
+remote control airplane is a thing. the description is "it was crashed by Dudley. Never let him become a pilot.".
+before opening cupboard door when the location is cupboard under the stairs:
+	if the venture of zoo aftermath is pending:
+		say "You can't open the door. Uncle Vernon must've locked it. You play a few games of chess against yourself and climb back into bed. Around  noon, Aunt Petunia appears to give you some food. Every day, after getting home from school, this schedule continues. You finally get let out at the end of the Summer holidays. [line break][wait 5000 ms]";
+	now the description of hall is "Dudley is here, with his friends Piers, Malcolm, Gordon, and half of Dennis; the other half of Dennis is out the front door, since they're too large to all fit into the one room. Though all of Dudley's friends are big and stupid, Dudley, being the biggest and stupidest of the lot, is the leader. They seem to be laughing at a story Dudley just told them about knocking Mrs Figg over while riding his bike for the first time. You'd like to go outside, but they're blocking the way.";
+	now Dudley's camera is in Dudley's second room;
+	now the description of Dudley's camera is "Broken.";
+	now remote control airplane is in Dudley's second room.
+every turn during zoo aftermath:
+	if the location is Dudley's bedroom:
+		if Dennis is in hall:
+			say "You can hear the sound of Dudley's friends exiting the house. Now you can go for a walk.";
+			remove malcolm from play;
+			remove gordon from play;
+			remove Piers from play;
+			now the description of hall is "";
+			remove dennis from play.
+Air rifle is a thing in Dudley's second room. the description of air rifle is "I could use this. If Dudley hadn't sat on it and bent it. I could fix it though... [if the venture of zoo aftermath is pending]I just need a vice. Maybe in the garage...".
+garage is a container. the description is "a grey box.". garage is in garden. garage is openable and closed. garage is enterable.
+toolbox is a container in garage. the description of toolbox is "a box of Uncle Vernon's tools, almost completely unused.".
+Hammer is a thing in toolbox.
+Stanley knife is a thing in toolbox.
+Saw is a thing in toolbox.
+Vice is a thing in garage. the description is "a heavy duty clamp.".
+after entering garage during zoo aftermath:
+	if air rifle is carried:
+		say "You grab the vice and use it to hold one end of the air rifle, and slowly bend it back into shape.";
+		now the description of air rifle is "a fully functioning air rifle. It isn't very powerful, but it would hurt.".
+after going northeast when the location is Dudley's second room during zoo aftermath:
+	if vice is carried:
+		say "You use the vice to bend the air rifle back into shape.";
+		now the description of air rifle is "a fully functioning air rifle. It isn't very powerful, but it would hurt.".
+after going east when the location is privet drive during zoo aftermath:
+	say "You spend the rest of the day [if air rifle is not carried]avoiding Dudley's gang.[otherwise]chasing Dudley's gang and shooting them with the air rifle.[end if]You go home, go to sleep, and get up again next morning.[wait 4000 ms][paragraph break]";
+	now the venture of zoo aftermath is success;
+	now the time of day is 7:30 am;
+	now the player is in cupboard under the stairs.
+the letters from no-one is a scene.
+the letters from no-one begins when the venture of zoo aftermath is success.
+the letters from no-one ends when the venture of the letters from no-one is success.
+harry's uniform is a thing. 
+sink is a thing in kitchen.
+after going west when the location is kitchen during the letters from no-one:
+	if harry's uniform is not seen:
+		now Harry's uniform is in sink;
+		remove newspaper from play;
+		now Dudley is in kitchen;
+		now Uncle Vernon is in kitchen;
+		say "You come into the kitchen in the morning to have your nostrils assaulted by a horrible smell. The smell seems to be coming from a container in the sink, full of grey water and rags. 'What is this?', you ask your Aunt. 'Your new school uniform', she says. 'I'm dyeing some of Dudley's old things gray for you. It'll look just like everyone else's when i[']ve finished.' Uncle Vernon and Dudley enter the room, their noses wrinkled from the smell of your uniform.";
+	otherwise:
+		continue the action.
+letters is a thing.
+after doing anything when the location is kitchen during the letters from no-one:
+	if newspaper is not in kitchen:
+		now newspaper is in kitchen;
+		now letters is in hall;
+		say "Uncle Vernon opens his newspaper, and Dudley bangs his Smeltings stick on the table. You hear the click of a letter-box and the sound of letters flopping on the doormat. Uncle Vernon tells Dudley to get it. Dudley tells you to get it. You tell Dudley to get it. Dudley tries to hit you with his Smeltings stick. You get the letters.";
+		continue the action.
+after doing anything when the location is kitchen during the letters from no-one:
+	if piece of toast is on table:
+		remove piece of toast from play;
+		say "Your Aunt takes the toast and throws it out. How long has that been there? She asks. No-one answers her. She seems miffed that she isn't getting any attention.".
+after doing anything when the location is kitchen during the letters from no-one:
+	if piece of toast is not in kitchen:
+		if newspaper is in kitchen:
+			if letters is not in kitchen:
+				say "I said, 'You get the letters'. Please don't stuff up the continuity of the story. It's rude.".
+
+

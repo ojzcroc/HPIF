@@ -2014,6 +2014,7 @@ understand "wingardium leviosa" as dursley's spellcasting while the venture of u
 understand "incendio" as dursley's spellcasting while the venture of uncle vernon's scene is incomplete.
 understand "xyzzy" as dursley's spellcasting while the venture of uncle vernon's scene is incomplete.
 understand "squiggly wiggly" as dursley's spellcasting while the venture of uncle vernon's scene is incomplete.
+understand "stupefy" as dursley's spellcasting while the venture of uncle vernon's scene is incomplete.
 after reading a command during uncle vernon's scene:
 	if the player carries a magic wand:
 		if the player's command includes "wave wand":
