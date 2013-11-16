@@ -7,8 +7,8 @@ Chapter 1 - The boy who lived
 Part 1 - The Dursleys
 
 current chapter is a number that varies. current chapter is 1.
-Current teletype character delay is a number variable. The current teletype character delay is 40.
 Current teletype line break delay is a number variable. The current teletype line break delay is 400.
+Current teletype character delay is a number variable. The current teletype character delay is 40.
 Current teletype paragraph break delay is a number variable. The current teletype paragraph break delay is 400.
 To teletype (text-to-be-printed - an indexed text):
 	repeat with N running from 1 to the number of characters in the text-to-be-printed:
@@ -1960,10 +1960,6 @@ before thanking with no noun:
 Living-room cut scene is a scene. 
 living-room cut scene begins when the venture of living-room cut scene is half-complete.
 living-room cut scene ends when the venture of living-room cut scene is success.
-to say wait (S - a number) ms/milliseconds/--:
-	say "[run paragraph on]";
-	if glulx timekeeping is supported:
-		wait S ms before continuing.
 when living-room cut scene begins:
 	say "'Funny stuff on the news. Owls... shooting stars...[wait 2000 ms]And there were a lot of funny-looking people in town today...'[wait 3000 ms][paragraph break]'So?' Snapped Petunia.[wait 3000 ms][paragraph break]'Well, I just thought... maybe... it was something to do with... you know... [italic type]her lot.'[roman type][wait 1000 ms][line break]You gulp down some Tea.[wait 2000 ms][line break]'Their son - he'd be about Dudley's age now, wouldn't he?'[wait 3000 ms][paragraph break]'I Suppose so.'[wait 2000 ms][line break]'What's his name again? Howard, isn't it?'[wait 3000 ms][paragraph break]'Harry. Nasty, common name, if you ask me.'[wait 3000 ms][paragraph break]'Oh, yes. Yes, I quite agree...'[wait 2000 ms][line break]Without another word, you and Petunia both go upstairs to bed.";
 	say "[line break]";

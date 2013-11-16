@@ -1,14 +1,13 @@
 "Harry Potter and the Philosopher's Stone" by Orion Zymaris
 
 The story headline is "Influenced by 'Harry Potter and the Philosopher's stone' by J.K. Rowling.".
-testing is a number that varies.  testing is 0.
 
 chapter 1 - Test facilities - not for release
 
-when play begins:
-	now testing is 1.
+
 when play begins:
 	now Harry Potter is wearing glasses;
+	now donotdelay is 1;
 	now bannerprinted is 1;
 	try silently exiting.
 regionating is an action applying to nothing.
@@ -104,7 +103,10 @@ Include After Not Doing Something by Ron Newcomb.
 to say wait (S - a number) ms/milliseconds/--:
 	say "[run paragraph on]";
 	if glulx timekeeping is supported:
-		wait S ms before continuing.
+		if donotdelay is 0:
+			wait S ms before continuing;
+		otherwise:
+			continue the action.
 bannerprinted is a number that varies. bannerprinted is 0.
 to say now bannerprinted is 1:
 	now bannerprinted is 1.
@@ -118,7 +120,7 @@ before printing the banner text when bannerprinted is 0:
 	if glulx timekeeping is supported:
 		wait 10000 ms before continuing;
 		clear the screen;
-	say "[if glulx timekeeping is supported][bold type]Welcome to An Interactive Fiction version of Harry Potter.[line break][italic type]                (If you ever need help, type help.)[roman type][paragraph break][end if]The room held no sign at all that another boy lived in the house too.[line break]    Yet Harry Potter was still there, asleep at the moment, but not for long. His Aunt Petunia was awake and it was her shrill voice which made the first noise of the day.[paragraph break][run paragraph on]";
+	say "[if glulx timekeeping is supported][bold type]Welcome to An Interactive Fiction version of Harry Potter.[line break][italic type]                (If you ever need help, type help. You can also access Settings through the help menu)[roman type][paragraph break][end if]The room held no sign at all that another boy lived in the house too.[line break]    Yet Harry Potter was still there, asleep at the moment, but not for long. His Aunt Petunia was awake and it was her shrill voice which made the first noise of the day.[paragraph break][run paragraph on]";
 	if glulx timekeeping is supported:
 		wait 10000 ms before continuing;
 		clear the screen;
@@ -141,8 +143,8 @@ shirt is a kind of clothing.
 pants is a kind of clothing.
 all people wear a shirt.
 all people wear pants.
-Aunt Petunia is a woman.  the description is "Aunt Petunia's even bossier than Uncle Vernon. She hates things being dirty.".
 Uncle Vernon is a person. the description is "Large and porky, with very little neck, Uncle Vernon loves bossing you around. it's the only exercise he gets.".
+Aunt Petunia is a woman.  the description is "Aunt Petunia's even bossier than Uncle Vernon. She hates things being dirty.".
 a thing can be rippable. a thing is usually not rippable.
 newspaper is a thing. it is in kitchen. newspaper is undescribed. newspaper is rippable.
 ripping is an action applying to one thing.
@@ -180,7 +182,7 @@ rule for printing the name of uncle vernon when looking:
 	otherwise:
 		say "Uncle Vernon".
 Dudley is a person. The description is "Larger than Uncle Vernon, who is not an inconsiderable size, Dudley would look like a pig in a wig if the average pig was a lot larger.".
-Bed is a container in Cupboard under the stairs. it is open and not openable. it is unlocked and not lockable. it is enterable. Harry Potter is in bed.
+Bed is a container in Cupboard under the stairs. bed is open and not openable. bed is unlocked and not lockable. bed is enterable. Harry Potter is in bed. bed is fixed in place.
 The description of Cupboard under the stairs is "You can[if glasses are not worn] barely[end if] see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...[if glasses are not worn][paragraph break]You need your glasses.[end if]".
 every turn during dudley's birthday breakfast:
 	if the player is not harry potter:
@@ -205,6 +207,7 @@ before going south:
 		if glasses are not worn:
 			say "you need your glasses first!" instead.
 a pair of shoes is clothing in Cupboard under the stairs.
+some assorted clothing is clothing in Cupboard under the stairs.
 Check wearing shoes:
 	if socks are not worn:
 		say "What, with no socks?" instead.
@@ -409,7 +412,7 @@ carry out clearing the screen:
 	clear the screen.
 Kitchen is a room. it is in Dursley's house.
 the description of kitchen is "[if Dudley is in kitchen]You see Dudley here, counting his presents.".
-kitchen door is a door. it is west of hall and east of kitchen.
+kitchen door is a door. it is west of hall and east of kitchen. kitchen door is lockable and unlocked.
 after going through kitchen door for the first time:
 	now cooker is engaged;
 	say "Your Uncle makes a rare attempt to look at you and barks 'Comb your hair!' by way of a morning greeting.";
@@ -633,7 +636,8 @@ instead of exiting from a rideable vehicle when the rideable vehicle is in a roa
 	say "That seems rather suicidal.".
 Privet'sstreets is a region.
 highway is a road in Privet'sstreets. it is north of garden. the description is "The highway is filled with large company cars like your uncle's, and people roaring around on motorbikes.".
-test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/purloin camera/drop camera/take camera/gonear bird room/w/eat food/gonear reptile/look snake/get out/w/n/sleep/get up/s/u/nw/se/purloin vice/ne/sw/d/e/e/s/w/look".
+test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/purloin camera/drop camera/take camera/gonear bird room/w/eat food/gonear reptile/look snake/get out/w/n/sleep/get up/s/u/nw/se/purloin vice/ne/sw/d/e/e/s/w/look/e/take mail/w/read mail/listen/n/take all/s/u/ne/sw/d/w/wait/wait/wait/wait/wait".
+test two with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/purloin camera/drop camera/take camera/gonear bird room/w/eat food/gonear reptile/look snake/get out/w".
 understand "bike" or "motorbike" or "motorcycle" or "dream" or "dreams" or "nightmare" or "flying bike" or "flying motorbike" or "flying motorcycle" as "[dream]".
 after entering car:
 	set pronouns from uncle vernon;
@@ -773,7 +777,11 @@ every turn during the zoo:
 			now vernon is in the zoo cafe;
 			now petunia is in the zoo cafe;
 			now Dudley's camera is on shelf;
-			now the venture of camera challenge is pending.
+			now the venture of camera challenge is pending;
+		otherwise:
+			continue the action;
+	otherwise:
+		continue the action.
 shelf is a supporter in marsupial place. shelf is not portable.
 rule for printing the name of shelf when looking:
 	say "a shelf".
@@ -802,7 +810,7 @@ after taking Dudley's camera:
 every turn during camera challenge:
 	if Dudley's camera is carried by the player:
 		now the venture of camera challenge is success.
-rubbish is a thing in waste disposal room. the description of rubbish is "a large, stench-laden pile of rubbish, generated by the zoo's visitors.".
+rubbish is a thing in waste disposal room. the description of rubbish is "a large, stench-laden pile of rubbish, generated by the zoo's visitors.". rubbish is fixed in place.
 the description of Dudley's camera is "It is amazing that it isn't broken yet.".
 understand "nudge [something]" as pushing.
 instead of pushing dudley's camera, try taking dudley's camera.
@@ -815,16 +823,17 @@ Before going west when the player does not have dudley's camera:
 		if the venture of Camera challenge is pending:
 			say "You need to get the camera first.";
 			stop the action;
-		otherwise:
+		otherwise if the venture of camera challenge is not success:
 			say "It isn't lunchtime yet.";
-			stop the action.
-
+			stop the action;
+		otherwise:
+			continue the action.
 understand "look [things]" as examining.
 the zoo cafe is a room in le zoo. it is west of bird room. the description of zoo cafe is "To the east is the bird room.".
 definition: something is unnocupied if there is nothing on it.
 cafe table is a supporter in zoo cafe.
 Dudley's knickerbocker glory is food on the cafe table. 
-after going west when the location is zoo cafe:
+after going west when the location is zoo cafe for the first time:
 	if the venture of camera challenge is success:
 		say "'You took your time!' says uncle vernon. 'Dudley didn[']t want to finish his knickerbocker glory; It's too small for him. You can have the rest of this one.' Uncle Vernon wrenches the camera from your grasp, and gives it to Dudley.";
 		move camera to Dudley;
@@ -865,8 +874,9 @@ after eating your knickerbocker glory:
 	now Uncle Vernon is in reptile house;
 	now Aunt Petunia is in reptile house;
 	now Piers Polkiss is in reptile house.
-after going east when the location is reptile house:
-	say "Dudley stands with his nose pressed against the glass. 'Make it move', he whines. Uncle Vernon taps on the glass, but the snake won't budge.".
+after going east when the location is reptile house for the first time:
+	say "Dudley stands with his nose pressed against the glass. 'Make it move', he whines. Uncle Vernon taps on the glass, but the snake won't budge.";
+	continue the action.
 after examining snake during zoo:
 	say "You wouldn't be surprised if it had died of boredom - with no company except stupid people drumming their fingers on the glass trying to disturb it all day long. It was worse than having a cupboard as a bedroom, where the only visitor was Aunt Petunia hammering on the door to wake you up - at least he got to visit the rest of the house.[wait 10000 ms][paragraph break]The snake suddenly opened it's beady eyes. Slowly, very slowly, it raised its head until its eyes were on a level with yours.[wait 6000 ms][paragraph break][italic type]It winked.[roman type][paragraph break]The snake jerked its head towards Uncle Vernon and Dudley,  then raised its eyes to the ceiling. It gave Harry a look that said quite plainly: [italic type]'I get that all the time'[roman type][wait 4000 ms]'I know', you murmur through the glass, although you don't know if the snake can hear you. 'It must be really annoying.'[wait 4000 ms][line break]The snake nods vigorously.[wait 2000 ms]'Where do you come from, anyway?' You ask.[wait 2000 ms]The snake jabs its tail at a little sign next to the glass. You peer at it.  [italic type]Boa Constrictor, Brazil.[roman type][wait 2000 ms][line break]'Was it nice there?'[wait 1000 ms][line break]The boa constrictor jabbed its tail at the sign again and you read on. [wait 2000 ms][line break][italic type]This specimen was bred in the zoo.[roman type][wait 2000 ms][paragraph break]'Oh, I see - so you've never been to Brazil?'[line break]As the snake shook its head, a deafening shout behind you made both you and the snake jump. 'DUDLEY! MR DURSLEY! COME AND LOOK AT THIS SNAKE! YOU WON'T BELIEVE WHAT IT'S DOING!'[wait 2000 ms][line break]'Out of the way, you', snarls Dudley, punching you in the ribs. You fall. When you look back at the snake's enclosure, you see Piers and Dudley jumping back with howls of horror. The glass has vanished, and the snake is slithering awat across the floor. [wait 2000 ms][paragraph break][italic type]'Brazil, here I come ... Thankssss, amigo.'[roman type][paragraph break][wait 1000 ms] You see everyone standing around, looking shocked. 'Well, we should go', says a rather uncomfortable looking Uncle Vernon. He steers you out to the carpark, and the rest of the group follows suit.";
 	now harry potter is in car;
@@ -883,7 +893,14 @@ after going west when the location is hall:
 		if piers is on-stage:
 			say "'Bye Dudley', says Piers. The front door slams as he leaves. Uncle Vernon rounds on you, and says 'Go - cupboard - stay - no meals,' before collapsing into a chair. Aunt Petunia runs to fetch him some brandy.";
 			now the description of cupboard under the stairs is "You can see a small, dark room with lots of spiders and your few measly possessions.";
-			remove piers from play.
+			now Uncle Vernon is in hall;
+			now Aunt Petunia is in hall;
+			now Dudley is in hall;
+			remove piers from play;
+		otherwise:	
+			continue the action;
+	otherwise:	
+		continue the action.
 Dining room is a room in dursley's house.
 Toilets is a room in dursley's house. it is northeast of hall.
 the hall door is a door. the printed name is "Dining room door". the hall door is northeast of dining room. the hall door is southwest of hall.
@@ -978,7 +995,6 @@ getting out is an action applying to nothing.
 understand "pj's" as pyjamas.
 the description of Dursley's bedroom is "You look around. There is a wardrobe, a bed, a bedside table with drawer attached, and a door to the north-west.".
 The dursley's Bed is a thing in Dursley's bedroom.
-bed is a container. it is open.
 The dursley's Wardrobe is a container in The Dursley's Bedroom. it is closed and openable.  the description of wardrobe is "A large wooden wardrobe, made of the finest materials to please Your Aunt.".
 wardrobe is fixed in place.
 A Mirror is in the wardrobe. it is not portable.
@@ -1027,15 +1043,17 @@ all people can be asleep.
 all people can be awake.
 definition: a person is awake if they are not asleep.
 after entering bed when the venture of zoo is success:
-	now the time of day is 9:00 pm;
-	say "Exhausted by the day, you collapse into bed. You wait until night, so you can go and get food from the kitchen without the Dursleys catching you. In the meantime, you sit and think.[wait 4000 ms][paragraph break]You have lived with the Dursleys for almost  ten years, ten miserable years, as long as you can remember, ever since you were a baby and your parents died in a car crash. [wait 4000 ms][paragraph break]You can't remember being there when your parents died. Sometimes, you can recall a strange vision: a blinding flash of green light and a burning pain on your forehead. This, you suppose, was the crash, though you can't imagine where the green light might've come from.[paragraph break][wait 6000 ms] You can't remember your parents, and the Dursleys never talked about them. He wasn't allowed to ask questions, and there were no photos of them in the house.[wait 4000 ms][paragraph break]When you were younger, you had dreamed and dreamed of an unknown relation coming to tak you away, but this never happened; The Dursleys were your only family.[wait 4000 ms][paragraph break]Yet, sometimes, it seemed as though strangers in the street seemed to know you. Very strange strangers they were, too.[wait 4000 ms][paragraph break]A tiny man in a violet top had bowed to you once while out shopping, and a wild-looking old woman dressed in green had waved merrily to him once. A bald man in a very long purple coat had actually shaken his hand in the street the other day and then walked away without a word.[wait 6000 ms][paragraph break]The weirdest thing about all these people was the way they seemed to vanish, the second you tried to take a closer look.[wait 4000 ms][paragraph break]At school, you have no one. Everybody knew that Dudley's gang hated that odd Harry Potter in his baggy old clothes and broken glasses, and nobody liked to disagree with Dudley's gang. [paragraph break]Sometime during your musings, you fall asleep.";
-	now Harry is asleep;
-	remove egg from play;
-	remove bacon from play;
-	now all presents are undescribed.
-instead of sleeping:
-	if the location is cupboard under the stairs:
-		try entering bed.
+	if egg is on-stage:
+		now the time of day is 9:00 pm;
+		say "Exhausted by the day, you collapse into bed. You wait until night, so you can go and get food from the kitchen without the Dursleys catching you. In the meantime, you sit and think.[wait 4000 ms][paragraph break]You have lived with the Dursleys for almost  ten years, ten miserable years, as long as you can remember, ever since you were a baby and your parents died in a car crash. [wait 4000 ms][paragraph break]You can't remember being there when your parents died. Sometimes, you can recall a strange vision: a blinding flash of green light and a burning pain on your forehead. This, you suppose, was the crash, though you can't imagine where the green light might've come from.[paragraph break][wait 6000 ms] You can't remember your parents, and the Dursleys never talked about them. He wasn't allowed to ask questions, and there were no photos of them in the house.[wait 4000 ms][paragraph break]When you were younger, you had dreamed and dreamed of an unknown relation coming to tak you away, but this never happened; The Dursleys were your only family.[wait 4000 ms][paragraph break]Yet, sometimes, it seemed as though strangers in the street seemed to know you. Very strange strangers they were, too.[wait 4000 ms][paragraph break]A tiny man in a violet top had bowed to you once while out shopping, and a wild-looking old woman dressed in green had waved merrily to him once. A bald man in a very long purple coat had actually shaken his hand in the street the other day and then walked away without a word.[wait 6000 ms][paragraph break]The weirdest thing about all these people was the way they seemed to vanish, the second you tried to take a closer look.[wait 4000 ms][paragraph break]At school, you have no one. Everybody knew that Dudley's gang hated that odd Harry Potter in his baggy old clothes and broken glasses, and nobody liked to disagree with Dudley's gang. [paragraph break]Sometime during your musings, you fall asleep.";
+		now Harry is asleep;
+		remove egg from play;
+		remove bacon from play;
+		now all presents are undescribed;
+	otherwise:
+		continue the action.
+instead of sleeping when the location is cupboard under the stairs:
+	try entering bed.
 Release along with "Quixe" interpreter.
 
 chapter 3 - the letters from no-one
@@ -1065,15 +1083,14 @@ instead of going east when the location is hall:
 	otherwise:
 		continue the action.
 remote control airplane is a thing. the description is "it was crashed by Dudley. Never let him become a pilot.".
-before opening cupboard door when the location is cupboard under the stairs:
-	if the venture of zoo aftermath is pending:
+before opening cupboard door when the location is cupboard under the stairs during zoo aftermath:
 		say "You can't open the door. Uncle Vernon must've locked it. You play a few games of chess against yourself and climb back into bed. Around  noon, Aunt Petunia appears to give you some food. Every day, after getting home from school, this schedule continues. You finally get let out at the end of the Summer holidays. [line break][wait 5000 ms]";
 	now the description of hall is "Dudley is here, with his friends Piers, Malcolm, Gordon, and half of Dennis; the other half of Dennis is out the front door, since they're too large to all fit into the one room. Though all of Dudley's friends are big and stupid, Dudley, being the biggest and stupidest of the lot, is the leader. They seem to be laughing at a story Dudley just told them about knocking Mrs Figg over while riding his bike for the first time. You'd like to go outside, but they're blocking the way.";
 	now Dudley's camera is in Dudley's second room;
 	now the description of Dudley's camera is "Broken.";
 	now remote control airplane is in Dudley's second room.
 every turn during zoo aftermath:
-	if the location is Dudley's bedroom:
+	if the location is landing:
 		if Dennis is in hall:
 			say "You can hear the sound of Dudley's friends exiting the house. Now you can go for a walk.";
 			remove malcolm from play;
@@ -1090,12 +1107,20 @@ Saw is a thing in toolbox.
 Vice is a thing in garage. the description is "a heavy duty clamp.".
 after entering garage during zoo aftermath:
 	if air rifle is carried:
-		say "You grab the vice and use it to hold one end of the air rifle, and slowly bend it back into shape.";
-		now the description of air rifle is "a fully functioning air rifle. It isn't very powerful, but it would hurt.".
-after going northeast when the location is Dudley's second room during zoo aftermath:
+		if the description of air rifle is not "a fully functioning air rifle. It isn't very powerful, but it would hurt.":
+			say "You grab the vice and use it to hold one end of the air rifle, and slowly bend it back into shape.";
+			now the description of air rifle is "a fully functioning air rifle. It isn't very powerful, but it would hurt.".
+fixing is an action applying to one thing.
+understand "fix [something]" as fixing.
+report fixing:
+	say "What is there to fix about [noun]?".
+carry out fixing air rifle:
 	if vice is carried:
-		say "You use the vice to bend the air rifle back into shape.";
-		now the description of air rifle is "a fully functioning air rifle. It isn't very powerful, but it would hurt.".
+		say "You fix the air rifle";
+		now the description of air rifle is "a fully functioning air rifle. It isn't very powerful, but it would hurt.";
+		rule succeeds;
+	otherwise:
+		continue the action.
 after going east when the location is privet drive during zoo aftermath:
 	say "You spend the rest of the day [if air rifle is not carried]avoiding Dudley's gang.[otherwise]chasing Dudley's gang and shooting them with the air rifle.[end if]You go home, go to sleep, and get up again next morning.[wait 4000 ms][paragraph break]";
 	now the venture of zoo aftermath is success;
@@ -1112,24 +1137,227 @@ after going west when the location is kitchen during the letters from no-one:
 		remove newspaper from play;
 		now Dudley is in kitchen;
 		now Uncle Vernon is in kitchen;
+		now Aunt Petunia is in kitchen;
 		say "You come into the kitchen in the morning to have your nostrils assaulted by a horrible smell. The smell seems to be coming from a container in the sink, full of grey water and rags. 'What is this?', you ask your Aunt. 'Your new school uniform', she says. 'I'm dyeing some of Dudley's old things gray for you. It'll look just like everyone else's when i[']ve finished.' Uncle Vernon and Dudley enter the room, their noses wrinkled from the smell of your uniform.";
 	otherwise:
 		continue the action.
-letters is a thing.
+mail is a container. mail is openable and not open.
 after doing anything when the location is kitchen during the letters from no-one:
 	if newspaper is not in kitchen:
 		now newspaper is in kitchen;
-		now letters is in hall;
+		now mail is in hall;
 		say "Uncle Vernon opens his newspaper, and Dudley bangs his Smeltings stick on the table. You hear the click of a letter-box and the sound of letters flopping on the doormat. Uncle Vernon tells Dudley to get it. Dudley tells you to get it. You tell Dudley to get it. Dudley tries to hit you with his Smeltings stick. You get the letters.";
+		continue the action;
+	otherwise:
 		continue the action.
 after doing anything when the location is kitchen during the letters from no-one:
 	if piece of toast is on table:
 		remove piece of toast from play;
-		say "Your Aunt takes the toast and throws it out. How long has that been there? She asks. No-one answers her. She seems miffed that she isn't getting any attention.".
-after doing anything when the location is kitchen during the letters from no-one:
-	if piece of toast is not in kitchen:
-		if newspaper is in kitchen:
-			if letters is not in kitchen:
-				say "I said, 'You get the letters'. Please don't stuff up the continuity of the story. It's rude.".
-
-
+		say "Your Aunt takes the toast and throws it out. 'How long has that been there?' She asks. No-one answers her. She seems miffed that she isn't getting any attention.";
+		continue the action;
+	otherwise:
+		continue the action.
+before doing anything except opening letter when the location is kitchen during the letters from no-one:
+	if the current action is not going east:
+		if piece of toast is not on table:
+			if newspaper is in kitchen:
+				if mail is not carried:
+					say "I said, 'You get the letters'. Please don't stuff up the continuity of the story. It's rude.";
+					continue the action;
+				otherwise:	
+					continue the action;
+			otherwise:
+				continue the action;
+		otherwise:
+			continue the action;
+	otherwise:
+		continue the action.
+understand "letter" or "letters" as mail. 
+after taking mail for the first time:
+	say "As you examine the mail, you see a postcard from Aunt Marge, who was on holiday, something that looked like a bill and - [italic type]a letter for Harry[roman type]. No one ever sends you letters, but here it was, a letter, adressed so plainly there could be no mistake:[paragraph break][italic type]Mr H. Potter[line break]The Cupboard under the Stairs[line break]4 Privet Drive[line break]Little Whinging[line break]Surrey[paragraph break][roman type]The thick, yellowish envelope has a purple wax seal on the back, bearing a coat of arms. 'Hurry up, boy!' shouted Uncle Vernon from the kitchen. 'What are you doing, checking for letter-bombs?' You hear him chuckling merrily.".
+the description of mail is "[italic type]Mr H. Potter[line break]The Cupboard under the Stairs[line break]4 Privet Drive[line break]Little Whinging[line break]Surrey[paragraph break][roman type]The thick, yellowish envelope has a purple wax seal on the back, bearing a coat of arms.".
+after going west when the location is kitchen during letters from no-one:
+	if mail is carried:
+		say "'Finally', says Uncle Vernon. You give him the other letters, and keep your own.";
+		now the description of kitchen is "Uncle Vernon sits reading his mail, as you should be";
+		now the printed name of mail is "letter";
+		continue the action;
+	otherwise:	
+		continue the action.
+instead of examining mail when the location is kitchen:
+	try opening mail.
+before opening mail during the letters from no-one:
+	if the location is not kitchen:
+		say "You need to take Uncle Vernon his mail first.";
+		stop the action;
+	otherwise:
+		say "'Marge's ill', Uncle Vernon informed Aunt Petunia. 'Ate a funny whelk...'[line break]'Dad!' said Dudley suddenly. 'Dad, Harry's got something!'[line break]Right before you unfold the heavy parchment letter, it is jerked sharply out of your hand by your Uncle.[wait 3000 ms][line break]'That[']s mine!', you say, trying to snatch it back.[line break]'Who'd be writing to you?' sneered Uncle Vernon, glancing at the letter. His face turned green. 'P-P-Petunia!' he gasped.[wait 3000 ms][line break]Dudley tried to grab the letter, but your Uncle held it out of his reach. Aunt Petunia took it and read the first line. For a moment it looked as though she might faint. She clutched her throat and made a choking noise. [wait 4000 ms][line break]'Vernon! Oh my goodness - Vernon!'[paragraph break]'I want to read it' [if the player is Harry]you say[otherwise]Harry says[end if], at the same time as Dudley. 'Get out, both of you,' croaks Uncle Vernon, 'OUT!', before he grabs both [if the player is harry]you[otherwise]Harry[end if] and Dudley by the neck and throws you out of the room.";
+		now Dudley is in hall;
+		now the description of kitchen is "";
+		now kitchen door is closed;
+		now kitchen door is locked;
+		now the description of hall is "You can hear Uncle Vernon and Aunt Petunia arguing.";
+		now Harry is in hall;
+		now Uncle Vernon has mail;
+		stop the action.
+report listening when the location is hall during letters from no-one:
+	if Harry is in hall:
+		if Uncle Vernon is in kitchen:	
+			if Aunt Petunia is in kitchen:
+				if Uncle Vernon has mail:
+					say "[first time]'Vernon,' Aunt Petunia says, 'look at the adress - how could they possibly know where he sleeps? You don't think they're watching the house?'[wait 3000 ms][line break]'Watching - spying - might be following us,' mutters Uncle Vernon. [line break]'What should we do? Write back?' says your Aunt.[line break]'No, No, We'll ignore it. if they don't get an answer ... yes, that's best ... we won't do anything ...'[wait 4000 ms][line break]'But - '[wait 1000 ms][line break]'I'm not having one in the house! Didn't we swear that we'd stamp him out of this dangerous nonsense?'[wait 3000 ms][paragraph break][only]You can hear Uncle Vernon and Aunt Petunia walking around the room, muttering. Your cupboard door stands open." instead;
+					now cupboard door is open;
+					now the description of hall is "";
+				otherwise:
+					continue the action;
+			otherwise:
+				continue the action;
+		otherwise:	
+			continue the action;
+	otherwise:	
+		continue the action.
+after going north when the location is cupboard under the stairs during letters from no-one:
+	if uncle vernon has mail:
+		now the time of day is 6:00 pm;
+		now bed is in Dudley's second room;
+		say "You spend the rest of the day thinking up ways of getting your letter back. After getting home from work, Uncle Vernon did something he'd never done before: he visited you in your cupboard. 'Where's my letter?' you ask. 'Who wrote to me?'[line break]'No one. it was adressed to you by mistake,' says Uncle Vernon. 'I have burned it.' 'It was [italic type]not[roman type] a mistake', you say. 'It had my cupboard on it.'[line break]'SILENCE!' yells Uncle Vernon. 'Er - yes, Harry - about this cupboard, We think you're getting a bit big for it... we think it might be nice if you moved into Dudley's second room. You can grab all your things and move up now.'";
+		now Dudley is in Dudley's bedroom;
+		now the description of hall is "";
+		now the description of Dudley's second room is "You can see all of Dudley's old junk. It seems Uncle Vernon moved your bed up here.";
+		now the printed name of Dudley's second room is "Your new room".
+Mini tank is a thing in Dudley's second room. the description of mini tank is "a mini tank that Dudley had one used to run over your next door neighbour's dog.".
+Bird cage is a thing in Dudley's second room. the description of bird cage is "This once held a parrot, but Dudley swapped it for the air rifle.".
+bookshelf is a supporter in Dudley's second room. the description of bookshelf is "The books on here look like the only things that are untouched.".
+Dudley's books is a thing on bookshelf. the description of Dudley's books is "A variety of books, ranging from those appropriate to Dudley, such as the hungry catterpillar, to more complex books such as Eragon and Harry Potter and the Philosopher's stone. Wait...".
+shooting is an action applying to one thing.
+understand "shoot [anything]" as shooting.
+before shooting:
+	if air rifle is carried:
+		if the description of air rifle is "a fully functioning air rifle. It isn't very powerful, but it would hurt.":
+			continue the action;
+		otherwise:	
+			say "The air rifle's broken";
+	otherwise:
+		say "With what?".
+understand "shoot [anyone]" as shooting.
+carry out shooting:
+	say "You shoot [noun] with the air rifle. [if noun is a person][noun] yells.[otherwise][end if]".
+The post is a scene. 
+The post begins when the venture of the post is pending.
+The post ends when the venture of the post is success.
+after going northeast when the location is dudley's second room during the letters from no-one:
+	if the printed name of Dudley's second room is "Your new room":
+		repeat with X running through things carried by player:
+			silently try dropping X;
+		now the time of day is 7:30 am;
+		say "You walk into the room and drop all of your things on the ground. Yesterday, you would've given anything to be up here. Today, you would rather be in the cupboard, without it. From downstairs, you hear the sound of Dudley complaining about you taking his room, mingled with the sound of Uncle Vernon yelling. It appears that more letters were forced through the letter-box, through the crack between the door and the wall, and the window in the downstairs toilet. Over the next few days, more letters find their way into the house. [paragraph break]One fine Sunday morning, after waking, Aunt Petunia calls you for breakfast.";
+		now kitchen door is open;
+		now kitchen door is unlocked;
+		now the venture of letters from no-one is success;
+		now the venture of the post is pending;
+		now the description of hall is "You see Uncle Vernon sitting in front of the letterbox, boarding it up.";
+	otherwise:
+		continue the action.
+Shack is a room. the description is "There is another small room to the east.".
+sofa is a supporter in shack. sofa is fixed in place.
+fireplace is a container in shack. fireplace is fixed in place.
+after going west when the location is kitchen during the post:
+	now Uncle Vernon is in kitchen;
+	say "Uncle Vernon comes into the room. 'No post on Sundays,' he reminded them all happily, 'no damn letters today -'[line break]Something came whizzing down the chimney as he spoke and caught him sharply on the head. Next moment, thirty or forty letters pelt out of the fireplace. While the others duck, You jump and try to catch one - [line break]'Out! OUT!'";
+	if glulx timekeeping is supported:
+		wait 5000 ms before continuing;
+	say "[line break]Uncle Vernon seizes you around the waist and throws you into the hall, while the others run after. The kitchen door closes behind them. 'That does it.' says Uncle Vernon. 'I want you all ready to leave in five minutes. We[']re going away. Just pack some clothes. No arguments!'";
+	if glulx timekeeping is supported:
+		wait 5000 ms before continuing;
+	increase time of day by 10 minutes;
+	say "[line break]Ten minutes later, everyone was in the car, speeding along the highway. They drove. And drove. Even Aunt Petunia didn't dare ask where they were going. They didn't stop to eat or drink all day.";
+	if glulx timekeeping is supported:
+		wait 5000 ms before continuing;
+	now time of day is 8:00 pm;
+	say "By nightfall Dudley was howling. He'd never missed so much TV in his life, or gone so long without using his computer. Finally, you stop outside of a gloomy-looking hotel. Dudley and Harry shared a room with twin beds and damp, musty sheets. Dudley's snoring fills the room.";
+	if glulx timekeeping is supported:
+		wait 6000 ms before continuing;
+	now time of day is 7:30 am;
+	now the description of mail is "[italic type]Mr H. Potter[line break]Room 17[line break]Railview Hotel[line break]Cokeworth[paragraph break][roman type]The thick, yellowish envelope has a purple wax seal on the back, bearing a coat of arms.";
+	say "Over a dinner of stale cornflakes and cold tomatoes on toast, the owner of the hotel comes over. '[']Scuse me, but is one of you Mr H. Potter? Only I got about an [']undred of these at the front desk.' She holds up a letter.[paragraph break][italic type]Mr H. Potter[line break]Room 17[line break]Railview Hotel[line break]Cokeworth[roman type][paragraph break]";
+	if glulx timekeeping is supported:
+		wait 4000 ms before continuing;
+	now time of day is 4:00 pm;
+	say "You try and grab the letter, but Uncle Vernon knocks your hand away. He follows the woman to get the letters. Within half an hour, you're back on the road again. 'Wouldn't it be better just to go home, dear?' Aunt Petunia suggested. Uncle Vernon pays no attention. After hours of roaming, the car stops at the coast and Uncle Vernon gets out, locking the door at the same time. After a while, Dudley starts complaining. 'It's Monday, and the Great Humberto's on tonight. I want to stay somewhere with [italic type]television[roman type].'[line break]If it is Monday, then it's your birthday tomorrow. Of course, your birthdays are never very fun - last year, you recieved a coat-hanger and a pair of old socks that used to beling to Uncle Vernon. Still, you weren't eleven every day.[paragraph break]";
+	if glulx timekeeping is supported:
+		wait 10000 ms before continuing;
+	say "Uncle Vernon comes, smiling, back to the car, carrying a long, thin package, which he wouldn't tell Petunia about. 'Found the perfect place!' he says. 'Come on! Everyone out!'[line break]You walk along the coast, before coming to a halt in front of an old rowing boat which your Uncle says was lent to you buy the  toothless old man standing next to him. Everyone hops into the boat, and are soon rowing towards a small, miserable looking shack on a rock in the middle of the ocean.[paragraph break]";
+	if glulx timekeeping is supported:
+		wait 8000 ms before continuing;
+	say "After reaching the rock, everyone gratefully clambers out of the boat. The shack smells horribly like seaweed. Uncle Vernon, who promised he'd brought rations, turned out to be in possession of four packets of crisps, and four bananas. After eating, he chucks the empty crisp packets into the fire and tries to light it, but they just shrivel up. 'Could do with some of those letters now, eh?' he says. Aunt Petunia and Uncle Vernon go into the only other room, and Dudley sleeps on the sofa. You get the floor. You check Dudley's watch, on his arm which is sticking over the side of the sofa. [paragraph break]Five minutes to go.";
+	now the time of day is 11:54 pm;
+	now Harry Potter is in Shack;
+	now Dudley is in Shack;
+	now Aunt Petunia is in Shack;
+	now Uncle Vernon is in Shack.
+[the times are offset because the check for time of day comes before the time of day refreshes]	
+Hagrid is a person.
+Hagrid's scene is a scene. 
+Hagrid's scene begins when the venture of post is success.
+Hagrid's scene ends when the venture of Hagrid's scene is success.
+every turn when the location is Shack:
+	if the time of day is 11:55 pm:
+		say "4 minutes to go.";
+	otherwise if the time of day is 11:56 pm:
+		say "3 minutes to go.";
+	otherwise if the time of day is 11:57 pm:
+		say "2 minutes to go.";
+	otherwise if the time of day is 11:58 pm:
+		say "1 minute to go.";
+	otherwise if the time of day is 11:59 pm:
+		say "BOOM. [wait 1000 ms]The whole shack shivered. You sit bolt upright. Someone was outside, knocking to come in. [line break]BOOM. [wait 1000 ms]They knocked again. Dudley jerked awake. 'Where[']s the cannon?' he said stupidly. [line break]There was a crash as Uncle Vernon skidded into the room, holding a rifle in his hands - now they knew what was in the package that he had brought with him.[line break]'Who's there?' he shouted. 'I warn you - I'm armed!;[line break]There was a pause. Then -[line break]SMASH![line break]The door was knocked off of its hinges and landed on the floor. A giant of a man was standing in the doorway. [wait 5000 ms]The giant squeezed his way into the hut. He picked up the door and fitted it back into it's frame. He turned around to look at them. [wait 4000 ms][line break]'Couldn't make us a cup o' tea, could yeh? It's not been an easy journey...'[line break] The stranger strolled over to the sofa and told Dudley to move. Dudley instead ran squeaking over to his parents. [wait 4000 ms][line break]'An here's Harry!' said the giant.";
+		now the venture of post is success;
+		now Hagrid is in shack;
+	otherwise:
+		say "[no line break]";
+		continue the action.
+		
+chapter 4 - the keeper of keys	
+	
+after doing anything during Hagrid's scene:
+	say "[first time]'I demand that you leave at one, sir!' says Uncle Vernon. 'You are breaking and entering!'[line break]The giant wrenched the gun out of Uncle Vernon's hands, and bent it into a knot, before throwing it aside. [line break]'I haven' seen you since you was only a baby. I[']m Hagrid, by the way. Rubeus Hagrid. I got summat for yeh - it's in my coat. Here you go.' [paragraph break]He gives you a box which he removed from his jacket, which, upon opening, contained a large chocolate cake with [italic type]Happy Birthday Harry[roman type] written on it in green icing. 'You wouldn['] mind making some tea and sausages, would yeh? they're in my coat. Start by getting out the tea pot and puttin['] some tea leaves in it. Then go to the other room to get some water in it.' Hagrid bent down in front of the fire, and when he stood up a fire was roaring in the grate. [only][no line break]"; 
+	now the description of shack is "There is another small room to the east. a fire is crackling merrily in the grate.";
+	continue the action.
+hagrid's coat is clothing in shack. the description of hagrid's coat is "there are a whole bunch of pockets all around the coat. try opening a pocket.".
+pocket is a container. pocket is part of hagrid's coat. pocket is closed and openable.
+teapot is a container in pocket. understand "pot" as teapot.
+understand "a pocket" as pocket.
+tea leaves is a thing in pocket.
+blanket is a thing in shack.
+The second bedroom is a room. it is east of shack.
+A mouldy old bed is a container in second bedroom. bed is enterable. bed is not portable.
+Dirty sink is a container in second bedroom. sink is fixed in place.
+water is a thing.
+understand "kettle" as teapot.
+water is in Dirty sink.
+filling is an action applying to one thing.
+understand "fill [something]" as filling.
+report filling:
+	say "with what?".
+carry out filling teapot for the first time:
+	if water is not carried:
+		if teapot is carried:
+			now water is in teapot;
+			say "You fill the teapot with water. From the other room, Hagrid calls out to you. 'How're you going there, Harry? anyway, like I told you, I'm the keeper of keys at Hogwarts. Yeh'll know all about Hogwarts, o['] course. [line break]'Er, no' you call back. 'Sorry'.[wait 3000 ms][line break]'[italic type]Sorry?'[roman type] barks Hagrid. 'It's them that should be sorry! I knew you weren't getting the letters, but I still thought you'd know about Hogwarts, fer crying out loud! Didn't you ever wonder where your parents learnt it all?[wait 3000 ms][line break]'All what?'[wait 1000 ms][line  break]'ALL WHAT! Don['] you know - Don't you know anything, about yer parents world?[wait 2000 ms][line break]'What world?[wait 1000 ms][line break]'DURSLEY!' booms Hagrid.";
+			stop the action;
+		otherwise:
+			continue the action;
+	otherwise:
+		continue the action.
+after going west when the location is shack:
+	if teapot is carried:
+		if water is in teapot:
+			say "As you enter, Hagrid says 'You never told him? You kept it from him for all these years?'[line break]'Kept [italic type]what[roman type] from me?' you ask eagerly.[line break]'STOP! I FORBID YOU!' says Uncle Vernon, panicking.[line break]'Ah, go boil yer heads, both of yeh,' says Hagrid. 'Harry - yer a wizard.'[wait 4000 ms][line break]'I'm a [italic type]what?[roman type]' you ask. [line break]'A wizard, and a good one i'd reckon, once yer trained up a bit. It's time you read your  letter.' Hagrid hands you a letter.";
+			now harry carries mail;
+			now mail is closed;
+			now the description of mail is "[italic type]Mr H. Potter[line break]The Floor[line break]Hut-on-the-Rock[line break]The Sea[roman type][line break]The thick, yellowish envelope has a purple wax seal on the back, bearing a coat of arms. You should open it first.".
+after opening mail:
+	if water is in teapot:
+		if the location is shack:
+			if hagrid is in shack:
+				now the description of mail is "You unfold the letter and read: [line break]".

@@ -11,21 +11,21 @@
     </dict>
     <key>1</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2.inform\Source\story.ni</string>
-        <key>Line</key><integer>6</integer>
+        <key>Line</key><integer>5</integer>
         <key>Title</key><string>chapter 1 - Test facilities - not for release</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>2</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2.inform\Source\story.ni</string>
-        <key>Line</key><integer>82</integer>
+        <key>Line</key><integer>81</integer>
         <key>Title</key><string>chapter 2 - The Vanishing Glass</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>3</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch2.inform\Source\story.ni</string>
-        <key>Line</key><integer>1041</integer>
+        <key>Line</key><integer>1059</integer>
         <key>Title</key><string>chapter 3 - the letters from no-one</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
@@ -1110,7 +1110,7 @@
     </dict>
     <key>158</key><dict>
         <key>Filename</key><string>D:\zym0001\Documents\Inform\Extensions\erik temple\real-time delays.i7x</string>
-        <key>Line</key><integer>50</integer>
+        <key>Line</key><integer>53</integer>
         <key>Title</key><string>Section - I6 Delay routines</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>

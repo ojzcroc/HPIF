@@ -220,90 +220,91 @@
 <p>This action responds to commands like ASK FRED ABOUT BOAT, where BOAT is a thing defined in the game, rather than a topic.<p><hr><p><b>Typed commands leading to this action</b><p>
 <p class="hangingin2">&quot;ask [someone] about [any known thing]&quot;&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </p><p><b>Rules controlling this action</b><p>
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything except opening letter when the location is kitchen during letters from no-one</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1160"><img border=0 src=inform:/Reveal.png></a></p>
 <p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>asking someone to try doing something when the person asked is not the current interlocutor</i>&nbsp;&nbsp;<font color="#800000">giving orders needs an interlocutor rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode2569(code) {
+function pasteCode2595(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('giving orders needs an interlocutor rule');
 }
 </script>
-<a href="javascript:pasteCode2569()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode2570(code) {
+<a href="javascript:pasteCode2595()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2596(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The giving orders needs an interlocutor rule is not listed in the before rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode2570()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<a href="javascript:pasteCode2596()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </p>
 <p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>conversing when the noun is not the current interlocutor</i>&nbsp;&nbsp;<font color="#800000">greet a new interlocutor rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode2571(code) {
+function pasteCode2597(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('greet a new interlocutor rule');
 }
 </script>
-<a href="javascript:pasteCode2571()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode2572(code) {
+<a href="javascript:pasteCode2597()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2598(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The greet a new interlocutor rule is not listed in the before rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode2572()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<a href="javascript:pasteCode2598()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </p>
-<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line355"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line403"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1049"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line358"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line406"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">before&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1067"><img border=0 src=inform:/Reveal.png></a></p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><i>NB:</i> the change greeting command to greeting rule is listed before the giving orders needs an interlocutor rule in the before rules&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </small><br>
-<br><p class="hangingin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the player's command includes "steal"</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line468"><img border=0 src=inform:/Reveal.png></a></p>
+<br><p class="hangingin2">instead of&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the player's command includes "steal"</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line471"><img border=0 src=inform:/Reveal.png></a></p>
 <br><p class="hangingin2">check&nbsp;&nbsp;&nbsp;&nbsp;<i>quizzing someone about something unknown</i>&nbsp;&nbsp;<font color="#800000">block asking about something unknown rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode2573(code) {
+function pasteCode2599(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('block asking about something unknown rule');
 }
 </script>
-<a href="javascript:pasteCode2573()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode2574(code) {
+<a href="javascript:pasteCode2599()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2600(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The block asking about something unknown rule is not listed in the check quizzing it about rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode2574()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<a href="javascript:pasteCode2600()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </p>
-<br><p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the location is kitchen during Dudley's birthday breakfast</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line518"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when in car during zoo</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line595"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the location is kitchen during letters from no-one</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1119"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the location is kitchen during letters from no-one</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1125"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the location is kitchen during letters from no-one</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1129"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the location is Cupboard under the stairs</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line132"><img border=0 src=inform:/Reveal.png></a></p>
-<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything during zoo</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line575"><img border=0 src=inform:/Reveal.png></a></p>
+<br><p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the location is kitchen during Dudley's birthday breakfast</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line521"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when in car during zoo</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line598"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the location is kitchen during letters from no-one</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1145"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the location is kitchen during letters from no-one</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1153"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything when the location is Cupboard under the stairs</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line134"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything during zoo</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line578"><img border=0 src=inform:/Reveal.png></a></p>
+<p class="hangingin2">after&nbsp;&nbsp;&nbsp;&nbsp;<i>doing anything during Hagrid's scene</i>&nbsp;&nbsp;&nbsp;<a href="source:story.ni#line1319"><img border=0 src=inform:/Reveal.png></a></p>
 <br><p class="hangingin2">report&nbsp;&nbsp;&nbsp;&nbsp;<i>quizzing someone about something</i>&nbsp;&nbsp;<font color="#800000">block quizzing rule</font>&nbsp;&nbsp;<script language="JavaScript">
-function pasteCode2575(code) {
+function pasteCode2601(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('block quizzing rule');
 }
 </script>
-<a href="javascript:pasteCode2575()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
-function pasteCode2576(code) {
+<a href="javascript:pasteCode2601()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>name</i> <script language="JavaScript">
+function pasteCode2602(code) {
     var myProject = external.Project;
 
     myProject.selectView('source');
     myProject.pasteCode('The block quizzing rule is not listed in the report quizzing it about rulebook.[=0x000A=]');
 }
 </script>
-<a href="javascript:pasteCode2576()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
+<a href="javascript:pasteCode2602()"><img border=0 src=inform:/doc_images/paste.png></a>&nbsp;<i>unlist</i>&nbsp;<a href='inform://Extensions/Extensions/Eric%20Eve/Conversation%20Framework.html' title="Conversation Framework by Eric Eve" STYLE="text-decoration: none"><img border=0 src=inform:/Revealext.png></a>
 </p>
 <br><p>
 <!--CONTENT ENDS-->
