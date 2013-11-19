@@ -1,13 +1,19 @@
 * //C8A63770-6D0B-11E2-B933-F96839AE4917// currentplayereports
 Action: looking 
 
-Game tester: Orion
-Command: cheats on
-Action: switching cheats on 
+Game tester: purloin doughnut
+Command: purloin doughnut
+Game tester: purloin doughnut
+Command: i
+Action: taking inventory 
 
-Game tester: Orion
-Command: help
-Action: asking for help 
+Game tester: purloin doughnut
+Command: eat donut
+Action: eating doughnut 
 
-Action: looking 
+Game tester: purloin doughnut
+Command: eat doughnut
+Action: eating doughnut 
 
+Game tester: purloin doughnut
+Command: eat doughnut

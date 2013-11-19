@@ -975,6 +975,9 @@ instead of swearing obscenely or swearing mildly when dialyes/no is 1:
 		say "'Well, my number is 893. Call me back if you ever gain a civil tongue. '";
 		try hanging up;
 		now lexicon is table 1 instead.
+		
+after dialling 893 on the office phone:
+	say "'Hello. How are you?' says the customer.".
 
 customercall is a scene.
 customercall begins when dialyes/no is 1.
@@ -1672,8 +1675,11 @@ after examining shop attendant:
 	now shop attendant is proper-named.
 a foods display case is a transparent closed container in bakers. it is fixed in place.
 after examining foods display case, stop the action.
+understand "food" as bun.
 doughnut is a food in foods display case. the printed name is "[if doughnut is in foods display case]a [end if]doughnut".
 understand "donut" as doughnut.
+instead of eating doughnut when the player's command includes "donut":
+	say "You aren't American, don't be silly.".
 bun is food in foods display case. the printed name is "[if bun is in foods display case]a [end if]bun".
 breadstick is food in foods display case. the printed name is "[if breadstick is in foods display case]a [end if]breadstick".
 rule for printing the name of doughnut when taking doughnut: say "doughnut".

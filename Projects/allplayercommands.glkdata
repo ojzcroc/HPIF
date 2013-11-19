@@ -1211,3 +1211,257 @@ Action: asking for help
 
 Action: looking 
 
+Action: looking 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Game tester: Orion
+Command: gonear car
+Game tester: Orion
+Command: open sesame
+Action: universal opening 
+
+Game tester: Orion
+Command: get in car
+Action: entering the car 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: get out
+Action: exiting 
+
+Game tester: Orion
+Command: u
+Action: going up 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: read ics
+Action: examining an important customer service document 
+
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: bad
+Action: saying "bad" 
+
+Game tester: Orion
+Command: terrible
+Action: saying "terrible" 
+
+Game tester: Orion
+Command: call 8953
+Game tester: Orion
+Command: ask for a hal 6502
+Action: hanging up 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: swear
+Action: saying "swear" 
+
+Game tester: Orion
+Command: fuck
+Action: swearing obscenely 
+
+Action: hanging up 
+
+Game tester: Orion
+Command: clear screen
+Game tester: Orion
+Command: clear the screen
+Game tester: Orion
+Command: call 893
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Game tester: Orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: actions
+Game tester: Orion
+Command: call 893
+Action: hanging up 
+
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: actions off
+Game tester: Orion
+Command: call 895
+Action: hanging up 
+
+Action: dialling 895 on the office phone 
+
+Game tester: Orion
+Command: call 8953
+Action: hanging up 
+
+Action: dialling 8953 on the office phone 
+
+Game tester: Orion
+Command: call 893
+Action: hanging up 
+
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Game tester: Orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: call 8953
+Game tester: Orion
+Command: then ask for a hal 6502
+Action: responding to customer "ask for a hal 6502" 
+
+Action: hanging up 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: read rolo
+Game tester: Orion
+Command: read dex
+Action: examining a rolodex 
+
+Action: dialling 12856 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to Mr. Mason 
+
+Game tester: Orion
+Command: yes
+Game tester: Orion
+Command: try the qz 77
+Action: responding to customer "the qz 77" 
+
+Game tester: Orion
+Command: is there
+Action: hanging up 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: looking 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take all
+Action: taking doughnut 
+
+Action: taking bun 
+
+Action: taking breadstick 
+
+Action: taking the small roll 
+
+Action: taking the small roll 
+
+Game tester: Orion
+Command: eat all
+Game tester: Orion
+Command: eat doughnut
+Action: eating doughnut 
+
+Game tester: Orion
+Command: eat donut
+Game tester: Orion
+Command: actions
+Game tester: Orion
+Command: eat doughnut
+Action: looking 
+
+Game tester: purloin doughnut
+Command: purloin doughnut
+Game tester: purloin doughnut
+Command: i
+Action: taking inventory 
+
+Game tester: purloin doughnut
+Command: eat donut
+Action: eating doughnut 
+
+Game tester: purloin doughnut
+Command: eat doughnut
+Action: eating doughnut 
+
+Game tester: purloin doughnut
+Command: eat doughnut
