@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x02C49220" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x0204F9E8" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x02C49220"/>
-  <item nodeId="node-0x02C49220">
+  <activeNode nodeId="node-0x0204F9E8"/>
+  <item nodeId="node-0x0204F9E8">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">"Up!" Screeches Petunia.&#x000A;&#x000A;Harry Potter and the Philosopher's Stone&#x000A;Influenced by "Harry Potter and the Philosopher's stone" by J.K. Rowling. by Orion Zymaris&#x000A;Release 1 / Serial number 131110 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Cupboard under the stairs&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (south), Bed (empty), a pair of socks, a pair of shoes, some assorted clothing, a chess set and a roll of sellotape here.&#x000A;&#x000A;Name:</result>
+    <result xml:space="preserve">"Up!" Screeches Petunia.&#x000A;&#x000A;Harry Potter and the Philosopher's Stone&#x000A;Influenced by "Harry Potter and the Philosopher's stone" by J.K. Rowling. by Orion Zymaris&#x000A;Release 1 / Serial number 131118 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Cupboard under the stairs&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (south), Bed (empty), a pair of socks, a pair of shoes, some assorted clothing, a chess set and a roll of sellotape here.&#x000A;&#x000A;Name:</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x02C49290"/>
-      <child nodeId="node-0x02C49920"/>
+      <child nodeId="node-0x0204FA58"/>
+      <child nodeId="node-0x02AC4668"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49290">
+  <item nodeId="node-0x0204FA58">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Cupboard under the stairs&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -22,11 +22,11 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49300"/>
-      <child nodeId="node-0x02C49370"/>
+      <child nodeId="node-0x02AC2FC8"/>
+      <child nodeId="node-0x02AC3140"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49300">
+  <item nodeId="node-0x02AC2FC8">
     <command xml:space="preserve">showme me</command>
     <result xml:space="preserve">yourself - person&#x000A;location: in Harry's Room&#x000A;singular-named, proper-named; unlit, inedible, portable; male&#x000A;printed name: "Harry Potter"&#x000A;printed plural name: "people"&#x000A;indefinite article: none&#x000A;description: none&#x000A;initial appearance: none&#x000A;carrying capacity: 100&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -34,7 +34,7 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02C49370">
+  <item nodeId="node-0x02AC3140">
     <command xml:space="preserve">help</command>
     <result xml:space="preserve">&gt; General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary</result>
     <commentary xml:space="preserve"></commentary>
@@ -42,10 +42,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C493E0"/>
+      <child nodeId="node-0x02AC33B0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C493E0">
+  <item nodeId="node-0x02AC33B0">
     <command xml:space="preserve">[down]</command>
     <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A; &gt; What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary&#x000A;   &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A; &gt; What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary</result>
     <commentary xml:space="preserve"></commentary>
@@ -53,10 +53,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49450"/>
+      <child nodeId="node-0x02AC3620"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49450">
+  <item nodeId="node-0x02AC3620">
     <command xml:space="preserve">[down]</command>
     <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A; &gt; Acknowledgements&#x000A;   Itinerary&#x000A;   &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A; &gt; Acknowledgements&#x000A;   Itinerary</result>
     <commentary xml:space="preserve"></commentary>
@@ -64,10 +64,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C494C0"/>
+      <child nodeId="node-0x02AC3890"/>
     </children>
   </item>
-  <item nodeId="node-0x02C494C0">
+  <item nodeId="node-0x02AC3890">
     <command xml:space="preserve">[down]</command>
     <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary&#x000A;   &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary</result>
     <commentary xml:space="preserve"></commentary>
@@ -75,10 +75,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49530"/>
+      <child nodeId="node-0x02AC3B08"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49530">
+  <item nodeId="node-0x02AC3B08">
     <command xml:space="preserve">[down]</command>
     <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary&#x000A; &gt; &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary&#x000A; &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -86,10 +86,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C495A0"/>
+      <child nodeId="node-0x02AC3CC8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C495A0">
+  <item nodeId="node-0x02AC3CC8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">*** Run-time problem P23: Attempt to look up a non-existent entry at column 1, row 5 of the table 'Table of Options'.&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
     <commentary xml:space="preserve"></commentary>
@@ -97,10 +97,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49610"/>
+      <child nodeId="node-0x02AC3F40"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49610">
+  <item nodeId="node-0x02AC3F40">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary&#x000A; &gt; &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A;   Itinerary&#x000A; &gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -108,10 +108,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49680"/>
+      <child nodeId="node-0x02AC41B0"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49680">
+  <item nodeId="node-0x02AC41B0">
     <command xml:space="preserve">[up]</command>
     <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary&#x000A;   &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary</result>
     <commentary xml:space="preserve"></commentary>
@@ -119,10 +119,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49760"/>
+      <child nodeId="node-0x02AC4290"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49760">
+  <item nodeId="node-0x02AC4290">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">'allo&#x000A;&#x000A;&#x000A;&#x000A;Please press SPACE to continue.</result>
     <commentary xml:space="preserve"></commentary>
@@ -130,10 +130,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C497D0"/>
+      <child nodeId="node-0x02AC4500"/>
     </children>
   </item>
-  <item nodeId="node-0x02C497D0">
+  <item nodeId="node-0x02AC4500">
     <command xml:space="preserve"> </command>
     <result xml:space="preserve">General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary&#x000A;   &#x000A;&#x000A;   General Game Commands (for specific hints, type hints)&#x000A;   What does that top bar do?&#x000A;   Acknowledgements&#x000A; &gt; Itinerary</result>
     <commentary xml:space="preserve"></commentary>
@@ -141,10 +141,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49840"/>
+      <child nodeId="node-0x02AC4588"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49840">
+  <item nodeId="node-0x02AC4588">
     <command xml:space="preserve">[esc]</command>
     <result xml:space="preserve">Cupboard under the stairs&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -152,10 +152,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C498B0"/>
+      <child nodeId="node-0x02AC45F8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C498B0">
+  <item nodeId="node-0x02AC45F8">
     <command xml:space="preserve"> look</command>
     <result xml:space="preserve">Cupboard under the stairs&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -163,7 +163,7 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02C49920">
+  <item nodeId="node-0x02AC4668">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -171,10 +171,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49990"/>
+      <child nodeId="node-0x02AC46D8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49990">
+  <item nodeId="node-0x02AC46D8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -182,10 +182,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49A00"/>
+      <child nodeId="node-0x02AC4748"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49A00">
+  <item nodeId="node-0x02AC4748">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -193,14 +193,14 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49A70"/>
-      <child nodeId="node-0x06074760"/>
-      <child nodeId="node-0x06074840"/>
-      <child nodeId="node-0x06074920"/>
-      <child nodeId="node-0x06074A70"/>
+      <child nodeId="node-0x02AC47B8"/>
+      <child nodeId="node-0x02AC4CF8"/>
+      <child nodeId="node-0x02AC4DD8"/>
+      <child nodeId="node-0x02AC4EB8"/>
+      <child nodeId="node-0x02AC5008"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49A70">
+  <item nodeId="node-0x02AC47B8">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Cupboard under the stairs&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -208,10 +208,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49AE0"/>
+      <child nodeId="node-0x02AC4828"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49AE0">
+  <item nodeId="node-0x02AC4828">
     <command xml:space="preserve">rape</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -219,10 +219,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49B50"/>
+      <child nodeId="node-0x02AC4898"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49B50">
+  <item nodeId="node-0x02AC4898">
     <command xml:space="preserve">rape</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -230,10 +230,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49BC0"/>
+      <child nodeId="node-0x02AC4908"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49BC0">
+  <item nodeId="node-0x02AC4908">
     <command xml:space="preserve">wte</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -241,10 +241,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49C30"/>
+      <child nodeId="node-0x02AC4978"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49C30">
+  <item nodeId="node-0x02AC4978">
     <command xml:space="preserve">ewfwrgdtg</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -252,10 +252,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49CA0"/>
+      <child nodeId="node-0x02AC49E8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49CA0">
+  <item nodeId="node-0x02AC49E8">
     <command xml:space="preserve">ffff</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -263,10 +263,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49D10"/>
+      <child nodeId="node-0x02AC4A58"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49D10">
+  <item nodeId="node-0x02AC4A58">
     <command xml:space="preserve">alex</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -274,10 +274,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02C49D80"/>
+      <child nodeId="node-0x02AC4AC8"/>
     </children>
   </item>
-  <item nodeId="node-0x02C49D80">
+  <item nodeId="node-0x02AC4AC8">
     <command xml:space="preserve">petunia</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -285,10 +285,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x060745A0"/>
+      <child nodeId="node-0x02AC4B38"/>
     </children>
   </item>
-  <item nodeId="node-0x060745A0">
+  <item nodeId="node-0x02AC4B38">
     <command xml:space="preserve">eat</command>
     <result xml:space="preserve">(yourself)&#x000A;(first taking yourself)&#x000A;You are always self-possessed.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -296,10 +296,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06074610"/>
+      <child nodeId="node-0x02AC4BA8"/>
     </children>
   </item>
-  <item nodeId="node-0x06074610">
+  <item nodeId="node-0x02AC4BA8">
     <command xml:space="preserve">actions</command>
     <result xml:space="preserve">Actions listing on.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -307,10 +307,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06074680"/>
+      <child nodeId="node-0x02AC4C18"/>
     </children>
   </item>
-  <item nodeId="node-0x06074680">
+  <item nodeId="node-0x02AC4C18">
     <command xml:space="preserve">grge</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -318,10 +318,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x060746F0"/>
+      <child nodeId="node-0x02AC4C88"/>
     </children>
   </item>
-  <item nodeId="node-0x060746F0">
+  <item nodeId="node-0x02AC4C88">
     <command xml:space="preserve">hello</command>
     <result xml:space="preserve">[hailing]&#x000A;There's no one here but you.&#x000A;[hailing - failed the check what's being hailed rule]&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -329,7 +329,7 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x06074760">
+  <item nodeId="node-0x02AC4CF8">
     <command xml:space="preserve">hel</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -337,10 +337,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x060747D0"/>
+      <child nodeId="node-0x02AC4D68"/>
     </children>
   </item>
-  <item nodeId="node-0x060747D0">
+  <item nodeId="node-0x02AC4D68">
     <command xml:space="preserve">dsfd</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -348,7 +348,7 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x06074840">
+  <item nodeId="node-0x02AC4DD8">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -356,10 +356,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x060748B0"/>
+      <child nodeId="node-0x02AC4E48"/>
     </children>
   </item>
-  <item nodeId="node-0x060748B0">
+  <item nodeId="node-0x02AC4E48">
     <command xml:space="preserve">fdgfg</command>
     <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -367,7 +367,7 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x06074920">
+  <item nodeId="node-0x02AC4EB8">
     <command xml:space="preserve">sdte</command>
     <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -375,10 +375,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06074990"/>
+      <child nodeId="node-0x02AC4F28"/>
     </children>
   </item>
-  <item nodeId="node-0x06074990">
+  <item nodeId="node-0x02AC4F28">
     <command xml:space="preserve">999</command>
     <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -386,10 +386,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06074A00"/>
+      <child nodeId="node-0x02AC4F98"/>
     </children>
   </item>
-  <item nodeId="node-0x06074A00">
+  <item nodeId="node-0x02AC4F98">
     <command xml:space="preserve">989</command>
     <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -397,7 +397,7 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x06074A70">
+  <item nodeId="node-0x02AC5008">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -405,11 +405,11 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06074AE0"/>
-      <child nodeId="node-0x0601D478"/>
+      <child nodeId="node-0x02AC5078"/>
+      <child nodeId="node-0x02AC5318"/>
     </children>
   </item>
-  <item nodeId="node-0x06074AE0">
+  <item nodeId="node-0x02AC5078">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">Welcome to An Interactive Fic tion version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;The room held no sign at all that another boy lived in the house too.&#x000A;    Yet Harry Potter was still there, asleep at the moment, but not for long. His Aunt Petunia was awake and it was her shrill voice which made the first noise of the day.</result>
     <commentary xml:space="preserve"></commentary>
@@ -417,10 +417,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06074B50"/>
+      <child nodeId="node-0x02AC50E8"/>
     </children>
   </item>
-  <item nodeId="node-0x06074B50">
+  <item nodeId="node-0x02AC50E8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Nearly ten years had passed since the Dursleys had woken up to find their nephew in the front step, but Privet Drive had hardly changed at all. The sun rose on the same tidy front gardens and lit up the brass number four on the Dursley's front door; it crept into their living-room, which was almost exactly the same as it had been on the night when Mr Dursley had seen that fateful news report about the owls.</result>
     <commentary xml:space="preserve"></commentary>
@@ -428,10 +428,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06074BC0"/>
+      <child nodeId="node-0x02AC5158"/>
     </children>
   </item>
-  <item nodeId="node-0x06074BC0">
+  <item nodeId="node-0x02AC5158">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Only the photographs on the mantlepiece really showed how much time had passed. Ten years ago, there had been lots of pictures of what looked like a large pink beach ball wearing different-coloured bobble hats - but Dudley Dursley was no longer a baby, and now the photographs showed a large, blond boy riding his first bicycle, on a roundabout at the fair, playing a computer game with his father, being hugged and kissed by his mother.</result>
     <commentary xml:space="preserve"></commentary>
@@ -439,10 +439,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06074C30"/>
+      <child nodeId="node-0x02AC51C8"/>
     </children>
   </item>
-  <item nodeId="node-0x06074C30">
+  <item nodeId="node-0x02AC51C8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">Welcome to An Interactive Fic tion version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;The room held no sign at all that another boy lived in the house too.&#x000A;    Yet Harry Potter was still there, asleep at the moment, but not for long. His Aunt Petunia was awake and it was her shrill voice which made the first noise of the day.</result>
     <commentary xml:space="preserve"></commentary>
@@ -450,10 +450,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06074CA0"/>
+      <child nodeId="node-0x02AC5238"/>
     </children>
   </item>
-  <item nodeId="node-0x06074CA0">
+  <item nodeId="node-0x02AC5238">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">Welcome to An Interactive Fiction version of Harry Potter.&#x000A;                (If you ever need help, type help.)&#x000A;&#x000A;Only the photographs on the mantlepiece really showed how much time had passed. Ten years ago, there had been lots of pictures of what looked like a large pink beach ball wearing different-coloured bobble hats - but Dudley Dursley was no longer a baby, and now the photographs showed a large, blond boy riding his first bicycle, on a roundabout at the fair, playing a computer game with his father, being hugged and kissed by his mother.</result>
     <commentary xml:space="preserve"></commentary>
@@ -461,10 +461,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06074D10"/>
+      <child nodeId="node-0x02AC52A8"/>
     </children>
   </item>
-  <item nodeId="node-0x06074D10">
+  <item nodeId="node-0x02AC52A8">
     <command xml:space="preserve">e</command>
     <result xml:space="preserve"></result>
     <commentary xml:space="preserve"></commentary>
@@ -472,7 +472,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x0601D478">
+  <item nodeId="node-0x02AC5318">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Cupboard under the stairs&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Cupboard door (south), Bed (empty), a pair of socks, a pair of shoes, a chess set and a roll of sellotape here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -480,12 +480,12 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601D4E8"/>
-      <child nodeId="node-0x0601D6A8"/>
-      <child nodeId="node-0x0601F8E8"/>
+      <child nodeId="node-0x02AC5388"/>
+      <child nodeId="node-0x02ACAED8"/>
+      <child nodeId="node-0x02ACB488"/>
     </children>
   </item>
-  <item nodeId="node-0x0601D4E8">
+  <item nodeId="node-0x02AC5388">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Cupboard under the stairs (in Bed)&#x000A;You can barely see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;I need my glasses.&#x000A;&#x000A;You can see Cupboard door (south), a pair of socks, a pair of shoes, a chess set, a roll of sellotape and glasses here.&#x000A;&#x000A;"Up!" Screeches Petunia.&#x000A;&#x000A;hi&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -493,10 +493,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601D558"/>
+      <child nodeId="node-0x02AC53F8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601D558">
+  <item nodeId="node-0x02AC53F8">
     <command xml:space="preserve"> Fine jerk</command>
     <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -504,10 +504,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601D5C8"/>
+      <child nodeId="node-0x02AC5468"/>
     </children>
   </item>
-  <item nodeId="node-0x0601D5C8">
+  <item nodeId="node-0x02AC5468">
     <command xml:space="preserve">get up</command>
     <result xml:space="preserve">You get out of Bed.&#x000A;&#x000A;Cupboard under the stairs&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Bed (empty) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -515,10 +515,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601D638"/>
+      <child nodeId="node-0x02AC54D8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601D638">
+  <item nodeId="node-0x02AC54D8">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Cupboard under the stairs&#x000A;You can see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;You can see Bed (empty) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -526,7 +526,7 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x0601D6A8">
+  <item nodeId="node-0x02ACAED8">
     <command xml:space="preserve">get up</command>
     <result xml:space="preserve">"Up!" Screeches Petunia.&#x000A;&#x000A;You get out of Bed.&#x000A;&#x000A;Cupboard under the stairs&#x000A;You can barely see a small, dark room with lots of spiders and your few measly possessions. Not as interesting as the dream you were having - There had been a flying motorbike in it. You have a funny feeling that you've had the same dream before...&#x000A;&#x000A;I need my glasses.&#x000A;&#x000A;You can see Cupboard door (south), Bed (empty), a pair of socks, a pair of shoes, a chess set, a roll of sellotape and glasses here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -534,12 +534,12 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601D718"/>
-      <child nodeId="node-0x0601D7F8"/>
-      <child nodeId="node-0x0601D8D8"/>
+      <child nodeId="node-0x02ACAF48"/>
+      <child nodeId="node-0x02ACB028"/>
+      <child nodeId="node-0x02ACB108"/>
     </children>
   </item>
-  <item nodeId="node-0x0601D718">
+  <item nodeId="node-0x02ACAF48">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">(first opening Cupboard door)&#x000A;"Get a move on, I want you to look after the bacon. And don't you dare let it burn, I want everything perfect on Duddy's birthday."&#x000A;&#x000A;Hall&#x000A;You can see Cupboard door (east) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -547,10 +547,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601D788"/>
+      <child nodeId="node-0x02ACAFB8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601D788">
+  <item nodeId="node-0x02ACAFB8">
     <command xml:space="preserve">groan</command>
     <result xml:space="preserve">It's not sexy times yet.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -558,7 +558,7 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x0601D7F8">
+  <item nodeId="node-0x02ACB028">
     <command xml:space="preserve">wear socks. wear shoes.</command>
     <result xml:space="preserve">(first taking the pair of socks)&#x000A;You pick up the pair of socks from the ground.&#x000A;&#x000A;You flick a spider off the socks and hurriedly put them on.&#x000A;&#x000A;(first taking the pair of shoes)&#x000A;You pick up the pair of shoes from the ground.&#x000A;&#x000A;You put on the pair of shoes.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -566,10 +566,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601D868"/>
+      <child nodeId="node-0x02ACB098"/>
     </children>
   </item>
-  <item nodeId="node-0x0601D868">
+  <item nodeId="node-0x02ACB098">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Cupboard door)&#x000A;"Get a move on, I want you to look after the bacon. And don't you dare let it burn, I want everything perfect on Duddy's birthday.". You see the kitchen door slam as Petunia walks through and closes it.&#x000A;&#x000A;Hall&#x000A;You can see white door (west) and Cupboard door (north) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -577,7 +577,7 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x0601D8D8">
+  <item nodeId="node-0x02ACB108">
     <command xml:space="preserve">wear glasses</command>
     <result xml:space="preserve">(first taking glasses)&#x000A;You pick up glasses from the ground.&#x000A;&#x000A;You put on glasses.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -585,10 +585,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601D948"/>
+      <child nodeId="node-0x02ACB178"/>
     </children>
   </item>
-  <item nodeId="node-0x0601D948">
+  <item nodeId="node-0x02ACB178">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -596,10 +596,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601D9B8"/>
+      <child nodeId="node-0x02ACB1E8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601D9B8">
+  <item nodeId="node-0x02ACB1E8">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Cupboard door)&#x000A;"Get a move on, I want you to look after the bacon. And don't you dare let it burn, I want everything perfect on Duddy's birthday.". You see the kitchen door slam as Petunia walks through and closes it. The sound of the frying pan being put on the cooker emenates from the kitchen.&#x000A;&#x000A;Hall&#x000A;You can see white door (west) and Cupboard door (north) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -607,10 +607,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601DA28"/>
+      <child nodeId="node-0x02ACB258"/>
     </children>
   </item>
-  <item nodeId="node-0x0601DA28">
+  <item nodeId="node-0x02ACB258">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">(first opening white door)&#x000A;Your Uncle makes a rare attempt to look at you and barks "Comb your hair!" by way of a morning greeting.&#x000A;&#x000A;Kitchen&#x000A;You can see the kitchen door (east), Aunt Petunia, Uncle Vernon, thirty-seven presents and a cooker (on which are the frying pan (in which is bacon) and spatula) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -618,10 +618,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601DA98"/>
+      <child nodeId="node-0x02ACB2C8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601DA98">
+  <item nodeId="node-0x02ACB2C8">
     <command xml:space="preserve">eat bacon</command>
     <result xml:space="preserve">(first taking bacon)&#x000A;You eat bacon. Not bad.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -629,10 +629,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601DB08"/>
+      <child nodeId="node-0x02ACB338"/>
     </children>
   </item>
-  <item nodeId="node-0x0601DB08">
+  <item nodeId="node-0x02ACB338">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Kitchen&#x000A;You can see the kitchen door (east), Aunt Petunia, Uncle Vernon, thirty-seven presents and a cooker (on which are the frying pan (empty) and spatula) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -640,10 +640,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601DB78"/>
+      <child nodeId="node-0x02ACB3A8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601DB78">
+  <item nodeId="node-0x02ACB3A8">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Kitchen&#x000A;You can see the kitchen door (east), Aunt Petunia, Uncle Vernon, thirty-seven presents and a cooker (on which are the frying pan (empty) and spatula) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -651,10 +651,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601DBE8"/>
+      <child nodeId="node-0x02ACB418"/>
     </children>
   </item>
-  <item nodeId="node-0x0601DBE8">
+  <item nodeId="node-0x02ACB418">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Kitchen&#x000A;You can see the kitchen door (east), Aunt Petunia, Uncle Vernon, thirty-seven presents and a cooker (on which are the frying pan (empty) and spatula) here.&#x000A;&#x000A;Aunt Petunia comes over to check the bacon. "Now i'll have to recook the bacon! You are not touching it again!"&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -662,7 +662,7 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x0601F8E8">
+  <item nodeId="node-0x02ACB488">
     <command xml:space="preserve">s</command>
     <result xml:space="preserve">(first opening Cupboard door)&#x000A;"Up!" Screeches Petunia.&#x000A;&#x000A;"Get a move on, I want you to look after the bacon. And don't you dare let it burn, I want everything perfect on Duddy's birthday.". You see the kitchen door slam as Petunia walks through and closes it. The sound of the frying pan being put on the cooker emenates from the kitchen. I'd better cook the breakfast.&#x000A;&#x000A;Hall&#x000A;You can see white door (west) and Cupboard door (north) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -670,10 +670,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601F958"/>
+      <child nodeId="node-0x02ACB4F8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601F958">
+  <item nodeId="node-0x02ACB4F8">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">(first opening white door)&#x000A;Your Uncle makes a rare attempt to look at you and barks "Comb your hair!" by way of a morning greeting.&#x000A;&#x000A;kitchen&#x000A;You can see the kitchen door (east), Aunt Petunia, Uncle Vernon (hiding behind a newspaper), kitchen table (on which is two pieces of toast), thirty-seven presents, a cooker (on which is the frying pan (in which are egg and bacon)) and fridge (closed) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -681,10 +681,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601F9C8"/>
+      <child nodeId="node-0x02ACB568"/>
     </children>
   </item>
-  <item nodeId="node-0x0601F9C8">
+  <item nodeId="node-0x02ACB568">
     <command xml:space="preserve">cook food</command>
     <result xml:space="preserve">You cook the eggs and bacon.&#x000A;&#x000A;Dudley arrives in the kitchen with Petunia. He looks startlingly like Uncle Vernon. He has a large, pink face, not much neck, small, watery blue eyes and thick blond hair that lies smoothly on his thick, fat head. "Here's the birthday angel!" Crows aunt Petunia.</result>
     <commentary xml:space="preserve"></commentary>
@@ -692,10 +692,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FA38"/>
+      <child nodeId="node-0x02ACB5D8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FA38">
+  <item nodeId="node-0x02ACB5D8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">Dudley starts counting his presents.</result>
     <commentary xml:space="preserve"></commentary>
@@ -703,10 +703,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FAA8"/>
+      <child nodeId="node-0x02ACB648"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FAA8">
+  <item nodeId="node-0x02ACB648">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"One..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -714,10 +714,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FB18"/>
+      <child nodeId="node-0x02ACB6B8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FB18">
+  <item nodeId="node-0x02ACB6B8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Two..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -725,10 +725,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FB88"/>
+      <child nodeId="node-0x02ACB728"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FB88">
+  <item nodeId="node-0x02ACB728">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">Three..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -736,10 +736,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FBF8"/>
+      <child nodeId="node-0x02ACB798"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FBF8">
+  <item nodeId="node-0x02ACB798">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Five... No, four..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -747,10 +747,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FC68"/>
+      <child nodeId="node-0x02ACB808"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FC68">
+  <item nodeId="node-0x02ACB808">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Five..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -758,10 +758,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FCD8"/>
+      <child nodeId="node-0x02ACB878"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FCD8">
+  <item nodeId="node-0x02ACB878">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Six..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -769,10 +769,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FD48"/>
+      <child nodeId="node-0x02ACB8E8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FD48">
+  <item nodeId="node-0x02ACB8E8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Seven..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -780,10 +780,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FDB8"/>
+      <child nodeId="node-0x02ACB958"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FDB8">
+  <item nodeId="node-0x02ACB958">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Eight..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -791,10 +791,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FE28"/>
+      <child nodeId="node-0x02ACB9C8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FE28">
+  <item nodeId="node-0x02ACB9C8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Nine..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -802,10 +802,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FE98"/>
+      <child nodeId="node-0x02ACBA38"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FE98">
+  <item nodeId="node-0x02ACBA38">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Ten..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -813,10 +813,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FF08"/>
+      <child nodeId="node-0x02ACBAA8"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FF08">
+  <item nodeId="node-0x02ACBAA8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">Eleven..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -824,10 +824,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FF78"/>
+      <child nodeId="node-0x02ACBB18"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FF78">
+  <item nodeId="node-0x02ACBB18">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twelve..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -835,10 +835,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x0601FFE8"/>
+      <child nodeId="node-0x02ACBB88"/>
     </children>
   </item>
-  <item nodeId="node-0x0601FFE8">
+  <item nodeId="node-0x02ACBB88">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Thirteen..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -846,10 +846,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06020058"/>
+      <child nodeId="node-0x02ACBBF8"/>
     </children>
   </item>
-  <item nodeId="node-0x06020058">
+  <item nodeId="node-0x02ACBBF8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Fourteen..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -857,10 +857,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06021E90"/>
+      <child nodeId="node-0x02ACBC68"/>
     </children>
   </item>
-  <item nodeId="node-0x06021E90">
+  <item nodeId="node-0x02ACBC68">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Fifteen..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -868,10 +868,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06021F00"/>
+      <child nodeId="node-0x02ACBCD8"/>
     </children>
   </item>
-  <item nodeId="node-0x06021F00">
+  <item nodeId="node-0x02ACBCD8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Sixteen..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -879,10 +879,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06021F70"/>
+      <child nodeId="node-0x02ACBD48"/>
     </children>
   </item>
-  <item nodeId="node-0x06021F70">
+  <item nodeId="node-0x02ACBD48">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Um... Seventeen..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -890,10 +890,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06021FE0"/>
+      <child nodeId="node-0x02ACBDB8"/>
     </children>
   </item>
-  <item nodeId="node-0x06021FE0">
+  <item nodeId="node-0x02ACBDB8">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Eighteen..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -901,10 +901,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06022050"/>
+      <child nodeId="node-0x02ACBE28"/>
     </children>
   </item>
-  <item nodeId="node-0x06022050">
+  <item nodeId="node-0x02ACBE28">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Nineteen..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -912,10 +912,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x060220C0"/>
+      <child nodeId="node-0x02A651A0"/>
     </children>
   </item>
-  <item nodeId="node-0x060220C0">
+  <item nodeId="node-0x02A651A0">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twenty..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -923,10 +923,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06022130"/>
+      <child nodeId="node-0x02A65210"/>
     </children>
   </item>
-  <item nodeId="node-0x06022130">
+  <item nodeId="node-0x02A65210">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twenty one..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -934,10 +934,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x060221A0"/>
+      <child nodeId="node-0x02A65280"/>
     </children>
   </item>
-  <item nodeId="node-0x060221A0">
+  <item nodeId="node-0x02A65280">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twenty two..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -945,10 +945,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06022210"/>
+      <child nodeId="node-0x02A652F0"/>
     </children>
   </item>
-  <item nodeId="node-0x06022210">
+  <item nodeId="node-0x02A652F0">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twenty three..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -956,10 +956,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06022280"/>
+      <child nodeId="node-0x02A65360"/>
     </children>
   </item>
-  <item nodeId="node-0x06022280">
+  <item nodeId="node-0x02A65360">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twenty four..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -967,10 +967,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x060222F0"/>
+      <child nodeId="node-0x02A653D0"/>
     </children>
   </item>
-  <item nodeId="node-0x060222F0">
+  <item nodeId="node-0x02A653D0">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twenty five..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -978,10 +978,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06022360"/>
+      <child nodeId="node-0x02A65440"/>
     </children>
   </item>
-  <item nodeId="node-0x06022360">
+  <item nodeId="node-0x02A65440">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twenty six..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -989,10 +989,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x060223D0"/>
+      <child nodeId="node-0x02A654B0"/>
     </children>
   </item>
-  <item nodeId="node-0x060223D0">
+  <item nodeId="node-0x02A654B0">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twenty seven..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -1000,10 +1000,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06022440"/>
+      <child nodeId="node-0x02A65520"/>
     </children>
   </item>
-  <item nodeId="node-0x06022440">
+  <item nodeId="node-0x02A65520">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twenty eight..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -1011,10 +1011,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x060224B0"/>
+      <child nodeId="node-0x02A65590"/>
     </children>
   </item>
-  <item nodeId="node-0x060224B0">
+  <item nodeId="node-0x02A65590">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Twenty nine..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -1022,10 +1022,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06022520"/>
+      <child nodeId="node-0x02A65600"/>
     </children>
   </item>
-  <item nodeId="node-0x06022520">
+  <item nodeId="node-0x02A65600">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Thirty..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -1033,10 +1033,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06022590"/>
+      <child nodeId="node-0x02A65670"/>
     </children>
   </item>
-  <item nodeId="node-0x06022590">
+  <item nodeId="node-0x02A65670">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Thirty-one..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -1044,10 +1044,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06022600"/>
+      <child nodeId="node-0x02A656E0"/>
     </children>
   </item>
-  <item nodeId="node-0x06022600">
+  <item nodeId="node-0x02A656E0">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Thirty-two..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -1055,10 +1055,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06023690"/>
+      <child nodeId="node-0x02A65750"/>
     </children>
   </item>
-  <item nodeId="node-0x06023690">
+  <item nodeId="node-0x02A65750">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Thirty-three..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -1066,10 +1066,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06023700"/>
+      <child nodeId="node-0x02A657C0"/>
     </children>
   </item>
-  <item nodeId="node-0x06023700">
+  <item nodeId="node-0x02A657C0">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Thirty-four..."</result>
     <commentary xml:space="preserve"></commentary>
@@ -1077,10 +1077,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x06023770"/>
+      <child nodeId="node-0x02A65830"/>
     </children>
   </item>
-  <item nodeId="node-0x06023770">
+  <item nodeId="node-0x02A65830">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">"Thirty-five..."</result>
     <commentary xml:space="preserve"></commentary>

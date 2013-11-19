@@ -1228,7 +1228,7 @@ after going north when the location is cupboard under the stairs during letters 
 Mini tank is a thing in Dudley's second room. the description of mini tank is "a mini tank that Dudley had one used to run over your next door neighbour's dog.".
 Bird cage is a thing in Dudley's second room. the description of bird cage is "This once held a parrot, but Dudley swapped it for the air rifle.".
 bookshelf is a supporter in Dudley's second room. the description of bookshelf is "The books on here look like the only things that are untouched.".
-Dudley's books is a thing on bookshelf. the description of Dudley's books is "A variety of books, ranging from those appropriate to Dudley, such as the hungry catterpillar, to more complex books such as Eragon and Harry Potter and the Philosopher's stone. Wait...".
+Dudley's books is a thing on bookshelf. the description of Dudley's books is "A variety of books, ranging from those appropriate to Dudley, such as the hungry catterpillar, to more complex books such as Eragon and Harry Potter and the Philosopher's Stone. Wait...".
 shooting is an action applying to one thing.
 understand "shoot [anything]" as shooting.
 before shooting:
@@ -1261,6 +1261,9 @@ after going northeast when the location is dudley's second room during the lette
 Shack is a room. the description is "There is another small room to the east.".
 sofa is a supporter in shack. sofa is fixed in place.
 fireplace is a container in shack. fireplace is fixed in place.
+incorporeal thing is a kind of thing.
+fire is an incorporeal thing. fire is fixed in place.
+instead of taking fire, say "Dudley might be stupid enough to try, but not you.".
 after going west when the location is kitchen during the post:
 	now Uncle Vernon is in kitchen;
 	say "Uncle Vernon comes into the room. 'No post on Sundays,' he reminded them all happily, 'no damn letters today -'[line break]Something came whizzing down the chimney as he spoke and caught him sharply on the head. Next moment, thirty or forty letters pelt out of the fireplace. While the others duck, You jump and try to catch one - [line break]'Out! OUT!'";
@@ -1310,6 +1313,7 @@ every turn when the location is Shack:
 	otherwise if the time of day is 11:58 pm:
 		say "1 minute to go.";
 	otherwise if the time of day is 11:59 pm:
+		now fire is in fireplace;
 		say "BOOM. [wait 1000 ms]The whole shack shivered. You sit bolt upright. Someone was outside, knocking to come in. [line break]BOOM. [wait 1000 ms]They knocked again. Dudley jerked awake. 'Where[']s the cannon?' he said stupidly. [line break]There was a crash as Uncle Vernon skidded into the room, holding a rifle in his hands - now they knew what was in the package that he had brought with him.[line break]'Who's there?' he shouted. 'I warn you - I'm armed!;[line break]There was a pause. Then -[line break]SMASH![line break]The door was knocked off of its hinges and landed on the floor. A giant of a man was standing in the doorway. [wait 5000 ms]The giant squeezed his way into the hut. He picked up the door and fitted it back into it's frame. He turned around to look at them. [wait 4000 ms][line break]'Couldn't make us a cup o' tea, could yeh? It's not been an easy journey...'[line break] The stranger strolled over to the sofa and told Dudley to move. Dudley instead ran squeaking over to his parents. [wait 4000 ms][line break]'An here's Harry!' said the giant.";
 		now the venture of post is success;
 		now Hagrid is in shack;
@@ -1332,7 +1336,8 @@ blanket is a thing in shack.
 The second bedroom is a room. it is east of shack.
 A mouldy old bed is a container in second bedroom. bed is enterable. bed is not portable.
 Dirty sink is a container in second bedroom. sink is fixed in place.
-water is a thing.
+water is a thing. 
+after taking water, try inserting water into teapot.
 understand "kettle" as teapot.
 water is in Dirty sink.
 filling is an action applying to one thing.
@@ -1343,21 +1348,38 @@ carry out filling teapot for the first time:
 	if water is not carried:
 		if teapot is carried:
 			now water is in teapot;
-			say "You fill the teapot with water. From the other room, Hagrid calls out to you. 'How're you going there, Harry? anyway, like I told you, I'm the keeper of keys at Hogwarts. Yeh'll know all about Hogwarts, o['] course. [line break]'Er, no' you call back. 'Sorry'.[wait 3000 ms][line break]'[italic type]Sorry?'[roman type] barks Hagrid. 'It's them that should be sorry! I knew you weren't getting the letters, but I still thought you'd know about Hogwarts, fer crying out loud! Didn't you ever wonder where your parents learnt it all?[wait 3000 ms][line break]'All what?'[wait 1000 ms][line  break]'ALL WHAT! Don['] you know - Don't you know anything, about yer parents world?[wait 2000 ms][line break]'What world?[wait 1000 ms][line break]'DURSLEY!' booms Hagrid.";
+			say "You fill the teapot with water. From the other room, Hagrid calls out to you. 'How're you going there, Harry? anyway, I'm the keeper of keys at Hogwarts. Yeh'll know all about Hogwarts, o['] course. [line break]'Er, no' you call back. 'Sorry'.[wait 3000 ms][line break]'[italic type]Sorry?'[roman type] barks Hagrid. 'It's them that should be sorry! I knew you weren't getting the letters, but I still thought you'd know about Hogwarts, fer crying out loud! Didn't you ever wonder where your parents learnt it all?[wait 3000 ms][line break]'All what?'[wait 1000 ms][line  break]'ALL WHAT! Don['] you know - Don't you know anything, about yer parents world?[wait 2000 ms][line break]'What world?[wait 1000 ms][line break]'DURSLEY!' booms Hagrid.";
 			stop the action;
 		otherwise:
 			continue the action;
 	otherwise:
 		continue the action.
+carry out inserting water into teapot for the first time:
+	if water is not in teapot:
+		if teapot is carried:
+			say "You fill the teapot with water. From the other room, Hagrid calls out to you. 'How're you going there, Harry? anyway, like I told you, I'm the keeper of keys at Hogwarts. Yeh'll know all about Hogwarts, o['] course. [line break]'Er, no' you call back. 'Sorry'.[wait 3000 ms][line break]'[italic type]Sorry?'[roman type] barks Hagrid. 'It's them that should be sorry! I knew you weren't getting the letters, but I still thought you'd know about Hogwarts, fer crying out loud! Didn't you ever wonder where your parents learnt it all?[wait 3000 ms][line break]'All what?'[wait 1000 ms][line  break]'ALL WHAT! Don['] you know - Don't you know anything, about yer parents world?[wait 2000 ms][line break]'What world?[wait 1000 ms][line break]'DURSLEY!' booms Hagrid.";
+			now water is in teapot;
+			stop the action;
+		otherwise:
+			continue the action;
+	otherwise:
+		continue the action.
+instead of opening hagrid's coat, try opening pocket.
 after going west when the location is shack:
 	if teapot is carried:
 		if water is in teapot:
-			say "As you enter, Hagrid says 'You never told him? You kept it from him for all these years?'[line break]'Kept [italic type]what[roman type] from me?' you ask eagerly.[line break]'STOP! I FORBID YOU!' says Uncle Vernon, panicking.[line break]'Ah, go boil yer heads, both of yeh,' says Hagrid. 'Harry - yer a wizard.'[wait 4000 ms][line break]'I'm a [italic type]what?[roman type]' you ask. [line break]'A wizard, and a good one i'd reckon, once yer trained up a bit. It's time you read your  letter.' Hagrid hands you a letter.";
+			say "As you enter, Hagrid says 'You never told him? You kept it from him for all these years?'[wait 2000 ms][line break]'Kept [italic type]what[roman type] from me?' you ask eagerly.[wait 2000 ms][line break]'STOP! I FORBID YOU!' says Uncle Vernon, panicking.[wait 2000 ms][line break]'Ah, go boil yer heads, both of yeh,' says Hagrid. 'Harry - yer a wizard.'[wait 4000 ms][line break]'I'm a [italic type]what?[roman type]' you ask. [line break]'A wizard, and a good one i'd reckon, once yer trained up a bit. It's time you read your  letter.' Hagrid hands you a letter.";
 			now harry carries mail;
 			now mail is closed;
-			now the description of mail is "[italic type]Mr H. Potter[line break]The Floor[line break]Hut-on-the-Rock[line break]The Sea[roman type][line break]The thick, yellowish envelope has a purple wax seal on the back, bearing a coat of arms. You should open it first.".
+			now the description of mail is "[italic type]Mr H. Potter[line break]The Floor[line break]Hut-on-the-Rock[line break]The Sea[roman type][line break]The thick, yellowish envelope has a purple wax seal on the back, bearing a coat of arms. You gingerly open the envelope.";
+			try opening mail;
+			try examining mail;
+			if glulx timekeeping is supported:
+				wait 6000 ms before continuing;
+			say "[line break]You look up. 'What does it mean, they await my owl?'[line break]Hagrid, appearing to just have his memory jogged, reaches inside one of his coat's many pockets, and extracts a real, live owl. He also extracts a quill and a roll of parchment. You read the letter he is writing upside down:[line break][italic type]Dear Mr Dumbledore,[line break]Given Harry his letter. Taking him to buy his things tomorrow.[line break]Weather's horrible. Hope you're well.[line break]Hagrid[roman type][line break]He rolls it up, and gives it to the owl, which takes the letter and flies out the window. 'Alright Harry, it'd do to get some sleep before tomorrow. Here, use this.' says Hagrid. He gives you his coat to sleep under, which you promptly do. [wait 6000 ms][line break]You wake next morning, fearing that the previous night was just a dream. However, when you open your eyes and sit up".
 after opening mail:
 	if water is in teapot:
 		if the location is shack:
 			if hagrid is in shack:
-				now the description of mail is "You unfold the letter and read: [line break]".
+				now the description of mail is "You unfold the letter and read: [paragraph break]HOGWARTS SCHOOL OF WITHCRAFT AND WIZADRY[paragraph break][italic type]Headmaster: Albus Dumbledore[line break](Order of Merlin, First Class, Grand Sorc., Chf. Warlock,[line break]Supreme Mugwump, International Confed. of Wizards[paragraph break]Dear Mr Potter,[line break]    We are pleased to inform you that you have a place at Hogwarts School of Witchcraft and Wizardry. Please find enclosed a list of all necessary books and equipment.[line break]    Term begins on 1 September. We await your owl by no later than 31 July. [paragraph break]Yours sincerely,[paragraph break][roman type]Minerva McGonagall[line break]Deputy Headmistress.".
+				

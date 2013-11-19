@@ -1199,3 +1199,15 @@ Action: looking
 
 Action: looking 
 
+Action: looking 
+
+Game tester: Orion
+Command: cheats on
+Action: switching cheats on 
+
+Game tester: Orion
+Command: help
+Action: asking for help 
+
+Action: looking 
+

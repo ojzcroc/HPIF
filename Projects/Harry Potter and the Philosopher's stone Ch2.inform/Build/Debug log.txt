@@ -6,7 +6,7 @@ Inform called as: C:\Program Files\Inform 7\Compilers\ni -rules C:\Program Files
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-I've now read your source text, which is 14848 words long.
+I've now read your source text, which is 15308 words long.
 
 
 -----------------------------------------------------
