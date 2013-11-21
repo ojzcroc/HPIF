@@ -1,19 +1,193 @@
 * //C8A63770-6D0B-11E2-B933-F96839AE4917// currentplayereports
 Action: looking 
 
-Game tester: purloin doughnut
-Command: purloin doughnut
-Game tester: purloin doughnut
-Command: i
-Action: taking inventory 
+Game tester: 
+Command: test three
+Game tester: orion
+Command: stats
+Game tester: orion
+Command: get up
+Action: exiting 
 
-Game tester: purloin doughnut
-Command: eat donut
-Action: eating doughnut 
+Game tester: orion
+Command: open drawer
+Action: opening bedside drawer 
 
-Game tester: purloin doughnut
-Command: eat doughnut
-Action: eating doughnut 
+Game tester: orion
+Command: read paper
+Action: examining the scrap of paper 
 
-Game tester: purloin doughnut
-Command: eat doughnut
+Game tester: orion
+Command: take paper
+Action: taking the scrap of paper 
+
+Game tester: orion
+Command: open wardrobe
+Action: opening Wardrobe 
+
+Game tester: orion
+Command: look in mirror
+Action: examining the mirror 
+
+Game tester: orion
+Command: wear muumuu
+Action: wearing the muumuu 
+
+Action: taking the muumuu 
+
+Game tester: orion
+Command: look in mirror
+Action: examining the mirror 
+
+Game tester: orion
+Command: nw
+Action: going northwest 
+
+Action: opening the door 
+
+Game tester: orion
+Command: stats
+Game tester: orion
+Command: go up stairs
+Action: going the door 
+
+Action: opening the door 
+
+Game tester: orion
+Command: read diary
+Action: examining Petunia's diary 
+
+Game tester: orion
+Command: read letter
+Action: examining letter 
+
+Game tester: orion
+Command: open box
+Action: opening dusty box 
+
+Game tester: orion
+Command: take cookbook
+Action: taking the High calorie cookbook 
+
+Game tester: orion
+Command: read history
+Action: examining drills- an unabridged history 
+
+Game tester: orion
+Command: go down stairs
+Action: going the door 
+
+Game tester: orion
+Command: d
+Action: going down 
+
+Game tester: orion
+Command: n
+Action: going north 
+
+Action: opening the door 
+
+Game tester: orion
+Command: stats
+Game tester: orion
+Command: take broom
+Action: taking broom 
+
+Game tester: orion
+Command: look at broom
+Action: examining broom 
+
+Game tester: orion
+Command: ride broom
+Action: dropping broom 
+
+Action: mounting broom 
+
+Game tester: orion
+Command: fly s
+Action: going south 
+
+Game tester: orion
+Command: go through white door
+Game tester: orion
+Command: stats
+Game tester: orion
+Command: say hello to petunia
+Game tester: orion
+Command: eat dudley
+Game tester: orion
+Command: eat toast
+Game tester: orion
+Command: drink coffee
+Game tester: orion
+Command: open fridge
+Game tester: orion
+Command: go through white door
+Game tester: orion
+Command: e
+Action: going east 
+
+Action: opening the door 
+
+Game tester: orion
+Command: n
+Action: going north 
+
+Game tester: orion
+Command: stats
+Game tester: orion
+Command: look
+Action: looking 
+
+Game tester: orion
+Command: w
+Action: going west 
+
+Game tester: orion
+Command: stats
+Game tester: orion
+Command: get off
+Action: exiting 
+
+Action: dismounting 
+
+Game tester: orion
+Command: get in elevator
+Action: entering elevator 
+
+Game tester: orion
+Command: press button
+Action: switching on elevator button 
+
+Action: looking 
+
+Game tester: orion
+Command: get out
+Action: exiting 
+
+Game tester: orion
+Command: stats
+Game tester: orion
+Command: n
+Action: going north 
+
+Action: opening the the door 
+
+Game tester: orion
+Command: stats
+Game tester: orion
+Command: call 893
+Action: dialling 893 on the office phone 
+
+Game tester: orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to the Customer 
+
+Game tester: orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: orion
+Command: call 8953

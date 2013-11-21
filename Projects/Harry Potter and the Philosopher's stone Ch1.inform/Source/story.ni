@@ -977,7 +977,8 @@ instead of swearing obscenely or swearing mildly when dialyes/no is 1:
 		now lexicon is table 1 instead.
 		
 after dialling 893 on the office phone:
-	say "'Hello. How are you?' says the customer.".
+	say "'Hello. How are you?' says the customer.";
+	now dialyes/no is 1.
 
 customercall is a scene.
 customercall begins when dialyes/no is 1.
@@ -1487,11 +1488,11 @@ After reading a command when the command prompt is "What do you want to write: "
 		
 
 		
-test me with "Orion/stats/Get up/open drawer/read paper/take paper/open wardrobe/look in mirror/wear muumuu/look in mirror/nw/stats/go up stairs/read diary/read letter/open box/take cookbook/read history/go down stairs/d/n/stats/take broom/look at broom/ride broom/fly s/go through white door/stats/say hello to petunia/eat dudley/eat toast/drink coffee/open fridge/go through white door/e/n/stats/look/w/stats/get off/get in elevator/press button/get out/stats/n/stats/call 893/hello/good/sure/call 8953/try asking for a hal 6502/call 12856/hello/wait/sure/try the hal 6502/try the t1000/try the qz 77/try the bk 44 model t/wait/hmmm.../read dex/flip dex/read dex/call 5552368/take pen/take coin/take coin/write on notepad/Write Major irrelivancies/s/press button/wait/get in elevator/press button/get out/e/go through shop door/stats/look at shop attendant/look/buy roll/pay coin/eat roll/w/w/go up/n/wait/s/go down/mount broom/e/s/get off broom/w/s/sit down/turn on tv/wait/think/drink tea/look window/get in bed".
+test me with "Orion/stats/Get up/open drawer/read paper/take paper/open wardrobe/look in mirror/wear muumuu/look in mirror/nw/stats/go up stairs/read diary/read letter/open box/take cookbook/read history/go down stairs/d/n/stats/take broom/look at broom/ride broom/fly s/go through white door/stats/say hello to petunia/eat dudley/eat toast/drink coffee/open fridge/go through white door/e/n/stats/look/w/stats/get off/get in elevator/press button/get out/stats/n/stats/call 893/hello/good/call 8953/try asking for a hal 6502/call 12856/hello/wait/sure/try the hal 6502/try the t1000/try the qz 77/try the bk 44 model t/wait/hmmm.../read dex/flip dex/read dex/call 5552368/take pen/take coin/take coin/write on notepad/Write Major irrelivancies/s/press button/wait/get in elevator/press button/get out/e/go through shop door/stats/look at shop attendant/look/buy roll/pay coin/eat roll/w/w/go up/n/wait/s/go down/mount broom/e/s/get off broom/w/s/sit down/turn on tv/wait/think/drink tea/look window/get in bed".
 
 test two with "Orion/gonear carpark/gonear work/call 893/hello/good/call 8953/ask for a t1000/read rolodex/hello/wait/sure/try the T1000/try the hal 6502/try the qz 77/try the bk 44 model t/hmmm.../take coins/s/go down/e/e/buy roll/pay coin/w/w/go up/n/wait/gonear living-room/turn on tv/think/drink tea/look window/get in bed".
 
-test three with "try the hal 6502/try the qz 77/try the t1000/try the bk 44 model t".
+test three with "Orion/stats/Get up/open drawer/read paper/take paper/open wardrobe/look in mirror/wear muumuu/look in mirror/nw/stats/go up stairs/read diary/read letter/open box/take cookbook/read history/go down stairs/d/n/stats/take broom/look at broom/ride broom/fly s/go through white door/stats/say hello to petunia/eat dudley/eat toast/drink coffee/open fridge/go through white door/e/n/stats/look/w/stats/get off/get in elevator/press button/get out/stats/n/stats/call 893/hello/good/call 8953/".
 
 does the player mean doing anything to living-room: it is likely.
 every turn during work:
@@ -1662,7 +1663,9 @@ bakery door is a door. the printed name is "a shop door". it is east of street a
 rule for printing the name of bakery door when opening bakery door: say "the door".
 rule for printing the name of bakery door when going through bakery door: say "the door".
 understand "shop door" as bakery door.
+bakervisit is a number that varies. bakervisit is 0.
 after going through bakery door when the location is bakers:
+	now bakervisit is 1;
 	say "'Good morning! How may i help you, sir?' asks the shop attendant.[if the player is on a broom]Wait, How are you flying that?";
 	unless shop attendant is the current interlocutor:
 		try silently saying hello to shop attendant.
@@ -1736,8 +1739,11 @@ instead of looking when location is street:
 	otherwise:
 		continue the action.
 after going west when bakers is visited:
-	say "As you stroll out of the shop, you notice another group of robed people standing further down the road. I wonder what they could be talking about?";
-	continue the action.
+	if the location is street:
+		say "As you stroll out of the shop, you notice another group of robed people standing further down the road. I wonder what they could be talking about?";
+		continue the action;
+	otherwise:
+		continue the action.
 a procedural rule: if the player is in street, ignore the block listening rule.
 alreadylooked is a number that varies. alreadylooked is 0.
 after reading a command during uncle vernon's scene:
@@ -1749,8 +1755,9 @@ after reading a command during uncle vernon's scene:
 					try listening to instead.
 carry out listening when the location is street:
 	say "'The Potters, that's right, that's what I heard -'[line break]'-yes, their son, Harry-'[line break]Potter? Petunia's sister's husband? I need to get back to the office and call petunia.".
+
 before going north when the location is corridor:
-	if bakers is visited:
+	if bakervisit is 1:
 		if the venture of work is half-complete:
 			say "You rush over to the phone and pick it up, but part-way through putting in your home phone number, you realise that you're overreacting, and put the phone down.[paragraph break]";
 			if glulx timekeeping is supported:
@@ -1778,7 +1785,11 @@ after exiting from elevator when the location is Grunnings carpark:
 			if glulx timekeeping is supported:
 				wait 4000 ms before continuing;
 			say "'[no line break]Don't be sorry, my dear sir, for nothing could upset me today![line break]Rejoice, for You-Know-Who has gone at last![line break]Even Muggles such as yourself should be celebrating, this happy, happy day!'[paragraph break][no line break]";
-			now bumpedinto is 1.
+			now bumpedinto is 1;
+		otherwise:
+			continue the action;
+	otherwise:
+		continue the action.
 does the player mean doing anything to car: it is likely.
 does the player mean moving to car: it is likely.
 after entering car:
