@@ -1286,7 +1286,7 @@ after going west when the location is kitchen during the post:
 	if glulx timekeeping is supported:
 		wait 4000 ms before continuing;
 	now time of day is 4:00 pm;
-	say "You try and grab the letter, but Uncle Vernon knocks your hand away. He follows the woman to get the letters. Within half an hour, you're back on the road again. 'Wouldn't it be better just to go home, dear?' Aunt Petunia suggested. Uncle Vernon pays no attention. After hours of roaming, the car stops at the coast and Uncle Vernon gets out, locking the door at the same time. After a while, Dudley starts complaining. 'It's Monday, and the Great Humberto's on tonight. I want to stay somewhere with [italic type]television[roman type].'[line break]If it is Monday, then it's your birthday tomorrow. Of course, your birthdays are never very fun - last year, you recieved a coat-hanger and a pair of old socks that used to beling to Uncle Vernon. Still, you weren't eleven every day.[paragraph break]";
+	say "You try and grab the letter, but Uncle Vernon knocks your hand away. He follows the woman to get the letters. Within half an hour, you're back on the road again. 'Wouldn't it be better just to go home, dear?' Aunt Petunia suggested. Uncle Vernon pays no attention. After hours of roaming, the car stops at the coast and Uncle Vernon gets out, locking the door at the same time. After a while, Dudley starts complaining. 'It's Monday, and the Great Humberto's on tonight. I want to stay somewhere with [italic type]television[roman type].'[line break]If it is Monday, then it's your birthday tomorrow. Of course, your birthdays are never very fun - last year, you recieved a coat-hanger and a pair of old socks that used to belong to Uncle Vernon. Still, you weren't eleven every day.[paragraph break]";
 	if glulx timekeeping is supported:
 		wait 10000 ms before continuing;
 	say "Uncle Vernon comes, smiling, back to the car, carrying a long, thin package, which he wouldn't tell Petunia about. 'Found the perfect place!' he says. 'Come on! Everyone out!'[line break]You walk along the coast, before coming to a halt in front of an old rowing boat which your Uncle says was lent to you buy the  toothless old man standing next to him. Everyone hops into the boat, and are soon rowing towards a small, miserable looking shack on a rock in the middle of the ocean.[paragraph break]";
@@ -1323,11 +1323,14 @@ every turn when the location is Shack:
 		
 chapter 4 - the keeper of keys	
 	
+cake is a thing. the description is "It says 'Happy Birthday Harry' on it.".
 after doing anything during Hagrid's scene:
 	say "[first time]'I demand that you leave at one, sir!' says Uncle Vernon. 'You are breaking and entering!'[line break]The giant wrenched the gun out of Uncle Vernon's hands, and bent it into a knot, before throwing it aside. [line break]'I haven' seen you since you was only a baby. I[']m Hagrid, by the way. Rubeus Hagrid. I got summat for yeh - it's in my coat. Here you go.' [paragraph break]He gives you a box which he removed from his jacket, which, upon opening, contained a large chocolate cake with [italic type]Happy Birthday Harry[roman type] written on it in green icing. 'You wouldn['] mind making some tea and sausages, would yeh? they're in my coat. Start by getting out the tea pot and puttin['] some tea leaves in it. Then go to the other room to get some water in it.' Hagrid bent down in front of the fire, and when he stood up a fire was roaring in the grate. [only][no line break]"; 
+	now cake is in shack;
+	now hagrid's coat is in shack;
 	now the description of shack is "There is another small room to the east. a fire is crackling merrily in the grate.";
 	continue the action.
-hagrid's coat is clothing in shack. the description of hagrid's coat is "there are a whole bunch of pockets all around the coat. try opening a pocket.".
+hagrid's coat is clothing. hagrid's coat is carried by hagrid. the description of hagrid's coat is "there are a whole bunch of pockets all around the coat. try opening a pocket.".
 pocket is a container. pocket is part of hagrid's coat. pocket is closed and openable.
 teapot is a container in pocket. understand "pot" as teapot.
 understand "a pocket" as pocket.

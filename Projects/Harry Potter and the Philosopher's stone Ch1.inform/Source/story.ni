@@ -968,8 +968,6 @@ every turn during mrmason call:
 			
 every turn during uncle vernon's scene:
 		increment bored.
-
-
 instead of swearing obscenely or swearing mildly when dialyes/no is 1:
 	unless the venture of customercall is success:
 		say "'Well, my number is 893. Call me back if you ever gain a civil tongue. '";
@@ -2091,7 +2089,7 @@ instead of turning tap2, try using sink2 instead.
 instead of switching on tap2, try using sink2 instead.
 instead of using tap2, try using sink2 instead.
 understand "faucet" as tap2.
-Privet Drive is a room in Privet'sstreets.. it is east of garden. the description of Privet Drive is "your garden is to the west.".
+Privet Drive is a room in Privet'sstreets. it is east of garden. the description of Privet Drive is "your garden is to the west.".
 jumping out of is an action applying to one thing.
 understand "jump out of [bedroomwindow]" as jumping out of.
 understand "jump out of [window]" as jumping out of.

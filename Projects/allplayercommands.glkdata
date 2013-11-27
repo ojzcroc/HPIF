@@ -3211,3 +3211,473 @@ Action: saying hello to the Customer
 
 Game tester: orion
 Command: call 8953
+Action: looking 
+
+Game tester: Orion Zymaris
+Command: test me
+Game tester: Orion Zymaris
+Command: orion
+Game tester: Orion Zymaris
+Command: stats
+Game tester: Orion Zymaris
+Command: get up
+Action: exiting 
+
+Game tester: Orion Zymaris
+Command: open drawer
+Action: opening bedside drawer 
+
+Game tester: Orion Zymaris
+Command: read paper
+Action: examining the scrap of paper 
+
+Game tester: Orion Zymaris
+Command: take paper
+Action: taking the scrap of paper 
+
+Game tester: Orion Zymaris
+Command: open wardrobe
+Action: opening Wardrobe 
+
+Game tester: Orion Zymaris
+Command: look in mirror
+Action: examining the mirror 
+
+Game tester: Orion Zymaris
+Command: wear muumuu
+Action: wearing the muumuu 
+
+Action: taking the muumuu 
+
+Game tester: Orion Zymaris
+Command: look in mirror
+Action: examining the mirror 
+
+Game tester: Orion Zymaris
+Command: nw
+Action: going northwest 
+
+Action: opening the door 
+
+Game tester: Orion Zymaris
+Command: stats
+Game tester: Orion Zymaris
+Command: go up stairs
+Action: going the door 
+
+Action: opening the door 
+
+Game tester: Orion Zymaris
+Command: read diary
+Action: examining Petunia's diary 
+
+Game tester: Orion Zymaris
+Command: read letter
+Action: examining letter 
+
+Game tester: Orion Zymaris
+Command: open box
+Action: opening dusty box 
+
+Game tester: Orion Zymaris
+Command: take cookbook
+Action: taking the High calorie cookbook 
+
+Game tester: Orion Zymaris
+Command: read history
+Action: examining drills- an unabridged history 
+
+Game tester: Orion Zymaris
+Command: go down stairs
+Action: going the door 
+
+Game tester: Orion Zymaris
+Command: d
+Action: going down 
+
+Game tester: Orion Zymaris
+Command: n
+Action: going north 
+
+Action: opening the door 
+
+Game tester: Orion Zymaris
+Command: stats
+Game tester: Orion Zymaris
+Command: take broom
+Action: taking broom 
+
+Game tester: Orion Zymaris
+Command: look at broom
+Action: examining broom 
+
+Game tester: Orion Zymaris
+Command: ride broom
+Action: dropping broom 
+
+Action: mounting broom 
+
+Game tester: Orion Zymaris
+Command: fly s
+Action: going south 
+
+Game tester: Orion Zymaris
+Command: go through white door
+Game tester: Orion Zymaris
+Command: stats
+Game tester: Orion Zymaris
+Command: say hello to petunia
+Game tester: Orion Zymaris
+Command: eat dudley
+Game tester: Orion Zymaris
+Command: eat toast
+Game tester: Orion Zymaris
+Command: drink coffee
+Game tester: Orion Zymaris
+Command: open fridge
+Game tester: Orion Zymaris
+Command: go through white door
+Game tester: Orion Zymaris
+Command: e
+Action: going east 
+
+Action: opening the door 
+
+Game tester: Orion Zymaris
+Command: n
+Action: going north 
+
+Game tester: Orion Zymaris
+Command: stats
+Game tester: Orion Zymaris
+Command: look
+Action: looking 
+
+Game tester: Orion Zymaris
+Command: w
+Action: going west 
+
+Game tester: Orion Zymaris
+Command: stats
+Game tester: Orion Zymaris
+Command: get off
+Action: exiting 
+
+Action: dismounting 
+
+Game tester: Orion Zymaris
+Command: get in elevator
+Action: entering elevator 
+
+Game tester: Orion Zymaris
+Command: press button
+Action: switching on elevator button 
+
+Action: looking 
+
+Game tester: Orion Zymaris
+Command: get out
+Action: exiting 
+
+Game tester: Orion Zymaris
+Command: stats
+Game tester: Orion Zymaris
+Command: n
+Action: going north 
+
+Action: opening the the door 
+
+Game tester: Orion Zymaris
+Command: stats
+Game tester: Orion Zymaris
+Command: call 893
+Action: dialling 893 on the office phone 
+
+Game tester: Orion Zymaris
+Command: hello
+Action: hailing 
+
+Action: saying hello to the Customer 
+
+Game tester: Orion Zymaris
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion Zymaris
+Command: call 8953
+Game tester: Orion Zymaris
+Command: try asking for a hal 6502
+Action: responding to customer "asking for a hal 6502" 
+
+Action: hanging up 
+
+Game tester: Orion Zymaris
+Command: call 12856
+Action: dialling 12856 on the office phone 
+
+Game tester: Orion Zymaris
+Command: hello
+Action: hailing 
+
+Action: saying hello to Mr. Mason 
+
+Game tester: Orion Zymaris
+Command: wait
+Action: waiting 
+
+Game tester: Orion Zymaris
+Command: sure
+Game tester: Orion Zymaris
+Command: try the hal 6502
+Action: responding to customer "the hal 6502" 
+
+Game tester: Orion Zymaris
+Command: try the t1000
+Action: responding to customer "the t1000" 
+
+Game tester: Orion Zymaris
+Command: try the qz 77
+Action: responding to customer "the qz 77" 
+
+Game tester: Orion Zymaris
+Command: try the bk 44 model t
+Action: responding to customer "the bk 44 model t" 
+
+Game tester: Orion Zymaris
+Command: wait
+Action: hanging up 
+
+Game tester: Orion Zymaris
+Command: hmmm...
+Game tester: Orion Zymaris
+Command: read dex
+Action: examining a rolodex 
+
+Game tester: Orion Zymaris
+Command: flip dex
+Action: flipping a rolodex 
+
+Game tester: Orion Zymaris
+Command: read dex
+Action: examining a rolodex 
+
+Game tester: Orion Zymaris
+Command: call 5552368
+Action: dialling 5552368 on the office phone 
+
+Game tester: Orion Zymaris
+Command: take pen
+Action: taking pen 
+
+Game tester: Orion Zymaris
+Command: take coin
+Action: taking the pound coin 
+
+Game tester: Orion Zymaris
+Command: take coin
+Action: taking the pound coin 
+
+Game tester: Orion Zymaris
+Command: write on notepad
+Action: writing intro notepad 
+
+Game tester: Orion Zymaris
+Command: s
+Action: going south 
+
+Game tester: Orion Zymaris
+Command: press button
+Action: switching on elevator button 
+
+Game tester: Orion Zymaris
+Command: wait
+Action: waiting 
+
+Game tester: Orion Zymaris
+Command: get in elevator
+Action: entering elevator 
+
+Game tester: Orion Zymaris
+Command: press button
+Action: switching on elevator button 
+
+Action: looking 
+
+Game tester: Orion Zymaris
+Command: get out
+Action: exiting 
+
+Game tester: Orion Zymaris
+Command: e
+Action: going east 
+
+Action: looking 
+
+Game tester: Orion Zymaris
+Command: go through shop door
+Action: entering a shop door (east) 
+
+Action: going the door 
+
+Action: opening the door 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion Zymaris
+Command: stats
+Game tester: Orion Zymaris
+Command: look at shop attendant
+Action: examining the Shop attendant 
+
+Game tester: Orion Zymaris
+Command: look
+Action: looking 
+
+Game tester: Orion Zymaris
+Command: buy roll
+Game tester: Orion Zymaris
+Command: pay coin
+Action: giving the pound coin to Mr. Finnigan 
+
+Game tester: Orion Zymaris
+Command: eat roll
+Action: eating the small roll 
+
+Game tester: Orion Zymaris
+Command: w
+Action: going west 
+
+Action: saying goodbye to Mr. Finnigan 
+
+Game tester: Orion Zymaris
+Command: w
+Action: going west 
+
+Action: listening to street 
+
+Action: looking 
+
+Game tester: Orion Zymaris
+Command: go up
+Action: going up 
+
+Game tester: Orion Zymaris
+Command: n
+Action: going north 
+
+Game tester: Orion Zymaris
+Command: wait
+Action: waiting 
+
+Game tester: Orion Zymaris
+Command: s
+Action: going south 
+
+Game tester: Orion Zymaris
+Command: go down
+Action: going down 
+
+Game tester: Orion Zymaris
+Command: mount broom
+Action: dropping broom 
+
+Action: mounting broom 
+
+Game tester: Orion Zymaris
+Command: e
+Action: going east 
+
+Game tester: Orion Zymaris
+Command: s
+Action: going south 
+
+Game tester: Orion Zymaris
+Command: get off broom
+Action: dismounting 
+
+Game tester: Orion Zymaris
+Command: w
+Action: going west 
+
+Game tester: Orion Zymaris
+Command: s
+Action: going south 
+
+Action: opening the door 
+
+Game tester: Orion Zymaris
+Command: sit on it
+Action: sitting on Armchair 
+
+Action: entering Armchair 
+
+Game tester: Orion Zymaris
+Command: turn on tv
+Action: switching on Television 
+
+Action: saying hello to Petunia 
+
+Game tester: Orion Zymaris
+Command: wait
+Action: waiting 
+
+Game tester: Orion Zymaris
+Command: think
+Action: thinking 
+
+Game tester: Orion Zymaris
+Command: drink tea
+Action: drinking tea 
+
+Action: looking 
+
+Game tester: Orion Zymaris
+Command: look window
+Action: examining bedroom window 
+
+Game tester: Orion Zymaris
+Command: get in bed
+Action: entering bed 
+
+Action: looking 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Game tester: Orion
+Command: sw
+Action: going southwest 
+
+Game tester: Orion
+Command: ne
+Action: going northeast 
+
+Game tester: Orion
+Command: nw
+Action: going northwest 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: look
+Action: looking 
+

@@ -1,5 +1,5 @@
 Debugging log of Inform 7
-Inform called as: C:\Program Files\Inform 7\Compilers\ni -release -rules C:\Program Files\Inform 7\Inform7\Extensions -package D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1.inform -extension=ulx 
+Inform called as: C:\Program Files\Inform 7\Compilers\ni -rules C:\Program Files\Inform 7\Inform7\Extensions -package D:\zym0001\Documents\GitHub\HPIF\Projects\Harry Potter and the Philosopher's stone Ch1.inform -extension=ulx 
 
 
 -----------------------------------------------------
@@ -167,14 +167,14 @@ Phase XII ... Code generation
 
 ==== Phase XII.18 ... Compiling routines from predicate calculus ====
 
-Providing for a total heap of 16384, given requirement of 12032
+Providing for a total heap of 16384, given requirement of 12560
 
 
 -----------------------------------------------------
 Phase XIII ... Compilation now complete
 -----------------------------------------------------
 
-Total of 215 files written as streams.
+Total of 225 files written as streams.
 
 That concludes the debugging log from this run of Inform.
 Its contents were as follows, and can be changed by placing
