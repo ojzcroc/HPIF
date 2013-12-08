@@ -10,6 +10,13 @@ current chapter is a number that varies. current chapter is 1.
 Current teletype line break delay is a number variable. The current teletype line break delay is 400.
 Current teletype character delay is a number variable. The current teletype character delay is 40.
 Current teletype paragraph break delay is a number variable. The current teletype paragraph break delay is 400.
+to say wait (S - a number) ms/milliseconds/--:
+	say "[run paragraph on]";
+	if glulx timekeeping is supported:
+		if donotdelay is 0:
+			wait S ms before continuing;
+		otherwise:
+			continue the action.
 To teletype (text-to-be-printed - an indexed text):
 	repeat with N running from 1 to the number of characters in the text-to-be-printed:
 		if character number N in the text-to-be-printed is "[line break]":
@@ -974,7 +981,7 @@ instead of swearing obscenely or swearing mildly when dialyes/no is 1:
 		try hanging up;
 		now lexicon is table 1 instead.
 		
-after dialling 893 on the office phone:
+after dialling 893 on the office phone during work:
 	say "'Hello. How are you?' says the customer.";
 	now dialyes/no is 1.
 

@@ -4,7 +4,8 @@ The story headline is "Influenced by 'Harry Potter and the Philosopher's stone' 
 
 chapter 1 - Test facilities - not for release
 
-
+to say itinerary:
+	say "unfinished".
 when play begins:
 	now Harry Potter is wearing glasses;
 	now donotdelay is 1;
@@ -98,7 +99,7 @@ Include Real-Time Delays by Erik Temple.
 Include Telephones by George Tryfonas.
 Include Postures by Emily Short.
 Include Basic Screen Effects by Emily Short. 
-Include hpmenu for chapter 2 by Orion Zymaris.
+Include hpmenu by Orion Zymaris.
 Include After Not Doing Something by Ron Newcomb.
 to say wait (S - a number) ms/milliseconds/--:
 	say "[run paragraph on]";
@@ -636,8 +637,7 @@ instead of exiting from a rideable vehicle when the rideable vehicle is in a roa
 	say "That seems rather suicidal.".
 Privet'sstreets is a region.
 highway is a road in Privet'sstreets. it is north of garden. the description is "The highway is filled with large company cars like your uncle's, and people roaring around on motorbikes.".
-test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/purloin camera/drop camera/take camera/gonear bird room/w/eat food/gonear reptile/look snake/get out/w/n/sleep/get up/s/u/nw/se/purloin vice/ne/sw/d/e/e/s/w/look/e/take mail/w/read mail/listen/n/take all/s/u/ne/sw/d/w/wait/wait/wait/wait/wait".
-test two with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/purloin camera/drop camera/take camera/gonear bird room/w/eat food/gonear reptile/look snake/get out/w".
+test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/purloin camera/drop camera/take camera/gonear bird room/w/eat food/gonear reptile/look snake/get out/w/n/sleep/get up/s/u/nw/se/purloin vice/ne/sw/d/e/e/s/w/look/e/take mail/w/read mail/listen/n/take all/s/u/ne/sw/d/w/wait/wait/wait/wait/wait/look/open pocket/take all/e/fill kettle with water/w/look/listen/open window".
 understand "bike" or "motorbike" or "motorcycle" or "dream" or "dreams" or "nightmare" or "flying bike" or "flying motorbike" or "flying motorcycle" as "[dream]".
 after entering car:
 	set pronouns from uncle vernon;
@@ -1064,13 +1064,13 @@ zoo aftermath ends when the venture of zoo aftermath is success.
 Gordon is a person. 
 Dennis is a person. 
 Malcolm is a person.
-before doing anything:
+before doing anything when the location is cupboard under the stairs:
 	if the player is asleep:
 		say "You wake up.";
 		now the time of day is 7:30 am;
 		now Harry is not asleep;
 		now cupboard door is closed;
-		now the venture of zoo aftermath is pending;
+		now the venture of zoo aftermath is pending;		
 		now Dudley is in hall;
 		now Piers is in hall;
 		now Dennis is in hall;
@@ -1205,7 +1205,7 @@ report listening when the location is hall during letters from no-one:
 		if Uncle Vernon is in kitchen:	
 			if Aunt Petunia is in kitchen:
 				if Uncle Vernon has mail:
-					say "[first time]'Vernon,' Aunt Petunia says, 'look at the adress - how could they possibly know where he sleeps? You don't think they're watching the house?'[wait 3000 ms][line break]'Watching - spying - might be following us,' mutters Uncle Vernon. [line break]'What should we do? Write back?' says your Aunt.[line break]'No, No, We'll ignore it. if they don't get an answer ... yes, that's best ... we won't do anything ...'[wait 4000 ms][line break]'But - '[wait 1000 ms][line break]'I'm not having one in the house! Didn't we swear that we'd stamp him out of this dangerous nonsense?'[wait 3000 ms][paragraph break][only]You can hear Uncle Vernon and Aunt Petunia walking around the room, muttering. Your cupboard door stands open." instead;
+					say "[first time]'Vernon,' Aunt Petunia says, 'look at the address - how could they possibly know where he sleeps? You don't think they're watching the house?'[wait 3000 ms][line break]'Watching - spying - might be following us,' mutters Uncle Vernon. [line break]'What should we do? Write back?' says your Aunt.[line break]'No, No, We'll ignore it. if they don't get an answer ... yes, that's best ... we won't do anything ...'[wait 4000 ms][line break]'But - '[wait 1000 ms][line break]'I'm not having one in the house! Didn't we swear that we'd stamp him out of this dangerous nonsense?'[wait 3000 ms][paragraph break][only]You can hear Uncle Vernon and Aunt Petunia walking around the room, muttering. Your cupboard door stands open." instead;
 					now cupboard door is open;
 					now the description of hall is "";
 				otherwise:
@@ -1273,20 +1273,11 @@ after going west when the location is kitchen during the post:
 	if glulx timekeeping is supported:
 		wait 5000 ms before continuing;
 	increase time of day by 10 minutes;
-	say "[line break]Ten minutes later, everyone was in the car, speeding along the highway. They drove. And drove. Even Aunt Petunia didn't dare ask where they were going. They didn't stop to eat or drink all day.";
-	if glulx timekeeping is supported:
-		wait 5000 ms before continuing;
-	now time of day is 8:00 pm;
-	say "By nightfall Dudley was howling. He'd never missed so much TV in his life, or gone so long without using his computer. Finally, you stop outside of a gloomy-looking hotel. Dudley and Harry shared a room with twin beds and damp, musty sheets. Dudley's snoring fills the room.";
-	if glulx timekeeping is supported:
-		wait 6000 ms before continuing;
-	now time of day is 7:30 am;
-	now the description of mail is "[italic type]Mr H. Potter[line break]Room 17[line break]Railview Hotel[line break]Cokeworth[paragraph break][roman type]The thick, yellowish envelope has a purple wax seal on the back, bearing a coat of arms.";
-	say "Over a dinner of stale cornflakes and cold tomatoes on toast, the owner of the hotel comes over. '[']Scuse me, but is one of you Mr H. Potter? Only I got about an [']undred of these at the front desk.' She holds up a letter.[paragraph break][italic type]Mr H. Potter[line break]Room 17[line break]Railview Hotel[line break]Cokeworth[roman type][paragraph break]";
+	say "[line break]Ten minutes later, everyone was in the car, speeding along the highway. They drove. And drove. Even Aunt Petunia didn't dare ask where they were going. After spending the night in a hotel, the family was back on the road again.";
 	if glulx timekeeping is supported:
 		wait 4000 ms before continuing;
 	now time of day is 4:00 pm;
-	say "You try and grab the letter, but Uncle Vernon knocks your hand away. He follows the woman to get the letters. Within half an hour, you're back on the road again. 'Wouldn't it be better just to go home, dear?' Aunt Petunia suggested. Uncle Vernon pays no attention. After hours of roaming, the car stops at the coast and Uncle Vernon gets out, locking the door at the same time. After a while, Dudley starts complaining. 'It's Monday, and the Great Humberto's on tonight. I want to stay somewhere with [italic type]television[roman type].'[line break]If it is Monday, then it's your birthday tomorrow. Of course, your birthdays are never very fun - last year, you recieved a coat-hanger and a pair of old socks that used to belong to Uncle Vernon. Still, you weren't eleven every day.[paragraph break]";
+	say " 'Wouldn't it be better just to go home, dear?' Aunt Petunia suggested. Uncle Vernon pays no attention. After hours of roaming, the car stops at the coast and Uncle Vernon gets out, locking the door at the same time. After a while, Dudley starts complaining. 'It's Monday, and the Great Humberto's on tonight. I want to stay somewhere with [italic type]television[roman type].'[line break]If it is Monday, then it's your birthday tomorrow. Of course, your birthdays are never very fun - last year, you recieved a coat-hanger and a pair of old socks that used to belong to Uncle Vernon. Still, you weren't eleven every day.[paragraph break]";
 	if glulx timekeeping is supported:
 		wait 10000 ms before continuing;
 	say "Uncle Vernon comes, smiling, back to the car, carrying a long, thin package, which he wouldn't tell Petunia about. 'Found the perfect place!' he says. 'Come on! Everyone out!'[line break]You walk along the coast, before coming to a halt in front of an old rowing boat which your Uncle says was lent to you buy the  toothless old man standing next to him. Everyone hops into the boat, and are soon rowing towards a small, miserable looking shack on a rock in the middle of the ocean.[paragraph break]";
@@ -1325,7 +1316,7 @@ chapter 4 - the keeper of keys
 	
 cake is a thing. the description is "It says 'Happy Birthday Harry' on it.".
 after doing anything during Hagrid's scene:
-	say "[first time]'I demand that you leave at one, sir!' says Uncle Vernon. 'You are breaking and entering!'[line break]The giant wrenched the gun out of Uncle Vernon's hands, and bent it into a knot, before throwing it aside. [line break]'I haven' seen you since you was only a baby. I[']m Hagrid, by the way. Rubeus Hagrid. I got summat for yeh - it's in my coat. Here you go.' [paragraph break]He gives you a box which he removed from his jacket, which, upon opening, contained a large chocolate cake with [italic type]Happy Birthday Harry[roman type] written on it in green icing. 'You wouldn['] mind making some tea and sausages, would yeh? they're in my coat. Start by getting out the tea pot and puttin['] some tea leaves in it. Then go to the other room to get some water in it.' Hagrid bent down in front of the fire, and when he stood up a fire was roaring in the grate. [only][no line break]"; 
+	say "[first time]'I demand that you leave at one, sir!' says Uncle Vernon. 'You are breaking and entering!'[line break]The giant wrenched the gun out of Uncle Vernon's hands, and bent it into a knot, before throwing it aside. [line break]'I haven' seen you since you was only a baby. I[']m Hagrid, by the way. Rubeus Hagrid. I got summat for yeh - it's in my coat. Here you go.' [paragraph break]He gives you a box which he removed from his jacket, which, upon opening, contained a large chocolate cake with [italic type]Happy Birthday Harry[roman type] written on it in green icing. 'You wouldn['] mind making some tea and sausages, would yeh? they're in my coat. Start by getting out the tea pot and puttin['] some tea leaves in it. Then go to the other room to get some water.' Hagrid bent down in front of the fire, and when he stood up a fire was roaring in the grate. [only][no line break]"; 
 	now cake is in shack;
 	now hagrid's coat is in shack;
 	now the description of shack is "There is another small room to the east. a fire is crackling merrily in the grate.";
@@ -1336,39 +1327,45 @@ teapot is a container in pocket. understand "pot" as teapot.
 understand "a pocket" as pocket.
 tea leaves is a thing in pocket.
 blanket is a thing in shack.
-The second bedroom is a room. it is east of shack.
+The Second bedroom is a room. it is east of shack. the description of second bedroom is "The small room in which your aunt and uncle sleep. The door is to the west.".
 A mouldy old bed is a container in second bedroom. bed is enterable. bed is not portable.
 Dirty sink is a container in second bedroom. sink is fixed in place.
 water is a thing. 
 after taking water, try inserting water into teapot.
 understand "kettle" as teapot.
 water is in Dirty sink.
-filling is an action applying to one thing.
-understand "fill [something]" as filling.
+filling is an action applying to two things.
+understand "fill [something] with [something]" as filling.
 report filling:
-	say "with what?".
-carry out filling teapot for the first time:
-	if water is not carried:
-		if teapot is carried:
-			now water is in teapot;
-			say "You fill the teapot with water. From the other room, Hagrid calls out to you. 'How're you going there, Harry? anyway, I'm the keeper of keys at Hogwarts. Yeh'll know all about Hogwarts, o['] course. [line break]'Er, no' you call back. 'Sorry'.[wait 3000 ms][line break]'[italic type]Sorry?'[roman type] barks Hagrid. 'It's them that should be sorry! I knew you weren't getting the letters, but I still thought you'd know about Hogwarts, fer crying out loud! Didn't you ever wonder where your parents learnt it all?[wait 3000 ms][line break]'All what?'[wait 1000 ms][line  break]'ALL WHAT! Don['] you know - Don't you know anything, about yer parents world?[wait 2000 ms][line break]'What world?[wait 1000 ms][line break]'DURSLEY!' booms Hagrid.";
+	if noun is not teapot:
+		say "I don't know if that's a good idea. It might be. I just don't know.".
+carry out filling teapot for the first time during hagrid's scene:
+	if water is in dirty sink:
+		if the location is second bedroom:
+			if teapot is carried:
+				if hagrid does not carry hagrid's coat:
+					now water is in teapot;
+					try silently moving to hagrid's coat;
+					say "You fill the teapot with water. From the other room, Hagrid calls out to you. 'How're you going there, Harry? anyway, I'm the keeper of keys at Hogwarts. Yeh'll know all about Hogwarts, o['] course. [line break]'Er, no' you call back. 'Sorry'.[wait 3000 ms][line break]'[italic type]Sorry?'[roman type] barks Hagrid. 'It's them that should be sorry! I knew you weren't getting the letters, but I still thought you'd know about Hogwarts, fer crying out loud! Didn't you ever wonder where your parents learnt it all?[wait 3000 ms][line break]'All what?'[wait 1000 ms][line  break]'ALL WHAT! Don['] you know - Don't you know anything, about yer parents world?[wait 2000 ms][line break]'What world?[wait 1000 ms][line break]'DURSLEY!' booms Hagrid.";
 			stop the action;
 		otherwise:
 			continue the action;
 	otherwise:
 		continue the action.
-carry out inserting water into teapot for the first time:
-	if water is not in teapot:
+carry out inserting water into teapot during hagrid's scene:
+	if the location is second bedroom:
 		if teapot is carried:
-			say "You fill the teapot with water. From the other room, Hagrid calls out to you. 'How're you going there, Harry? anyway, like I told you, I'm the keeper of keys at Hogwarts. Yeh'll know all about Hogwarts, o['] course. [line break]'Er, no' you call back. 'Sorry'.[wait 3000 ms][line break]'[italic type]Sorry?'[roman type] barks Hagrid. 'It's them that should be sorry! I knew you weren't getting the letters, but I still thought you'd know about Hogwarts, fer crying out loud! Didn't you ever wonder where your parents learnt it all?[wait 3000 ms][line break]'All what?'[wait 1000 ms][line  break]'ALL WHAT! Don['] you know - Don't you know anything, about yer parents world?[wait 2000 ms][line break]'What world?[wait 1000 ms][line break]'DURSLEY!' booms Hagrid.";
+			if hagrid does not carry hagrid's coat:
+				say "You fill the teapot with water. From the other room, Hagrid calls out to you. 'How're you going there, Harry? anyway, like I told you, I'm the keeper of keys at Hogwarts. Yeh'll know all about Hogwarts, o['] course. [line break]'Er, no' you call back. 'Sorry'.[wait 3000 ms][line break]'[italic type]Sorry?'[roman type] barks Hagrid. 'It's them that should be sorry! I knew you weren't getting the letters, but I still thought you'd know about Hogwarts, fer crying out loud! Didn't you ever wonder where your parents learnt it all?[wait 3000 ms][line break]'All what?'[wait 1000 ms][line  break]'ALL WHAT! Don['] you know - Don't you know anything, about yer parents world?[wait 2000 ms][line break]'What world?[wait 1000 ms][line break]'DURSLEY!' booms Hagrid.";
 			now water is in teapot;
+			move hagrid's coat to hagrid;
 			stop the action;
 		otherwise:
 			continue the action;
 	otherwise:
 		continue the action.
 instead of opening hagrid's coat, try opening pocket.
-after going west when the location is shack:
+after going west when the location is shack during hagrid's scene:
 	if teapot is carried:
 		if water is in teapot:
 			say "As you enter, Hagrid says 'You never told him? You kept it from him for all these years?'[wait 2000 ms][line break]'Kept [italic type]what[roman type] from me?' you ask eagerly.[wait 2000 ms][line break]'STOP! I FORBID YOU!' says Uncle Vernon, panicking.[wait 2000 ms][line break]'Ah, go boil yer heads, both of yeh,' says Hagrid. 'Harry - yer a wizard.'[wait 4000 ms][line break]'I'm a [italic type]what?[roman type]' you ask. [line break]'A wizard, and a good one i'd reckon, once yer trained up a bit. It's time you read your  letter.' Hagrid hands you a letter.";
@@ -1379,10 +1376,37 @@ after going west when the location is shack:
 			try examining mail;
 			if glulx timekeeping is supported:
 				wait 6000 ms before continuing;
-			say "[line break]You look up. 'What does it mean, they await my owl?'[line break]Hagrid, appearing to just have his memory jogged, reaches inside one of his coat's many pockets, and extracts a real, live owl. He also extracts a quill and a roll of parchment. You read the letter he is writing upside down:[line break][italic type]Dear Mr Dumbledore,[line break]Given Harry his letter. Taking him to buy his things tomorrow.[line break]Weather's horrible. Hope you're well.[line break]Hagrid[roman type][line break]He rolls it up, and gives it to the owl, which takes the letter and flies out the window. 'Alright Harry, it'd do to get some sleep before tomorrow. Here, use this.' says Hagrid. He gives you his coat to sleep under, which you promptly do. [wait 6000 ms][line break]You wake next morning, fearing that the previous night was just a dream. However, when you open your eyes and sit up".
-after opening mail:
+			say "[line break]You look up. 'What does it mean, they await my owl?'[line break]Hagrid, appearing to just have his memory jogged, reaches inside one of his coat's many pockets, and extracts a real, live owl. He also extracts a quill and a roll of parchment. You read the letter he is writing upside down:[line break][italic type]Dear Mr Dumbledore,[line break]Given Harry his letter. Taking him to buy his things tomorrow.[line break]Weather's horrible. Hope you're well.[line break]Hagrid[roman type][line break]He rolls it up, and gives it to the owl, which takes the letter and flies out the window. 'Alright Harry, it'd do to get some sleep before tomorrow. Here, use this.' says Hagrid. He gives you his coat to sleep under, which you promptly do. [wait 6000 ms][line break]You wake next morning.";
+			now hagrid is asleep;
+			now harry is asleep;
+			now the venture of hagrid's scene is half-complete.
+after opening mail during hagrid's scene:
 	if water is in teapot:
 		if the location is shack:
 			if hagrid is in shack:
 				now the description of mail is "You unfold the letter and read: [paragraph break]HOGWARTS SCHOOL OF WITHCRAFT AND WIZADRY[paragraph break][italic type]Headmaster: Albus Dumbledore[line break](Order of Merlin, First Class, Grand Sorc., Chf. Warlock,[line break]Supreme Mugwump, International Confed. of Wizards[paragraph break]Dear Mr Potter,[line break]    We are pleased to inform you that you have a place at Hogwarts School of Witchcraft and Wizardry. Please find enclosed a list of all necessary books and equipment.[line break]    Term begins on 1 September. We await your owl by no later than 31 July. [paragraph break]Yours sincerely,[paragraph break][roman type]Minerva McGonagall[line break]Deputy Headmistress.".
-				
+instead of searching hagrid's coat, try examining hagrid's coat.
+instead of looking under hagrid's coat, try examining hagrid's coat.
+instead of looking when the venture of hagrid's scene is half-complete:
+	if the location is shack:
+		if player is asleep:
+			say "[first time]You keep your eyes screwed shut, knowing that the events of yesterday where a dream. You are at home in your cupboard, waiting for your Aunt to knock on the door. [only]Waiting for her to knock...";
+		otherwise:
+			continue the action;
+	otherwise:
+		continue the action.
+a person can be asleep.
+definition: a person is awake if they are not asleep.
+carry out listening when the venture of hagrid's scene is half-complete:
+	if the location is shack:
+		say "[first time]You hear a loud tapping noise. There's Aunt Petunia, you think, come to wake you up. You wished that yesterday was real, that you really where going off to a wizards school. You open your eyes, to the sight of the dark, damp hut. The tapping is coming from an owl, by the closed window. [only]Hagrid is lying in a corner, snoring loudly.";
+		now harry is awake;
+		now harry is not asleep;
+		stop the action;
+		rule succeeds;
+	otherwise:
+		continue the action.
+a window is a container in shack. a window is not portable. a window is openable and closed.
+after opening a window, say "You open the window, and the owl flies in.".
+owl is a thing.
+after opening a window, now owl is in shack.
