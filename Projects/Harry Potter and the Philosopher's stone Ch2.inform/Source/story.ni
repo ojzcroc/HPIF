@@ -4,8 +4,7 @@ The story headline is "Based on by 'Harry Potter and the Philosopher's stone' by
 
 chapter 1 - Test facilities - not for release
 
-to say itinerary:
-	say "unfinished".
+
 when play begins:
 	now Harry Potter is wearing glasses;
 	now donotdelay is 1;
@@ -150,6 +149,8 @@ before printing the banner text when bannerprinted is 0:
 		wait 3000 ms before continuing;
 		clear the screen;
 	now bannerprinted is 1.
+to say itinerary:
+	say "unfinished".
 when play begins:
 	now turn count is 0.
 after doing anything when the location is Cupboard under the stairs :
