@@ -1,0 +1,62 @@
+* //C8A63770-6D0B-11E2-B933-F96839AE4917// Errors
+Game tester: Orion. Error 1: "before going northwest, it should warn you to get dressed, but not force it upon
+Game tester: Orion. Error 2: give bed a description
+Game tester: Orion. Error 3: give everything a description
+Game tester: Orion. Error 4: the mirror should start of saying "you see your reflection"
+Game tester: Orion. Error 5: "it should say you put away the pyjamas
+Game tester: Orion. Error 6: it is inconsistent for you to be able to auto remove pj's but not other clothes
+Game tester: Orion. Error 7: "opening the bedside table should open the drawer"
+Game tester: Orion. Error 8: "it is unclear that you have to go downstairs, should mention wotk"
+Game tester: Orion. Error 9: "read spellbook: the book has weird words written inside it; expe..."
+Game tester: Orion. Error 10: "> take picturesyou can?t see any such thing.
+Game tester: Orion. Error 11: "should be a letter"
+Game tester: Orion. Error 12: "some of the things that are fixed in place should say that they are too heavy and
+Game tester: Orion. Error 13: "the drills book says drills-, not drills -"
+Game tester: Orion. Error 14: 'there should be a light in the attic
+Game tester: Orion. Error 15: "down" should be 'go down'
+Game tester: Orion. Error 16: hall description should say "conveniently placed as it is between the television and the fridge/
+Game tester: Orion. Error 17: "hall description tells you about rooms twice"
+Game tester: Orion. Error 18: "understand "use piano" as play piano"
+Game tester: Orion. Error 19: "sheet music should have a description"
+Game tester: Orion. Error 20: "sheet music should be the sheets for a cauldron full of hot, strong love"
+Game tester: Orion. Error 21: "says you turn on tv twice after turning it on"
+Game tester: Orion. Error 22: "give a more dramatic description of riding broom than "you mount broom"
+Game tester: Orion. Error 23: "should give a hint that you should say hello to petunia"
+Game tester: Orion. Error 24: "dropping something fragile should cause it to shatter"
+Game tester: Orion. Error 25: "petunia should get annoyed if you leave the fridge open"
+Game tester: Orion. Error 26: "things you drop on while on broom stay on the broom"
+Game tester: Orion. Error 27: "should have more talking to petunia
+Game tester: Orion. Error 28: "you shouldn't be able to carry too much; make objects have weight element maybe".
+Game tester: Orion. Error 29: "after trying to open suitcase you should be told it's a number lock"
+Game tester: Orion. Error 30: "instead of opening suitcase when suitcase is locked, try unlocking suitcase instead'
+Game tester: Orion. Error 31: "should say privet drive is accessible to coincide with later chapters"
+Game tester: Orion. Error 32: make opening and closing car done for the player
+Game tester: Orion. Error 33: 
+Game tester: Orion. Error 34: "a ferrari, which is slowly brought out to ground level" has no full stop
+Game tester: Orion. Error 35: "open ferrarithat?s not something you can open.
+Game tester: Orion. Error 36: "say that you use a control inside the enzo to open garage. otherwise, you can't
+Game tester: Orion. Error 37: you don't get the normal message about the tabby cat
+Game tester: Orion. Error 38: in the enzo
+Game tester: Orion. Error 39: there should be people as scenery to look at on highway
+Game tester: Orion. Error 40: the wait how are you flying that doesn't have quotes
+Game tester: Orion. Error 41: hitting a car should hijack it
+Game tester: Orion. Error 42: says the since you pressed the button line first time going in the elevator
+Game tester: Orion. Error 43: after being chastised by the boss you should respond
+Game tester: Orion. Error 44: should be more pointers during the phone conversations
+Game tester: Orion. Error 45: should be more pointers to read the rolodex and the document
+Game tester: Orion. Error 46: after sitting on chair say you deserve it  after all it's been the
+Game tester: Orion. Error 47: make sure the player knows that if they don't get the right papers they can look
+Game tester: Orion. Error 48: after opening the cabinet while searching for papers he should say no no it's
+Game tester: Orion. Error 49: get the customers to understand more greetings including famously british ones
+Game tester: Orion. Error 50: after finishing call, the rolodex should tell you you can go
+Game tester: Orion. Error 51: "elevator is not in corridor, neither is the elevator door"
+Game tester: Orion. Error 52: "the boss should say 'there's a new bakery across the road. there food is good"
+Game tester: Orion. Error 53: "?the potters, that?s right, that?s what i heard -? comes before going in shop after
+Game tester: Orion. Error 54: "maybe some things shouldn't be edible in 2 bites"
+Game tester: Orion. Error 55: "maybe some things shouldn't be edible in 2 bites"
+Game tester: Orion. Error 56: "'the whole potter listening thing is a bit tricky to figure out"
+Game tester: Orion. Error 57: "cat is not a physical object"
+Game tester: Orion. Error 58: 'after entering hall when you have done work it should suggest you watch tv
+Game tester: Orion. Error 59: "some of the times are a bit odd; the evening news shouldn't end at 5:29
+Game tester: Orion. Error 60: "it is unclear that you should tell petunia about the potters"
+Game tester: Orion. Error 61: "there seems to be a bug preventing me from completing the end of the last scene"

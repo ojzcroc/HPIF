@@ -1,6 +1,6 @@
 "Harry Potter and the Philosopher's Stone" by Orion Zymaris
 
-The story headline is "Influenced by 'Harry Potter and the Philosopher's stone' by J.K. Rowling.".
+The story headline is "Based on by 'Harry Potter and the Philosopher's stone' by J.K. Rowling. This game is not approved by J. K. Rowling. It exists because I am a fan of Harry Potter and text adventures, and is not a commercial venture.".
 
 chapter 1 - Test facilities - not for release
 
@@ -9,8 +9,7 @@ to say itinerary:
 when play begins:
 	now Harry Potter is wearing glasses;
 	now donotdelay is 1;
-	now bannerprinted is 1;
-	try silently exiting.
+	now bannerprinted is 1.
 regionating is an action applying to nothing.
 understand "current region" or "region" as regionating.
 carry out regionating:
@@ -81,7 +80,28 @@ carry out clearing all error reports:
 	
 chapter 2 - The Vanishing Glass
 
-current chapter is a number that varies. current chapter is 2.
+Current teletype line break delay is a number variable. The current teletype line break delay is 400.
+Current teletype character delay is a number variable. The current teletype character delay is 40.
+Current teletype paragraph break delay is a number variable. The current teletype paragraph break delay is 400.
+To teletype (text-to-be-printed - an indexed text):
+	repeat with N running from 1 to the number of characters in the text-to-be-printed:
+		if character number N in the text-to-be-printed is "[line break]":
+			wait (current teletype line break delay) milliseconds before continuing;
+		if character number N in the text-to-be-printed is "[paragraph break]":
+			wait (current teletype paragraph break delay) milliseconds before continuing;
+		if character number N in the text-to-be-printed is "[italic type]":
+			wait (current teletype paragraph break delay) milliseconds before continuing;
+			say "[italic type][run paragraph on]";
+		if character number N in the text-to-be-printed is "[roman type]":
+			wait (current teletype paragraph break delay) milliseconds before continuing;
+			say "[roman type][run paragraph on]";
+		say "[character number N in the text-to-be-printed][run paragraph on]";
+		wait (current teletype character delay) milliseconds before continuing, strictly.
+To teletype (text-to-be-printed - an indexed text) at/with (speed - a number) ms/milliseconds/-- delay/--:
+	change the current teletype character delay to the speed;
+	teletype the text-to-be-printed.
+To say change teletype delay to (speed - a number) ms/milliseconds/--:
+	change the current teletype character delay to speed.
 venture is a kind of value. all scenes have a venture. The ventures are success and failure and incomplete and pending and half-complete. the venture of a scene is usually incomplete.
 Dudley's birthday breakfast is a scene.
 Dudley's birthday breakfast begins when play begins.
@@ -113,11 +133,11 @@ to say now bannerprinted is 1:
 	now bannerprinted is 1.
 before printing the banner text when bannerprinted is 0:
 	clear the screen;
-	say "[bold type]Welcome to An Interactive Fiction version of Harry Potter.[line break][italic type]                (If you ever need help, type help.) Also, you can skip the intro and other cut scenes by pressing enter.[roman type][paragraph break]Nearly ten years had passed since the Dursleys had woken up to find their nephew in the front step, but Privet Drive had hardly changed at all. The sun rose on the same tidy front gardens and lit up the brass number four on the Dursley's front door; it crept into their living-room, which was almost exactly the same as it had been on the night when Mr Dursley had seen that fateful news report about the owls.[paragraph break][run paragraph on]";
+	say "[bold type]Welcome to An Interactive Fiction version of Harry Potter.[line break][italic type]                (If you ever need help, type help. You can also access Settings through the help menu) Also, you can skip the intro and other cut scenes by pressing enter, or by turning off time delays in the settings menu.[roman type][paragraph break]Nearly ten years had passed since the Dursleys had woken up to find their nephew in the front step, but Privet Drive had hardly changed at all. The sun rose on the same tidy front gardens and lit up the brass number four on the Dursley's front door; it crept into their living-room, which was almost exactly the same as it had been on the night when Mr Dursley had seen that fateful news report about the owls.[paragraph break][run paragraph on]";
 	if glulx timekeeping is supported:
 		wait 10000 ms before continuing;
 		clear the screen;
-	say "[if glulx timekeeping is supported][bold type]Welcome to An Interactive Fiction version of Harry Potter.[line break][italic type]                (If you ever need help, type help.)[roman type][paragraph break][end if]Only the photographs on the mantlepiece really showed how much time had passed. Ten years ago, there had been lots of pictures of what looked like a large pink beach ball wearing different-coloured bobble hats - but Dudley Dursley was no longer a baby, and now the photographs showed a large, blond boy riding his first bicycle, on a roundabout at the fair, playing a computer game with his father, being hugged and kissed by his mother.[paragraph break][run paragraph on]";
+	say "[if glulx timekeeping is supported][bold type]Welcome to An Interactive Fiction version of Harry Potter.[line break][italic type]                (If you ever need help, type help. You can also access Settings through the help menu)[roman type][paragraph break][end if]Only the photographs on the mantlepiece really showed how much time had passed. Ten years ago, there had been lots of pictures of what looked like a large pink beach ball wearing different-coloured bobble hats - but Dudley Dursley was no longer a baby, and now the photographs showed a large, blond boy riding his first bicycle, on a roundabout at the fair, playing a computer game with his father, being hugged and kissed by his mother.[paragraph break][run paragraph on]";
 	if glulx timekeeping is supported:
 		wait 10000 ms before continuing;
 		clear the screen;
@@ -132,13 +152,13 @@ before printing the banner text when bannerprinted is 0:
 	now bannerprinted is 1.
 when play begins:
 	now turn count is 0.
-after doing anything when the location is Cupboard under the stairs:
-	if the turn count is 1:
+after doing anything when the location is Cupboard under the stairs :
+	if the turn count is 2:
 		say "'Up!' Screeches Petunia.";
-		now turn count is 2;
+		now turn count is 3;
 		continue the action;
 	else:
-		continue the action.
+		continue the action.	
 clothing is a kind of thing. clothing is wearable.
 shirt is a kind of clothing. 
 pants is a kind of clothing.
@@ -278,8 +298,12 @@ after taking a thing:
 carry out looking under a noun:
 	if there is one thing underlying the noun:
 		say "underneath the [noun] is [a list of things underlying the noun].";
+		stop the action;
+		rule succeeds;
 	otherwise:
-		say "There is nothing underneath [the noun]." instead.
+		say "There is nothing underneath [the noun].";
+		stop the action;
+		rule succeeds instead.
 		
 after taking a noun:
 	now the noun is not underlying anything;
@@ -637,7 +661,7 @@ instead of exiting from a rideable vehicle when the rideable vehicle is in a roa
 	say "That seems rather suicidal.".
 Privet'sstreets is a region.
 highway is a road in Privet'sstreets. it is north of garden. the description is "The highway is filled with large company cars like your uncle's, and people roaring around on motorbikes.".
-test me with "000/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/purloin camera/drop camera/take camera/gonear bird room/w/eat food/gonear reptile/look snake/get out/w/n/sleep/get up/s/u/nw/se/purloin vice/ne/sw/d/e/e/s/w/look/e/take mail/w/read mail/listen/n/take all/s/u/ne/sw/d/w/wait/wait/wait/wait/wait/look/open pocket/take all/e/fill kettle with water/w/look/listen/open window".
+test me with "000/get up/s/w/cook food/wait/wait/wait/wait/e/e/open car/get in car/look/look/look/get out/n/wait/e/n/gonear camera/purloin stick/take camera/purloin camera/drop camera/take camera/gonear bird room/w/eat food/gonear reptile/look snake/get out/w/n/sleep/get up/s/u/nw/se/purloin vice/ne/sw/d/e/e/s/w/look/e/take mail/w/read mail/listen/n/take all/s/u/ne/sw/d/w/wait/wait/wait/wait/wait/look/open pocket/take all/e/fill kettle with water/w/look/listen/open window/open pocket/open bag of coins/take 5 knuts/put 5 knuts in pouch/w/get in/w/buy tickets/look at timetable/look at timetable/look at timetable/look at timetable/read list".
 understand "bike" or "motorbike" or "motorcycle" or "dream" or "dreams" or "nightmare" or "flying bike" or "flying motorbike" or "flying motorcycle" as "[dream]".
 after entering car:
 	set pronouns from uncle vernon;
@@ -1042,12 +1066,14 @@ some random objects is a thing in attic. the description is "some random bits an
 all people can be asleep.
 all people can be awake.
 definition: a person is awake if they are not asleep.
+juice box is a thing.
 after entering bed when the venture of zoo is success:
-	if egg is on-stage:
+	if juice box is off-stage:
 		now the time of day is 9:00 pm;
 		say "Exhausted by the day, you collapse into bed. You wait until night, so you can go and get food from the kitchen without the Dursleys catching you. In the meantime, you sit and think.[wait 4000 ms][paragraph break]You have lived with the Dursleys for almost  ten years, ten miserable years, as long as you can remember, ever since you were a baby and your parents died in a car crash. [wait 4000 ms][paragraph break]You can't remember being there when your parents died. Sometimes, you can recall a strange vision: a blinding flash of green light and a burning pain on your forehead. This, you suppose, was the crash, though you can't imagine where the green light might've come from.[paragraph break][wait 6000 ms] You can't remember your parents, and the Dursleys never talked about them. He wasn't allowed to ask questions, and there were no photos of them in the house.[wait 4000 ms][paragraph break]When you were younger, you had dreamed and dreamed of an unknown relation coming to tak you away, but this never happened; The Dursleys were your only family.[wait 4000 ms][paragraph break]Yet, sometimes, it seemed as though strangers in the street seemed to know you. Very strange strangers they were, too.[wait 4000 ms][paragraph break]A tiny man in a violet top had bowed to you once while out shopping, and a wild-looking old woman dressed in green had waved merrily to him once. A bald man in a very long purple coat had actually shaken his hand in the street the other day and then walked away without a word.[wait 6000 ms][paragraph break]The weirdest thing about all these people was the way they seemed to vanish, the second you tried to take a closer look.[wait 4000 ms][paragraph break]At school, you have no one. Everybody knew that Dudley's gang hated that odd Harry Potter in his baggy old clothes and broken glasses, and nobody liked to disagree with Dudley's gang. [paragraph break]Sometime during your musings, you fall asleep.";
 		now Harry is asleep;
 		remove egg from play;
+		now juice box is in waste disposal room;
 		remove bacon from play;
 		now all presents are undescribed;
 	otherwise:
@@ -1084,8 +1110,7 @@ instead of going east when the location is hall:
 		continue the action.
 remote control airplane is a thing. the description is "it was crashed by Dudley. Never let him become a pilot.".
 before opening cupboard door when the location is cupboard under the stairs during zoo aftermath:
-		say "You can't open the door. Uncle Vernon must've locked it. You play a few games of chess against yourself and climb back into bed. Around  noon, Aunt Petunia appears to give you some food. Every day, after getting home from school, this schedule continues. You finally get let out at the end of the Summer holidays. [line break][wait 5000 ms]";
-	now the description of hall is "Dudley is here, with his friends Piers, Malcolm, Gordon, and half of Dennis; the other half of Dennis is out the front door, since they're too large to all fit into the one room. Though all of Dudley's friends are big and stupid, Dudley, being the biggest and stupidest of the lot, is the leader. They seem to be laughing at a story Dudley just told them about knocking Mrs Figg over while riding his bike for the first time. You'd like to go outside, but they're blocking the way.";
+	now the description of hall is "Dudley is here, with his friends Piers, Malcolm, Gordon, and half of Dennis; the other half of Dennis is out the front door, since they're too large to all fit into the one room. Though all of Dudley's friends are big and stupid, Dudley, being the biggest and stupidest of the lot, is the leader. They seem to be laughing at a story Dudley just told them about knocking Mrs Figg over while riding his bike for the first time. You'd like to go outside for a walk, but they're blocking the way. Hang on, didn't Dudley have a broken air rifle? What if I could fix it?";
 	now Dudley's camera is in Dudley's second room;
 	now the description of Dudley's camera is "Broken.";
 	now remote control airplane is in Dudley's second room.
@@ -1118,6 +1143,7 @@ carry out fixing air rifle:
 	if vice is carried:
 		say "You fix the air rifle";
 		now the description of air rifle is "a fully functioning air rifle. It isn't very powerful, but it would hurt.";
+		stop the action;
 		rule succeeds;
 	otherwise:
 		continue the action.
@@ -1146,7 +1172,7 @@ after doing anything when the location is kitchen during the letters from no-one
 	if newspaper is not in kitchen:
 		now newspaper is in kitchen;
 		now mail is in hall;
-		say "Uncle Vernon opens his newspaper, and Dudley bangs his Smeltings stick on the table. You hear the click of a letter-box and the sound of letters flopping on the doormat. Uncle Vernon tells Dudley to get it. Dudley tells you to get it. You tell Dudley to get it. Dudley tries to hit you with his Smeltings stick. You get the letters.";
+		say "Uncle Vernon opens his newspaper, and Dudley bangs his Smeltings stick on the table. You hear the click of a letter-box and the sound of letters flopping on the doormat. Uncle Vernon tells Dudley to get it. Dudley tells you to get it. You tell Dudley to get it. Dudley tries to hit you with his Smeltings stick. You go to get the letters.";
 		continue the action;
 	otherwise:
 		continue the action.
@@ -1157,17 +1183,10 @@ after doing anything when the location is kitchen during the letters from no-one
 		continue the action;
 	otherwise:
 		continue the action.
-before doing anything except opening letter when the location is kitchen during the letters from no-one:
-	if the current action is not going east:
-		if piece of toast is not on table:
-			if newspaper is in kitchen:
-				if mail is not carried:
-					say "I said, 'You get the letters'. Please don't stuff up the continuity of the story. It's rude.";
-					continue the action;
-				otherwise:	
-					continue the action;
-			otherwise:
-				continue the action;
+every turn during letters from no-one:
+	if mail is in hall:
+		if mail is unseen:
+			say "I said, 'You get the letters. Don't stuff up the continuity of the story. It's rude.";
 		otherwise:
 			continue the action;
 	otherwise:
@@ -1179,7 +1198,7 @@ the description of mail is "[italic type]Mr H. Potter[line break]The Cupboard un
 after going west when the location is kitchen during letters from no-one:
 	if mail is carried:
 		say "'Finally', says Uncle Vernon. You give him the other letters, and keep your own.";
-		now the description of kitchen is "Uncle Vernon sits reading his mail, as you should be";
+		now the description of kitchen is "Uncle Vernon sits reading his mail, as you should be.";
 		now the printed name of mail is "letter";
 		continue the action;
 	otherwise:	
@@ -1258,7 +1277,8 @@ after going northeast when the location is dudley's second room during the lette
 		now the description of hall is "You see Uncle Vernon sitting in front of the letterbox, boarding it up.";
 	otherwise:
 		continue the action.
-Shack is a room. the description is "There is another small room to the east.".
+The sea is a region.
+Shack is a room in the sea. the description is "There is another small room to the east.".
 sofa is a supporter in shack. sofa is fixed in place.
 fireplace is a container in shack. fireplace is fixed in place.
 incorporeal thing is a kind of thing.
@@ -1328,6 +1348,7 @@ understand "a pocket" as pocket.
 tea leaves is a thing in pocket.
 blanket is a thing in shack.
 The Second bedroom is a room. it is east of shack. the description of second bedroom is "The small room in which your aunt and uncle sleep. The door is to the west.".
+second bedroom is in sea.
 A mouldy old bed is a container in second bedroom. bed is enterable. bed is not portable.
 Dirty sink is a container in second bedroom. sink is fixed in place.
 water is a thing. 
@@ -1364,11 +1385,15 @@ carry out inserting water into teapot during hagrid's scene:
 			continue the action;
 	otherwise:
 		continue the action.
+bag of coins is a container. bag of coins is openable and closed.
+there are 10 knuts in bag of coins.
+there are 10 sickles in bag of coins.
+there are 10 galleons in bag of coins.
 instead of opening hagrid's coat, try opening pocket.
 after going west when the location is shack during hagrid's scene:
 	if teapot is carried:
 		if water is in teapot:
-			say "As you enter, Hagrid says 'You never told him? You kept it from him for all these years?'[wait 2000 ms][line break]'Kept [italic type]what[roman type] from me?' you ask eagerly.[wait 2000 ms][line break]'STOP! I FORBID YOU!' says Uncle Vernon, panicking.[wait 2000 ms][line break]'Ah, go boil yer heads, both of yeh,' says Hagrid. 'Harry - yer a wizard.'[wait 4000 ms][line break]'I'm a [italic type]what?[roman type]' you ask. [line break]'A wizard, and a good one i'd reckon, once yer trained up a bit. It's time you read your  letter.' Hagrid hands you a letter.";
+			say "As you enter, Hagrid says 'You never told him? You kept it from him for all these years?'[wait 2000 ms][line break]'Kept [italic type]what[roman type] from me?' you ask eagerly.[wait 2000 ms][line break]'STOP! I FORBID YOU!' says Uncle Vernon, panicking.[wait 2000 ms][line break]'Ah, go boil yer heads, both of yeh,' says Hagrid. 'Ruddy great Muggles. Harry - yer a wizard.'[wait 4000 ms][line break]'I'm a [italic type]what?[roman type]' you ask. [line break]'A wizard, and a good one i'd reckon, once yer trained up a bit. It's time you read your  letter.' Hagrid hands you a letter.";
 			now harry carries mail;
 			now mail is closed;
 			now the description of mail is "[italic type]Mr H. Potter[line break]The Floor[line break]Hut-on-the-Rock[line break]The Sea[roman type][line break]The thick, yellowish envelope has a purple wax seal on the back, bearing a coat of arms. You gingerly open the envelope.";
@@ -1376,9 +1401,14 @@ after going west when the location is shack during hagrid's scene:
 			try examining mail;
 			if glulx timekeeping is supported:
 				wait 6000 ms before continuing;
-			say "[line break]You look up. 'What does it mean, they await my owl?'[line break]Hagrid, appearing to just have his memory jogged, reaches inside one of his coat's many pockets, and extracts a real, live owl. He also extracts a quill and a roll of parchment. You read the letter he is writing upside down:[line break][italic type]Dear Mr Dumbledore,[line break]Given Harry his letter. Taking him to buy his things tomorrow.[line break]Weather's horrible. Hope you're well.[line break]Hagrid[roman type][line break]He rolls it up, and gives it to the owl, which takes the letter and flies out the window. 'Alright Harry, it'd do to get some sleep before tomorrow. Here, use this.' says Hagrid. He gives you his coat to sleep under, which you promptly do. [wait 6000 ms][line break]You wake next morning.";
+			say "[line break]You look up. 'What does it mean, they await my owl?'[line break]Hagrid, appearing to just have his memory jogged, reaches inside one of his coat's many pockets, and extracts a real, live owl. He also extracts a quill and a roll of parchment. You read the letter he is writing upside down:[paragraph break]";
+			teletype "[italic type]Dear Mr Dumbledore,[line break]Given Harry his letter. Taking him to buy his things tomorrow.[line break]Weather's horrible. Hope you're well.[line break]Hagrid[roman type]";
+			say "[paragraph break]He rolls it up, and gives it to the owl, which takes the letter and flies out the window. Uncle Vernon regains his courage. 'I WILL NOT PAY FOR SOME CRAKPOT OLD FOOL TO TEACH HIM MAGIC TRICKS!' he yells. He had gone too far. Hagrid seizes his umbrella, and thunders 'NEVER - INSULT - ALBUS - DUMBLEDORE - IN - FRONT - OF - ME!'[wait 7000 ms][line break]He brought the umbrella swishing down through the air, and the next second there was a cracking sound, and Dudley was dancing around, holding his fat bottom. When he turned, they saw a pigs tail stiching out of a hole in his pyjamas. Dudley's parents grabbed him and threw him into the next room, before slamming the door shut. 'Alright Harry, it'd do to get some sleep before tomorrow. Here, use this.' says Hagrid. He gives you his coat to sleep under, which you promptly do. [wait 6000 ms][line break]You wake next morning.";
 			now hagrid is asleep;
 			now harry is asleep;
+			now pocket is closed;
+			now bag of coins is in pocket;
+			now time of day is 7:00 am;
 			now the venture of hagrid's scene is half-complete.
 after opening mail during hagrid's scene:
 	if water is in teapot:
@@ -1407,6 +1437,187 @@ carry out listening when the venture of hagrid's scene is half-complete:
 	otherwise:
 		continue the action.
 a window is a container in shack. a window is not portable. a window is openable and closed.
-after opening a window, say "You open the window, and the owl flies in.".
 owl is a thing.
-after opening a window, now owl is in shack.
+instead of opening pocket when the venture of Hagrid's scene is half-complete:
+	unless owl is in shack:
+		say "You shouldn't; That's not yours. Besides, who knows what could be in there... Did it just wriggle?";
+	otherwise:
+		say "[first time]You open one of the pockets at random, and find a large bunch of keys. Another pocket yields mint humbugs. Then you find slug pellets, and three more packets of sausages, before finally stumbling across a bag of strange-looking coins.[only][no line break]";
+		continue the action.
+after opening pocket when the venture of Hagrid's scene is half-complete:
+	stop the action;
+	rule succeeds.
+the rock is a room. the description is "You can see Uncle Vernon's borrowed rowing boat bobbing in the water.".
+the shack's door is a door.
+the shack's door is west of the shack and east of the rock. the printed name of the shack's door is "the shack's door".
+after opening a window:
+	say "You open the window, and the owl flies in. The owl drops a newspaper on Hagrid, before beginning to attack Hagrid's coat. 'Hagrid, there's an owl', you say. 'Pay [']im', responds Hagrid. 'There's money in one o['] my coat pockets. Give him five Knuts. They're the little bronze ones. The Silver ones're called Sickles, and the gold are Galleons.'";
+	now owl is in shack.
+instead of taking owl, say "It doesn't seem like the owl would appreciate that. It ruffles it's feathers at you.".
+instead of taking hagrid's coat, say "That's not yours.".
+pouch is a container. pouch is open and openable. pouch is part of owl.
+after opening bag of coins, say "The owl holds out its leg, displaying a little, open pouch. It watches you expectantly.".
+every turn when the venture of hagrid's scene is half-complete:
+	if there are 5 knuts in pouch:
+		if owl is in shack:
+			now owl is off-stage;
+			say "The owl flutters out the open window. Hagrid gets up, yawning loudly, and says 'Best be off Harry. Lots to do.' He notices you looking at the coins in the bag, and says 'I wouldn['] worry [']bout money; Your parents left you some. It's in the wizard's bank, Gringotts.  We'll go there soon enough.' Hagrid takes his coat and walks out the door.";
+			now bag of coins is off-stage;
+			now pocket is off-stage;
+			now Hagrid is wearing hagrid's coat;
+			now Hagrid is in rock;
+			now the venture of Hagrid's scene is success;
+		otherwise:
+			continue the action;
+	otherwise:
+		continue the action.
+every turn during hagrid's scene:
+	unless there are at least 25 things in bag of coins:
+		say "You shouldn't take Hagrid's money.".
+boat is a container in rock. boat is enterable. boat is not openable and open.
+Diagonalley is a scene.
+Diagonalley begins when the venture of hagrid's scene is success.
+Diagonalley ends when the venture of diagonalley is success.
+street is a room.
+every turn when the location is rock during diagonalley:
+	if boat is in rock:
+		if street is unvisited:
+			say "'Well, get in Harry', says Hagrid.";
+		otherwise:
+			continue the action;
+	otherwise:
+		continue the action.
+after entering boat during diagonalley:
+	if boat is in rock:
+		if street is unvisited:	
+			now Hagrid is in boat;
+			say "Hagrid jumps in the boat next to you, squishing you against the side. He looks at the boat. 'Seems a shame to row', he says. He glances over his shoulder, before saying 'If I sped things up a bit, would you mind not mentioning it at Hogwarts?'[line break]'Sure,' you say. Hagrid retrieves his pink umbrella from inside his coat and taps the side of the boat. The boat sped away towards the harbour. 'Hagrid, what's a muggle?'[wait 5000 ms][line break]'It's what we call non-magic folk, and your family are the biggest group o['] muggles I've ever seen, and I don't just mean physical size!'[wait 2000 ms][line break]'What about my parents?' you ask.[line break]Hagrid sighs. 'Your parents were a great witch and wizard, but even the greatest aren't invulnerable.  I can't tell yeh everythin['], Because no-one knows all of it... [wait 4000 ms][line break]It begins with a person called - called -'[wait 2000 ms][line break]'Called what?' you ask.[wait 1000 ms][line break]'Blimey, it's incredible you don't know his name, everyone in our world does - I don['] like sayin['] the name if I don't have to, and I'm not alone in that.'[wait 2000 ms][line break]'Why not?'[wait 1000 ms][line break]'Because people are still scared, even after all this time... See, there was this wizard who went... bad. As bad as you could go. His name was... was [wait 4000 ms][line break]'Was what?'[wait 1000 ms][paragraph break][italic type]'Voldemort[roman type].' [wait 2000 ms][paragraph break]Hagrid shuddered. 'Anyway, about 20 years ago, he started gathering followers, and he found loads of people. Some afraid, and some just power hungry, because he had power. Dark days, Harry. Didn't know who you could trust. Hogwarts was one o['] the only safe places left, because of Dumbledore, the headmaster. Your mum and dad were at Hogwarts then, and as good a witch and wizard as I ever knew. They were close to Dumbledore. [wait 6000 ms][line break]And then, one day, at Hallowe'en ten years ago, he went to find them. He came to your house, and -'[wait 2000 ms][line break]Hagrid pulled a spotted handkerchief out of his pocket and blew his nose. [paragraph break]'You-know-who killed your parents. And then - and this is the mysterious bit - he tried to kill you too. Turned his wand on you, and ended up destroying himself, while you just got a scar. No one knows what happened to him afterwards, except that he hasn't been seen since. I took you from the house personally, took you to the muggles, and you'd know the rest better than I would,' he says, sighing. The boat bumps up against the harbor wall, and you climb out onto the street.";
+			now boat is in street;
+			now Hagrid is in street;
+			now Harry is in street;
+		otherwise:
+			continue the action;
+	otherwise:
+		continue the action.
+Passers-by is a person in street. 
+rule for printing the name of passers-by when doing something to passers-by:
+	say "they".
+The description of street is "The station is to your west. Passers-by stare at you as you walk through the street. Hagrid being twice as tall as a normal man, and the way he kept pointing out ordinary things like parking meters and saying loudly 'See that Harry? Things these Muggles dream up, eh?', might've had something to do with it.".
+public streets is a region.
+street is in public streets.
+the description of Passers-by is "They look away quickly as you look at them.".
+the station is a room in public streets. the station is west of street.
+the description of the station is "a greyish, gloomy room presents itself to you. The train tracks run along one side.".
+tracks is scenery in station.
+timetilltrain is indexed text that varies. timetilltrain is "in 6 minutes.".
+every turn during diagonalley:
+	if the location is station:
+		if timetilltrain is "in 6 minutes.":
+			now timetilltrain is "in 5 minutes.";
+		otherwise if timetilltrain is "in 5 minutes.":
+			now timetilltrain is "in 4 minutes.";
+		otherwise if timetilltrain is "in 4 minutes.":
+			now timetilltrain is "in 3 minutes.";
+		otherwise if timetilltrain is "in 3 minutes.":
+			now timetilltrain is "in 2 minutes.";
+		otherwise if timetilltrain is "in 2 minutes.":
+			now timetilltrain is "in 1 minute.";
+		otherwise if timetilltrain is "in 1 minute.":
+			now timetilltrain is "coming now.".
+the description of tracks is "Long, greyish metal bars the train runs on. Hagrid marvels at them as well.".
+timetable is a thing in station. timetable is fixed in place. the description is "The next train is to London, [timetilltrain]".
+ticket machine is a container in station. ticket machine is fixed in place. the description is "The machine says that it is 2 pounds for a ticket.".
+ticket machine is closed and not openable.
+muggle money is a thing.
+before going west during diagonalley:
+	if the location is street:
+		if station is unvisited:
+			say "'Now, I don't understand this muggle money,' says Hagrid. 'Can you please go and buy tickets from the machine? Here's some money.'";
+			now Harry carries muggle money.
+tickets is a thing in ticket machine.
+understand "track" as tracks.
+understand "train track" as tracks.
+understand "train tracks" as tracks.
+understand "ticket" as tickets.
+understand "ticket from machine" as tickets.
+understand "tickets from ticket machine" as tickets.
+understand "ticket from ticket machine" as tickets.
+understand "tickets from machine" as tickets.
+ticket machine is transparent.
+before buying tickets for the first time:
+	say "you pay the machine for the ticket.";
+	now Harry carries tickets;
+	now muggle money is off-stage;
+	stop the action;
+	rule succeeds.
+train is a container. train is enterable. train is closed and openable. train is not portable. train is transparent.
+understand "door" and "train door" as train.
+instead of dropping letter, say "You still need that!".
+school list is a thing. the description is "HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY[paragraph break]Uniform[line break][italic type]First year students will require:[line break]    1. Three sets of plain work robes (black)[line break]    2. One plain pointed hat (black) for day wear[line break]    3. One pair of protective gloves (dragon hide or similar)[line break]    4. One winter cloak (black, silver fastenings)[line break]Please note that all pupils['] clothes should carry name tags[paragraph break][roman type]Set Books[line break][italic type]All students should have a copy of each of the following:[line break][roman type]The standard Book of Spells (Grade 1) [italic type] by Miranda Goshawk[line break][roman type]A History of Magic [italic type]by Bathilda Bagshot[line break][roman type]Magical Theory [italic type]by Adalbert Waffling[line break][roman type]A Beginner's Guide to  Transfiguration [italic type]by Emeric Switch[line break][roman type]One Thousand Magical Herbs and Fungi [italic type]by Phyllida Spore[line break][roman type]Magical Drafts and Potions [italic type]by Arsenius Jigger[line break][roman type]Fantastic Beasts and Where to Find Them [italic type]by Newt Scamander[line break][roman type]The Dark Forces: A Guide to Self-Protection [italic type]by Quentin Trimble[paragraph break][roman type]Other Equipment[line break]    [italic type]1 wand[line break]    1 cauldron (pewter, standard size 2)[line break]    1 set glass or crystal phials[line break]    1 telescope[line break]    1 set brass scales[paragraph break]Students may also bring an owl OR a cat OR a toad[paragraph break][roman type]PARENTS ARE REMINDED THAT FIRST YEARS ARE NOT ALLOWED THEIR OWN BROOMSTICKS".
+every turn during diagonalley:
+	if train is unseen:
+		if timetilltrain is "coming now.":
+			if the location is station:
+				now train is in station;
+				say "The train rushes into the station. Hagrid grabs your arm and drags you onto the train. 'Now, have you still got that letter? It's got a list of your school things inside it.' .";
+				now school list is in mail;
+				now Hagrid is in train;
+				now Harry is in train.
+leaky cauldron is a room.
+after examining school list during diagonalley:
+	if Harry is in train:
+		if leaky cauldron is not visited:
+			say "[wait 3000 ms]'Can we buy all of this in London?' you ask. [line break]'If you know where to go', says Hagrid. 'Hey look, we're here!'[line break]Hagrid pulls you off the train and into a small bar. 'This, Harry, is the leaky cauldron.'";
+			now harry is in leaky cauldron;
+			now hagrid is in leaky cauldron;
+			say "The barman asks 'The usual, Hagrid?'[line break]'Can't. Tom, I'm on Hogwarts Business. I'm taking Harry here to buy his school things.'[wait 2000 ms][line break]The room goes quiet. 'Good lord. Can it be... can it be Harry Potter?'[line break]What seems like the entire bar queues up to shake your hand; some keep coming back. [line break]'Welcome back Mr Potter, Welcome back!'[line break]'So proud, Mr Potter, I'm just so proud - '[line break]'P-P-Potter, c-can't tell you how p-pleased I am to meet you.'[line break]'Harry, this is Professor Quirrell. He's a Hogwarts teacher.' says Hagrid.".
+the description of leaky cauldron is "The leaky cauldron is small, dark and shabby. A few old women sit in one corner, drinking sherry. The barman was talking to a little man in a top hat. Everyone seems to know Hagrid. ".
+Tom is a person in leaky Cauldron. the description of tom is "Tom, an old, bald and wizened gentleman, is the bartender of the leaky cauldron. Tom is standing with his back up against the wall. It looks like he's covering something.".
+after saying hello to tom, say "'Is there anything I can do for you, Mister Potter?' Tom wheezes.".
+button is a thing in leaky cauldron. button is undescribed.
+your drink is a thing.
+carry out pushing button:
+	if button is undescribed:
+		say "Tom is in the way.";
+		stop the action;
+	otherwise:
+		say "You press the button.";
+		stop the action;
+		rule succeeds.
+report pushing button:
+	do nothing.
+after doing anything in leaky cauldron:
+	if button is described:
+		now button is undescribed;
+		say "Tom moves back over to his spot. [line break]'Here you go, here's your drink.'";
+		now your drink is on bar;
+		continue the action.
+after reading a command when the location is leaky cauldron:
+	if word number 1 in the player's command is "buy":
+		if Tom is in leaky cauldron:
+			let T be indexed text;
+			let T be the player's command;
+			replace word number 1 in T with "";
+			say "Tom turns around to make you the[T], revealing a button on the wall.";
+			now button is described;
+			stop the action;
+			rule succeeds.
+adrink is a thing. adrink is on bar. the printed name of adrink is "drink". understand "drink" as adrink.
+instead of requesting tom for something:
+	say "Tom turns around to make you a [second noun], revealing a button on the wall.";
+	now button is described;
+	stop the action;
+	rule succeeds.
+Dedalus Diggle is a person in leaky cauldron. the description of Dedalus is "Diggle appears very excited to meet you. You recognise him. He was the one who bowed to you once in a shop.".
+old woman is a kind of person. the plural of old women is old women. the description of old woman is "The group are all staring at you. The bottle of Sherry, for the first time, sits forgotten on their table.".
+Professor Quirrell is a person in leaky cauldron. the description of professor Quirrell is "A young man, pale and thin, Professor Quirrell appears extremely jumpy. If he's a professor at Hogwarts, it must be an interesting place.".
+Doris Crockford is a person in leaky cauldron. the description of Doris Crockford is "Doris shakes your hand again.".
+A small table is a thing in leaky cauldron. the description of a small table is "The little table is surrounded by the group of old women, who, before you entered were drinking sherry, but are now staring open mouthed at you. ".
+there are 5 chairs in leaky cauldron.
+there is 5 old women in leaky cauldron.
+a rusty old door is a door.
+london is a region. leaky cauldron is in london.
+courtyard is a room.
+bar is a supporter in leaky cauldron. the description of bar is "The bar is highly polished from all the glasses that have slid across its surface.".
+a rusty old door is west of courtyard and east of the leaky cauldron.
+the description of courtyard is "'See? I told you that you're famous. Even Professor Quirrell was trembling ter meet yeh - mind you, he's usually tremblin[']. Poor bloke. He was fine until he went on a trip one year to experience the dark arts first hand, but they say he met some vampires in the Black Forest and he had some trouble with a hag, and he's never been the same since.'".

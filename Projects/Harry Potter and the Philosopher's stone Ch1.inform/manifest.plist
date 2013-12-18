@@ -8,13 +8,13 @@
         <key>Sounds</key>
         <dict>
             <key>3</key>
-            <string>Sounds\Harry Potter and the Philosopher's stone intro.ogg</string>
+            <string>Sounds/Harry Potter and the Philosopher's stone intro.ogg</string>
             <key>4</key>
-            <string>Sounds\Harry Potter with first paragraph cut.ogg</string>
+            <string>Sounds/Harry Potter with first paragraph cut.ogg</string>
             <key>5</key>
-            <string>Sounds\Harry Potter with first two paragraphs cut.ogg</string>
+            <string>Sounds/Harry Potter with first two paragraphs cut.ogg</string>
             <key>6</key>
-            <string>Sounds\Harry Potter with first three paragraphs cut.ogg</string>
+            <string>Sounds/Harry Potter with first three paragraphs cut.ogg</string>
         </dict>
     </dict>
 </plist>

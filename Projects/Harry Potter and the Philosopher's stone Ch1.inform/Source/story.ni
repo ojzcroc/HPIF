@@ -55,7 +55,7 @@ before printing the banner text when bannerprinted is 0:
 		wait 58095 ms before continuing;
 		clear the screen;
 	play sound of intro four;
-	say "[now bannerprinted is 1][banner text][paragraph break][if glulx timekeeping is supported][bold type]Welcome to An Interactive Fiction version of Harry Potter.[line break][italic type]                (If you ever need help, type help.)[roman type][paragraph break][end if]When Mr and Mrs Dursley woke up on the dull, grey Tuesday our story starts, there was nothing about the cloudy sky outside to suggest that strange and mysterious things would soon be happening all over the country.[paragraph break]".
+	say "[now bannerprinted is 1][banner text][paragraph break][if glulx timekeeping is supported][bold type]Welcome to An Interactive Fiction version of Harry Potter.[line break][italic type]                (If you ever need help, type help.)[roman type][paragraph break][end if]When Mr and Mrs Dursley woke up on the dull, grey Tuesday our story starts, there was nothing about the cloudy sky outside to suggest that strange and mysterious things would soon be happening all over the country.[paragraph break]Mrs Dursley goes downstairs and says 'You should get ready for work dear!'".
 
 Uncle Vernon's Scene is a scene.
 npcm is a kind of person. 
@@ -259,7 +259,7 @@ understand "bedroom window" as bedroomwindow.
 bedroomwindow is fixed in place. it is lit. it is described.
 understand "look [bedroomwindow]" as examining.
 understand "look out [bedroomwindow]" as examining.
-the description of bedroomwindow is "you look out the window and see the lovely gray of Surrey suburbia.".
+the description of bedroomwindow is "you look out the window and see the lovely grey of Surrey suburbia.".
 getting out is an action applying to nothing.
 understand "pj's" as pyjamas.
 understand "get out of bed" as exiting when player is in bed.
@@ -282,7 +282,25 @@ bed is enterable.
 before opening the wardrobe:
 	if player is in bed:
 		say "You reach up to open the wardrobe, but you can't quite get there. You need to get up first.";
-		stop the action.			
+		stop the action.	
+warned about pyjamas is a number that  varies. 
+warned about pyjamas is 0.	
+before going northwest when the location is dursley's bedroom:
+	if the player is wearing pyjamas:
+		if warned about pyjamas is 0:
+			say "Maybe you should wear something else before going.";
+			now warned about pyjamas is 1;
+			stop the action;
+		otherwise if warned about pyjamas is 1:
+			say "Are you sure? Do you want to go out in your pyjamas?";
+			now warned about pyjamas is 2;
+			stop the action;
+		otherwise if warned about pyjamas is 2:
+			say "Ok then. On your head be it.";
+			now warned about pyjamas is 3;
+			continue the action;
+	otherwise:
+		continue the action.
 before opening the bedroomdoor:
 	if player is in bed:
 		say "You should be out of bed before trying to reach the door.";
@@ -290,7 +308,7 @@ before opening the bedroomdoor:
 understand "look in [mirror]" as examining.
 understand "look in [window]" as examining.
 understand "look out [window]" as examining.
-the description of the mirror is "[if player is wearing suit ]This suit is rather business-like. Nice and grey.[otherwise if player is wearing pyjamas]These pyjamas are great, with the little dollar signs all over them![otherwise if player is not wearing clothing]The best kind of suit - a birthday suit![otherwise]You look in the mirror.[one of]That outfit looks wonderful![or]That is spectacular. Nice and flashy. Just what you were looking for.[or]Those clothes are a very nice, vibrant shade.[or] In this outfit, the person in the mirror reminds you of your sister, Marge.[purely at random]".	
+the description of the mirror is "You look in the mirror and see your reflection. [if player is wearing suit ]This suit is rather business-like. Nice and grey.[otherwise if player is wearing pyjamas]These pyjamas are great, with the little dollar signs all over them![otherwise if player is not wearing clothing]The best kind of suit - a birthday suit![otherwise][one of]That outfit looks wonderful![or]That is spectacular. Nice and flashy. Just what you were looking for.[or]Those clothes are a very nice, vibrant shade.[or] In this outfit, the person in the mirror reminds you of your sister, Marge.[purely at random]".	
 instead of taking inventory:
 	if the player is carrying at least 6 things:
 		continue the action;
@@ -320,13 +338,15 @@ the description of the bedside table is "This is your bedside table. It has a dr
 bedside drawer is a small container. it is closed and openable.
 inside bedside drawer is a scrap of paper.
 scrap of paper is a small thing.
+instead of opening bedside table, try opening bedside drawer instead.
 the description of scrap of paper is "[random lock number]".
 Dursley is wearing Pyjamas.  
 before wearing clothing:
 	if player is wearing pyjamas:
 		unless the player's command includes "pyjamas":
 			if the location is dursley's bedroom:
-				now the pyjamas is in the wardrobe.
+				now the pyjamas is in the wardrobe;
+				say "You take off your pyjamas and put them away.".
 before wearing clothing:
 	if player is wearing clothing:
 		say "Even though you got the biggest clothing the store could sell you, you can barely wear one set of clothing, let alone two.";
@@ -342,7 +362,7 @@ northwest of bedroomdoor is Landing.
 Staircase is a door. it is open and not openable. staircase is above Hall. staircase is below Landing. the printed name is "the staircase".
 understand "bedroom door" as bedroomdoor.
 understand "door" as door.
-Hall is a room in dursley's house. "You can see Dudley's fingermarks all over the walls here. He frequents the hall, as it is in between the television and the fridge. There are rooms southwest, east, west, above, south, northeast and north of you.".
+Hall is a room in dursley's house. "You can see Dudley's fingermarks all over the walls here. He frequents the hall, conveniently placed as it is in between the television and the fridge. ".
 Toilets is a room in dursley's  house. the printed name is "Toilet". it is northeast of Hall. the description is "The room is gleaming white, and still wet from Petunia's obsessive and never ending cleaning.".
 Toilet1 is a thing in toilets. the description is "As clean as the rest of the room.".the printed name is "Toilet".
 understand "toilet" as toilet1.
@@ -409,6 +429,9 @@ after dismounting:
 	now the noun is not occupied;
 	continue the action.
 lily'sbroom is a large broom. it is in broomcupboard.
+after mounting lily'sbroom for the first time:
+	say "You jump on the broom. You're hovering a few feet off the ground, your feet skimming the floor.";
+	stop the action.
 the description of lily'sbroom is "As you examine the handle, you see the name Lily Potter engraved into it. and there's a card on the side - it says [italic type][line break]To Petunia[line break]     I leave you my old school broom. I never was any good at quidditch.[roman type][line break]The handle says that it is a cleansweep five.".
 the printed name is "broom".
 understand "broomstick" as a broom.
@@ -434,7 +457,8 @@ understand "go down [something]" as going.
 understand "go up [something]" as going.
 understand "down [something]" as going.
 understand "up [something]" as going.
-attic is a room in dursley's house. "As you enter the attic, you see pictures of [unless player is dudley]Dudley[otherwise]you[end if] all over the walls.[no line break]". 
+attic is a dark room in dursley's house. "As you enter the attic, you see pictures of [unless player is dudley]Dudley[otherwise]you[end if] all over the walls.[no line break]". 
+Dudley's pictures is a thing in attic. pictures of Dudley is fixed in place.
 dusty box is a medium container. it is closed and openable. it is not portable.
 dusty box is in attic.
 a book is a kind of thing. 
@@ -444,15 +468,21 @@ instead of taking a toy:
 	say "[first time]If you took one of Dudley's toys, he would notice.[line break]after he spent an hour counting them.[only]You can't take that.".
 the description of a toy is "[one of] Dudley's old favourite toy[or]This was Dudley's[or]one of Dudley's favourite toys[purely at random].".
 the description of howto spoil your children handbook is  "A comprehensive guide to help you ensure the over-enrichment of your favourite child." .
-the description of drills- an unabridged history is "A full and unabridged history on the subject of drills, drilling, drillmaking, and more!".
+the description of drills - an unabridged history is "A full and unabridged history on the subject of drills, drilling, drillmaking, and more!".
 the description of 101 Pompous Complaints is "A list of the best of Pompous Complaints and snide remarks.".
 the description of the High calorie cookbook is "A book of the meals with the highest possible calorie content.". the description of the smeltings schoolbook is "The smeltings schoolbook [line break] owner: Vernon Dursley".
 Howto spoil your children handbook is a book in dusty box. 
-Drills- an unabridged History is a book in dusty box.
+Drills - an unabridged History is a book in dusty box.
 101 Pompous Complaints is a book in dusty box.
 High calorie cookbook is a book in dusty box.
 Smeltings schoolbook is a book in dusty box.
 Petunia's diary is a book in attic.
+light is a lit device in attic. the description of light is "a small lightbulb glows dimly in its socket.".
+light is switched on.
+after switching off light:
+	now light is dark.
+after switching on light:
+	now light is lit.
 instead of opening diary:
 	try examining diary.
 the printed name of howto spoil your children handbook is "how to spoil your children handbook".
@@ -463,26 +493,30 @@ every turn during uncle vernon's scene:
 	unless howto spoil your children handbook is in dusty box:
 		now the printed name of howto spoil your children handbook is "How to Spoil your Children Handbook".
 letter is a small thing.
+the printed name of letter is "a letter".
 before moving to:
 	if player's command includes "handbook":
 		now the printed name of howto spoil your children handbook is "How to Spoil your Children Handbook";
 		move Howto to the second noun.
-the description of letter is "You unfold the letter, and see a message written in the recognisable handwriting of Petunia's sister.[italic type][line break]Dear Petunia,[line break]     I hope you respond to this letter. I would really like to keep in touch! Three months since I went to hogwarts for the[line break]first time and already I feel like an old timer. I'm still wary of some of the teachers we have though. Some of them are[line break]downright horrible. There are also some real show-offs here too. James Potter is the most boisterous of them, but his[line break]friend Sirius is pretty self-centered too. On the other hand, the rest of his friends aren't bad. Remus Lupin is rather[line break]kind, and his friend Peter Pettigrew is quite well mannered, if frustratingly shy.[line break]The world of magic is amazing, and there's so much to do! We[paragraph break][roman type]The rest of the letter seems to have been torn off.".
+the description of letter is "You unfold the letter, and see a message written in the recognisable handwriting of Petunia's sister.[italic type][line break]Dear Petunia,[line break]     I hope you respond to this letter. I would really like to keep in touch! Three months since I went to Hogwarts for the[line break]first time and already I feel like an old timer. I'm still wary of some of the teachers we have though. Some of them are[line break]downright horrible. There are also some real show-offs here too. James Potter is the most boisterous of them, but his[line break]friend Sirius is pretty self-centered too. On the other hand, the rest of his friends aren't bad. Remus Lupin is rather[line break]kind, and his friend Peter Pettigrew is quite well mannered, if frustratingly shy.[line break]The world of magic is amazing, and there's so much to do! We[paragraph break][roman type]The rest of the letter seems to have been torn off.".
 before examining petunia's diary:
 	now letter is in attic.
 The description of Petunia's diary is "[first time]As you open the diary, a letter falls out, sent from Lilly Potter.[line break][only]A glance at the diary tells you it holds nothing interesting - just some old appointments and dates to keep.".
-kitchendoor is a door. the printed name is "[if kitchen is not visited]a white door[otherwise]the kitchen door". it is west of the Hall. it is east of the kitchen. it is open and openable.
+kitchendoor is a door. the printed name is "the kitchen door". it is west of the Hall. it is east of the kitchen. it is open and openable.
 kitchen is a room in dursley's house.
 a procedural rule: ignore block giving rule.
 A road is a kind of room.
 Garden is a multiroad in dursley's house.
+Cat is an animal in garden. the description of cat is "The cat is sitting on the wall. It has markings around its eyes.".
 garage is not portable.
 Petunia is a a medium npcf in the kitchen.
 Petunia is edible. the description is "Your wife Petunia. She looks perfect.".
 Instead of eating Petunia:
 	say "Why would you want to do that?".
+after going to kitchen for first time:
+	say "'Are you ready for work dear?' Says Petunia.".
 definition: a broom is occupied if there is a person on it.
-After saying hello to petunia when the venture of work is incomplete:
+After telling petunia about when the venture of work is incomplete:
 	if the description of Petunia is not "Your lovely wife Petunia.":
 		now the description of Petunia is "Your lovely wife Petunia.";
 		say "[if broom is occupied]'What on earth... How are you flying that?'[otherwise]'Good morning. How did you sleep?' Asks Petunia.[paragraph break]'Since there[']s Cereal all over the place, can you go get the broom and clean it up?'[no line break]";
@@ -490,7 +524,14 @@ After saying hello to petunia when the venture of work is incomplete:
 	otherwise:
 		say "'Good morning' Says Petunia.[if broom is occupied] 'Why are you doing... (Petunia looks around nervously) Magic, in our house?'";
 		rule succeeds.
-		
+after saying hello to petunia when the venture of work is incomplete:
+	if the description of Petunia is not "Your lovely wife Petunia.":
+		now the description of Petunia is "Your lovely wife Petunia.";
+		say "[if broom is occupied]'What on earth... How are you flying that?'[otherwise]'Good morning. How did you sleep?' Asks Petunia.[paragraph break]'Since there[']s Cereal all over the place, can you go get the broom and clean it up?'[no line break]";
+		rule succeeds;
+	otherwise:
+		say "'Good morning' Says Petunia.[if broom is occupied] 'Why are you doing... (Petunia looks around nervously) Magic, in our house?'";
+		rule succeeds.
 after saying hello to dudley:
 		say "You say hello to Dudley.[line break]'Shan't! Shan't!' Says Dudley." instead.
 		
@@ -573,6 +614,10 @@ Instead of eating Dudley:
 	say "Even though you are able to eat half a cow's worth of meat in one sitting, you don't think you could eat Dudley.".
 Procedural rule while eating something: ignore the carrying requirements rule.
 fridge is a large container in the kitchen. it is not portable. it is closed and openable. the printed name is "a fridge".
+every turn when the location is kitchen:
+	if fridge is open for 5 turns:
+		say "Petunia walks over to the fridge to close it. 'Do try and close the fridge please Dear,' she says.";
+		now fridge is closed.
 rule for printing the name of fridge when listing contents: say "the fridge".
 rule for printing the name of fridge while opening fridge: say "fridge".
 Steak is a food inside fridge. the description is "This looks like a good, proper size for a steak. what does it weigh... twenty, twenty five pounds? A whole half a cow's worth...". the printed name of steak is "a steak".
@@ -597,6 +642,8 @@ say "that cereal's Dudleys. and it's also been in his mouth.";
 stop the action.
 Dudley is a large npcm.
 suitcase is a medium number unlockable in the kitchen. it is closed and openable. it is locked.  Rule for printing the name of the suitcase while taking inventory: say "a suitcase".
+instead of opening suitcase when suitcase is locked:
+	try unlocking suitcase with dursley.
 after reading a command during uncle vernon's scene:
 	if the player's command includes "unlock case":
 		change the text of the player's command to "unlock case with dursley";
@@ -625,8 +672,21 @@ understand "paper" as papers.
 the description of three papers is "The latest drill models - The Bk 44 model T, The Qz  77, the T1000, and the HAL 6502.[line break]The Bk 44 model T is reccomended for hard work and long lasting life.[line break]The Qz 77 is reccomended for it's low, low price.[line break]The HAL 6502 is reccomended for use with smaller screws and where finesse is needed.[line break]The T1000 is reccomended for use with large bolts and large scale work.".
 suitcase has a carrying capacity 10.
 front door is east of hall and west of the Garden. front door is a door. front door is closed and openable.
+before entering something:
+	if the noun is closed:
+		try silently opening the noun;
+		say "(first opening [noun])";
+		continue the action;
+	otherwise:
+		do nothing.
+before exiting from something:
+	if the noun is open:
+		try silently closing the noun;
+		continue the action;
+	otherwise:
+		do nothing.
 the printed name of front door is "the front door".
-the description of the Garden is "You look around and see a driveway with the car on it, the garage where the car came out of, and the highway to the north.".
+the description of the Garden is "You look around and see a driveway with the car on it, the garage where the car came out of, and the highway to the north. The rest of privet drive is to the east.".
 garage is a huge container in Garden. it is enterable. it is closed and openable. it is opaque. 
 understand "garage door" as garage.
 understand "switch" as start button.
@@ -715,7 +775,7 @@ every turn when in garage:
 	if ferrari enzo is in garage:
 		if player has not been in ferrari enzo:
 			if ferrari enzo has not been in garage for at least one turn:
-				say  "as you close the garage, a secret hole opens in the floor, revealing a Ferrari, which is slowly brought out to ground level";
+				say  "as you close the garage, a secret hole opens in the floor, revealing a Ferrari, which is slowly brought out to ground level.";
 			otherwise:
 				if the ferrari enzo is in garage:
 					say "you can see your ferrari taking pride of place in your garage.";
@@ -726,7 +786,13 @@ every turn during uncle vernon's scene:
 	if player is not in ferrari enzo:
 		if player has been in ferrari enzo for at least one turn:
 			now start button is switched off.
-			
+the description of ferrari enzo is "An immaculately kept Enzo, with carbon fibre everything and  an engine with more capacity than your stomach.".
+ferrari door is a container.
+instead of opening ferrari, try opening ferrari door.
+ferrari door is part of ferrari enzo.
+understand "door" as ferrari door.
+ferrari door is openable and closed.
+understand "ferrari" or "ferrari enzo" or "enzo" as ferrari door.
 instead of exiting from a vehicle when the vehicle is in a road:
 	say "That seems rather suicidal.".
 instead of exiting from a rideable vehicle when the rideable vehicle is in a road:
@@ -750,6 +816,7 @@ every turn when in ferrari enzo:
 			if garage is open:
 				if start button is switched on:
 					now ferrari enzo is in Garden;
+					say "You open the garage with a remote and go to the garden.";
 					now player is in ferrari enzo;
 					
 report switching on start button:
@@ -765,12 +832,18 @@ every turn when in ferrari enzo:
 				if start button has not been switched on for at least one turn:
 					say "You need to open the garage before you can leave.".
 				
-before going to highway when in car:
+before going to highway when the venture of work is incomplete:
+	if player is in ferrari enzo:
+		say "[one of]As you back out of Privet Drive, you notice a tabby cat out of the corner of your eye. you also notice that the cat looks like it is reading a map. you look round again, but the map has gone. As you drive round the corner of the road, you notice the cat reading the sign - no, looking at the sign; cats can't read maps or signs.[or][stopping][line break][if the venture of work is incomplete]".
+before going to highway when the venture of work is incomplete:
 	if player is in car:
 		say "[one of]As you back out of Privet Drive, you notice a tabby cat out of the corner of your eye. you also notice that the cat looks like it is reading a map. you look round again, but the map has gone. As you drive round the corner of the road, you notice the cat reading the sign - no, looking at the sign; cats can't read maps or signs.[or][stopping][line break][if the venture of work is incomplete]".
-after going to highway when lily'sbroom is occupied for the first time:
-	say "As you fly out to the highway, you notice a tabby cat out of the corner of your eye. you also notice that the cat looks like it is reading a map. you look round again, but the map has gone. as you drive round the corner of the road, you notice the cat reading the sign - no, looking at the sign; cats can't read maps or signs. The people on the street seem to be looking at you rather strangely.";
-	continue the action.
+after going to highway when the venture of work is incomplete:
+	if lily'sbroom is occupied:
+		say "As you fly out to the highway, you notice a tabby cat out of the corner of your eye. you also notice that the cat looks like it is reading a map. you look round again, but the map has gone. as you drive round the corner of the road, you notice the cat reading the sign - no, looking at the sign; cats can't read maps or signs. The people on the street seem to be looking at you rather strangely.";
+		continue the action;
+	otherwise:
+		continue the action.
 	
 
 Part 2 - Work
@@ -788,6 +861,7 @@ understand "elevator button" as elevatorbutton.
 understand "button" as elevatorbutton.
 person in cloak is a kind of person.
 the plural of person in cloak is people in cloaks.
+there are 5 people in cloaks in highway.
 Grunnings Carpark is a multiroad in grunnings. it is west of the highway. "You can see the highway to the east. There is a small shop on the other side.".
 red car is a vehicle in Grunnings Carpark. it is locked. the description is "This one seems to be a Daihatsu.".
 blue car is a vehicle in Grunnings Carpark. it is locked. the description is "It's a Ford.".
@@ -796,6 +870,7 @@ green car is a vehicle in Grunnings Carpark. it is locked. the description is "T
 carjacking is an action applying to one visible thing.
 understand "carjack[something]" as carjacking.
 understand "hijack[something]" as carjacking.
+instead of attacking a vehicle, try carjacking the noun instead.
 instead of carjacking something that is not a vehicle:
 	say "How can you carjack that? It isn't a vehicle.".
 instead of carjacking ferrari enzo:
@@ -841,6 +916,7 @@ level 1 is a region in grunnings.
 Work office is a room. it is in level 1.
 the description of the office door is "you see an office door to the north with the words 'Vernon Dursley' on a plaque in front of it. [line break] there are other offices to either side of you.".
 corridor is a room. it is in level 1. 
+the description of corridor is "Your office is north, and the elevator door is on the wall behind you.".
 after reading a command when the player is in corridor:
 	if the player's command includes "get in":
 		unless elevator is in corridor:
@@ -892,13 +968,13 @@ every turn during uncle vernon's scene:
 
 before going north when in corridor for the first time:
 	if the time of day is at least 8:30 am:
-		say "As you [if lily'sbroom is occupied]fly[else]walk[end if] in, the Boss comes up to you. 'Late again, Dursley?' He says. 'Well, i hope this is the last time. Make sure you are here at 8:30 Tomorrow, On The Dot.'[paragraph break]";
+		say "As you [if lily'sbroom is occupied]fly[else]walk[end if] in, the Boss comes up to you. 'Late again, Dursley?' He says. 'Well, i hope this is the last time. Make sure you are here at 8:30 Tomorrow, On The Dot.'[line break]'Ok Sir', you say.[paragraph break]";
 		if glulx timekeeping is supported:
 			wait 2000 milliseconds before continuing;
 		say "[no line break]".
 			
 office door is a door. it is north of the corridor and south of work office.
-the description of work is "[first time]As you enter your office, [only]You can see your desk, with a phone on it.". 
+the description of work is "[first time]As you enter your office, [only]You can see your desk, with a phone on it. [if the venture of work is not success]It seems someone has left you a document to read; You should also check your rolodex, in case anything important's come up.". 
 desk is a huge supporter in work office.
 understand "ring [a number]" as dialling it on.
 workwindow is a medium thing in work office. the printed name is "a window". it is fixed in place. the description is "as you look out the window, you see [one of]a large tawny owl[or]a flock of small brown owls[or]a small white owl[or]a large white owl[or]a ginger cat with bandy legs[purely at random] flutter past.".
@@ -1113,7 +1189,7 @@ before saying yes during customercall:
 	otherwise:
 		do nothing.
 to say mason drill specifics:
-	say "[if first digit is 1]work with large, tough, unweildy bolts[no line break][otherwise if first digit is 2]work with large, tough, unweildy bolts[no line break][otherwise if first digit is 3]working with small, fiddly screws[no line break][otherwise if first digit is 4]working with small, fiddly screws[no line break][otherwise if first digit is 5]hardiness and ability to withstand impact[no line break][otherwise if first digit is 6]hardiness and ability to withstand impact[no line break][otherwise]its low price[no line break][end if][no line break]?'" .
+	say "[if first digit is 1]work with large, tough, unweildy bolts[no line break][otherwise if first digit is 2]work with large, tough, unweildy bolts[no line break][otherwise if first digit is 3]working with small, fiddly screws[no line break][otherwise if first digit is 4]working with small, fiddly screws[no line break][otherwise if first digit is 5]hardiness and ability to withstand impact[no line break][otherwise if first digit is 6]hardiness and ability to withstand impact[no line break][otherwise]its low price[no line break][end if][no line break]?'[line break]You had that document in your suitcase... there should be a spare in the filing cabinet, if I can find the right drawer." .
 		
 before saying no during uncle vernon's scene:
 	if lexicon is table 2:
@@ -1187,10 +1263,11 @@ does the player mean saying hello to:
 
 A chair is a kind of supporter. A chair is always enterable. Every chair allows seated.
 office chair is a chair in office.
+after sitting on office chair, say "You deservedly lean back into the chair. After all, it was a long walk from the carpark.".
 Rollerdex is a small thing on desk. the printed name is "a rolodex".
 understand "rolodex" as rollerdex.
 understand "roller" or "dex" as rollerdex.
-the description of rollerdex is "Tuesday[paragraph break]Work for today:[paragraph break]Answer two customer phone calls:[line break]First call[if the venture of customercall is success]: [bold type]achieved[roman type][otherwise if the venture of customercall is failure]: [bold type]failed[roman type][otherwise].[end if][line break]Second call[if the venture of mrmason call is success]:[bold type]	achieved[roman type][otherwise if the venture of mrmason call is failure]:[bold type]	failed[roman type][otherwise if the venture of mrmason call is pending]:[bold type]	pending[roman type][otherwise].[end if]".
+the description of rollerdex is "Tuesday[paragraph break]Work for today:[paragraph break]Answer two customer phone calls:[line break]First call[if the venture of customercall is success]: [bold type]achieved[roman type][otherwise if the venture of customercall is failure]: [bold type]failed[roman type][otherwise].[end if][line break]Second call[if the venture of mrmason call is success]:[bold type]	achieved[roman type][otherwise if the venture of mrmason call is failure]:[bold type]	failed[roman type][otherwise if the venture of mrmason call is pending]:[bold type]	pending[roman type][otherwise].[end if][line break][if the venture of work is half-complete]You can go for lunch![end if]".
 flipping is an action applying to one thing.
 understand "flip [rollerdex]" as flipping.
 understand "turn [rollerdex]" as flipping.
@@ -1298,7 +1375,7 @@ after examining ics document:
 		if the venture of customercall is incomplete:
 			if glulx timekeeping is supported:
 				wait 2000 ms before continuing;
-			say "As you go about looking at the document, the phone rings. How convenient.[line break]You pick up the phone.[paragraph break]Hello? Says the voice on the other end of the line. ";
+			say "As you go about looking at the document, the phone rings. How convenient.[line break]You pick up the phone.[paragraph break]'Hello?' Says the voice on the other end of the line. ";
 			now dialyes/no is 1;
 			now bored is 0;
 			now office phone is inuse;
@@ -1505,14 +1582,14 @@ every turn during work:
 		if the venture of mrmason call is success:
 			unless the venture of work is half-complete:
 				now the time of day is 12:30 AM;
-				say "Your boss walks into the office. 'Good Job', he says. 'I see you've made a few good sales. go, take a break; have some lunch.'.";
+				say "Your boss walks into the office. 'Good Job', he says. 'I see you've made a few good sales. go, take a break; have some lunch. There's a good bakery across the road; it opened recently.'.";
 				now the venture of work is half-complete.
 clearing the screen is an action out of world. 
 understand "clear the screen" as clearing the screen.
 carry out clearing the screen:
 	clear the screen.
 				
-Section 1 - Stats - Not for release
+Section 1 - Stats - not for release
 
 when play begins:
 	now cheats_bin is 1.
@@ -1671,7 +1748,7 @@ understand "shop door" as bakery door.
 bakervisit is a number that varies. bakervisit is 0.
 after going through bakery door when the location is bakers:
 	now bakervisit is 1;
-	say "'Good morning! How may i help you, sir?' asks the shop attendant.[if the player is on a broom]Wait, How are you flying that?";
+	say "'Good morning! How may i help you, sir?' asks the shop attendant.[if the player is on a broom]'Wait, How are you flying that?'";
 	unless shop attendant is the current interlocutor:
 		try silently saying hello to shop attendant.
 Bakers is a room in privet'sstreets. the printed name is "The Baker's".
@@ -1749,9 +1826,13 @@ after going west when bakers is visited:
 		continue the action;
 	otherwise:
 		continue the action.
+after going to something:
+	now the noun is visited.
+every turn:
+	now the location is visited.
 a procedural rule: if the player is in street, ignore the block listening rule.
 alreadylooked is a number that varies. alreadylooked is 0.
-after reading a command during uncle vernon's scene:
+after reading a command when the venture of work is half-complete:
 	if  the player is in street:
 		if bakers is visited:
 			if alreadylooked is 0:
@@ -1759,8 +1840,12 @@ after reading a command during uncle vernon's scene:
 					now alreadylooked is 1;
 					try listening to instead.
 carry out listening when the location is street:
-	say "'The Potters, that's right, that's what I heard -'[line break]'-yes, their son, Harry-'[line break]Potter? Petunia's sister's husband? I need to get back to the office and call petunia.".
-
+	if the venture of work is half-complete:
+		say "'The Potters, that's right, that's what I heard -'[line break]'-yes, their son, Harry-'[line break]Potter? Petunia's sister's husband? I need to get back to the office and call petunia.";
+	otherwise:
+		continue the action.
+report listening:
+	say "You listen intently. However, it seems like your efforts are pointless. There's nothing you can hear.".
 before going north when the location is corridor:
 	if bakervisit is 1:
 		if the venture of work is half-complete:
@@ -1791,6 +1876,7 @@ after exiting from elevator when the location is Grunnings carpark:
 				wait 4000 ms before continuing;
 			say "'[no line break]Don't be sorry, my dear sir, for nothing could upset me today![line break]Rejoice, for You-Know-Who has gone at last![line break]Even Muggles such as yourself should be celebrating, this happy, happy day!'[paragraph break][no line break]";
 			now bumpedinto is 1;
+			now the time of day is 5:30 pm;
 		otherwise:
 			continue the action;
 	otherwise:
@@ -1810,6 +1896,7 @@ Part 4 - Finishing the chapter
 
 after going to Garden when the venture of work is success:
 	now the description of Garden is "You notice the cat from this morning sitting on the garden wall. Despite your attempts to shoo it away, it is still sitting there, looking sternly at you.";
+	now the time of day is 6:30 pm;
 	continue the action.
 carry out saying hello to petunia during uncle vernon's scene:
 	if the venture of work is success:
@@ -1840,6 +1927,8 @@ The description of photos is "In these, Dudley looks like a beach ball wearing a
 Instead of taking a photo, say "You should leave these. They're family possessions.".
 living-room door is a door. it is south of hall and north of living-room. the printed name is "the living-room door".
 Piano is a supporter in living-room.
+instead of using piano, try playing piano.
+the description of sheet music is "A selection of old songs is here to be played; Some music from the TV show Buffy, some Rock and roll, and a cauldron full of hot, strong love.".
 sheet music is a thing on piano.
 playing is an action applying to one thing.
 understand "play [something]" as playing.
@@ -1864,8 +1953,13 @@ after going to living-room:
 instead of examining television when television is switched on:
 	try silently switching off television;
 	try switching on television.
+after going to hall when the venture of work is success:
+	say "After a long day, you feel like putting your feet up and watching TV. You've earned it.";
+	continue the action.
 report switching on television when the venture of work is incomplete:
-	say "You turn on the Television, but the only thing on is children's shows.".
+	say "You turn on the Television, but the only thing on is children's shows.";
+	stop the action;
+	rule succeeds.
 tvonafterwork is a number that varies. tvonafterwork is 0.
 report switching on television when the venture of work is not incomplete:
 	say "[one of]As you switch in the television, you are greeted with the sight of the last few minutes of the evening news.[paragraph break][italic type]'And finally, bird-watchers everywhere have reported that the nation's owls have been behaving very unusually today.[line break]Although owls normally hunt at night and are hardly ever seen in daylight, there have been hundreds of sightings of these birds flying in every direction since sunrise.[paragraph break]Experts are unable to explain why the owls have suddenly changed their sleeping pattern. Most mysterious.[paragraph break]And now, over to Jim McGuffin with the weather. Going to be any more showers of owls tonight, Jim?'.[roman type][run paragraph on][or]You turn the tv on, but there's nothing good to watch.[stopping]";
@@ -1873,7 +1967,9 @@ report switching on television when the venture of work is not incomplete:
 		if glulx timekeeping is supported:
 			wait 7000 ms before continuing;
 		now tvonafterwork is 1;
-		say "[paragraph break][italic type]'Well, Ted, I don[']t know about that, but it's not only the owls that have been acting oddly today.[line break]Viewers as far apart as Kent, Yorkshire, and Dundee have been phoning in to tell me that instead of the rain I promised yesterday, they've had a downpour of shooting stars![line break]Perhaps people have been celebrating Bonfire Night early - it's not untill next week, folks! But I can promise a wet night tonight.[roman type][line break]" instead.
+		say "[paragraph break][italic type]'Well, Ted, I don[']t know about that, but it's not only the owls that have been acting oddly today.[line break]Viewers as far apart as Kent, Yorkshire, and Dundee have been phoning in to tell me that instead of the rain I promised yesterday, they've had a downpour of shooting stars![line break]Perhaps people have been celebrating Bonfire Night early - it's not untill next week, folks! But I can promise a wet night tonight.[roman type][line break]" instead;
+		stop the action;
+		rule succeeds.
 understand "ruminesce" as thinking.
 understand "ponder" as thinking.
 understand "wonder" as thinking.
@@ -1985,6 +2081,7 @@ living-room cut scene ends when the venture of living-room cut scene is success.
 when living-room cut scene begins:
 	say "'Funny stuff on the news. Owls... shooting stars...[wait 2000 ms]And there were a lot of funny-looking people in town today...'[wait 3000 ms][paragraph break]'So?' Snapped Petunia.[wait 3000 ms][paragraph break]'Well, I just thought... maybe... it was something to do with... you know... [italic type]her lot.'[roman type][wait 1000 ms][line break]You gulp down some Tea.[wait 2000 ms][line break]'Their son - he'd be about Dudley's age now, wouldn't he?'[wait 3000 ms][paragraph break]'I Suppose so.'[wait 2000 ms][line break]'What's his name again? Howard, isn't it?'[wait 3000 ms][paragraph break]'Harry. Nasty, common name, if you ask me.'[wait 3000 ms][paragraph break]'Oh, yes. Yes, I quite agree...'[wait 2000 ms][line break]Without another word, you and Petunia both go upstairs to bed.";
 	say "[line break]";
+	now the time of day is 9:00 pm;
 	now dursley is in dursley's bedroom;
 	now Petunia is in dursley's bedroom;
 	now the description of bedroomwindow is "[one of]As you look out the window, you see the cat from this morning, as well as a tall, thin man, who silently walks from the corner of the street. He holds up a small object, and suddenly, all the lamps in the street go out.[or]It is pitch black.[stopping]";
@@ -2078,7 +2175,7 @@ Dudley's second room is a room in dursley's house. "There's not a lot in here. D
 Dudley's second room's door is a door. it is northeast of landing and southwest of dudley's second room. 
 Dudley's wardrobe is a container in dudley's second room. it is not portable. it is closed and openable.
 there are 3 books in dudley's wardrobe. the description of a book is usually "Some books bought for Dudley, in case he ever turns out to like reading.".
-Spellbook is a book. it is in Dudley's wardrobe. the description of Spellbook is "Some spells: Expelliarmus, Incendio, WIngardium Leviosa, Avada Kadavra, Expecto Patronum.".
+Spellbook is a book. it is in Dudley's wardrobe. the description of Spellbook is "The book has some odd words written in it: Expelliarmus, Incendio, WIngardium Leviosa, Avada Kadavra, Expecto Patronum.".
 understand "spell" as spellbook.
 Bathroom is a room in dursley's house. it is west of Landing. 
 Bath is a container in bathroom. it is open and not openable. it is not portable. it is enterable.

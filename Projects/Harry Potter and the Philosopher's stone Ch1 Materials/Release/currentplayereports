@@ -1,0 +1,2097 @@
+* //C8A63770-6D0B-11E2-B933-F96839AE4917// currentplayereports
+Action: looking 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: wake up
+Action: waking up 
+
+Game tester: Orion
+Command: sleep
+Action: sleeping 
+
+Game tester: Orion
+Command: dream
+Game tester: Orion
+Command: go to sleep
+Game tester: Orion
+Command: go to sleep
+Game tester: Orion
+Command: wake up
+Action: waking up 
+
+Game tester: Orion
+Command: get out of bed
+Action: exiting 
+
+Game tester: Orion
+Command: ne
+Action: going northeast 
+
+Game tester: Orion
+Command: nw
+Action: going northwest 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: report error "before going northwest, it should warn you to get dressed, but not force it upon
+Action: error reporting "" before going northwest , it should warn you to get dressed , but not force it upon" 
+
+Game tester: Orion
+Command: se
+Action: going southeast 
+
+Game tester: Orion
+Command: look at bed
+Action: examining bed 
+
+Game tester: Orion
+Command: "give bed a description"
+Game tester: Orion
+Command: report error give bed a description
+Action: error reporting "give bed a description" 
+
+Game tester: Orion
+Command: look door
+Action: examining the bedroom door (northwest) 
+
+Game tester: Orion
+Command: report error give everything a description
+Action: error reporting "give everything a description" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look window
+Action: examining bedroom window 
+
+Game tester: Orion
+Command: look at wardrobe
+Action: examining Wardrobe 
+
+Game tester: Orion
+Command: open the wardrobe
+Action: opening Wardrobe 
+
+Game tester: Orion
+Command: look at mirror
+Action: examining the mirror 
+
+Game tester: Orion
+Command: report error the mirror should start of saying "you see your reflection"
+Action: error reporting "the mirror should start of saying " you see your reflection "" 
+
+Game tester: Orion
+Command: wear suit
+Action: wearing the suit 
+
+Action: taking the suit 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: i
+Action: taking inventory 
+
+Game tester: Orion
+Command: report error "it should say you put away the pyjamas
+Action: error reporting "" it should say you put away the pyjamas" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look at robes
+Action: examining wizards robes 
+
+Game tester: Orion
+Command: look at muumuu
+Action: examining the muumuu 
+
+Game tester: Orion
+Command: look at tutu
+Action: examining the tutu 
+
+Game tester: Orion
+Command: look at pyjamas
+Action: examining Pyjamas 
+
+Game tester: Orion
+Command: look at mirror
+Action: examining the mirror 
+
+Game tester: Orion
+Command: wear a muumuu
+Game tester: Orion
+Command: take off suit
+Action: taking off the suit 
+
+Game tester: Orion
+Command: wear a muumuu
+Action: wearing the muumuu 
+
+Action: taking the muumuu 
+
+Game tester: Orion
+Command: report error It is inconsistent for you to be able to auto remove PJ's but not other clothes
+Action: error reporting "it is inconsistent for you to be able to auto remove pj's but not other clothes" 
+
+Game tester: Orion
+Command: error report
+Action: error report retrieving 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take all
+Action: taking Pyjamas 
+
+Action: taking wizards robes 
+
+Action: taking the tutu 
+
+Game tester: Orion
+Command: take table
+Action: taking bedside table 
+
+Game tester: Orion
+Command: cheats off
+Action: switching cheats off 
+
+Game tester: Orion
+Command: drop table
+Action: dropping bedside table 
+
+Game tester: Orion
+Command: take table
+Action: taking bedside table 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take mirror
+Action: taking the mirror 
+
+Game tester: Orion
+Command: open table
+Action: opening bedside table 
+
+Game tester: Orion
+Command: report error "opening the bedside table should open the drawer"
+Action: error reporting "" opening the bedside table should open the drawer "" 
+
+Game tester: Orion
+Command: open drawer
+Action: opening bedside drawer 
+
+Game tester: Orion
+Command: look in drawer
+Action: searching bedside drawer 
+
+Game tester: Orion
+Command: look at drawer
+Action: examining bedside drawer 
+
+Game tester: Orion
+Command: take drawer
+Action: taking bedside drawer 
+
+Game tester: Orion
+Command: take paper
+Action: taking the scrap of paper 
+
+Game tester: Orion
+Command: read paper
+Action: examining the scrap of paper 
+
+Game tester: Orion
+Command: loo
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take clock
+Action: taking the clock 
+
+Game tester: Orion
+Command: look at clock
+Action: examining the clock 
+
+Game tester: Orion
+Command: nw
+Action: going northwest 
+
+Game tester: Orion
+Command: report error "it is unclear that you have to go downstairs, should mention wotk"
+Action: error reporting "" it is unclear that you have to go downstairs , should mention wotk "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: ne
+Action: going northeast 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: open wardrobe
+Action: opening Dudley's wardrobe 
+
+Game tester: Orion
+Command: take all
+Action: taking the book 
+
+Action: taking the book 
+
+Action: taking the book 
+
+Action: taking Spellbook 
+
+Game tester: Orion
+Command: read book
+Action: examining the book 
+
+Game tester: Orion
+Command: read spellbook
+Action: examining Spellbook 
+
+Game tester: Orion
+Command: report error "read spellbook: The book has weird words written inside it; Expe..."
+Action: error reporting "" read spellbook: the book has weird words written inside it; expe . . . "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look under wardrobe
+Action: looking under Dudley's wardrobe 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: sw
+Action: going southwest 
+
+Game tester: Orion
+Command: nw
+Action: going northwest 
+
+Action: opening the door 
+
+Action: putting the the wand under Cot 
+
+Game tester: Orion
+Command: take all
+Game tester: Orion
+Command: open drawers
+Action: opening the set of drawers 
+
+Action: opening Dudley's drawers 
+
+Game tester: Orion
+Command: look toys
+Game tester: Orion
+Command: look toy
+Action: examining the toy 
+
+Game tester: Orion
+Command: take glasses
+Action: taking the the pair of glasses 
+
+Game tester: Orion
+Command: wear glasses
+Action: wearing the the pair of glasses 
+
+Game tester: Orion
+Command: look at glasses
+Action: examining the the pair of glasses 
+
+Game tester: Orion
+Command: sw
+Action: going southwest 
+
+Game tester: Orion
+Command: se
+Action: going southeast 
+
+Game tester: Orion
+Command: u
+Action: going up 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: take pictures
+Game tester: Orion
+Command: report error "> take picturesYou can?t see any such thing.
+Action: error reporting "" > take picturesyou can?t see any such thing ." 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: read diart
+Game tester: Orion
+Command: read diary
+Action: examining Petunia's diary 
+
+Game tester: Orion
+Command: read diary
+Action: examining Petunia's diary 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take letter
+Action: taking letter 
+
+Game tester: Orion
+Command: report error "should be a letter"
+Action: error reporting "" should be a letter "" 
+
+Game tester: Orion
+Command: read letter
+Action: examining letter 
+
+Game tester: Orion
+Command: look letter
+Action: examining letter 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: open box
+Action: opening dusty box 
+
+Game tester: Orion
+Command: take box
+Action: taking dusty box 
+
+Game tester: Orion
+Command: report error "some of the things that are fixed in place should say that they are too heavy and
+Action: error reporting "" some of the things that are fixed in place should say that they are too heavy and" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look toys
+Game tester: Orion
+Command: look toy
+Action: examining the toy 
+
+Game tester: Orion
+Command: look handbook
+Action: examining how to spoil your children handbook 
+
+Game tester: Orion
+Command: read drills-
+Action: examining drills- an unabridged history 
+
+Game tester: Orion
+Command: read drills
+Game tester: Orion
+Command: report error "the drills book says drills-, not drills -"
+Action: error reporting "" the drills book says drills- , not drills - "" 
+
+Game tester: Orion
+Command: read 101
+Action: examining 101 Pompous Complaints 
+
+Game tester: Orion
+Command: read high
+Action: examining the High calorie cookbook 
+
+Game tester: Orion
+Command: read smeltings
+Action: examining the smeltings schoolbook 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take all
+Action: taking Petunia's diary 
+
+Action: taking the toy 
+
+Action: taking the toy 
+
+Action: taking the toy 
+
+Action: taking how to spoil your children handbook 
+
+Action: taking drills- an unabridged history 
+
+Action: taking 101 Pompous Complaints 
+
+Action: taking the High calorie cookbook 
+
+Action: taking the smeltings schoolbook 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: turn off light
+Game tester: Orion
+Command: close stairs
+Action: closing Attic stairs 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: report error 'there should be a light in the attic
+Action: error reporting "'there should be a light in the attic" 
+
+Game tester: Orion
+Command: l
+Action: looking 
+
+Game tester: Orion
+Command: x
+Action: examining yourself 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: close letter
+Action: closing letter 
+
+Game tester: Orion
+Command: close stairs
+Action: closing Attic stairs 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: down
+Action: going down 
+
+Game tester: Orion
+Command: understand "down" as "go down"
+Game tester: Orion
+Command: report error "down" should be 'go down'
+Action: error reporting "" down " should be 'go down'" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: report error hall description should say "conveniently placed as it is between the television and the fridge/
+Action: error reporting "hall description should say " conveniently placed as it is between the television and the fridge/" 
+
+Game tester: Orion
+Command: sw
+Action: going southwest 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: ne
+Action: going northeast 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: ne
+Action: going northeast 
+
+Game tester: Orion
+Command: sw
+Action: going southwest 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: report error "Hall description tells you about rooms twice"
+Action: error reporting "" hall description tells you about rooms twice "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: take photos
+Action: taking the photo 
+
+Action: taking the photo 
+
+Action: taking the photo 
+
+Action: taking the photo 
+
+Action: taking the photo 
+
+Game tester: Orion
+Command: take photo
+Action: taking the photo 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: sit
+Action: sitting down 
+
+Action: taking position seated 
+
+Game tester: Orion
+Command: sit on stool
+Action: sitting on Stool 
+
+Action: entering Stool 
+
+Game tester: Orion
+Command: stand
+Action: standing up 
+
+Action: exiting 
+
+Action: getting off Stool 
+
+Game tester: Orion
+Command: stand
+Action: standing up 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Action: taking position standing 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: sit on stool
+Action: sitting on Stool 
+
+Action: entering Stool 
+
+Game tester: Orion
+Command: play piano
+Action: playing Piano 
+
+Game tester: Orion
+Command: use piano
+Action: using Piano 
+
+Game tester: Orion
+Command: report error "understand "use piano" as play piano"
+Action: error reporting "" understand " use piano " as play piano "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: read music
+Action: examining sheet music 
+
+Game tester: Orion
+Command: report error "sheet music should have a description"
+Action: error reporting "" sheet music should have a description "" 
+
+Game tester: Orion
+Command: report error "sheet music should be the sheets for a cauldron full of hot, strong love"
+Action: error reporting "" sheet music should be the sheets for a cauldron full of hot , strong love "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: turn on tv
+Action: switching on Television 
+
+Game tester: Orion
+Command: report error "says you turn on TV twice after turning it on"
+Action: error reporting "" says you turn on tv twice after turning it on "" 
+
+Game tester: Orion
+Command: loo
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: sit on couch
+Action: sitting on Couch 
+
+Action: entering Couch 
+
+Action: exiting 
+
+Action: getting off Stool 
+
+Game tester: Orion
+Command: sit on mantlepiece
+Action: sitting on the mantlepiece 
+
+Action: entering the mantlepiece 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Action: getting off Couch 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: opening the door 
+
+Game tester: Orion
+Command: sit on chair
+Action: sitting on the chair 
+
+Action: entering the chair 
+
+Game tester: Orion
+Command: eat table
+Action: eating Dining room table 
+
+Game tester: Orion
+Command: take all
+Game tester: Orion
+Command: take table
+Action: taking Dining room table 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Action: getting off the chair 
+
+Game tester: Orion
+Command: ne
+Action: going northeast 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: nw
+Action: going northwest 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: ne
+Action: going northeast 
+
+Game tester: Orion
+Command: use sink
+Action: using Sink 
+
+Game tester: Orion
+Command: use toilet
+Action: using Toilet 
+
+Game tester: Orion
+Command: turn on tap
+Action: switching on Tap 
+
+Action: using Sink 
+
+Game tester: Orion
+Command: turn on toilet
+Action: switching on Toilet 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: sw
+Action: going southwest 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: look rubbish
+Action: examining the few bits of rubbish 
+
+Game tester: Orion
+Command: look socks
+Game tester: Orion
+Command: look sock
+Action: examining the sock 
+
+Game tester: Orion
+Command: look pencil
+Action: examining the pencil 
+
+Game tester: Orion
+Command: look broom
+Action: examining broom 
+
+Game tester: Orion
+Command: ride broom
+Action: mounting broom 
+
+Game tester: Orion
+Command: report error "give a more dramatic description of riding broom than "you mount broom"
+Action: error reporting "" give a more dramatic description of riding broom than " you mount broom "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to Dudley 
+
+Game tester: Orion
+Command: hello petunia
+Action: saying hello to Petunia 
+
+Game tester: Orion
+Command: report error "should give a hint that you should say Hello to Petunia"
+Action: error reporting "" should give a hint that you should say hello to petunia "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take all
+Action: taking broom 
+
+Action: taking suitcase 
+
+Action: taking the piece of toast 
+
+Action: taking the piece of toast 
+
+Action: taking the coffee cup 
+
+Game tester: Orion
+Command: take dudley
+Action: taking Dudley 
+
+Game tester: Orion
+Command: kick dudley
+Game tester: Orion
+Command: eat toast
+Action: eating the piece of toast 
+
+Game tester: Orion
+Command: eat cup
+Action: eating a coffee cup 
+
+Game tester: Orion
+Command: drink coffee
+Action: drinking coffee 
+
+Game tester: Orion
+Command: drink cup
+Game tester: Orion
+Command: drink coffee
+Action: drinking coffee 
+
+Game tester: Orion
+Command: drink coffee
+Action: drinking coffee 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: drop cup
+Action: dropping a coffee cup 
+
+Game tester: Orion
+Command: report error "dropping something fragile should cause it to shatter"
+Action: error reporting "" dropping something fragile should cause it to shatter "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look table
+Action: examining the kitchen table 
+
+Game tester: Orion
+Command: open fridge
+Action: opening fridge 
+
+Game tester: Orion
+Command: look at fridge
+Action: examining a fridge 
+
+Game tester: Orion
+Command: eat steak
+Action: eating steak 
+
+Game tester: Orion
+Command: eat steak
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: close fridge
+Action: closing a fridge 
+
+Game tester: Orion
+Command: report error "Petunia should get annoyed if you leave the fridge open"
+Action: error reporting "" petunia should get annoyed if you leave the fridge open "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: report error "things you drop on while on broom stay on the broom"
+Action: error reporting "" things you drop on while on broom stay on the broom "" 
+
+Game tester: Orion
+Command: put cup in kitchen
+Game tester: Orion
+Command: put coffee cup cup in kitchen
+Game tester: Orion
+Command: showme a tea cup
+Game tester: Orion
+Command: cheats on
+Action: switching cheats on 
+
+Game tester: Orion
+Command: a tea cup
+Action: implicit-asking "tea cup" 
+
+Action: asking Petunia about "tea cup" 
+
+Game tester: Orion
+Command: stats
+Game tester: Orion
+Command: move tea cup to me
+Action: moving to a tea cup 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take cup
+Action: taking the coffee cup 
+
+Game tester: Orion
+Command: drop cup on floor
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look out window
+Action: examining window 
+
+Game tester: Orion
+Command: look out window
+Action: examining window 
+
+Game tester: Orion
+Command: look out window
+Action: examining window 
+
+Game tester: Orion
+Command: look out window
+Action: examining window 
+
+Game tester: Orion
+Command: look out window
+Action: examining window 
+
+Game tester: Orion
+Command: look out window
+Action: examining window 
+
+Game tester: Orion
+Command: look out window
+Action: examining window 
+
+Game tester: Orion
+Command: look out window
+Action: examining window 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying goodbye to Petunia 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: hello petunia
+Action: saying hello to Petunia 
+
+Game tester: Orion
+Command: talk to petunia
+Action: saying hello to Petunia 
+
+Game tester: Orion
+Command: report error "should have more talking to petunia
+Action: error reporting "" should have more talking to petunia" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying goodbye to Petunia 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Game tester: Orion
+Command: i
+Action: taking inventory 
+
+Game tester: Orion
+Command: report error "you shouldn't be able to carry too much; make objects have weight element maybe".
+Action: error reporting "" you shouldn't be able to carry too much; make objects have weight element maybe " ." 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: drop all
+Action: dropping a coffee cup 
+
+Action: dropping the piece of toast 
+
+Action: dropping the piece of toast 
+
+Action: dropping suitcase 
+
+Action: dropping the smeltings schoolbook 
+
+Action: dropping the High calorie cookbook 
+
+Action: dropping 101 Pompous Complaints 
+
+Action: dropping drills- an unabridged history 
+
+Action: dropping How to Spoil your Children Handbook 
+
+Action: dropping Petunia's diary 
+
+Action: dropping letter 
+
+Action: dropping Spellbook 
+
+Action: dropping the book 
+
+Action: dropping the book 
+
+Action: dropping the book 
+
+Action: dropping the scrap of paper 
+
+Action: dropping the tutu 
+
+Action: dropping wizards robes 
+
+Action: dropping Pyjamas 
+
+Action: dropping the suit 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take all
+Action: taking broom 
+
+Action: taking the suit 
+
+Action: taking Pyjamas 
+
+Action: taking wizards robes 
+
+Action: taking the tutu 
+
+Action: taking the scrap of paper 
+
+Action: taking the book 
+
+Action: taking the book 
+
+Action: taking the book 
+
+Action: taking Spellbook 
+
+Action: taking letter 
+
+Action: taking Petunia's diary 
+
+Action: taking how to spoil your children handbook 
+
+Action: taking drills- an unabridged history 
+
+Action: taking 101 Pompous Complaints 
+
+Action: taking the High calorie cookbook 
+
+Action: taking the smeltings schoolbook 
+
+Action: taking suitcase 
+
+Action: taking the piece of toast 
+
+Action: taking the piece of toast 
+
+Action: taking the coffee cup 
+
+Game tester: Orion
+Command: i
+Action: taking inventory 
+
+Game tester: Orion
+Command: cheats off
+Action: switching cheats off 
+
+Game tester: Orion
+Command: open car
+Action: opening the car 
+
+Game tester: Orion
+Command: i
+Action: taking inventory 
+
+Game tester: Orion
+Command: open suitcase
+Action: opening suitcase 
+
+Game tester: Orion
+Command: report error "after trying to open suitcase you should be told it's a number lock"
+Action: error reporting "" after trying to open suitcase you should be told it's a number lock "" 
+
+Game tester: Orion
+Command: unlock case with dursley
+Game tester: Orion
+Command: 893
+Action: inputting 893 
+
+Game tester: Orion
+Command: read scrap
+Action: examining the scrap of paper 
+
+Game tester: Orion
+Command: unlock case with dursley
+Game tester: Orion
+Command: 898
+Action: inputting 898 
+
+Game tester: Orion
+Command: report error "instead of opening suitcase when suitcase is locked, try unlocking suitcase instead'
+Action: error reporting "" instead of opening suitcase when suitcase is locked , try unlocking suitcase instead'" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: open case
+Action: opening suitcase 
+
+Game tester: Orion
+Command: unlock car with keys
+Action: unlocking the car with keys 
+
+Action: taking keys 
+
+Game tester: Orion
+Command: open car
+Action: opening the car 
+
+Game tester: Orion
+Command: get in car
+Action: entering the car 
+
+Action: exiting 
+
+Action: dismounting 
+
+Game tester: Orion
+Command: take broom
+Action: taking broom 
+
+Game tester: Orion
+Command: close car
+Action: closing the car 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: report error "should say privet drive is accessible to coincide with later chapters"
+Action: error reporting "" should say privet drive is accessible to coincide with later chapters "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look garage
+Action: examining garage 
+
+Game tester: Orion
+Command: get out
+Action: exiting 
+
+Game tester: Orion
+Command: open car
+Action: opening the car 
+
+Game tester: Orion
+Command: get out
+Action: exiting 
+
+Game tester: Orion
+Command: close car
+Action: closing the car 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: report error make opening and closing car done for the player
+Action: error reporting "make opening and closing car done for the player" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: error report
+Action: error report retrieving 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: open garage
+Action: opening garage 
+
+Game tester: Orion
+Command: enter garage
+Action: entering garage 
+
+Game tester: Orion
+Command: turn on light
+Action: switching on light switch 
+
+Game tester: Orion
+Command: close garage
+Action: closing garage 
+
+Game tester: Orion
+Command: report error
+Game tester: Orion
+Command: report error "a Ferrari, which is slowly brought out to ground level" has no full stop
+Action: error reporting "" a ferrari , which is slowly brought out to ground level " has no full stop" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: open ferrari
+Action: opening Ferrari Enzo 
+
+Game tester: Orion
+Command: get in ferrari
+Action: entering Ferrari Enzo 
+
+Game tester: Orion
+Command: report error "open ferrariThat?s not something you can open.
+Action: error reporting "" open ferrarithat?s not something you can open ." 
+
+Game tester: Orion
+Command: press button
+Action: switching on start button 
+
+Game tester: Orion
+Command: open garage
+Action: opening garage 
+
+Action: looking 
+
+Game tester: Orion
+Command: report error "say that you use a control inside the enzo to open garage. Otherwise, you can't
+Action: error reporting "" say that you use a control inside the enzo to open garage . otherwise , you can't" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: get out
+Action: exiting 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: get out
+Action: exiting 
+
+Game tester: Orion
+Command: ride broom
+Action: dropping broom 
+
+Action: mounting broom 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: report error you don't get the normal message about the tabby cat
+Action: error reporting "you don't get the normal message about the tabby cat" 
+
+Game tester: Orion
+Command: report error in the enzo
+Action: error reporting "in the enzo" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look at people
+Game tester: Orion
+Command: look at person
+Game tester: Orion
+Command: look at cloaks
+Game tester: Orion
+Command: report error there should be people as scenery to look at on highway
+Action: error reporting "there should be people as scenery to look at on highway" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: opening the door 
+
+Action: saying hello to the Shop attendant 
+
+Game tester: Orion
+Command: report error the wait how are you flying that doesn't have quotes
+Action: error reporting "the wait how are you flying that doesn't have quotes" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look at shop
+Action: examining the Shop attendant 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: q
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to Mr. Finnigan 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: get off
+Action: exiting 
+
+Action: dismounting 
+
+Game tester: Orion
+Command: open red car
+Action: opening red car 
+
+Game tester: Orion
+Command: hit red
+Action: attacking red car 
+
+Game tester: Orion
+Command: report error hitting a car should hijack it
+Action: error reporting "hitting a car should hijack it" 
+
+Game tester: Orion
+Command: hijack red car
+Action: carjacking red car 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: hijack blue car
+Action: carjacking blue car 
+
+Game tester: Orion
+Command: press button
+Action: switching on elevator button 
+
+Game tester: Orion
+Command: report error says the since you pressed the button line first time going in the elevator
+Action: error reporting "says the since you pressed the button line first time going in the elevator" 
+
+Action: looking 
+
+Game tester: Orion
+Command: setting
+Game tester: Orion
+Command: settings
+Action: asking for help 
+
+Action: looking 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Action: opening the the door 
+
+Game tester: Orion
+Command: report error after being chastised by the boss you should respond
+Action: error reporting "after being chastised by the boss you should respond" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look at phone
+Action: examining the office phone 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take phone
+Action: taking the office phone 
+
+Game tester: Orion
+Command: look at dex
+Action: examining a rolodex 
+
+Action: dialling 12856 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to Mr. Mason 
+
+Game tester: Orion
+Command: report error should be more pointers during the phone conversations
+Action: error reporting "should be more pointers during the phone conversations" 
+
+Game tester: Orion
+Command: sure
+Game tester: Orion
+Command: try the qz 77
+Action: responding to customer "the qz 77" 
+
+Game tester: Orion
+Command: aestfgyh
+Action: hanging up 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: call 0429 949 979
+Game tester: Orion
+Command: call 555 5555
+Game tester: Orion
+Command: dial 555 5555
+Game tester: Orion
+Command: dial 555
+Action: dialling 555 on the office phone 
+
+Game tester: Orion
+Command: dial 5555555
+Action: dialling 5555555 on the office phone 
+
+Game tester: Orion
+Command: dial 000
+Action: dialling 0 on the office phone 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look at rolodex
+Action: examining a rolodex 
+
+Game tester: Orion
+Command: report error should be more pointers to read the rolodex and the document
+Action: error reporting "should be more pointers to read the rolodex and the document" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: take pen
+Action: taking pen 
+
+Game tester: Orion
+Command: write on notepad
+Action: writing intro notepad 
+
+Game tester: Orion
+Command: read notepad
+Action: examining notepad 
+
+Game tester: Orion
+Command: write on notepad
+Action: writing intro notepad 
+
+Game tester: Orion
+Command: read notepad
+Action: examining notepad 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: drop pen
+Action: dropping pen 
+
+Game tester: Orion
+Command: take coins
+Action: taking the pound coin 
+
+Action: taking the pound coin 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look out window
+Action: examining a window 
+
+Game tester: Orion
+Command: look out window
+Action: examining a window 
+
+Game tester: Orion
+Command: put pen on desk
+Action: putting pen on desk 
+
+Action: taking pen 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: sit on chair
+Action: sitting on office chair 
+
+Action: entering office chair 
+
+Game tester: Orion
+Command: report error after sitting on chair say you deserve it  after all it's been the
+Action: error reporting "after sitting on chair say you deserve it after all it's been the" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look at cabinet
+Action: opening Drawer 
+
+Game tester: Orion
+Command: look at cabinet
+Action: opening Drawer 
+
+Game tester: Orion
+Command: look at cabinet
+Action: opening Drawer 
+
+Game tester: Orion
+Command: look at cabinet
+Action: opening Drawer 
+
+Game tester: Orion
+Command: look at cabinet
+Action: opening Drawer 
+
+Game tester: Orion
+Command: look at cabinet
+Action: opening Drawer 
+
+Game tester: Orion
+Command: look at cabinet
+Action: opening Drawer 
+
+Game tester: Orion
+Command: look at cabinet
+Action: opening Drawer 
+
+Game tester: Orion
+Command: report error make sure the player knows that if they don't get the right papers they can look
+Action: error reporting "make sure the player knows that if they don't get the right papers they can look" 
+
+Game tester: Orion
+Command: report error after opening the cabinet while searching for papers he should say no no it's
+Action: error reporting "after opening the cabinet while searching for papers he should say no no it's" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: read ics
+Action: examining an important customer service document 
+
+Action: dialling 893 on the office phone 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: spiffing
+Action: saying "spiffing" 
+
+Game tester: Orion
+Command: report error get the customers to understand more greetings including famously british ones
+Action: error reporting "get the customers to understand more greetings including famously british ones" 
+
+Game tester: Orion
+Command: good
+Action: saying hello to the Customer 
+
+Game tester: Orion
+Command: call  8953
+Game tester: Orion
+Command: then ask for t1000
+Action: responding to customer "ask for t1000" 
+
+Action: hanging up 
+
+Game tester: Orion
+Command: error report
+Action: error report retrieving 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: ask for a t1000
+Game tester: Orion
+Command: read rolodex
+Action: examining a rolodex 
+
+Game tester: Orion
+Command: report error after finishing call, the rolodex should tell you you can go
+Action: error reporting "after finishing call , the rolodex should tell you you can go" 
+
+Game tester: Orion
+Command: lok
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: get up
+Action: exiting 
+
+Action: getting off office chair 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Game tester: Orion
+Command: report error "elevator is not in corridor, neither is the elevator door"
+Action: error reporting "" elevator is not in corridor , neither is the elevator door "" 
+
+Game tester: Orion
+Command: report error "The boss should say 'there's a new bakery across the road. There food is good"
+Action: error reporting "" the boss should say 'there's a new bakery across the road . there food is good "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: looking 
+
+Action: listening to street 
+
+Game tester: Orion
+Command: report error "?The Potters, that?s right, that?s what I heard -? comes before going in shop after
+Action: error reporting "" ?the potters , that?s right , that?s what i heard -? comes before going in shop after" 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying hello to Mr. Finnigan 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: open case
+Action: opening suitcase 
+
+Game tester: Orion
+Command: open foods
+Action: opening the foods display case 
+
+Game tester: Orion
+Command: buy doughnut
+Game tester: Orion
+Command: pay one pound
+Action: giving the pound coin to Mr. Finnigan 
+
+Game tester: Orion
+Command: eat doughnut
+Action: eating doughnut 
+
+Game tester: Orion
+Command: eat doughnut
+Game tester: Orion
+Command: report error "maybe some things shouldn't be edible in 2 bites"
+Action: error reporting "" maybe some things shouldn't be edible in 2 bites "" 
+
+Game tester: Orion
+Command: report error "maybe some things shouldn't be edible in 2 bites"
+Action: error reporting "" maybe some things shouldn't be edible in 2 bites "" 
+
+Game tester: Orion
+Command: error report
+Action: error report retrieving 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: saying goodbye to Mr. Finnigan 
+
+Game tester: Orion
+Command: listen
+Action: listening to street 
+
+Game tester: Orion
+Command: report error "'the whole potter listening thing is a bit tricky to figure out"
+Action: error reporting "" 'the whole potter listening thing is a bit tricky to figure out "" 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Action: listening to street 
+
+Action: looking 
+
+Game tester: Orion
+Command: go up
+Action: going up 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: read dex
+Action: examining a rolodex 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: d
+Action: going down 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: i
+Action: taking inventory 
+
+Game tester: Orion
+Command: get on broom
+Action: dropping broom 
+
+Action: mounting broom 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: get off broom
+Action: dismounting 
+
+Game tester: Orion
+Command: look at cat
+Game tester: Orion
+Command: report error "cat is not a physical object"
+Action: error reporting "" cat is not a physical object "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: report error 'after entering hall when you have done work it should suggest you watch TV
+Action: error reporting "'after entering hall when you have done work it should suggest you watch tv" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: n
+Action: going north 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: w
+Action: going west 
+
+Game tester: Orion
+Command: hello
+Action: hailing 
+
+Action: saying hello to Petunia 
+
+Game tester: Orion
+Command: good thanks
+Game tester: Orion
+Command: talk to petunia
+Action: saying hello to Petunia 
+
+Game tester: Orion
+Command: banter
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: e
+Action: going east 
+
+Action: saying goodbye to Petunia 
+
+Game tester: Orion
+Command: s
+Action: going south 
+
+Game tester: Orion
+Command: sit on it
+Action: sitting on Armchair 
+
+Action: entering Armchair 
+
+Game tester: Orion
+Command: turn on YV
+Game tester: Orion
+Command: turn on TV
+Action: switching on Television 
+
+Game tester: Orion
+Command: report error "some of the times are a bit odd; the evening news shouldn't end at 5:29
+Action: error reporting "" some of the times are a bit odd; the evening news shouldn't end at 5:29" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Action: saying hello to Petunia 
+
+Game tester: Orion
+Command: thank you
+Action: thanking Petunia 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: report error "it is unclear that you should tell Petunia about the potters"
+Action: error reporting "" it is unclear that you should tell petunia about the potters "" 
+
+Game tester: Orion
+Command: think
+Action: thinking 
+
+Game tester: Orion
+Command: think about potters
+Game tester: Orion
+Command: tell petunia about potters
+Action: telling Petunia about "potters" 
+
+Game tester: Orion
+Command: stats
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: tell petunia about potters
+Action: telling Petunia about "potters" 
+
+Game tester: Orion
+Command: report error "there seems to be a bug preventing me from completing the end of the last scene"
+Action: error reporting "" there seems to be a bug preventing me from completing the end of the last scene "" 
+
+Game tester: Orion
+Command: look
+Action: looking 
+
+Game tester: Orion
+Command: save
+Game tester: Orion
+Command: error report
+Action: error report retrieving 
+
+Game tester: Orion
+Command: error report
+Action: error report retrieving 
+
